@@ -59,7 +59,7 @@ function LoginPage() {
                 <p className="btn-link fs-5 text-decoration-none d-flex justify-content-end">olvide mi contraseña</p>
 
                 <div className="d-flex justify-content-center ">
-                    <Button className=" btn  btn-dark w-100  rounded-0 fs-5" type="submit" onClick={Login}>Login</Button>
+                    <Button className=" btn  btn-dark w-100  rounded-0 fs-5" onClick={Login}>Login</Button>
                 </div>
             </Form>
         </div>

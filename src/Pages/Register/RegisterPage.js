@@ -56,9 +56,6 @@ function RegisterPage() {
           />
         </Form.Group>
         <Form.Group className="my-5">
-          <Form.Control className="border-bottom border-0 bg-light rounded-0 fs-5 " name="lastname" placeholder="Lastname" onChange={OnChange} />
-        </Form.Group>
-        <Form.Group className="my-5">
           <Form.Control className="border-bottom border-0 bg-light rounded-0 fs-5 " type="email" name="email" placeholder="Email" onChange={OnChange} />
         </Form.Group>
         <Form.Group className="my-5">
