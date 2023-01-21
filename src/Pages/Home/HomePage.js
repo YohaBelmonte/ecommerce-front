@@ -16,6 +16,7 @@ function HomePage() {
         <div className="d-flex justify-content-center bg-dark ">
 
             <div className="d-grid">
+                <div className="bg-success">Home Page</div>
                 <Button className=" w-100 mt-1 " variant="success">
                     <Link id="register_login" to="/Login">Login</Link>
                 </Button>
