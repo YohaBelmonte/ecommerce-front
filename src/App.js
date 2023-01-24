@@ -1,23 +1,47 @@
-import "./App.css";
+import './App.css';
+import RegisterPage from './Pages/Register/RegisterPage';
+import { Form, Button } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ShoppingCart from "./Pages/ShoppingCart/ShoppingCart";
-import Navbar from "./components/Navbar/Navbar";
+import LoginPage from './Pages/Login/LoginPage';
+import HomePage from './Pages/Home/HomePage';
 
 function App() {
+
   return (
-    <BrowserRouter>
+
+    <BrowserRouter >
+
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <Navbar />
-              <div className="mt-5">
-                <ShoppingCart />
-              </div>
+        <Route path='/' element={
+          <div>
+            <div className='mt-5'>
+              <HomePage/>
             </div>
-          }
-        ></Route>
+          </div>
+        }>
+        </Route>
+        <Route path='/Login' element={
+          <div>
+
+            <div className='mt-5'>
+              <LoginPage />
+            </div>
+          </div>
+        }>
+        </Route>
+
+        <Route path='/Register' element={
+          <div>
+
+            <div className='mt-5'>
+              <RegisterPage />
+            </div>
+          </div>
+        }>
+        </Route>
+
+
       </Routes>
     </BrowserRouter>
   );
