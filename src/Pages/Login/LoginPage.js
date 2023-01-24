@@ -20,9 +20,7 @@ function LoginPage() {
   async function Login() {
     try {
       const { data } = await axios.post("http://localhost:4000/api/auth", form);
-      console.log(data);
       localStorage.setItem("token", data);
-
       window.location.href = "/";
     } catch (error) {
       console.error("error");
