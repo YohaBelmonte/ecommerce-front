@@ -1,0 +1,10 @@
+.shop-container{
+    min-height: 200px;
+    margin-inline: 12px;
+    background-color: rgb(112, 116, 116);
+}
+
+.cart-container{
+    margin-top: 15px;
+    background-color: rgb(231, 83, 83);
+}
