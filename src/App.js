@@ -1,10 +1,10 @@
 import './App.css';
 import RegisterPage from './Pages/Register/RegisterPage';
-import { Form, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
+import NewPassword from './Pages/NewPassword/NewPassword';
 
 function App() {
 
@@ -36,6 +36,16 @@ function App() {
 
             <div className='mt-5'>
               <RegisterPage />
+            </div>
+          </div>
+        }>
+        </Route>
+
+        <Route path='/NewPassword' element={
+          <div>
+
+            <div className='mt-5'>
+              < NewPassword/>
             </div>
           </div>
         }>

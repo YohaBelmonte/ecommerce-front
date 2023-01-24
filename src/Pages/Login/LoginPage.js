@@ -1,9 +1,10 @@
 import "./LoginPage.css";
-import { Form, Button, FormText } from "react-bootstrap";
+import { Form, Button} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import ForgotPassword from "../../components/Modal/ModalRegister"
 
 function LoginPage() {
   const [form, setForm] = useState({});
@@ -20,13 +21,20 @@ function LoginPage() {
   async function Login() {
     try {
       const { data } = await axios.post("http://localhost:4000/api/auth", form);
+      console.log(data);
       localStorage.setItem("token", data);
-      window.location.href = "/";
+
+      window.location.href = "/NewPassword";
     } catch (error) {
       console.error("error");
       alert("Error de sesion");
     }
   }
+
+  const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
   return (
     <div className="d-flex justify-content-center bg-dark LoginImage">
@@ -67,9 +75,9 @@ function LoginPage() {
             onChange={OnChange}
           />
         </Form.Group>
-        <p className="btn-link fs-5 text-decoration-none d-flex justify-content-end">
+        <Link className="btn-link fs-5 text-decoration-none d-flex justify-content-end" onClick={handleShow}>
           olvide mi contraseña
-        </p>
+        </Link>
 
         <div className="d-flex justify-content-center ">
           <Button
@@ -81,6 +89,7 @@ function LoginPage() {
           </Button>
         </div>
       </Form>
+      <ForgotPassword show={show} handleClose={handleClose}/>
     </div>
   );
 }
