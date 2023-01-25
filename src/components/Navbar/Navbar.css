@@ -1,4 +1,90 @@
-.nav-container{
-    height: 100px;
-    background-color: rgb(193, 245, 245);
+.link-navbar {
+    font-size: 14px;
+}
+
+.af {
+    background-image: linear-gradient(to right,
+            #275e38,
+            #275e38 50%,
+            rgb(32, 32, 32) 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.af:before {
+    content: '';
+    background: #275e38;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.af:hover {
+    background-position: 0;
+}
+
+.af:hover::before {
+    width: 100%;
+}
+
+.image {
+    background-color: #490D40;
+    background: url(https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwb054a473/products/PU_383368-01/PU_383368-01-1.JPG) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    margin-top: -20px;
+}
+
+.icons-nav {
+    margin-left: 270px;
+}
+
+.styleIcons {
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+}
+
+.styleIcons:hover {
+    color: #275e38;
+}
+
+.shopping-cart {
+    font-size: 0px;
+}
+
+.styleIcons2 {
+    font-size: 0px;
+}
+
+@media (max-width:896px) {
+    .styleIcons {
+        color: rgb(255, 255, 255);
+    }
+
+    .icons-nav {
+        width: 0px;
+        height: 0px;
+    }
+
+    .ubac-nav {
+        margin-left: 20px;
+    }
+
+    .basic-navbar-nav {
+        width: 375px;
+    }
+
+    .shopping-cart {
+        font-size: 14px;
+    }
 }
