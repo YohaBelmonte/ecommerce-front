@@ -81,11 +81,11 @@ function LoginPage() {
 
         <div className="d-flex justify-content-center ">
           <Button
-            className="text-light w-100 mt-4 "
+            className=" btn  btn-dark w-100  rounded-0 fs-5"
             variant="primary"
             onClick={Login}
           >
-            LOGIN
+            Login
           </Button>
         </div>
       </Form>

@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
 import NewPassword from './Pages/NewPassword/NewPassword';
+import ResetPassword from './components/ResetPassword/ResetPassword';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={
           <div>
-            <div className='mt-5'>
+            <div>
               <HomePage/>
             </div>
           </div>
@@ -24,7 +25,7 @@ function App() {
         <Route path='/Login' element={
           <div>
 
-            <div className='mt-5'>
+            <div>
               <LoginPage />
             </div>
           </div>
@@ -34,8 +35,18 @@ function App() {
         <Route path='/Register' element={
           <div>
 
-            <div className='mt-5'>
+            <div>
               <RegisterPage />
+            </div>
+          </div>
+        }>
+        </Route>
+
+        <Route path='/ResetPassword' element={
+          <div>
+
+            <div>
+              < ResetPassword/>
             </div>
           </div>
         }>
@@ -44,7 +55,7 @@ function App() {
         <Route path='/NewPassword' element={
           <div>
 
-            <div className='mt-5'>
+            <div>
               < NewPassword/>
             </div>
           </div>
