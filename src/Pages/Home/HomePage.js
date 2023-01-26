@@ -2,8 +2,13 @@ import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import CardShoes from "../../components/CardShoes/CardShoes";
+import useHome from "../../Utils/useHome";
 
 function HomePage() {
+
+//hook
+const { MapProduct } = useHome();
+
   return (
     //home de prueba ↓↓↓↓ para ver si andaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓
     <div>
@@ -22,8 +27,7 @@ function HomePage() {
       </div>
 
       <div className="d-flex flex-column-reverse MapProductContainer">
-        {/* {MapProduct} */}
-        <CardShoes />
+        {MapProduct}
       </div>
     </div>
   );

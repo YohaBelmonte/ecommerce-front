@@ -15,12 +15,12 @@ function CardShoes({propName, propImage, propDescription, propRating, propPrice}
     <div>
       <div id="toast"></div>
       <div id="toast-cart"></div>
-      <div className="container">
+      {/* <div className="container"> */}
         {/* <hr> */}
         {/* <br> */}
-        <div className="row">
-          <div className="col-lg-4">
-            <div className="card">
+        {/* <div className="row"> */}
+          {/* <div className="col-lg-3"> */}
+            <div className="m-0 card">
               <span id="heart" className="heart">
                 {/* <i onclick="wishList()" className="fas fa-heart"></i> */}
               </span>
@@ -34,11 +34,11 @@ function CardShoes({propName, propImage, propDescription, propRating, propPrice}
                   <h5 className="card-title">{propName}</h5>
                 </center>
               </div>
-            </div>
-          </div>
+            {/* </div> */}
+          {/* </div> */}
 
           
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

@@ -1,37 +1,38 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import CardShoes from "../../src/components/CardPost/CardPost";
-import { NavItem } from "react-bootstrap";
+import CardShoes from "../../src/components/CardShoes/CardShoes";
 
-function UseHome(){
-    const [product, setproduct] = useState([]);
-    useEffect(() => {
-        GetProduct();
-    }, []);
+function UseHome() {
+  const token = localStorage.getItem("token") ?? "";
+  const headers = { "x-auth-token": token };
+  const [product, setproduct] = useState([]);
+  useEffect(() => {
+    GetProduct();
+  }, []);
 
   const url = "http://localhost:4000/api";
 
-    async function GetProduct() {
-        try {
-          const { data } = await axios.get(`${url}/product`, { headers });
-          setproduct(data);
-          console.log(data)
-        } catch (error) {
-          console.error(error);
-        }
-      }
+  async function GetProduct() {
+    try {
+      const { data } = await axios.get(`${url}/product`, { headers });
+      setproduct(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
-      const MapProduct= product.map((iten,i)=>(
-        <CardShoes
-        key={i}
-        propName={item.name}
-        propImage={item.image}
-        propDescription={item.description}
-        propRating={item.rating}
-        propPrice={item.price}
-        />
-      ));
-      return{
-        MapProduct
-      }
+  const MapProduct = product.map((item, i) => (
+    <CardShoes
+      key={i}
+      propName={item.name}
+      propImage={item.image}
+      propDescription={item.description}
+      propRating={item.rating}
+      propPrice={item.price}
+    />
+  ));
+  return {
+    MapProduct,
+  };
 }
+export default UseHome;
