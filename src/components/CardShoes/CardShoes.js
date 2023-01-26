@@ -6,7 +6,7 @@ import { useState } from "react";
 // import { AiOutlineRetweet } from "react-icons/ai";
 import axios from "axios";
 
-function CardShoes() {
+function CardShoes({propName, propImage, propDescription, propRating, propPrice}) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -24,14 +24,14 @@ function CardShoes() {
               <span id="heart" className="heart">
                 {/* <i onclick="wishList()" className="fas fa-heart"></i> */}
               </span>
-              <img src="https://images.unsplash.com/photo-1565208565380-02138793c3b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" className="first-image"/>
+              <img src={propImage}/>
               <div className="card-body">
                 <a href="#" onclick="addCart()">
                   <center>Add to cart</center>
                 </a>
                 {/* <hr> */}
                 <center>
-                  <h5 className="card-title">Black Pants</h5>
+                  <h5 className="card-title">{propName}</h5>
                 </center>
               </div>
             </div>
