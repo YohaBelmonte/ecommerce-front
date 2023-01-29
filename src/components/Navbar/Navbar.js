@@ -18,7 +18,7 @@ function AdminNavbar() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  AdminPage
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
@@ -26,7 +26,7 @@ function AdminNavbar() {
                   <Nav.Link href="/Admin">Home</Nav.Link>
                   <Nav.Link href="/Admin/Productos">Productos</Nav.Link>
                   <Nav.Link href="#action3">Añadir Productos</Nav.Link>
-                  <Nav.Link href="#action4">Categorías</Nav.Link>
+                  <Nav.Link href="/Admin/Categorias">Categorías</Nav.Link>
                   <Nav.Link href="#action5">Pedidos</Nav.Link>
                   <Nav.Link href="/Admin/Usuarios">Usuarios</Nav.Link>
                 </Nav>

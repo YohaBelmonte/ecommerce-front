@@ -13,7 +13,7 @@ function WithHeaderExample() {
           <Card.Text>
             Total por ventas = $1.000.000
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Ver detalles</Button>
         </Card.Body>
       </Card>
       <Card className='col-3'>
@@ -23,7 +23,7 @@ function WithHeaderExample() {
           <Card.Text>
             Total por ventas = $8.000.000
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Ver detalles</Button>
         </Card.Body>
       </Card>
       <Card className='col-3'>
@@ -33,7 +33,7 @@ function WithHeaderExample() {
           <Card.Text>
             Total por ventas = $2.000.000
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Ver detalles</Button>
         </Card.Body>
       </Card>
       </div>
@@ -45,7 +45,7 @@ function WithHeaderExample() {
           <Card.Text>
             Total pedidos = 489
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Ver detalles</Button>
         </Card.Body>
       </Card>
       <Card className='col-3'>
@@ -55,7 +55,7 @@ function WithHeaderExample() {
           <Card.Text>
           Total pedidos = 3426
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Ver detalles</Button>
         </Card.Body>
       </Card>
       <Card className='col-3'>
@@ -65,7 +65,7 @@ function WithHeaderExample() {
           <Card.Text>
           Total pedidos = 977
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Ver detalles</Button>
         </Card.Body>
       </Card>
       </div>
