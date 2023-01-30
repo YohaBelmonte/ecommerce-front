@@ -11,7 +11,7 @@ function NavBarComponent() {
             <Container>
                 <Navbar.Brand>
                     <div className='d-flex'>
-                        <div className='icons-nav2'> <a href="#" className='styleUser' > <FontAwesomeIcon icon={faUser} /> </a>
+                        <div className='icons-nav2'> <a href="#" className='styleUser' > <FontAwesomeIcon/> </a>
                         </div>
                         <h2 className=" d-flex justify-content-center mt-3 ubac-nav">U B A C</h2> </div></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav " />

@@ -3,7 +3,10 @@ import Admin from './Pages/Admin/admin';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Products from './Pages/Admin/Productos';
 import Usuarios from './Pages/Admin/Usuarios';
-import Categorias from './Pages/Admin/Categorias';
+import AboutUs from './Pages/Admin/AboutUs';
+import Faq from './Pages/Admin/FAQ';
+
+
 
 function App() {
   return (
@@ -43,10 +46,18 @@ function App() {
         }>
         </Route>
 
-        <Route path='/Admin/Categorias' element={
+        <Route path='/Admin/AboutUs' element={
           <div>
             <div>
-              <Categorias />
+              <AboutUs />
+            </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin/Faq' element={
+          <div>
+            <div>
+              <Faq />
             </div>
           </div>
         }>

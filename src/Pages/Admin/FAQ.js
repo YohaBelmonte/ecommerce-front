@@ -1,19 +1,19 @@
 import AdminNavbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar"; 
 import "./admin.css"
-import TablaProductos from "../../components/TablaProductos/TablaProductos";
+import Acordeon from "../../components/Accordion/Accordion";
 
-function Products() {
+function Faq() {
     return (
         <div>
 <AdminNavbar />
 <div className="d-flex m-0">
 <Sidebar/>
-<TablaProductos/>
+<Acordeon/>
 </div>
 
         </div>
     );
 }
 
-export default Products;
+export default Faq;

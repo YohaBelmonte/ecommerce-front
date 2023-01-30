@@ -1,4 +1,4 @@
-import './CardComponents.css';
+import './AdminIcon.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function CardComponents({icons}) {

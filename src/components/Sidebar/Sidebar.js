@@ -1,10 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./CardAdmin.css"
-import CardComponents from '../cardAdmin/CardComponents';
+import "./Sidebar.css"
+import CardComponents from '../AdminIcon/AdminIcon';
+import { Link } from "react-router-dom";
 
 
 
-function WithHeaderExample() {
+function Sidebar() {
   return (
     <div className="d-flex mt-5" id="wrapper">
       <div className="bg-white px-3" id="sidebar-wrapper">
@@ -28,10 +29,11 @@ function WithHeaderExample() {
 
         {/* esto no va */}
         <div className="list-group list-group-flush text-center">
-          <a href="/admin" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Dashboard</p></a>
-          <a href="/admin" className="list-group-item list-group-item-action bg-transparent second-text fw-bold"><p className='af'>Usuarios</p></a>
-          <a href="/admin" className="list-group-item list-group-item-action bg-transparent second-text fw-bold"><p className='af'>Data</p></a>
-          <a href="/admin/productos" className="list-group-item list-group-item-action bg-transparent second-text fw-bold"><p className='af'>Productos</p></a>
+          <Link to="/admin" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Dashboard</p></Link>
+          <Link to="/admin/usuarios" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Usuarios</p></Link>         
+          <Link to="/admin/productos" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Productos</p></Link>
+          <a href="/admin" className="list-group-item list-group-item-action bg-transparent second-text fw-bold"><p className='af'>AboutUs</p></a>
+          <a href="/admin/Faq" className="list-group-item list-group-item-action bg-transparent second-text fw-bold"><p className='af'>FAQ</p></a>
           <a href="/admin" className="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><p className='aff text-danger'>Logout</p></a>
         </div>
       </div>
@@ -41,4 +43,4 @@ function WithHeaderExample() {
   );
 }
 
-export default WithHeaderExample;
+export default Sidebar;

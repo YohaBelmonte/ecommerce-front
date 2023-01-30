@@ -1,5 +1,5 @@
 import AdminNavbar from "../../components/Navbar/Navbar";
-import WithHeaderExample from "../../components/CardShoes/CardAdmin"; 
+import Sidebar from "../../components/Sidebar/Sidebar"; 
 import "./admin.css"
 import Dashboard from "../../components/Dashboard/Dashboard";
 
@@ -8,7 +8,7 @@ function Admin() {
         <div>
 <AdminNavbar />
 <div className="d-flex column-gap-2">
-<WithHeaderExample/>
+<Sidebar/>
 <Dashboard/>
 </div>
 
