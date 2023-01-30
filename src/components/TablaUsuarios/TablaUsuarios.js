@@ -3,7 +3,7 @@ import './TablaUsuarios.css'
 import Form from 'react-bootstrap/Form';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, InputGroup } from 'react-bootstrap';
 
 function TablaUsuarios() {
 
@@ -48,7 +48,7 @@ function TablaUsuarios() {
               <tbody className='text-center'>
 
                 <tr>
-                  <td>{Math.round(Math.random()*100)}</td>
+                  <td>{Math.round(Math.random() * 100)}</td>
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
@@ -59,7 +59,7 @@ function TablaUsuarios() {
                   </td>
                 </tr>
                 <tr>
-                  <td>{Math.round(Math.random()*100)}</td>
+                  <td>{Math.round(Math.random() * 100)}</td>
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
@@ -70,7 +70,7 @@ function TablaUsuarios() {
                   </td>
                 </tr>
                 <tr>
-                  <td>{Math.round(Math.random()*100)}</td>
+                  <td>{Math.round(Math.random() * 100)}</td>
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
@@ -81,7 +81,7 @@ function TablaUsuarios() {
                   </td>
                 </tr>
                 <tr>
-                  <td>{Math.round(Math.random()*100)}</td>
+                  <td>{Math.round(Math.random() * 100)}</td>
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
@@ -92,7 +92,7 @@ function TablaUsuarios() {
                   </td>
                 </tr>
                 <tr>
-                  <td>{Math.round(Math.random()*100)}</td>
+                  <td>{Math.round(Math.random() * 100)}</td>
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
@@ -103,7 +103,7 @@ function TablaUsuarios() {
                   </td>
                 </tr>
                 <tr>
-                  <td>{Math.round(Math.random()*100)}</td>
+                  <td>{Math.round(Math.random() * 100)}</td>
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
@@ -140,6 +140,11 @@ function TablaUsuarios() {
                 <div class="form-group my-3">
                   <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="password" placeholder="Contraseña" />
                 </div>
+                <InputGroup className=" d-flex mb-3">
+                  <input type="checkbox" className="mx-1" />
+
+                  <Form type="disable" aria-label="Text input with checkbox" className='border-0 text-secondary mx-2'>Es administrador</Form>
+                </InputGroup>
 
                 <button class="custom-btn btn-5"><span>Añadir</span></button>
               </form>

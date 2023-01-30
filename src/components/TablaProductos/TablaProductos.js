@@ -3,7 +3,7 @@ import './TablaProductos.css'
 import Form from 'react-bootstrap/Form';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from 'react';
-import { Button, Modal, } from 'react-bootstrap';
+import { Button, Modal, InputGroup } from 'react-bootstrap';
 
 function TablaProductos() {
 
@@ -161,11 +161,16 @@ function TablaProductos() {
                     <option>Niños</option>
                   </select>
                 </div>
+                
                 <Form.Group controlId="formFileSm" className="mb-3">
 
                   <Form.Control type="file" size="m" />
                 </Form.Group>
+                <InputGroup className=" d-flex mb-3">
+                  <input type="checkbox" className="mx-1" />
 
+                  <Form type="disable" aria-label="Text input with checkbox" className='border-0 text-secondary mx-2'>Publicado</Form>
+                </InputGroup>
                 <button class="custom-btn btn-5"><span>Añadir</span></button>
               </form>
             </Modal.Body>

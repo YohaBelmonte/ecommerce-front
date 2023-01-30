@@ -140,6 +140,7 @@ function Acordeon() {
                             </div>
 
                             <button class="btn btn-dark rounded-0"><span>Actualizar</span></button>
+                            
                         </form>
                     </Modal.Body>
                 </Modal>
