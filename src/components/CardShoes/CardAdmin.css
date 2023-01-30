@@ -37,7 +37,6 @@
 
 #sidebar-wrapper {
   min-height: 100vh;
-  margin-left: -15rem;
   -webkit-transition: margin 0.25s ease-out;
   -moz-transition: margin 0.25s ease-out;
   -o-transition: margin 0.25s ease-out;
@@ -49,9 +48,7 @@
   font-size: 1.2rem;
 }
 
-#sidebar-wrapper .list-group {
-  width: 15rem;
-}
+
 
 #page-content-wrapper {
   min-width: 100vw;
@@ -103,24 +100,24 @@ div {
   cursor: pointer;
   margin: auto;
   background-color: #eee;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
   position: relative;
   overflow: hidden;
 }
 .daire > .bar {
   background-color: darkgray;
-  width: 200px;
+  width: 100px;
   height: 0px;
 }
 .daire:hover .bar {
-  height: 300px;
+  height: 100px;
 }
 .daire > .bar > div {
   background-color: #fff;
-  width: 190px;
-  height: 190px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -138,4 +135,75 @@ div {
   font-weight: bold;
   font-family: calibri;
   letter-spacing: 3px;
+  font-size: 18px;
+}
+
+.af {
+  margin:0%;
+  background-image: linear-gradient(to right,
+          #275e38,
+          #275e38 50%,
+          rgb(32, 32, 32) 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.af:before {
+  content: '';
+  background: #275e38;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.af:hover {
+  background-position: 0;
+}
+
+.af:hover::before {
+  width: 100%;
+}
+
+.aff {
+  background-image: linear-gradient(to right,
+          #9b1111,
+          #9b1111 50%,
+          #9b1111 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.aff:before {
+  content: '';
+  background:  #9b1111;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.aff:hover {
+  background-position: 0;
+}
+
+.aff:hover::before {
+  width: 100%;
 }

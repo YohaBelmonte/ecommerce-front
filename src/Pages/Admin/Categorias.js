@@ -1,13 +1,19 @@
 import AdminNavbar from "../../components/Navbar/Navbar";
 import BasicExample from "../../components/TablaCategorias/Tabla";
+import WithHeaderExample from "../../components/CardShoes/CardAdmin";
 
 function Categorias() {
     return (
         <div>
-            <AdminNavbar/>
-<h1 className="bg-warning text-white text-center">AQUI HAY MUCHAS CATEGORIAS</h1>
+            <AdminNavbar />
+            <div className="d-flex">
+                <WithHeaderExample />
+                
+                <BasicExample/>
+               
 
-<BasicExample/>
+            </div>
+
         </div>
     );
 }

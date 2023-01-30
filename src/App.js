@@ -1,7 +1,7 @@
 import './App.css';
 import Admin from './Pages/Admin/admin';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Productos from './Pages/Admin/Productos';
+import Products from './Pages/Admin/Productos';
 import Usuarios from './Pages/Admin/Usuarios';
 import Categorias from './Pages/Admin/Categorias';
 
@@ -29,7 +29,7 @@ function App() {
         <Route path='/Admin/Productos' element={
           <div>
             <div>
-              <Productos />
+              <Products />
             </div>
           </div>
         }>

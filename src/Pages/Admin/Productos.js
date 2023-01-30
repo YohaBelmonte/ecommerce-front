@@ -1,15 +1,19 @@
 import AdminNavbar from "../../components/Navbar/Navbar";
-import GroupExample from "../../components/CardShoes/CardShoes";
+import WithHeaderExample from "../../components/CardShoes/CardAdmin"; 
+import "./admin.css"
+import BasicExample from "../../components/TablaCategorias/Tabla";
 
-function Productos() {
+function Products() {
     return (
         <div>
-            <AdminNavbar/>
-<h1 className="bg-secondary text-white text-center">AQUI HAY MUCHOS PRODUCTOS</h1>
+<AdminNavbar />
+<div className="d-flex m-0">
+<WithHeaderExample/>
+<BasicExample/>
+</div>
 
-<GroupExample/>
         </div>
     );
 }
 
-export default Productos;
+export default Products;
