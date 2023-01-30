@@ -15,21 +15,21 @@ function TablaUsuarios() {
 
     <div className="container-fluid">
       <div className="crud shadow-lg p-3 my-5 bg-dark">
-        <div class="row ">
+        <div class="row p-2">
 
           <div class="col-sm-3 mt-5 mb-4 text-gred">
             <div className="search">
               <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar usuario" aria-label="Search" />
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar Usuario" aria-label="search" />
 
               </form>
             </div>
           </div>
           <div class="col-sm-3 offset-sm-2 mt-5 mb-4 text-gred text-white"><h4>USUARIOS</h4></div>
-          <div class="col-sm-3 offset-sm-1  mt-4 mb-4 text-gred">
+          <div class="col-sm-3 offset-sm-1 d-flex py-3 px-0 justify-content-end">
 
             <Button className="btn btn-outline-none btn-success" onClick={handleShow}>
-              Añadir un Nuevo Usuario
+              Añadir Usuario
             </Button>
           </div>
         </div>

@@ -15,7 +15,7 @@ function TablaProductos() {
 
     <div className="container-fluid">
       <div className="crud shadow-lg p-3 my-5 bg-dark">
-        <div class="row ">
+        <div class="row p-2">
 
           <div class="col-sm-3 mt-5 mb-4 text-gred">
             <div className="search">
@@ -26,7 +26,7 @@ function TablaProductos() {
             </div>
           </div>
           <div class="col-sm-3 offset-sm-2 mt-5 mb-4 text-gred text-white"><h4>PRODUCTOS</h4></div>
-          <div class="col-sm-3 offset-sm-1  mt-4 mb-4 text-gred">
+          <div class="col-sm-3 offset-sm-1 d-flex py-3 px-0 justify-content-end">
 
             <Button className="btn btn-outline-none btn-success" onClick={handleShow}>
               Añadir Producto
