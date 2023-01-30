@@ -1,43 +1,37 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import "./Navbar.css";
 
-function AdminNavbar() {
-  return (
-    <>
-      {[false].map((expand) => (
-        <Navbar key={expand} bg="light" expand={expand} className="mb-3">
-          <Container fluid>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-${expand}`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="start"
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  AdminPage
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="/Admin">Home</Nav.Link>
-                  <Nav.Link href="/Admin/Productos">Productos</Nav.Link>
-                  <Nav.Link href="#action3">Añadir Productos</Nav.Link>
-                  <Nav.Link href="/Admin/Categorias">Categorías</Nav.Link>
-                  <Nav.Link href="#action5">Pedidos</Nav.Link>
-                  <Nav.Link href="/Admin/Usuarios">Usuarios</Nav.Link>
-                </Nav>
-              
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-          </Container>
-        </Navbar>
-      ))}
-    </>
-  );
+function NavBarComponent() {
+    return (
+        <Navbar bg="light" expand="lg">
+            <Container>
+                <Navbar.Brand>
+                    <div className='d-flex'>
+                        <div className='icons-nav2'> <a href="#" className='styleUser' > <FontAwesomeIcon icon={faUser} /> </a>
+                        </div>
+                        <h2 className=" d-flex justify-content-center mt-3 ubac-nav">U B A C</h2> </div></Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav " />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="link-navbar mt-4">
+                        <p><a href="#" className='af mx-lg-5' data-replace="INICIO" ><span>INICIO</span></a></p>
+                        <p><a href="#" className='af' data-replace="MASCULINO" ><span>MASCULINO</span> </a> </p>
+                        <p><a href="#" className='af mx-lg-5' data-replace="FEMENINO" ><span>FEMENINO</span></a></p>
+                        <p><a href="./about" className='af' data-replace="SOBRE NOSOTROS" ><span>SOBRE NOSOTROS</span></a></p>
+                        <p><a href="#" className='af mx-lg-5' data-replace="CONTACTO"><span>CONTACTO</span></a></p>
+                        <p><a href="#" className='af mx-lg-5 shopping-cart' data-replace="CONTACTO"><span>PERFIL</span></a></p>
+                        <p><a href="#" className='af shopping-cart' data-replace="CONTACTO"><span>MI CARRITO</span></a></p>
+                        <div className='icons-nav'>    <a href="#" className='styleIcons ' > <FontAwesomeIcon icon={faUser} /> </a> <a href="#" className='styleIcons ' > <FontAwesomeIcon icon={faShoppingCart} className="mx-5" /> </a>
+                        </div>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+
+        </Navbar >
+    )
 }
 
-export default AdminNavbar;
+export default NavBarComponent;
