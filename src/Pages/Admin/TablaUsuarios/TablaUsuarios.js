@@ -5,6 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from 'react';
 import { Button, Modal, InputGroup } from 'react-bootstrap';
 import axios from 'axios';
+import { BiEdit } from 'react-icons/bi';
+import { AiTwotoneDelete } from 'react-icons/ai';
+
+
 
 
 const url = "http://localhost:4000/api";
@@ -43,7 +47,6 @@ function TablaUsuarios() {
   //Get Method
   const [posts, setposts] = useState([]);
 
-
   useEffect(() => {
     GetMethod();
   }, []);
@@ -59,7 +62,7 @@ function TablaUsuarios() {
 
 
 
-
+  // Peticion Get ↓↓↓
   useEffect(() => {
     const peticionGet = async () => {
       const { data } = await axios.get(`${url}/user`)
@@ -71,8 +74,7 @@ function TablaUsuarios() {
   }, [])
 
 
-
-
+  // Peticion Delete ↓↓↓
   async function deletUser(id) {
     try {
       const { data } = await axios.delete(`${url}/user/${id}`)
@@ -84,6 +86,32 @@ function TablaUsuarios() {
       console.error(error)
     }
   }
+
+    //   //Put Method
+    //   const [update, setupdate] = useState({
+    //     name: "",
+    //     email: "",
+    //     password: ""
+    // });
+
+    // function OnChangeUpdate(e) {
+    //     const { name, value } = e.target;
+    //     const response = { ...update, [name]: value }
+    //     setupdate(response);
+    //     console.log(response);
+    // }
+
+    // async function PutMethod(id) {
+    //     try {
+    //         const { data } = await axios.put(`${url}/post/${id}`, update,)
+    //         console.log(data)
+    //         GetMethod()
+    //         setShow(false)
+    //     } catch (error) {
+    //         alert("No se pudo");
+    //         console.error(error);
+    //     }
+    // }
 
 
 
@@ -131,9 +159,14 @@ function TablaUsuarios() {
                     <td>{item.createAdd}</td>
                     <td><input type="checkbox" className="mx-1" /></td>
                     <td className='d-flex justify-content-evenly'>
-                      <a className="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i className="material-icons">&#xE417;</i></a>
+                      {/* ↓↓↓ Botones de la tabla ↓↓↓ */}
+
+                      <h2 className='btn'><BiEdit /></h2>
+                      <h2 className='btn' onClick={() => deletUser(item._id)}><AiTwotoneDelete /></h2>
+
+                      {/* <a className="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i className="material-icons">&#xE417;</i></a>
                       <a className="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i className="material-icons">&#xE254;</i></a>
-                      <a className="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }} onClick={() => deletUser(item._id)}><i className="material-icons">&#xE872;</i></a>
+                      <a className="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }} onClick={() => deletUser(item._id)}><i className="material-icons">&#xE872;</i></a> */}
                     </td>
                   </tr>
 
