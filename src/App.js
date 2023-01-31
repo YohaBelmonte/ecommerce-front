@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
+import ShoePage from './Pages/ShoePage/ShoePage'
 
 function App() {
 
@@ -36,6 +37,14 @@ function App() {
 
             <div className='mt-5'>
               <RegisterPage />
+            </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Shoe' element={
+          <div>
+            <div className=''>
+              <ShoePage/>
             </div>
           </div>
         }>
