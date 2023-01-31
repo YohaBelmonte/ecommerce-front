@@ -1,19 +1,19 @@
 import AdminNavbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar"; 
 import "./admin.css"
-import Dashboard from "../../components/Dashboard/Dashboard";
+import TablaProductos from "../../components/TablaProductos/TablaProductos";
 
-function Admin() {
+function Products() {
     return (
         <div>
 <AdminNavbar />
-<div className="d-flex column-gap-2">
+<div className="d-flex m-0">
 <Sidebar/>
-<Dashboard/>
+<TablaProductos/>
 </div>
 
         </div>
     );
 }
 
-export default Admin;
+export default Products;
