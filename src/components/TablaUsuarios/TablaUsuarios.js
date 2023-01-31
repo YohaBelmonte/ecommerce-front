@@ -42,6 +42,7 @@ function TablaUsuarios() {
                   <th className='col-2'>Name</th>
                   <th className='col-2'>Email</th>
                   <th className='col-2'>Fecha de registro</th>
+                  <th className='col-2'>Es admin</th>
                   <th className='col-2'>Actions</th>
                 </tr>
               </thead>
@@ -52,6 +53,7 @@ function TablaUsuarios() {
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
+                  <td><input type="checkbox" className="mx-1" /></td>
                   <td className='d-flex justify-content-evenly'>
                     <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
                     <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
@@ -63,6 +65,7 @@ function TablaUsuarios() {
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
+                  <td><input type="checkbox" className="mx-1" /></td>
                   <td className='d-flex justify-content-evenly'>
                     <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
                     <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
@@ -74,6 +77,7 @@ function TablaUsuarios() {
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
+                  <td><input type="checkbox" className="mx-1" /></td>
                   <td className='d-flex justify-content-evenly'>
                     <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
                     <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
@@ -85,6 +89,7 @@ function TablaUsuarios() {
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
+                  <td><input type="checkbox" className="mx-1" /></td>
                   <td className='d-flex justify-content-evenly'>
                     <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
                     <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
@@ -96,6 +101,7 @@ function TablaUsuarios() {
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
+                  <td><input type="checkbox" className="mx-1" /></td>
                   <td className='d-flex justify-content-evenly'>
                     <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
                     <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
@@ -107,6 +113,7 @@ function TablaUsuarios() {
                   <td>Rual Octo</td>
                   <td>Deban Steet</td>
                   <td>30/01/2023</td>
+                  <td><input type="checkbox" className="mx-1" /></td>
                   <td className='d-flex justify-content-evenly'>
                     <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
                     <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
