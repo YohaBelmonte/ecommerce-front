@@ -1,15 +1,14 @@
-import AdminNavbar from "../../components/Navbar/Navbar";
+import NavBarComponent from "../../components/Navbar/Navbar";
 
-function aboutUs() {
-    return (
-      <div>
-        <AdminNavbar />
-        <div className="d-flex m-0">
-          Holamundo
-        </div> 
+function Faq() {
+  return (
+    <div>
+      <NavBarComponent />
+      <div className="d-flex m-0">
+HOLA MUNDO
       </div>
-    );
-  }
-  
-  export default aboutUs;
-  
+    </div>
+  );
+}
+
+export default Faq;
