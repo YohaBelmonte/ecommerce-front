@@ -10,9 +10,7 @@ import Faq from './Pages/Admin/FAQ';
 
 
 import RegisterPage from './Pages/Register/RegisterPage';
-// import { Form, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
 
