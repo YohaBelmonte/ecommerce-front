@@ -65,6 +65,10 @@ function App() {
           <div>
             <div>
               <AboutUs />
+              </div>
+          </div>
+        }>
+        </Route>
 
         <Route path='/Login' element={
           <div>
@@ -81,6 +85,10 @@ function App() {
           <div>
             <div>
               <Faq />
+              </div>
+          </div>
+        }>
+        </Route>
 
 
         <Route path='/Register' element={
