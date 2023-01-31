@@ -24,7 +24,6 @@ function TablaUsuarios() {
       ...form, [name]: value,
     };
     setForm(response);
-    console.log(response)
   }
 
   async function Register() {
@@ -41,79 +40,78 @@ function TablaUsuarios() {
 
   }
 
-      //Get Method
-      const [posts, setposts] = useState([]);
+  //Get Method
+  const [posts, setposts] = useState([]);
 
-      useEffect(() => {
-          GetMethod();
-      }, []);
-  
-      async function GetMethod() {
-          try {
-              const { data } = await axios.get(`${url}/post`)
-              setposts(data)
-              console.log("Solo para verificar commit")
-          } catch (error) {
-              console.error(error)
-          }
-      }
+
+  useEffect(() => {
+    GetMethod();
+  }, []);
+
+  async function GetMethod() {
+    try {
+      const { data } = await axios.get(`${url}/user`)
+      setposts(data)
+    } catch (error) {
+      console.error(error)
+    }
+  }
 
 
 
 
   useEffect(() => {
     const peticionGet = async () => {
-      const data = await axios.get(`${url}/user`)
-        .then(response => {
-          setData(response.data)
-        });
+      const { data } = await axios.get(`${url}/user`)
+      setData(data)
     }
     peticionGet()
       .catch(console.error);
 
   }, [])
 
-  // const deletUser = async (id) => {
-  //   await axios.delete(axios.delete(`${url}/post/${id}`))
-  // }
+
+
+
   async function deletUser(id) {
     try {
-      console.log(deletUser)
-        const { data } = await axios.delete(`${url}/user/${id}`)
-        GetMethod()
-        handleClose(false)
-        window.location.href = "/admin/usuarios"
+      const { data } = await axios.delete(`${url}/user/${id}`)
+      GetMethod()
+      handleClose(false)
+      // window.location.href = "/admin/usuarios"
 
     } catch (error) {
-        console.error(error)
+      console.error(error)
     }
-}
+  }
+
+
 
   return (
 
     <div className="container-fluid">
       <div className="crud shadow-lg p-3 my-5 bg-dark">
-        <div class="row p-2">
+        <div className="row p-2">
 
-          <div class="col-sm-3 mt-5 mb-4 text-gred">
+          <div className="col-sm-3 mt-5 mb-4 text-gred">
             <div className="search">
-              <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar Usuario" aria-label="search" />
+              <form className="form-inline">
+                <input className="form-control mr-sm-2" type="search" placeholder="Buscar Usuario" aria-label="search" />
 
               </form>
             </div>
           </div>
-          <div class="col-sm-3 offset-sm-2 mt-5 mb-4 text-gred text-white"><h4>USUARIOS</h4></div>
-          <div class="col-sm-3 offset-sm-1 d-flex py-3 px-0 justify-content-end">
+          <div className="col-sm-3 offset-sm-2 mt-5 mb-4 text-gred text-white"><h4>USUARIOS</h4></div>
+          <div className="col-sm-3 offset-sm-1 d-flex py-3 px-0 justify-content-end">
 
             <Button className="btn btn-outline-none btn-success" onClick={handleShow}>
               Añadir Usuario
             </Button>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="table-responsive" >
-            <table class="table table-hover table-bordered  bg-light col-8">
+        <div className="row justify-content-center">
+          <div className="table-responsive" >
+            <table className="table table-hover table-bordered  bg-light col-8">
               <thead className='text-center'>
                 <tr >
                   <th className='col-1'>id</th>
@@ -125,17 +123,17 @@ function TablaUsuarios() {
                 </tr>
               </thead>
               <tbody className='text-center'>
-                {data.map(item => (
-                  <tr key={item.id}>
+                {data.map((item, i) => (
+                  <tr key={i}>
                     <td>{item._id}</td>
                     <td>{item.name}</td>
                     <td>{item.email}</td>
                     <td>{item.createAdd}</td>
                     <td><input type="checkbox" className="mx-1" /></td>
                     <td className='d-flex justify-content-evenly'>
-                      <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
-                      <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
-                      <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }} onClick={() => deletUser(item._id)}><i class="material-icons">&#xE872;</i></a>
+                      <a className="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i className="material-icons">&#xE417;</i></a>
+                      <a className="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i className="material-icons">&#xE254;</i></a>
+                      <a className="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }} onClick={() => deletUser(item._id)}><i className="material-icons">&#xE872;</i></a>
                     </td>
                   </tr>
 
@@ -160,13 +158,13 @@ function TablaUsuarios() {
             <Modal.Body>
               <form>
                 <div className="form-group">
-                  <input type="text" class="form-control" id="exampleInputEmail1" name='name' onChange={OnChange} placeholder="Nombre" />
+                  <input type="text" className="form-control" id="exampleInputEmail1" name='name' onChange={OnChange} placeholder="Nombre" />
                 </div>
                 <div className="form-group mt-3">
-                  <input type="email" class="form-control" id="exampleInputEmail1" name='email' onChange={OnChange} placeholder="Email" />
+                  <input type="email" className="form-control" id="exampleInputEmail1" name='email' onChange={OnChange} placeholder="Email" />
                 </div>
                 <div className="form-group my-3">
-                  <input type="password" class="form-control" id="exampleInputEmail1" name='password' onChange={OnChange} placeholder="Contraseña" />
+                  <input type="password" className="form-control" id="exampleInputEmail1" name='password' onChange={OnChange} placeholder="Contraseña" />
                 </div>
                 <InputGroup className=" d-flex mb-3">
                   <input type="checkbox" className="mx-1" />

@@ -32,9 +32,9 @@ function Sidebar() {
           <Link to="/admin" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Dashboard</p></Link>
           <Link to="/admin/usuarios" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Usuarios</p></Link>         
           <Link to="/admin/productos" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Productos</p></Link>
-          <a href="/admin" className="list-group-item list-group-item-action bg-transparent second-text fw-bold"><p className='af'>AboutUs</p></a>
-          <a href="/admin/Faq" className="list-group-item list-group-item-action bg-transparent second-text fw-bold"><p className='af'>FAQ</p></a>
-          <a href="/admin" className="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><p className='aff text-danger'>Logout</p></a>
+          <Link to="/admin/AboutUs" className="list-group-item list-group-item-action bg-transparent second-text fw-bold active"><p className='af'>AboutUs</p></Link>
+          <Link to="/admin/Faq" className="list-group-item list-group-item-action bg-transparent second-text fw-bold active"><p className='af'>FAQ</p></Link>
+          <Link to="/admin" className="list-group-item list-group-item-action bg-transparent text-danger fw-bold active"><p className='aff text-danger'>Logout</p></Link>
         </div>
       </div>
 
