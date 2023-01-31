@@ -7,7 +7,7 @@ import Usuarios from './Pages/Admin/Usuarios';
 import AboutUs from './Pages/Admin/AboutUs';
 import Faq from './Pages/Admin/FAQ';
 
-
+import ShoePage from './Pages/ShoePage/ShoePage';
 
 import RegisterPage from './Pages/Register/RegisterPage';
 // import { Form, Button } from "react-bootstrap";
