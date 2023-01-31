@@ -1,8 +1,7 @@
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { Navbar, Nav, Button} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { FaUserAlt, FaShoppingCart} from "react-icons/fa";
 import "./Navbar.css";
 
 function NavBarComponent() {
@@ -11,7 +10,8 @@ function NavBarComponent() {
             <Container>
                 <Navbar.Brand>
                     <div className='d-flex'>
-                        <div className='icons-nav2'> <a href="#" className='styleUser' > <FontAwesomeIcon/> </a>
+                        <div className='icons-nav2'> 
+                            {/* <a href="#" className='styleUser' ><FontAwesomeIcon/></a> */}
                         </div>
                         <h2 className=" d-flex justify-content-center mt-3 ubac-nav">U B A C</h2> </div></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav " />
@@ -24,7 +24,9 @@ function NavBarComponent() {
                         <p><a href="#" className='af mx-lg-5' data-replace="CONTACTO"><span>CONTACTO</span></a></p>
                         <p><a href="#" className='af mx-lg-5 shopping-cart' data-replace="CONTACTO"><span>PERFIL</span></a></p>
                         <p><a href="#" className='af shopping-cart' data-replace="CONTACTO"><span>MI CARRITO</span></a></p>
-                        <div className='icons-nav'>    <a href="#" className='styleIcons ' > <FontAwesomeIcon icon={faUser} /> </a> <a href="#" className='styleIcons ' > <FontAwesomeIcon icon={faShoppingCart} className="mx-5" /> </a>
+                        <div className='icons-nav'>
+                            <a href="#" className='styleIcons '><FaUserAlt/></a> 
+                            <a href="#" className='styleIcons '><FaShoppingCart/></a>
                         </div>
                     </Nav>
                 </Navbar.Collapse>
