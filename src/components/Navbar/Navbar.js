@@ -28,8 +28,22 @@ function NavBarComponent() {
                             <a href="#" className='styleIcons '><FaUserAlt/></a> 
                             <a href="#" className='styleIcons '><FaShoppingCart/></a>
                         </div>
+                        <div className="d-grid justify-content-center ">
+                            <Button className=" w-100 mt-1 " variant="success">
+                            <Link id="register_login" to="/Login">
+                                Login
+                            </Link>
+                            </Button>
+                            <Button className=" w-100 mt-1 " variant="success">
+                            <Link id="register_login" to="/register">
+                                Registrarse
+                            </Link>
+                            </Button>
+                        </div>
                     </Nav>
+                    
                 </Navbar.Collapse>
+                
             </Container>
 
         </Navbar >

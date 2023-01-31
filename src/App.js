@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path='/' element={
           <div>
-            <div className='mt-5'>
+            <div className=''>
               <HomePage/>
             </div>
           </div>
