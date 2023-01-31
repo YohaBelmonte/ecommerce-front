@@ -15,11 +15,35 @@ function TablaUsuarios() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-
   const [data, setData] = useState([]);
+  const [form, setForm] = useState({});
 
- 
+  function OnChange(e) {
+    const { name, value, } = e.target;
+    const response = {
+      ...form, [name]: value,
+    };
+    setForm(response);
+    console.log(response)
+  }
+
+  async function Register() {
+
+    try {
+      const response = await axios.post(`${url}/user`, form)
+      alert("se registró con exito")
+      window.location.href = "/admin/usuarios"
+
+    } catch (error) {
+
+      console.error(error)
+    }
+
+  }
+
+
+
+
   useEffect(() => {
     const peticionGet = async () => {
       const data = await axios.get(`${url}/user`)
@@ -64,6 +88,7 @@ function TablaUsuarios() {
                   <th className='col-2'>Name</th>
                   <th className='col-2'>Email</th>
                   <th className='col-2'>Fecha de registro</th>
+                  <th className='col-2'>Es admin</th>
                   <th className='col-2'>Actions</th>
                 </tr>
               </thead>
@@ -74,6 +99,7 @@ function TablaUsuarios() {
                     <td>{item.name}</td>
                     <td>{item.email}</td>
                     <td>{item.createAdd}</td>
+                    <td><input type="checkbox" className="mx-1" /></td>
                     <td className='d-flex justify-content-evenly'>
                       <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
                       <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
@@ -101,14 +127,14 @@ function TablaUsuarios() {
             </Modal.Header>
             <Modal.Body>
               <form>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="Name" placeholder="Nombre" />
+                <div className="form-group">
+                  <input type="text" class="form-control" id="exampleInputEmail1" name='name'  onChange={OnChange} placeholder="Nombre" />
                 </div>
-                <div class="form-group mt-3">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+                <div className="form-group mt-3">
+                  <input type="email" class="form-control" id="exampleInputEmail1" name='email'  onChange={OnChange} placeholder="Email" />
                 </div>
-                <div class="form-group my-3">
-                  <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="password" placeholder="Contraseña" />
+                <div className="form-group my-3">
+                  <input type="password" class="form-control" id="exampleInputEmail1" name='password'  onChange={OnChange} placeholder="Contraseña" />
                 </div>
                 <InputGroup className=" d-flex mb-3">
                   <input type="checkbox" className="mx-1" />
@@ -116,7 +142,7 @@ function TablaUsuarios() {
                   <Form type="disable" aria-label="Text input with checkbox" className='border-0 text-secondary mx-2'>Es administrador</Form>
                 </InputGroup>
 
-                <button class="custom-btn btn-5"><span>Añadir</span></button>
+                <button className="custom-btn btn-5" onClick={Register}><span>Añadir</span></button>
               </form>
             </Modal.Body>
           </Modal>
