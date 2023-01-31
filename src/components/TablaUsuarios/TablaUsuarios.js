@@ -41,6 +41,23 @@ function TablaUsuarios() {
 
   }
 
+      //Get Method
+      const [posts, setposts] = useState([]);
+
+      useEffect(() => {
+          GetMethod();
+      }, []);
+  
+      async function GetMethod() {
+          try {
+              const { data } = await axios.get(`${url}/post`)
+              setposts(data)
+              console.log("Solo para verificar commit")
+          } catch (error) {
+              console.error(error)
+          }
+      }
+
 
 
 
@@ -54,8 +71,23 @@ function TablaUsuarios() {
     peticionGet()
       .catch(console.error);
 
-  },[])
+  }, [])
 
+  // const deletUser = async (id) => {
+  //   await axios.delete(axios.delete(`${url}/post/${id}`))
+  // }
+  async function deletUser(id) {
+    try {
+      console.log(deletUser)
+        const { data } = await axios.delete(`${url}/user/${id}`)
+        GetMethod()
+        handleClose(false)
+        window.location.href = "/admin/usuarios"
+
+    } catch (error) {
+        console.error(error)
+    }
+}
 
   return (
 
@@ -103,7 +135,7 @@ function TablaUsuarios() {
                     <td className='d-flex justify-content-evenly'>
                       <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
                       <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
-                      <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
+                      <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }} onClick={() => deletUser(item._id)}><i class="material-icons">&#xE872;</i></a>
                     </td>
                   </tr>
 
@@ -128,13 +160,13 @@ function TablaUsuarios() {
             <Modal.Body>
               <form>
                 <div className="form-group">
-                  <input type="text" class="form-control" id="exampleInputEmail1" name='name'  onChange={OnChange} placeholder="Nombre" />
+                  <input type="text" class="form-control" id="exampleInputEmail1" name='name' onChange={OnChange} placeholder="Nombre" />
                 </div>
                 <div className="form-group mt-3">
-                  <input type="email" class="form-control" id="exampleInputEmail1" name='email'  onChange={OnChange} placeholder="Email" />
+                  <input type="email" class="form-control" id="exampleInputEmail1" name='email' onChange={OnChange} placeholder="Email" />
                 </div>
                 <div className="form-group my-3">
-                  <input type="password" class="form-control" id="exampleInputEmail1" name='password'  onChange={OnChange} placeholder="Contraseña" />
+                  <input type="password" class="form-control" id="exampleInputEmail1" name='password' onChange={OnChange} placeholder="Contraseña" />
                 </div>
                 <InputGroup className=" d-flex mb-3">
                   <input type="checkbox" className="mx-1" />
