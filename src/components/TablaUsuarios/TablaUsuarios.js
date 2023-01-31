@@ -2,15 +2,37 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './TablaUsuarios.css'
 import Form from 'react-bootstrap/Form';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Modal, InputGroup } from 'react-bootstrap';
+import axios from 'axios';
+
+
+const url = "http://localhost:4000/api";
+
 
 function TablaUsuarios() {
 
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+
+  const [data, setData] = useState([]);
+
+ 
+  useEffect(() => {
+    const peticionGet = async () => {
+      const data = await axios.get(`${url}/user`)
+        .then(response => {
+          setData(response.data)
+        });
+    }
+    peticionGet()
+      .catch(console.error);
+
+  },[])
+
+
   return (
 
     <div className="container-fluid">
@@ -46,73 +68,21 @@ function TablaUsuarios() {
                 </tr>
               </thead>
               <tbody className='text-center'>
+                {data.map(item => (
+                  <tr key={item.id}>
+                    <td>{item._id}</td>
+                    <td>{item.name}</td>
+                    <td>{item.email}</td>
+                    <td>{item.createAdd}</td>
+                    <td className='d-flex justify-content-evenly'>
+                      <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
+                      <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
+                      <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
+                    </td>
+                  </tr>
 
-                <tr>
-                  <td>{Math.round(Math.random() * 100)}</td>
-                  <td>Rual Octo</td>
-                  <td>Deban Steet</td>
-                  <td>30/01/2023</td>
-                  <td className='d-flex justify-content-evenly'>
-                    <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
-                    <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>{Math.round(Math.random() * 100)}</td>
-                  <td>Rual Octo</td>
-                  <td>Deban Steet</td>
-                  <td>30/01/2023</td>
-                  <td className='d-flex justify-content-evenly'>
-                    <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
-                    <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>{Math.round(Math.random() * 100)}</td>
-                  <td>Rual Octo</td>
-                  <td>Deban Steet</td>
-                  <td>30/01/2023</td>
-                  <td className='d-flex justify-content-evenly'>
-                    <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
-                    <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>{Math.round(Math.random() * 100)}</td>
-                  <td>Rual Octo</td>
-                  <td>Deban Steet</td>
-                  <td>30/01/2023</td>
-                  <td className='d-flex justify-content-evenly'>
-                    <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
-                    <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>{Math.round(Math.random() * 100)}</td>
-                  <td>Rual Octo</td>
-                  <td>Deban Steet</td>
-                  <td>30/01/2023</td>
-                  <td className='d-flex justify-content-evenly'>
-                    <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
-                    <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>{Math.round(Math.random() * 100)}</td>
-                  <td>Rual Octo</td>
-                  <td>Deban Steet</td>
-                  <td>30/01/2023</td>
-                  <td className='d-flex justify-content-evenly'>
-                    <a class="view" title="View" data-toggle="tooltip" style={{ color: "grey" }}><i class="material-icons">&#xE417;</i></a>
-                    <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }}><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
-                  </td>
-                </tr>
+                ))}
+
               </tbody>
             </table>
           </div>
