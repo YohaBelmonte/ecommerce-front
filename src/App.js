@@ -7,15 +7,12 @@ import Usuarios from './Pages/Admin/Usuarios';
 import AboutUs from './Pages/Admin/AboutUs';
 import Faq from './Pages/Admin/FAQ';
 
-
+import ShoePage from './Pages/ShoePage/ShoePage';
 
 import RegisterPage from './Pages/Register/RegisterPage';
-import { Form, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
-
 
 function App() {
 
@@ -26,11 +23,8 @@ function App() {
         <Route path='/' element={
           <div>
             <div className='mt-5'>
-
-              <div>Hola soy homepage</div>
-
+              <div>Hola BRO soy homepage </div>
               <HomePage/>
-
             </div>
           </div>
         }>
@@ -60,22 +54,19 @@ function App() {
           </div>
         }>
         </Route>
-
-        <Route path='/Admin/AboutUs' element={
+        {/* <Route path='/Admin/AboutUs' element={
           <div>
             <div>
               <AboutUs />
               </div>
           </div>
         }>
+        </Route> */}
         </Route>
-
         <Route path='/Login' element={
           <div>
-
             <div className='mt-5'>
               <LoginPage />
-
             </div>
           </div>
         }>
@@ -89,20 +80,22 @@ function App() {
           </div>
         }>
         </Route>
-
-
         <Route path='/Register' element={
           <div>
-
             <div className='mt-5'>
               <RegisterPage />
-
             </div>
           </div>
         }>
         </Route>
-
-
+        <Route path='/Shoe' element={
+          <div>
+            <div className=''>
+              <ShoePage/>
+            </div>
+          </div>
+        }>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
