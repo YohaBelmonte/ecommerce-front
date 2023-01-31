@@ -54,14 +54,13 @@ function App() {
           </div>
         }>
         </Route>
-        {/* <Route path='/Admin/AboutUs' element={
+        <Route path='/Admin/AboutUs' element={
           <div>
             <div>
               <AboutUs />
               </div>
           </div>
         }>
-        </Route> */}
         </Route>
         <Route path='/Login' element={
           <div>
