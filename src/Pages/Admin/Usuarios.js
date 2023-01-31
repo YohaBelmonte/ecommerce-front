@@ -1,6 +1,6 @@
 import AdminNavbar from "../../components/Navbar/Navbar";
-import Sidebar from "../../components/Sidebar/Sidebar"; 
-import TablaUsuarios from "../../components/TablaUsuarios/TablaUsuarios";
+import Sidebar from "../Admin/Sidebar/Sidebar"; 
+import TablaUsuarios from "../Admin/TablaUsuarios/TablaUsuarios";
 import "./admin.css"
 
 function Usuarios() {

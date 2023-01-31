@@ -1,7 +1,7 @@
 import NavBarComponent from "../../components/Navbar/Navbar";
-import Sidebar from "../../components/Sidebar/Sidebar";
+import Sidebar from "../Admin/Sidebar/Sidebar";
 import "./admin.css";
-import Acordeon from "../../components/Accordion/Accordion";
+import Acordeon from "../Admin/Accordion/Accordion";
 
 function Faq() {
   return (
