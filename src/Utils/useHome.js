@@ -19,7 +19,7 @@ function UseHome() {
     } catch (error) {
       console.error(error);
     }
-  }
+  };
 
   const MapProduct = product.map((item, i) => (
     <CardShoes
@@ -29,8 +29,12 @@ function UseHome() {
       propDescription={item.description}
       propRating={item.rating}
       propPrice={item.price}
+      propId={item._id}
+      propItem={item}
     />
   ));
+
+
   return {
     MapProduct,
   };
