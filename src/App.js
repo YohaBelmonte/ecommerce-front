@@ -54,7 +54,6 @@ function App() {
           </div>
         }>
         </Route>
-
         {/* <Route path='/Admin/AboutUs' element={
           <div>
             <div>
@@ -63,6 +62,7 @@ function App() {
           </div>
         }>
         </Route> */}
+        </Route>
         <Route path='/Login' element={
           <div>
             <div className='mt-5'>
@@ -80,7 +80,6 @@ function App() {
           </div>
         }>
         </Route>
-
         <Route path='/Register' element={
           <div>
             <div className='mt-5'>
@@ -97,8 +96,6 @@ function App() {
           </div>
         }>
         </Route>
-
-
       </Routes>
     </BrowserRouter>
   );
