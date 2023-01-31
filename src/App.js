@@ -26,7 +26,7 @@ function App() {
         <Route path='/' element={
           <div>
             <div className='mt-5'>
-              <div>Hola soy homepage</div>
+              <div>Hola BRO soy homepage </div>
               <HomePage/>
             </div>
           </div>
