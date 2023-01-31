@@ -34,8 +34,3 @@ const { MapProduct } = useHome();
 }
 
 export default HomePage;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> a25147b7573b95b711da3433e42646c82b26f2bb
