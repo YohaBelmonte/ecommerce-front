@@ -128,3 +128,4 @@ function TablaUsuarios() {
   );
 }
 
+export default TablaUsuarios;

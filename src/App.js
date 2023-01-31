@@ -1,5 +1,4 @@
 import './App.css';
-
 import Admin from './Pages/Admin/admin';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Products from './Pages/Admin/Productos';
@@ -9,16 +8,7 @@ import Faq from './Pages/Admin/FAQ';
 
 
 
-import RegisterPage from './Pages/Register/RegisterPage';
-import { Form, Button } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoginPage from './Pages/Login/LoginPage';
-import HomePage from './Pages/Home/HomePage';
-
-
 function App() {
-
   return (
     <BrowserRouter >
 
@@ -26,16 +16,11 @@ function App() {
         <Route path='/' element={
           <div>
             <div className='mt-5'>
-
               <div>Hola soy homepage</div>
-
-              <HomePage/>
-
             </div>
           </div>
         }>
         </Route>
-
         <Route path='/Admin' element={
           <div>
             <div>
@@ -65,35 +50,18 @@ function App() {
           <div>
             <div>
               <AboutUs />
-
-        <Route path='/Login' element={
-          <div>
-
-            <div className='mt-5'>
-              <LoginPage />
-
             </div>
           </div>
         }>
         </Route>
-
         <Route path='/Admin/Faq' element={
           <div>
             <div>
               <Faq />
-
-
-        <Route path='/Register' element={
-          <div>
-
-            <div className='mt-5'>
-              <RegisterPage />
-
             </div>
           </div>
         }>
         </Route>
-
 
       </Routes>
     </BrowserRouter>
