@@ -10,15 +10,15 @@ function NavBarComponent() {
   return (
     <div>
     <Navbar bg="light" expand="lg">
-      <Container className='container-nav'>
-      <Navbar.Brand>
+      <Container className='container-nav d-flex mt-5'>
                     <div className='d-flex'>
                         <div className='icons-nav2'>
                              <Link id="user" to="/" className='styleUser'>
                                  <FontAwesomeIcon icon={faUser} />
                              </Link>
                          </div>
-                      <p><h2 class="logo-nav">L O G O</h2> </p></div></Navbar.Brand>
+                     <div className='logo-nav'> <p>L O G O </p></div> 
+                     </div> 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto link-navbar">
