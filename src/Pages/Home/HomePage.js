@@ -5,7 +5,6 @@ import useHome from "../../Utils/useHome";
 import NavBarComponent from "../../components/Navbar/Navbar";
 
 function HomePage() {
-
 //hook
 const { MapProduct } = useHome();
 
