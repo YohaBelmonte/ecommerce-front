@@ -14,8 +14,8 @@ import HomePage from './Pages/Home/HomePage';
 function App() {
   return (
     <BrowserRouter >
-
       <Routes>
+  
         <Route path='/' element={
           <div>
             <div className=''>
