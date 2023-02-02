@@ -1,58 +1,66 @@
-import './App.css';
+import "./App.css";
 
-import Admin from './Pages/Admin/admin';
+import Admin from "./Pages/Admin/admin";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Products from './Pages/Admin/Productos';
-import Usuarios from './Pages/Admin/Usuarios';
-import AboutUs from './Pages/Admin/AboutUs';
-import Faq from './Pages/Admin/FAQ';
+import Products from "./Pages/Admin/Productos";
+import Usuarios from "./Pages/Admin/Usuarios";
+import AboutUs from "./Pages/Admin/AboutUs";
+import Faq from "./Pages/Admin/FAQ";
+import PreLoader from "./components/LoadingScreen/LoadingScreen";
 
-import ShoePage from './Pages/ShoePage/ShoePage';
+import ShoePage from "./Pages/ShoePage/ShoePage";
 
-import RegisterPage from './Pages/Register/RegisterPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import LoginPage from './Pages/Login/LoginPage';
-import HomePage from './Pages/Home/HomePage';
+import RegisterPage from "./Pages/Register/RegisterPage";
+import "bootstrap/dist/css/bootstrap.min.css";
+import LoginPage from "./Pages/Login/LoginPage";
+import HomePage from "./Pages/Home/HomePage";
 
 function App() {
-
   return (
-    <BrowserRouter >
-
+    <BrowserRouter>
+    <PreLoader />
       <Routes>
-        <Route path='/' element={
-          <div>
-            <div className=''>
-              <HomePage/>
+        <Route
+          path="/"
+          element={
+            <div>
+              <div className="">
+                <HomePage />
+              </div>
             </div>
-          </div>
-        }>
-        </Route>
+          }
+        ></Route>
 
-        <Route path='/Admin' element={
-          <div>
+        <Route
+          path="/Admin"
+          element={
             <div>
-              <Admin />
+              <div>
+                <Admin />
+              </div>
             </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Admin/Productos' element={
-          <div>
+          }
+        ></Route>
+        <Route
+          path="/Admin/Productos"
+          element={
             <div>
-              <Products />
+              <div>
+                <Products />
+              </div>
             </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Admin/Usuarios' element={
-          <div>
+          }
+        ></Route>
+        <Route
+          path="/Admin/Usuarios"
+          element={
             <div>
-              <Usuarios />
+              <div>
+                <Usuarios />
+              </div>
             </div>
-          </div>
-        }>
-        </Route>
+          }
+        ></Route>
         {/* <Route path='/Admin/AboutUs' element={
           <div>
             <div>
@@ -61,39 +69,47 @@ function App() {
           </div>
         }>
         </Route> */}
-        <Route path='/Login' element={
-          <div>
-            <div className='mt-5'>
-              <LoginPage />
-            </div>
-          </div>
-        }>
-        </Route>
-
-        <Route path='/Admin/Faq' element={
-          <div>
+        <Route
+          path="/Login"
+          element={
             <div>
-              <Faq />
+              <div className="mt-5">
+                <LoginPage />
               </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Register' element={
-          <div>
-            <div className='mt-5'>
-              <RegisterPage />
             </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Shoe' element={
-          <div>
-            <div className=''>
-              <ShoePage/>
+          }
+        ></Route>
+
+        <Route
+          path="/Admin/Faq"
+          element={
+            <div>
+              <div>
+                <Faq />
+              </div>
             </div>
-          </div>
-        }>
-        </Route>
+          }
+        ></Route>
+        <Route
+          path="/Register"
+          element={
+            <div>
+              <div className="mt-5">
+                <RegisterPage />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/Shoe"
+          element={
+            <div>
+              <div className="">
+                <ShoePage />
+              </div>
+            </div>
+          }
+        ></Route>
       </Routes>
     </BrowserRouter>
   );

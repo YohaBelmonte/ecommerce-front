@@ -34,9 +34,6 @@ function RegisterPage() {
 
   }
 
-
-
-
   return (
 
     <div className="d-flex justify-content-center bg-dark registerImage">
