@@ -1,25 +1,21 @@
 import './App.css';
-
 import Admin from './Pages/Admin/admin';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Products from './Pages/Admin/Productos';
 import Usuarios from './Pages/Admin/Usuarios';
 import AboutUs from './Pages/Admin/AboutUs';
 import Faq from './Pages/Admin/FAQ';
-
 import ShoePage from './Pages/ShoePage/ShoePage';
-
 import RegisterPage from './Pages/Register/RegisterPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
 
 function App() {
-
   return (
     <BrowserRouter >
-
       <Routes>
+  
         <Route path='/' element={
           <div>
             <div className=''>
@@ -28,7 +24,6 @@ function App() {
           </div>
         }>
         </Route>
-
         <Route path='/Admin' element={
           <div>
             <div>
@@ -69,7 +64,6 @@ function App() {
           </div>
         }>
         </Route>
-
         <Route path='/Admin/Faq' element={
           <div>
             <div>

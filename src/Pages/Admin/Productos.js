@@ -1,5 +1,5 @@
 import AdminNavbar from "../../components/Navbar/Navbar";
-import Sidebar from "../../components/Sidebar/Sidebar"; 
+import Sidebar from "../Admin/Sidebar/Sidebar"; 
 import "./admin.css"
 import TablaProductos from "../../components/TablaProductos/TablaProductos";
 

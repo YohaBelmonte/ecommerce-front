@@ -17,6 +17,8 @@ function NavBarComponent() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav " />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="link-navbar mt-4">
+                    
+
                         <p><a href="#" className='af mx-lg-5' data-replace="INICIO" ><span>INICIO</span></a></p>
                         <p><a href="#" className='af' data-replace="MASCULINO" ><span>MASCULINO</span> </a> </p>
                         <p><a href="#" className='af mx-lg-5' data-replace="FEMENINO" ><span>FEMENINO</span></a></p>
