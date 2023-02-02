@@ -6,6 +6,7 @@ import { AiTwotoneDelete } from 'react-icons/ai';
 import { useEffect, useState } from "react";
 import useAdmin from "../../Utils/useAdmin";
 import axios from "axios";
+import "./TablaUsuarios.js"
 
 
 
@@ -37,6 +38,7 @@ function TablaUsuarios() {
     try {
       const { data } = await axios.put(`${url}/user/${id}`, update)
       setId("")
+      window.location.reload()
     } catch (error) {
       alert("No se pudo");
       console.error(error);
@@ -69,9 +71,9 @@ function TablaUsuarios() {
   return (
     <NavBarComponent />,
 
-    <div>
-      <div className="container-fluid">
-        <div className="crud shadow-lg p-3 my-5 bg-dark">
+    
+      <div className="container-fluid ">
+        <div className="crud shadow-lg p-3 my-5 bg-dark ">
           <div className="row p-2">
             <div className="col-sm-3 mt-5 mb-4 text-gred">
               <div className="search">
@@ -169,7 +171,6 @@ function TablaUsuarios() {
                     </div>
                     <button className="custom-btn btn-5" onClick={() => setId("")}><span>Cancelar</span></button>
                     <button className="custom-btn btn-5" onClick={PutMethod}><span>Editar</span></button>
-
                   </form>
                 </Modal.Body>
                 <Modal.Footer>
@@ -180,7 +181,6 @@ function TablaUsuarios() {
           </div>
         </div>
       </div>
-    </div>
 
   )
 }
