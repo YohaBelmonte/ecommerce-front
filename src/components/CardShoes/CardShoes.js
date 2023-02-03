@@ -66,15 +66,18 @@ function CardShoes({
               </span>
               <img src={propImage} />
               <div className="card-body">
-                <a href="#" onClick={() => addToCart()}>
-                  <center>Add to cart</center>
-                </a>
-                {/* <a href="#" onClick={() => removeToCart()}>
-                  <center>Remove to cart</center>
-                </a> */}
                 <center>
                   <h5 className="card-title">{propName}</h5>
                 </center>
+                <a href="#" onClick={() => addToCart()}>
+                  <center className="tocart">Add to cart</center>
+                </a>
+                
+                <h2 className="precio">100 $</h2>
+
+                {/* <a href="#" onClick={() => removeToCart()}>
+                  <center>Remove to cart</center>
+                </a> */}
               </div>
             </div>
           </div>

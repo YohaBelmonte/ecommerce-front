@@ -5,6 +5,11 @@
 h1,
 .card-title,
 a,
+.card-title{
+  font-size: 20px;
+  margin-top: -100%;
+
+}
 #toast {
   font-family: "Roboto", sans-serif;
 }
@@ -14,7 +19,7 @@ h1 {
 }
 
 .card {
-  max-width: 250px;
+  max-width: 300px;
   margin-left: 0 !important;
   margin-right: 0 !important;
   box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
@@ -24,8 +29,8 @@ h1 {
 
 .card-body {
   /* background-color: #c5070757; */
-  padding: 5px 10px 5px 10px;
-  margin-top: -10px;
+  padding: 1px 15px 10px 15px;
+  margin-bottom: 40px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -35,7 +40,7 @@ h1 {
 .heart {
   color: #989898;
   margin-top: 15px;
-  margin-left: 230px;
+  margin-left: 250px;
   font-size: 30px;
   position: absolute;
   width: 40px;
@@ -47,11 +52,11 @@ h1 {
 }
 
 .heart-active {
-  color: #c50707;
+  color: #275e38;
 }
 
 .heart:hover {
-  color: red;
+  color: #275e38;
   background-color: #f9f9f9;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -61,6 +66,8 @@ h1 {
 
 .card-body a {
   visibility: hidden;
+  text-decoration: none;
+  
 }
 
 .card:hover > .card-body {
@@ -106,6 +113,28 @@ h1 {
 
 .wish {
   color: #c50707;
+}
+.tocart{
+ margin-top: 80%;
+  color: #212322;
+  font-size: 20px;
+  padding: 8px;
+  width: 45%;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #212322;
+}
+.tocart:hover{
+  background-color: #275e38;
+  transition-duration: 1s;
+  padding: 10px;
+  width: 55%;
+}
+.precio{
+  display: flex;
+  justify-content: end;
+  margin-top: -30%;
+  color: #275e38;
 }
 
 #toast,
