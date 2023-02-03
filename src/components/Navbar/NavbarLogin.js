@@ -3,47 +3,44 @@ import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./NavbarLogin.css";
 
 
 function NavBarComponent() {
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand>
+    <div>
+      <Navbar bg="light" expand="lg">
+        <Container className='container-nav d-flex'>
           <div className='d-flex'>
-            <div className='icons-nav2 styleUser'>
-              <Link to="/icon-nav" className='mx-lg-2 styleIcons2'>
+            <div className='icons-nav2'>
+              <Link id="user" to="/" className='styleUser'>
                 <FontAwesomeIcon icon={faUser} />
               </Link>
             </div>
-            <p><h2 class="ubac-nav">L O G O </h2> </p>
+            <div className='logo-nav'> <p>L O G O </p></div>
           </div>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav " />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="link-navbar mt-4">
-            <li className='container-link'>
-              <Link to="/home" className='link-nav mx-lg-5'>INICIO</Link>
-              <Link to="/mal" className='link-nav'>MASCULINO</Link>
-              <Link to="/famele" className='link-nav mx-lg-5'>FEMENINO</Link>
-              <Link to="/aboutUs" className='link-nav'>SOBRE NOSOTROS</Link>
-              <Link to="/contact" className='link-nav mx-lg-5'>CONTACTO</Link>
-              <Link to="/shoppingCart" className='link-nav shopping-cart mx-lg-5'>MI CARRITO</Link>
-              <Link to="/shoppingCart" className='link-nav shopping-cart mx-lg-5'>MI CARRITO</Link>
-              <Link to="/icon-nav" className='mx-lg-2 icon-nav'>
-                <FontAwesomeIcon icon={faUser} />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto link-navbar">
+              <div className='af mx-lg-5'> <Nav.Link href="#home">INICIO</Nav.Link></div>
+              <div className='af'> <Nav.Link href="#male">MASCULINO</Nav.Link></div>
+              <div className='af mx-lg-5'> <Nav.Link href="#female">FEMENINO</Nav.Link></div>
+              <div className='af'> <Nav.Link href="#aboutUs">SOBRE NOSOTROS</Nav.Link></div>
+              <div className='af mx-lg-5'> <Nav.Link href="#contact">CONTACTO</Nav.Link></div>
+              <div className='af mx-lg-5 shopping-cart'> <Nav.Link href="#contact">MI CARRITO</Nav.Link></div>
+            </Nav>
+            <div className='icons-nav2'>
+              <Link id="user" to="/" className=''>
+                <button> register </button>
               </Link>
-              <Link to="/icon-nav " className='icon-nav'>
-                <FontAwesomeIcon icon={faShoppingCart} className="mx-5" />
+              <Link id="user" to="/" className=''>
+                <button> register </button>
               </Link>
-            </li>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-
-    </Navbar >
-
+            </div>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
   )
 }
 
