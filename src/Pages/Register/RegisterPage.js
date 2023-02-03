@@ -23,7 +23,7 @@ function RegisterPage() {
   async function Register() {
 
     try {
-      const response = await axios.post(`${url}/user`, form)
+      const response = await axios.post(`${url}/user`, form);
       alert("se registro con exito")
       window.location.href = "/login"
 

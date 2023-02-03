@@ -1,57 +1,45 @@
 import "./NewPassword.css"
-import { Form, Button} from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
-// import axios from "axios";
-// import { Link } from "react-router-dom";
+import React from "react";
 
 function NewPassword() {
 
-    const [form, setForm] = useState({});
+    const [update, setForm] = useState({});
 
     function OnChange(e) {
         const { name, value, } = e.target;
         const response = {
-            ...form,
+            ...update,
             [name]: value,
         };
         setForm(response);
+        console.log(response)
 
     }
-                                                    
-    // async function Login() {
-    //     try {
-    //         const {data} = await axios.post(`http://localhost:4000/api/auth`, form)
+       
+        return (
 
-    //         localStorage.setItem('token', data)
+            <div className="d-flex justify-content-center bg-dark LoginImage">
+                <Form className="col-lg-3 col-sm-6 my-4 bg-light px-5 py-4" action="#">
+                    <p className="text-center">Nueva Contraseña</p>
 
-    //         window.location.href = '/'
-    //     } catch (error) {
-    //         console.error('error')
+                    <Form.Group className="my-5">
+                        <input id="1" className="border-bottom border-0 bg-light rounded-0 fs-6 " type="password" name="Password" placeholder="Nueva Contraseña" onChange={OnChange}></input>
 
-    //     }
-    // }
+                    </Form.Group>
+                    <Form.Group className="my-5">
+                    <input id="2" className="border-bottom border-0 bg-light rounded-0 fs-6 " type="password" name="Password" placeholder="Nueva Contraseña" onChange={OnChange}></input>
+                    </Form.Group>
 
-    return (
-
-        <div className="d-flex justify-content-center bg-dark LoginImage">
-            <Form className="col-lg-3 col-sm-6 my-4 bg-light px-5 py-4">
-                <p className="text-center">Nueva Contraseña</p>
-
-                <Form.Group className="my-5">
-                    <Form.Control className="border-bottom border-0 bg-light rounded-0 fs-6 " type="password" name="Password" placeholder="Nueva Contraseña" onChange={OnChange} />
-                </Form.Group>
-                <Form.Group className="my-5">
-                    <Form.Control className="border-bottom border-0 bg-light rounded-0 fs-6 " type="password" name="Password" placeholder="Confirmación de contraseña" onChange={OnChange} />
-                </Form.Group>
-
-                <div className="d-flex justify-content-center ">
-                    <Button className=" btn  btn-dark w-100  rounded-0 fs-5" type="submit" >Enviar</Button>
-                </div>
-            </Form>
-        </div>
-    );
-   
+                    <div className="d-flex justify-content-center ">
+                        <Button className=" btn  btn-dark w-100  rounded-0 fs-5" type="submit">Enviar</Button>
+                    </div>
+                </Form>
+            </div>
+        );
+    
 }
 
 export default NewPassword;

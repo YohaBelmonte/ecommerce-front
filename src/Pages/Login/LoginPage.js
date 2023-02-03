@@ -24,7 +24,7 @@ function LoginPage() {
       console.log(data);
       localStorage.setItem("token", data);
 
-      window.location.href = "/NewPassword";
+      window.location.href = "/";
     } catch (error) {
       console.error("error");
       alert("Error de sesion");
