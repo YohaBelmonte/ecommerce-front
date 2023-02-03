@@ -15,8 +15,7 @@ function App() {
   return (
     <BrowserRouter >
       <Routes>
-  
-        <Route path='/' element={
+          <Route path='/' element={
           <div>
             <div className=''>
               <HomePage/>
@@ -48,17 +47,17 @@ function App() {
           </div>
         }>
         </Route>
-        {/* <Route path='/Admin/AboutUs' element={
+        <Route path='/Admin/AboutUs' element={
           <div>
             <div>
               <AboutUs />
               </div>
           </div>
         }>
-        </Route> */}
+        </Route>
         <Route path='/Login' element={
           <div>
-            <div className='mt-5'>
+            <div className=''>
               <LoginPage />
             </div>
           </div>
@@ -74,7 +73,7 @@ function App() {
         </Route>
         <Route path='/Register' element={
           <div>
-            <div className='mt-5'>
+            <div className=''>
               <RegisterPage />
             </div>
           </div>
