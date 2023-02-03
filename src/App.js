@@ -20,10 +20,16 @@ function App() {
     <BrowserRouter>
     <PreLoader />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
+          <Route path='/' element={
+          <div>
+            <div className=''>
+              <HomePage/>
+            </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin' element={
+         <div>
               <div className="">
                 <HomePage />
               </div>
@@ -49,53 +55,46 @@ function App() {
                 <Products />
               </div>
             </div>
-          }
-        ></Route>
-        <Route
-          path="/Admin/Usuarios"
-          element={
-            <div>
-              <div>
-                <Usuarios />
-              </div>
-            </div>
-          }
-        ></Route>
-        {/* <Route path='/Admin/AboutUs' element={
+        }>
+        </Route>
+        <Route path='/Admin/AboutUs' element={
           <div>
             <div>
               <AboutUs />
               </div>
           </div>
         }>
-        </Route> */}
-        <Route
-          path="/Login"
-          element={
+        </Route>
+        <Route path='/Login' element={
+          <div>
+            <div className=''>
+              <LoginPage />
+            </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin/Faq' element={
             <div>
               <div className="mt-5">
                 <LoginPage />
               </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Register' element={
+          <div>
+            <div className=''>
+              <RegisterPage />
+            </div>
             </div>
           }
         ></Route>
-
         <Route
           path="/Admin/Faq"
           element={
             <div>
               <div>
                 <Faq />
-              </div>
-            </div>
-          }
-        ></Route>
-        <Route
-          path="/Register"
-          element={
-            <div>
-              <div className="mt-5">
-                <RegisterPage />
               </div>
             </div>
           }

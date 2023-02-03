@@ -1,6 +1,5 @@
 import "./LoginPage.css";
 import { Form, Button, FormText } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -32,7 +31,7 @@ function LoginPage() {
     <div className="d-flex justify-content-center bg-dark LoginImage">
       <Form className="col-lg-3 col-sm-6 my-4 bg-light px-5 py-4">
         <p className="text-center">Mi Cuenta</p>
-        <div className="d-flex justify-content-around my-4">
+        <div className="">
           <Link
             className="fs-4 text-secondary "
             id="register_login"

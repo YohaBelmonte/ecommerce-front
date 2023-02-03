@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
-import { Navbar, Nav, Button} from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Navbar, Nav, Button} from "react-bootstrap";
 import { FaUserAlt, FaShoppingCart} from "react-icons/fa";
 import "./Navbar.css";
 
