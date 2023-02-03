@@ -14,8 +14,10 @@ function LoginPage() {
     const response = {
       ...form,
       [name]: value,
+    
     };
     setForm(response);
+    console.log(OnChange)
   }
 
   async function Login() {
