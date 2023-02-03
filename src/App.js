@@ -1,30 +1,67 @@
+
 import './App.css';
-import RegisterPage from './Pages/Register/RegisterPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Admin from './Pages/Admin/admin';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import Products from './Pages/Admin/Productos';
+import Usuarios from './Pages/Admin/Usuarios';
+import AboutUs from './Pages/Admin/AboutUs';
+import Faq from './Pages/Admin/FAQ';
+import ShoePage from './Pages/ShoePage/ShoePage';
+import RegisterPage from './Pages/Register/RegisterPage';
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
 import NewPassword from './Pages/NewPassword/NewPassword';
 
 
 function App() {
-
   return (
-
     <BrowserRouter >
-
       <Routes>
         <Route path='/' element={
           <div>
-            <div>
-              <HomePage/>
+            <div className=''>
+              <HomePage />
             </div>
           </div>
         }>
         </Route>
+        <Route path='/Admin' element={
+          <div>
+            <div>
+              <Admin />
+            </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin/Productos' element={
+          <div>
+            <div>
+              <Products />
+            </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin/Usuarios' element={
+          <div>
+            <div>
+              <Usuarios />
+            </div>
+          </div>
+        }>
+        </Route>
+
+        <Route path='/Admin/AboutUs' element={
+          <div>
+            <div>
+              <AboutUs />
+            </div>
+          </div>
+        }>
+        </Route>
+
         <Route path='/Login' element={
           <div>
-
             <div>
               <LoginPage />
             </div>
@@ -32,10 +69,17 @@ function App() {
         }>
         </Route>
 
+        <Route path='/Admin/Faq' element={
+          <div>
+            <div>
+              <Faq />
+            </div>
+          </div>
+        }>
+        </Route>
         <Route path='/Register' element={
           <div>
-
-            <div>
+            <div className=''>
               <RegisterPage />
             </div>
           </div>
@@ -44,15 +88,21 @@ function App() {
 
         <Route path='/NewPassword' element={
           <div>
-
-            <div>
-              < NewPassword/>
+            <div className=''>
+              <NewPassword />
             </div>
           </div>
         }>
         </Route>
 
-
+        <Route path='/Shoe' element={
+          <div>
+            <div className=''>
+              <ShoePage />
+            </div>
+          </div>
+        }>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
