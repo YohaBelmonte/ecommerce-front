@@ -1,7 +1,7 @@
 import './App.css';
 import Admin from './Pages/Admin/admin';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Products from './Pages/Admin/Productos';
 import Usuarios from './Pages/Admin/Usuarios';
 import AboutUs from './Pages/Admin/AboutUs';
