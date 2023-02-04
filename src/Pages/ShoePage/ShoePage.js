@@ -1,7 +1,11 @@
 import './ShoePage.css';
+import { Link } from "react-router-dom";
 
 
 function ShoePage() {
+
+
+   
 
 
 
@@ -15,9 +19,9 @@ function ShoePage() {
                 sdfdsfsdfdsf
             </div>
         </div>
-
-
-    )
+       
+)
 
 }
+
 export default ShoePage;

@@ -54,17 +54,18 @@ function PreLoader() {
     }, []);
 
   return (
+    <div >
     <div  className="body-preloader">
     {/* TERNARIO 1 ↓: buscamos renderizar los componentes cuando el estado "completed" sea FALSE */}
       {!completed ? (
         <>
         {/* TERNARIO 2 ↓: buscamos renderizar los componentes cuando el estado "loading" sea FALSE */}
           {!loading ? (
-            // <div className="spinner">
-            //   <span>Loading...</span>
-            //   <div className="half-spinner"></div>
-            // </div>
-            <Lottie options={defaultOption1} height={200} width={200} />
+            <div className="spinner">
+              <span>Loading...</span>
+              <div className="half-spinner"></div>
+            </div>
+            // <Lottie options={defaultOption1} height={200} width={200} />
           ) : (
             //Forma de llamar ↓ al component de la libreria LOTTIE
             <Lottie options={defaultOption2} height={100} width={100} />
@@ -76,6 +77,7 @@ function PreLoader() {
         ""
       )}
       {/* FIN TERNARIO 1 ↑ */}
+    </div>
     </div>
   );
 }

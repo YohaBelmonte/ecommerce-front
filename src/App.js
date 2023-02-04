@@ -6,7 +6,7 @@ import Products from "./Pages/Admin/Productos";
 import Usuarios from "./Pages/Admin/Usuarios";
 import AboutUs from "./Pages/Admin/AboutUs";
 import Faq from "./Pages/Admin/FAQ";
-import PreLoader from "./components/LoadingScreen/LoadingScreen";
+// import PreLoader from "./components/LoadingScreen/LoadingScreen";
 
 import ShoePage from "./Pages/ShoePage/ShoePage";
 
@@ -18,7 +18,7 @@ import HomePage from "./Pages/Home/HomePage";
 function App() {
   return (
     <BrowserRouter>
-    <PreLoader />
+    {/* <PreLoader /> */}
       <Routes>
           <Route path='/' element={
           <div>

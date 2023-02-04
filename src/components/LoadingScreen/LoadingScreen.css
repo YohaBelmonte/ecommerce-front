@@ -1,68 +1,70 @@
-
-.body-preloader{
-    z-index: 11111111 !important;
-    background-color: rgb(39, 94, 56);
-    /* background-color: #212322; */
+.body-preloader {
+  position: relative;
+  /* height: 100vh !important; */
+  z-index: 11111111 !important;
+  background-color: rgb(39, 94, 56);
+  /* background-color: #212322; */
 }
 .spinner {
-    width: 300px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-  }
-  
-  .spinner span {
-    font-size: 2rem;
-    animation: fade 1s linear 0s infinite;
-    padding-right: 1rem;
-    color:#fff
-  }
+  position: relative;
+  width: 300px;
+  z-index: 1111111111 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
 
-  /* diseño de un medio perimetro de circunferencia ↓ */
-  .half-spinner {
-    width: 50px;
-    height: 50px;
-    border: 3px solid #275e38;
-    border-top: 3px solid transparent;
-    border-radius: 50%;
-    animation: spin 0.5s linear 0s infinite;
+.spinner span {
+  font-size: 2rem;
+  animation: fade 1s linear 0s infinite;
+  padding-right: 1rem;
+  color: #fff;
+}
+
+/* diseño de un medio perimetro de circunferencia ↓ */
+.half-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #275e38;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.5s linear 0s infinite;
+}
+
+.completed {
+  font-size: 2rem;
+  color: #03fc4e;
+
+  animation: bigger 1s linear;
+}
+
+/* animacion BIGGER del div ".completed" el que hace crecer su escala de 0 a 2 en 0.5 segundos */
+@keyframes bigger {
+  from {
+    transform: scale(0);
   }
-  
-  .completed {
-    font-size: 2rem;
-    color: #03fc4e;
-  
-    animation: bigger 1s linear;
+  to {
+    transform: scale(2);
   }
-  
-  /* animacion BIGGER del div ".completed" el que hace crecer su escala de 0 a 2 en 0.5 segundos */
-  @keyframes bigger {
-    from {
-      transform: scale(0);
-    }
-    to {
-      transform: scale(2);
-    }
+}
+
+/* animacion SPIN del div ".half-spinner" el que hace girar el div en 360° en 0.5 segundos */
+@keyframes spin {
+  from {
+    transform: rotate(0);
   }
-  
- /* animacion SPIN del div ".half-spinner" el que hace girar el div en 360° en 0.5 segundos */
-  @keyframes spin {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
   }
-  
-  /* animacion fade (desvanecerce) del div ".spinner" pasando de opacidad 0=0% a 1=100% en 1 segundo */
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+}
+
+/* animacion fade (desvanecerce) del div ".spinner" pasando de opacidad 0=0% a 1=100% en 1 segundo */
+@keyframes fade {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}

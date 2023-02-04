@@ -1,7 +1,8 @@
 import "./CardShoes.css";
-import { useState } from "react";
+import {  useState } from "react";
 import { AiTwotoneHeart } from "react-icons/ai";
 import axios from "axios";
+
 
 function CardShoes({
   propName,
@@ -11,6 +12,7 @@ function CardShoes({
   propPrice,
   propId,
   propItem,
+  propDispatchADD,
 }) {
 
   //ADD TO CART
@@ -30,7 +32,6 @@ function CardShoes({
  
 //ADD TO FAV
   const [isFavActive, setIsFavActive] = useState(false);
-
   //--- ↓ agregar al array un nuevo producto
   async function wishList() {
     const favCart = JSON.parse(localStorage.getItem("fav")) || [];
@@ -46,6 +47,7 @@ function CardShoes({
     }
     console.log(isFavActive);
   }
+
 
 
   return (
@@ -66,7 +68,7 @@ function CardShoes({
               </span>
               <img src={propImage}/>
               <div className="card-body">
-                <a href="#" onClick={() => addToCart()}>
+                <a href="#" onClick={() => {propDispatchADD}}>
                   <center>Add to cart</center>
                 </a>
                 {/* <a href="#" onClick={() => removeToCart()}>
