@@ -1,16 +1,16 @@
-import AdminNavbar from "../../components/Navbar/Navbar";
-import Sidebar from "../../components/Sidebar/Sidebar"; 
+import NavBarComponent from "../../components/Navbar/Navbar";
+import Sidebar from "../Admin/Sidebar/Sidebar";
 import TablaUsuarios from "../../components/TablaUsuarios/TablaUsuarios";
 import "./admin.css"
 
 function Usuarios() {
     return (
         <div>
-<AdminNavbar />
-<div className="d-flex m-0">
-<Sidebar/>
-<TablaUsuarios/>
-</div>
+            <NavBarComponent />
+            <div className="d-flex m-0">
+                <Sidebar />
+                <TablaUsuarios/>
+            </div>
 
         </div>
     );

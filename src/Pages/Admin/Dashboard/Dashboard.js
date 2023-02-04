@@ -44,7 +44,7 @@ function Dashboard(){
         </div>
 
         <div className="row my-5">
-        <div class="mb-4 text-gred text-white text-center"><h4>ACTIVIDAD RECIENTE</h4></div>
+        <div className="mb-4 text-gred text-white text-center"><h4>ACTIVIDAD RECIENTE</h4></div>
           <div className="col">
             <table className="table bg-white rounded shadow-sm  table-hover">
               <thead>
