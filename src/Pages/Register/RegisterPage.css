@@ -1,0 +1,14 @@
+.registerImage {
+  background: url(https://www.lavanguardia.com/files/og_thumbnail/uploads/2020/06/26/5fa91d261c673.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+}
+Form {
+  height: fit-content;
+}
+Form p {
+  font-size: 200%;
+  font-weight: 400;
+}
