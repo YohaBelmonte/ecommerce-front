@@ -8,7 +8,7 @@
 
 .link-nav {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     color:rgb(32, 32, 32);
     background-image: linear-gradient(
         to right,
@@ -27,8 +27,11 @@
     background-size: 100% 2px;
     color: #275e38;
 } 
-.shopping-cart {
+.shopping-cart1 {
     font-size: 0px;
+}
+.shopping-cart {
+font-size: 0px;
 }
 .icon-nav {
     text-decoration: none;
@@ -59,6 +62,12 @@
         font-size: 0px;
     }
     .container-link {
+        display: block;
+    }
+    .shopping-cart1 {
+        font-size: 15px;
+    }
+    .link-nav {
         display: block;
     }
 }
