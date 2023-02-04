@@ -20,15 +20,15 @@ function CardShoes({
 
   async function addToCart() {
     try {
-      const response = await axios.put(`${url}/product/add/${propId}`,{},{headers});
+      const response = await axios.put(`${url}/product/add/${propId}`, {}, { headers });
       alert("Producto agregado con exito");
       console.log(response);
     } catch (error) {
       console.error(error);
     }
   }
- 
-//ADD TO FAV
+
+  //ADD TO FAV
   const [isFavActive, setIsFavActive] = useState(false);
 
   //--- ↓ agregar al array un nuevo producto
@@ -39,7 +39,7 @@ function CardShoes({
       favCart.push(propItem);
       //↓ El "fav" que se escribe es para identificarlo en el inspeccionar elemento-Application
       localStorage.setItem("fav", JSON.stringify(favCart));
-    } else{
+    } else {
       setIsFavActive(false);
       favCart.splice(propId, 1)
       localStorage.setItem("fav", JSON.stringify(favCart));
@@ -49,41 +49,34 @@ function CardShoes({
 
 
   return (
-    <div>
-      <div id="toast"></div>
-      <div id="toast-cart"></div>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3">
-            <div className="m-0 card">
-              <span
-                id="heart"
-                className={`heart${isFavActive ? "-active" : ""}`}
-              >
-                <i onClick={() => wishList()}>
-                  <AiTwotoneHeart />
-                </i>
-              </span>
-              <img src={propImage} />
-              <div className="card-body">
-                <center>
-                  <h5 className="card-title">{propName}</h5>
-                </center>
-                <a href="#" onClick={() => addToCart()}>
-                  <center className="tocart">Add to cart</center>
-                </a>
-                
-                <h2 className="precio">100 $</h2>
+    <> 
+      <div className="card">
+        <span
+          id="heart"
+          className={`heart${isFavActive ? "-active" : ""}`}
+        >
+          <i onClick={() => wishList()}>
+            <AiTwotoneHeart />
+          </i>
+        </span>
+        <img src={propImage} />
+        <div className="card-title-wrapper">
+        <center>
+            <h5 className="card-title">{propName}</h5>
+          </center>
+        </div>
+        <div className="card-body">
+          <a className="btn-card" href="#" onClick={() => addToCart()}>
+            <center className="tocart">Add to cart</center>
+          </a>
+          <h2 className="precio">$100</h2>
 
-                {/* <a href="#" onClick={() => removeToCart()}>
-                  <center>Remove to cart</center>
-                </a> */}
-              </div>
-            </div>
-          </div>
+          {/* <a href="#" onClick={() => removeToCart()}>
+            <center>Remove to cart</center>
+          </a> */}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
