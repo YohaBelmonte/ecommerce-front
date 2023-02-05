@@ -1,5 +1,5 @@
 import Accordion from 'react-bootstrap/Accordion';
-import { Button, Modal, } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { useState } from 'react';
 
 function Acordeon() {
@@ -10,7 +10,7 @@ function Acordeon() {
     return (
         <div className='container-fluid'>
             <div className="crud shadow-lg p-3 my-5 bg-dark">
-            <div className='text-center'><h3 class="text-white m-4">FAQ</h3></div>
+            <div className='text-center'><h3 className="text-white m-4">FAQ</h3></div>
             <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header className='col-11'>Accordion Item #1</Accordion.Header>
@@ -24,8 +24,8 @@ function Acordeon() {
                             culpa qui officia deserunt mollit anim id est laborum.</div>
                         <div className='d-flex justify-content-center m-3'>
 
-                            <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }} onClick={handleShow}><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
+                            <a className="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }} onClick={handleShow}><i className="material-icons">&#xE254;</i></a>
+                            <a className="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i className="material-icons">&#xE872;</i></a>
                         </div>
                     </Accordion.Body>
 
@@ -42,8 +42,8 @@ function Acordeon() {
           culpa qui officia deserunt mollit anim id est laborum.</div>
           <div className='d-flex justify-content-center m-3'>
         
-                    <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }} onClick={handleShow}><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
+                    <a className="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }} onClick={handleShow}><i className="material-icons">&#xE254;</i></a>
+                    <a className="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i className="material-icons">&#xE872;</i></a>
         </div>
                     </Accordion.Body>
                 </Accordion.Item>
@@ -59,8 +59,8 @@ function Acordeon() {
           culpa qui officia deserunt mollit anim id est laborum.</div>
           <div className='d-flex justify-content-center m-3'>
         
-                    <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }} onClick={handleShow}><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
+                    <a className="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }} onClick={handleShow}><i className="material-icons">&#xE254;</i></a>
+                    <a className="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i className="material-icons">&#xE872;</i></a>
         </div>
                     </Accordion.Body>
                 </Accordion.Item>
@@ -110,8 +110,8 @@ function Acordeon() {
           culpa qui officia deserunt mollit anim id est laborum.</div>
           <div className='d-flex justify-content-center m-3'>
         
-                    <a class="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }} onClick={handleShow}><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i class="material-icons">&#xE872;</i></a>
+                    <a className="edit" title="Edit" data-toggle="tooltip" style={{ color: "darkgreen" }} onClick={handleShow}><i className="material-icons">&#xE254;</i></a>
+                    <a className="delete" title="Delete" data-toggle="tooltip" style={{ color: "black" }}><i className="material-icons">&#xE872;</i></a>
         </div>
                     </Accordion.Body>
                 </Accordion.Item>
@@ -132,14 +132,14 @@ function Acordeon() {
                     </Modal.Header>
                     <Modal.Body>
                         <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="Question" placeholder="Pregunta" />
+                            <div className="form-group">
+                                <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="Question" placeholder="Pregunta" />
                             </div>
-                            <div class="form-group mt-3">
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="Answer" placeholder="Respuesta" />
+                            <div className="form-group mt-3">
+                                <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="Answer" placeholder="Respuesta" />
                             </div>
 
-                            <button class="btn btn-dark rounded-0"><span>Actualizar</span></button>
+                            <button className="btn btn-dark rounded-0"><span>Actualizar</span></button>
                             
                         </form>
                     </Modal.Body>
