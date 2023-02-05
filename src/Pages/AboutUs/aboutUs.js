@@ -3,7 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import "./AboutUs.css";
+import "./aboutUs.css";
 
 function AboutPage() {
   return (
@@ -11,7 +11,7 @@ function AboutPage() {
     <div>
       <Navbar />
       <div className="box-text w-100">
-        <div className='d-flex justify-content-center  text-about' ><a href="/" className='mx-2 mt-lg-5  home-about '>HOME</a> <h8 className="mt-lg-5">•   SOBRE NOSOTROS</h8></div>
+        <div className='d-flex justify-content-center  text-about' ><a href="/" className='mx-2 mt-lg-5  home-about '>HOME</a> <h6 className="mt-lg-5">•   SOBRE NOSOTROS</h6></div>
         {/* este box se va en sm */}
         <div className="mt-2 ">
           <div ><h1 className="ubac"> UBAC </h1></div>
@@ -39,10 +39,11 @@ function AboutPage() {
           </div>
           <div className="col-lg-4 col-sm-12 "> <img className="container-img1 col-12" src="https://img.freepik.com/fotos-premium/piernas-mujer-pantalones-negros-zapatillas-cuero-blanco-estilo-casual-moderno-nueva-coleccion-zapatos_173815-23316.jpg?w=2000" />
           </div>
-          <div className="col-lg-4 col-sm-12 mx-lg-5 p-5"> <p className="title1">
-            <h5 className="mt-lg-2 ">
+          <div className="col-lg-4 col-sm-12 mx-lg-5 p-5"> 
+            <h5 className="mt-lg-2 title1 ">
               Inspirado en la naturaleza,
-              diseñado para el futuro. </h5></p> <p className="text1 ">Desde su creación en 2018, Ubac ofrece zapatillas fabricadas con materiales naturales y reciclados. La palabra Ubac designa la ladera de la montaña menos expuesta al sol y
+              diseñado para el futuro. </h5> 
+              <p className="text1 ">Desde su creación en 2018, Ubac ofrece zapatillas fabricadas con materiales naturales y reciclados. La palabra Ubac designa la ladera de la montaña menos expuesta al sol y
                 por lo tanto la más preservada de la huella humana. Ubac se convierte entonces en símbolo de una naturaleza preservada y aún salvaje que debemos cuidar. Aspira a la sensación de libertad y
                 protección que los paisajes de alta montaña pueden proporcionar.</p>
           </div>
@@ -71,7 +72,7 @@ function AboutPage() {
 
       {/* seccion materiales */}
       <div className="seccionMateriales w-100" id="materiales">
-        <p><h1 className="SubTitle">Materiales</h1> </p>
+        <h1 className="SubTitle">Materiales</h1> 
         {/* solo se ve en response */}
         <div className="carruselResponse ">
           <Carousel>
@@ -167,7 +168,7 @@ function AboutPage() {
 
       {/* seccion ubicacion */}
       <div className="container-ubic w-100" id="ubicación">
-        <p><h1 className="SubTitle p-2">Ubicación</h1> </p>
+        <h1 className="SubTitle p-2">Ubicación</h1> 
         <p className="text2 p-2 text-arg"> Todos los productos son fabricados en Argentina.</p>
       </div>
       <div>
@@ -192,7 +193,7 @@ function AboutPage() {
 
       {/* seccion Impacto ambiental */}
       <div className="containerAmbiental w-100" id="impacto">
-        <p><h1 className="mt-lg-5  SubTitle p-2">Impacto ambiental</h1> </p>
+        <h1 className="mt-lg-5  SubTitle p-2">Impacto ambiental</h1>
         <p className="mt-lg-5  text4 p-2 mx-lg-5">Tenemos en cuenta el impacto del carbono y la cuestión del final de la vida útil de nuestros productos desde la etapa de diseño para hacerlo siempre mejor. </p>
         <div className="d-flex backImpact">
           <div className="Impact col-lg-7 mx-5 p-lg-5 mt-lg-5">
@@ -208,74 +209,74 @@ function AboutPage() {
 
       {/* seccion Nuestro equipo */}
       <div className="containerTeam w-100" id="team">
-        <p><h1 className="mt-lg-5  SubTitle p-2">Nuestro equipo</h1> </p>
-        <div class="row ">
-          <div class="col-12 col-sm-0 col-md-0 col-lg-2 ">  </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center cardTeam">
-            <div class="our-team">
-              <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=1027"></img>
+        <h1 className="mt-lg-5  SubTitle p-2">Nuestro equipo</h1> 
+        <div className="row ">
+          <div className="col-12 col-sm-0 col-md-0 col-lg-2 ">  </div>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center cardTeam">
+            <div className="our-team">
+              <div className="picture">
+                <img className="img-fluid" src="https://picsum.photos/130/130?image=1027"></img>
               </div>
-              <div class="team-content">
-                <h3 class="name">Yohana Belmonte</h3>
-                <h4 class="title">Lider </h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center cardTeam">
-            <div class="our-team">
-              <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=839"></img>
-              </div>
-              <div class="team-content">
-                <h3 class="name">Joaquín Lizarraga</h3>
-                <h4 class="title">Sector: Desarollador Web</h4>
+              <div className="team-content">
+                <h3 className="name">Yohana Belmonte</h3>
+                <h4 className="title">Lider </h4>
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center cardTeam">
-            <div class="our-team">
-              <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=856"></img>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center cardTeam">
+            <div className="our-team">
+              <div className="picture">
+                <img className="img-fluid" src="https://picsum.photos/130/130?image=839"></img>
               </div>
-              <div class="team-content">
-                <h3 class="name">Diego Ponce</h3>
-                <h4 class="title">Sector: Venta y atención al público</h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-0 col-md-0 col-lg-2 mt-lg-2">  </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-lg-2 d-flex justify-content-center cardTeam">
-            <div class="our-team">
-              <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=856"></img>
-              </div>
-              <div class="team-content">
-                <h3 class="name">Yuliana Senia</h3>
-                <h4 class="title">Sector: Diseño y Marketing</h4>
+              <div className="team-content">
+                <h3 className="name">Joaquín Lizarraga</h3>
+                <h4 className="title">Sector: Desarollador Web</h4>
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-lg-2 d-flex justify-content-center cardTeam">
-            <div class="our-team">
-              <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=856"></img>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center cardTeam">
+            <div className="our-team">
+              <div className="picture">
+                <img className="img-fluid" src="https://picsum.photos/130/130?image=856"></img>
               </div>
-              <div class="team-content">
-                <h3 class="name">Julieta Zarzosa</h3>
-                <h4 class="title">Sector: Ecológico y ambiental</h4>
+              <div className="team-content">
+                <h3 className="name">Diego Ponce</h3>
+                <h4 className="title">Sector: Venta y atención al público</h4>
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-sm-0 col-md-0 col-lg-2 mt-lg-2">  </div>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 mt-lg-2 d-flex justify-content-center cardTeam">
+            <div className="our-team">
+              <div className="picture">
+                <img className="img-fluid" src="https://picsum.photos/130/130?image=856"></img>
+              </div>
+              <div className="team-content">
+                <h3 className="name">Yuliana Senia</h3>
+                <h4 className="title">Sector: Diseño y Marketing</h4>
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 mt-lg-2 d-flex justify-content-center cardTeam">
+            <div className="our-team">
+              <div className="picture">
+                <img className="img-fluid" src="https://picsum.photos/130/130?image=856"></img>
+              </div>
+              <div className="team-content">
+                <h3 className="name">Julieta Zarzosa</h3>
+                <h4 className="title">Sector: Ecológico y ambiental</h4>
               </div>
 
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-lg-2 d-flex justify-content-center cardTeam">
-            <div class="our-team">
-              <div class="picture">
-                <img class="img-fluid" src="https://picsum.photos/130/130?image=836"></img>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 mt-lg-2 d-flex justify-content-center cardTeam">
+            <div className="our-team">
+              <div className="picture">
+                <img className="img-fluid" src="https://picsum.photos/130/130?image=836"></img>
               </div>
-              <div class="team-content">
-                <h3 class="name">Micaela</h3>
-                <h4 class="title">Sector: Calidad</h4>
+              <div className="team-content">
+                <h3 className="name">Micaela</h3>
+                <h4 className="title">Sector: Calidad</h4>
               </div>
             </div>
           </div>

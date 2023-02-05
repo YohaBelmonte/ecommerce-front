@@ -56,7 +56,7 @@ export default NavBarComponent;
 //                                 <FontAwesomeIcon icon={faUser} />
 //                             </Link>
 //                         </div>
-//                         <p><h2 class="logo-nav">L O G O</h2> </p></div></Navbar.Brand>
+//                         <p>L O G O</p></div></Navbar.Brand>
 //                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 //                 <Navbar.Collapse id="basic-navbar-nav">
 //                     <Nav className="link-navbar">

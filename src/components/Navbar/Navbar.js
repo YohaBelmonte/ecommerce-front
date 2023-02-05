@@ -17,7 +17,7 @@ function NavBarComponent() {
                 <FontAwesomeIcon icon={faUser} />
               </Link>
             </div>
-            <p><h2 class="ubac-nav">L O G O </h2> </p>
+            <h2 className="ubac-nav">L O G O </h2>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
