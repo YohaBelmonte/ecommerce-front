@@ -1,139 +1,101 @@
-import "./App.css";
-
-import Admin from "./Pages/Admin/admin";
+import './App.css';
+import Admin from './Pages/Admin/admin';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Products from "./Pages/Admin/Productos";
-import Usuarios from "./Pages/Admin/Usuarios";
-import AboutUs from "./Pages/Admin/AboutUs";
-import AboutUs2 from "./Pages/AboutUs/aboutUs";
-import Faq from "./Pages/Admin/FAQ";
-import PreLoader from "./components/LoadingScreen/LoadingScreen";
-import ShoePage from "./Pages/ShoePage/ShoePage";
-import RegisterPage from "./Pages/Register/RegisterPage";
-import LoginPage from "./Pages/Login/LoginPage";
-import HomePage from "./Pages/Home/HomePage";
-import NewPassword from "./Pages/NewPassword/NewPassword";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import Products from './Pages/Admin/Productos';
+import Usuarios from './Pages/Admin/Usuarios';
+import AboutUs from './Pages/Admin/AboutUs';
+import AboutUs2 from './Pages/AboutUs/aboutUs';
+import Faq from './Pages/Admin/FAQ';
+import ShoePage from './Pages/ShoePage/ShoePage';
+import RegisterPage from './Pages/Register/RegisterPage';
+import LoginPage from './Pages/Login/LoginPage';
+import HomePage from './Pages/Home/HomePage';
 
 function App() {
   return (
-    <BrowserRouter>
-      <PreLoader />
+    <BrowserRouter >
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <div className="">
-                <HomePage />
-              </div>
+          <Route path='/' element={
+          <div>
+            <div className=''>
+              <HomePage/>
             </div>
-          }
-        ></Route>
-        <Route
-          path="/Admin"
-          element={
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin' element={
+          <div>
             <div>
-              <div>
-                <Admin />
-              </div>
+              <Admin />
             </div>
-          }
-        ></Route>
-
-        <Route
-          path="/Admin/Productos"
-          element={
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin/Productos' element={
+          <div>
             <div>
-              <div>
-                <Products />
-              </div>
+              <Products />
             </div>
-          }
-        ></Route>
-        <Route
-          path="/Admin/Usuarios"
-          element={
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin/Usuarios' element={
+          <div>
             <div>
-              <div>
-                <Usuarios />
-              </div>
+              <Usuarios />
             </div>
-          }
-        ></Route>
-
-        <Route
-          path="/Admin/AboutUs"
-          element={
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin/AboutUs' element={
+          <div>
             <div>
-              <div>
-                <AboutUs />
+              <AboutUs />
               </div>
-            </div>
-          }
-        ></Route>
-        <Route
-          path="/aboutUs"
-          element={
+          </div>
+        }>
+        </Route>
+        <Route path='/aboutUs' element={
+          <div>
             <div>
-              <div>
-                <AboutUs2 />
+              <AboutUs2 />
               </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Login' element={
+          <div>
+            <div className=''>
+              <LoginPage />
             </div>
-          }
-        ></Route>
-        <Route
-          path="/Login"
-          element={
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin/Faq' element={
+          <div>
             <div>
-              <div>
-                <LoginPage />
+              <Faq />
               </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Register' element={
+          <div>
+            <div className=''>
+              <RegisterPage />
             </div>
-          }
-        ></Route>
-
-        <Route
-          path="/Admin/Faq"
-          element={
-            <div>
-              <div>
-                <Faq />
-              </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Shoe' element={
+          <div>
+            <div className=''>
+              <ShoePage/>
             </div>
-          }
-        ></Route>
-        <Route
-          path="/Register"
-          element={
-            <div>
-              <div className="">
-                <RegisterPage />
-              </div>
-            </div>
-          }
-        ></Route>
-
-        <Route
-          path="/NewPassword"
-          element={
-            <div>
-              <div className="">
-                <NewPassword />
-              </div>
-            </div>
-          }
-        ></Route>
-
-        <Route
-          path="/Shoe"
-          element={
-            <div>
-              <div className="">
-                <ShoePage />
-              </div>
-            </div>
-          }
-        ></Route>
+          </div>
+        }>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
