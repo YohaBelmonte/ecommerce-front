@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
 import Pagination from "./pagination";
-import products from "../../data/Products";
-import axios from "axios";
+// import products from "../../data/Products";
+// import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { listProduct } from "../../Redux/Actions/ProductActions";
 

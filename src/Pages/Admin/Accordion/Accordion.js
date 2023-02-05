@@ -1,5 +1,5 @@
 import Accordion from 'react-bootstrap/Accordion';
-import { Button, Modal, } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { useState } from 'react';
 
 function Acordeon() {
