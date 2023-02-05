@@ -21,9 +21,12 @@ function HomePage() {
         <div className="d-flex flex-column-reverse MapProductContainer">
           {MapProduct}
         </div>
+      <Footer />
       </div>
     </div>
   );
 }
 
 export default HomePage;
+
+  
