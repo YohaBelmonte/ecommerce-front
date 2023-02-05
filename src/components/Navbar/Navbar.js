@@ -24,7 +24,7 @@ function NavBarComponent() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="link-navbar mt-4">
             <li className='container-link'>
-              <Link to="/home" className='link-nav mx-lg-5'>INICIO</Link>
+              <Link to="/" className='link-nav mx-lg-5'>INICIO</Link>
               <Link to="/mal" className='link-nav'>MASCULINO</Link>
               <Link to="/famele" className='link-nav mx-lg-5'>FEMENINO</Link>
               <Link to="/aboutUs" className='link-nav'>SOBRE NOSOTROS</Link>
