@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Products from './Pages/Admin/Productos';
 import Usuarios from './Pages/Admin/Usuarios';
 import AboutUs from './Pages/Admin/AboutUs';
+import AboutUs2 from './Pages/AboutUs/aboutUs';
 import Faq from './Pages/Admin/FAQ';
 import ShoePage from './Pages/ShoePage/ShoePage';
 import RegisterPage from './Pages/Register/RegisterPage';
@@ -51,6 +52,14 @@ function App() {
           <div>
             <div>
               <AboutUs />
+              </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/aboutUs' element={
+          <div>
+            <div>
+              <AboutUs2 />
               </div>
           </div>
         }>

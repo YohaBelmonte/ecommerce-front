@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useHome from "../../Utils/useHome";
 import NavBarComponent from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 function HomePage() {
 
@@ -16,8 +17,11 @@ const { MapProduct } = useHome();
       <div className="d-flex flex-column-reverse MapProductContainer">
         {MapProduct}
       </div>
+      <Footer />
     </div>
   );
 }
 
 export default HomePage;
+
+  
