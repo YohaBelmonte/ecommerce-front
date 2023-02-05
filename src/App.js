@@ -5,38 +5,30 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Products from "./Pages/Admin/Productos";
 import Usuarios from "./Pages/Admin/Usuarios";
 import AboutUs from "./Pages/Admin/AboutUs";
+import AboutUs2 from "./Pages/AboutUs/aboutUs";
 import Faq from "./Pages/Admin/FAQ";
 import PreLoader from "./components/LoadingScreen/LoadingScreen";
-
 import ShoePage from "./Pages/ShoePage/ShoePage";
-
 import RegisterPage from "./Pages/Register/RegisterPage";
-import "bootstrap/dist/css/bootstrap.min.css";
 import LoginPage from "./Pages/Login/LoginPage";
 import HomePage from "./Pages/Home/HomePage";
+import NewPassword from "./Pages/NewPassword/NewPassword";
 
 function App() {
   return (
     <BrowserRouter>
-    <PreLoader />
+      <PreLoader />
       <Routes>
-          <Route path='/' element={
-          <div>
-            <div className=''>
-              <HomePage/>
-            </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Admin' element={
-         <div>
+        <Route
+          path="/"
+          element={
+            <div>
               <div className="">
                 <HomePage />
               </div>
             </div>
           }
         ></Route>
-
         <Route
           path="/Admin"
           element={
@@ -47,6 +39,7 @@ function App() {
             </div>
           }
         ></Route>
+
         <Route
           path="/Admin/Productos"
           element={
@@ -55,40 +48,50 @@ function App() {
                 <Products />
               </div>
             </div>
-        }>
-        </Route>
-        <Route path='/Admin/AboutUs' element={
-          <div>
+          }
+        ></Route>
+        <Route
+          path="/Admin/Usuarios"
+          element={
             <div>
-              <AboutUs />
+              <div>
+                <Usuarios />
               </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Login' element={
-          <div>
-            <div className=''>
-              <LoginPage />
-            </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Admin/Faq' element={
-            <div>
-              <div className="mt-5">
-                <LoginPage />
-              </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Register' element={
-          <div>
-            <div className=''>
-              <RegisterPage />
-            </div>
             </div>
           }
         ></Route>
+
+        <Route
+          path="/Admin/AboutUs"
+          element={
+            <div>
+              <div>
+                <AboutUs />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/aboutUs"
+          element={
+            <div>
+              <div>
+                <AboutUs2 />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/Login"
+          element={
+            <div>
+              <div>
+                <LoginPage />
+              </div>
+            </div>
+          }
+        ></Route>
+
         <Route
           path="/Admin/Faq"
           element={
@@ -99,6 +102,28 @@ function App() {
             </div>
           }
         ></Route>
+        <Route
+          path="/Register"
+          element={
+            <div>
+              <div className="">
+                <RegisterPage />
+              </div>
+            </div>
+          }
+        ></Route>
+
+        <Route
+          path="/NewPassword"
+          element={
+            <div>
+              <div className="">
+                <NewPassword />
+              </div>
+            </div>
+          }
+        ></Route>
+
         <Route
           path="/Shoe"
           element={
