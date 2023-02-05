@@ -12,6 +12,7 @@ const { MapProduct } = useHome();
   return (
     //home de prueba ↓↓↓↓ para ver si andaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓
     <div>
+      {/* <PreLoader/> */}
       <NavBarComponent/>
       <div className="d-flex flex-column-reverse MapProductContainer">
         {MapProduct}

@@ -1,4 +1,3 @@
-
 import './App.css';
 import Admin from './Pages/Admin/admin';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -12,17 +11,15 @@ import ShoePage from './Pages/ShoePage/ShoePage';
 import RegisterPage from './Pages/Register/RegisterPage';
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
-import NewPassword from './Pages/NewPassword/NewPassword';
-
 
 function App() {
   return (
     <BrowserRouter >
       <Routes>
-        <Route path='/' element={
+          <Route path='/' element={
           <div>
             <div className=''>
-              <HomePage />
+              <HomePage/>
             </div>
           </div>
         }>
@@ -51,12 +48,11 @@ function App() {
           </div>
         }>
         </Route>
-
         <Route path='/Admin/AboutUs' element={
           <div>
             <div>
               <AboutUs />
-            </div>
+              </div>
           </div>
         }>
         </Route>
@@ -70,18 +66,17 @@ function App() {
         </Route>
         <Route path='/Login' element={
           <div>
-            <div>
+            <div className=''>
               <LoginPage />
             </div>
           </div>
         }>
         </Route>
-
         <Route path='/Admin/Faq' element={
           <div>
             <div>
               <Faq />
-            </div>
+              </div>
           </div>
         }>
         </Route>
@@ -93,20 +88,10 @@ function App() {
           </div>
         }>
         </Route>
-
-        <Route path='/NewPassword' element={
-          <div>
-            <div className=''>
-              <NewPassword />
-            </div>
-          </div>
-        }>
-        </Route>
-
         <Route path='/Shoe' element={
           <div>
             <div className=''>
-              <ShoePage />
+              <ShoePage/>
             </div>
           </div>
         }>
