@@ -1,7 +1,7 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+// import { Button } from "react-bootstrap";
+// import { Link } from "react-router-dom";
 import useHome from "../../Utils/useHome";
 import NavBarComponent from "../../components/Navbar/Navbar";
 import PreLoader from "../../components/LoadingScreen/LoadingScreen";

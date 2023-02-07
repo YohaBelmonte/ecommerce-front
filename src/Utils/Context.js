@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import {createContext, useReducer } from "react";
 
 // con esta const ↓ llamamos a la funcion de react "createcontext" que luego le pasaremos info y luego datos
 export const Cartcontext = createContext();
@@ -57,8 +57,8 @@ function Context(props) {
 
   return (
     // inyectamos los provider ↓ a todos los componentes hijos de esta funcion "reducer"
-    <Cartcontext.Provider value={info}>{props.children}</Cartcontext.Provider>
+    <Cartcontext.Provider value={info}>{props}</Cartcontext.Provider>
   );
 }
 
-// export default Context;
+export default Context;
