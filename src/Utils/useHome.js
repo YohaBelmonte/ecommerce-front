@@ -1,13 +1,14 @@
-import { useContext, useState, useEffect } from "react";
+import {useState, useEffect } from "react";
 import axios from "axios";
 import CardShoes from "../../src/components/CardShoes/CardShoes";
 // Importamos el contexto que se genero en context.js↓
-import { Cartcontext } from "../components/ContextCart/Context";
+// import { Cartcontext } from "../components/ContextCart/Context";
 
 function UseHome() {
   const token = localStorage.getItem("token") ?? "";
   const headers = { "x-auth-token": token };
   const [product, setproduct] = useState([]);
+  
   useEffect(() => {
     GetProduct();
   }, []);
@@ -32,7 +33,6 @@ function UseHome() {
 
   const MapProduct = product.map((item, i) => {
     // Nro multiplicador del precio "quantity"
-    // item.quantity = 1;
     <CardShoes
       key={i}
       propName={item.name}
@@ -49,7 +49,7 @@ function UseHome() {
     />
   });
 
-// console.log(product)
+console.log(MapProduct)
   return {
     MapProduct,
   };
