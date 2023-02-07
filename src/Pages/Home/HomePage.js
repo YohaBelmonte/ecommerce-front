@@ -15,7 +15,7 @@ function HomePage() {
     //home de prueba ↓↓↓↓ para ver si andaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓
     <div className="general">
       <div className="spinner2">
-        <PreLoader />
+        {/* <PreLoader /> */}
       </div>
       <div>
         <NavBarComponent />
