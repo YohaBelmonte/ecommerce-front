@@ -11,6 +11,7 @@ import ShoePage from './Pages/ShoePage/ShoePage';
 import RegisterPage from './Pages/Register/RegisterPage';
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
+import ShoppingCart from './Pages/ShoppingCart/ShoppingCart';
 
 function App() {
   return (
@@ -92,6 +93,14 @@ function App() {
           <div>
             <div className=''>
               <ShoePage/>
+            </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/cart' element={
+          <div>
+            <div className=''>
+              <ShoppingCart/>
             </div>
           </div>
         }>

@@ -12,7 +12,7 @@ function CardShoes({
   propPrice,
   propId,
   propItem,
-  propDispatchADD,
+  // propDispatchADD,
 }) {
 
   //ADD TO CART
@@ -68,9 +68,9 @@ function CardShoes({
               </span>
               <img src={propImage}/>
               <div className="card-body">
-                <a href="#" onClick={() => {propDispatchADD}}>
+                {/* <a href="#" onClick={() => {propDispatchADD}}>
                   <center>Add to cart</center>
-                </a>
+                </a> */}
                 {/* <a href="#" onClick={() => removeToCart()}>
                   <center>Remove to cart</center>
                 </a> */}

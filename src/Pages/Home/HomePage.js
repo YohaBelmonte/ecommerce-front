@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import useHome from "../../Utils/useHome";
 import NavBarComponent from "../../components/Navbar/Navbar";
 import PreLoader from "../../components/LoadingScreen/LoadingScreen";
+import Footer from "../../components/Footer/Footer";
 
 function HomePage() {
   //hook

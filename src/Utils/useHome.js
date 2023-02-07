@@ -24,14 +24,15 @@ function UseHome() {
   };
 
 // con esta ↓ const buscamos recuperar la info de Cartcontext creada en "Context.js"
-const globalState = useContext(Cartcontext);
-    // QUE SIGNIFICA ".dispatch" ↓  Porque solo nos interesa el dispatch que nos trae el globalstate??
-const dispatch = globalState.dispatch ;
+// const globalState = useContext(Cartcontext);
+    // QUE SIGNIFICA ".dispatch" ↓  --> Porque solo nos interesa el dispatch que nos trae el globalstate??
+// const dispatch = globalState.dispatch ;
 
+// console.log(globalState)
 
   const MapProduct = product.map((item, i) => {
     // Nro multiplicador del precio "quantity"
-    item.quantity = 1;
+    // item.quantity = 1;
     <CardShoes
       key={i}
       propName={item.name}
@@ -41,14 +42,14 @@ const dispatch = globalState.dispatch ;
       propPrice={item.price}
       propId={item._id}
       propItem={item}
-      propDispatchADD={dispatch({ type: "ADD", payload: item })}
+      // propDispatchADD={dispatch({ type: "ADD", payload: item })}
       // propDispatchINCREASE={dispatch({ type: "INCREASE", payload: item })}
       // propDispatchDECREASE={dispatch({ type: "DECREASE", payload: item })}
       // propDispatchREMOVE={dispatch({ type: "REMOVE", payload: item })}
     />
   });
 
-
+// console.log(product)
   return {
     MapProduct,
   };
