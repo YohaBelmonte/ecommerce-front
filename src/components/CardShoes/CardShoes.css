@@ -53,15 +53,21 @@ h1 {
 
 .heart-active {
   color: #275e38;
+  margin-top: 15px;
+  margin-left: 190px;
+  font-size: 30px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  padding: 0px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .heart:hover {
   color: #275e38;
-  background-color: #f9f9f9;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease-in-out;
+ 
 }
 
 .card-body a {
@@ -78,7 +84,7 @@ h1 {
 }
 
 .card:hover {
-  transform: scale(1.3);
+  transform: translateY(-4px)
 }
 
 .card:hover > .card-body > a {
