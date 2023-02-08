@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { BiEdit } from "react-icons/bi";
-import { AiTwotoneDelete } from "react-icons/ai";
-import { Form } from "react-bootstrap";
 
 function useAdmin() {
   var url = "http://localhost:4000/api";

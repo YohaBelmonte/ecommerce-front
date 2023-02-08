@@ -12,12 +12,14 @@ import RegisterPage from './Pages/Register/RegisterPage';
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
 import ShoppingCart from './Pages/ShoppingCart/ShoppingCart';
+import Preloader from './components/LoadingScreen/LoadingScreen';
 
 
 
 function App() {
   return (
     <BrowserRouter >
+      <Preloader/>
       <Routes>
           <Route path='/' element={
           <div>
