@@ -1,14 +1,20 @@
+import "./Navbar.css";
 import Container from 'react-bootstrap/Container';
 import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import useHome from "../../Utils/useHome";
+import { useEffect } from "react";
 
 
 function NavBarComponent() {
 
-const isAdmin = true
+const {admin} = useHome();
+// console.log(admin)
+// const isAdmin = admin.filter((admin) => admin.isAdmin);
+// console.log(isAdmin)
+ const isAdmin = true
 
   return (
     <Navbar bg="light" expand="lg">

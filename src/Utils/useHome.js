@@ -7,10 +7,12 @@ function UseHome() {
   const headers = { "x-auth-token": token };
   const [product, setproduct] = useState([]);
   const [cart, setCart] = useState({});
+  const [admin, setAdmin] = useState({});
 
   useEffect(() => {
     GetProduct();
     GetCartProducts();
+    GetAdminUser();
   }, []);
 
   const url = "http://localhost:4000/api";
@@ -26,12 +28,24 @@ function UseHome() {
     }
   };
 
+  // Method Get Admin User ↓↓↓
+  async function GetAdminUser() {
+    try {
+      const { data } = await axios.get(`${url}/user`);
+    //   const adminUser = data.map((data) => data.isAdmin);
+      const adminUser = data.filter((data) => data.isAdmin ===true);
+      setAdmin(adminUser);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
    // Method Get Cart ↓↓↓
   async function GetCartProducts() {
       try {
           const { data } = await axios.get(`${url}/product/cart`, { headers })
           setCart(data)
-          console.log(data)
+          // console.log(data)
       } catch (error) {
           console.error(error);
       }
@@ -67,6 +81,7 @@ function UseHome() {
 
   return {
     MapProduct,
+    admin
     // CartProducts
   };
 }
