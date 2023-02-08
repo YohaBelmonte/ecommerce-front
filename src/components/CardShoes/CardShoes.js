@@ -47,7 +47,6 @@ function CardShoes({
     console.log(isFavActive);
   }
 
-
   return (
     <div>
       <div id="toast"></div>
@@ -64,7 +63,7 @@ function CardShoes({
                   <AiTwotoneHeart />
                 </i>
               </span>
-              <img src={propImage} />
+              <img src={propImage}/>
               <div className="card-body">
                 <a href="#" onClick={() => addToCart()}>
                   <center>Add to cart</center>

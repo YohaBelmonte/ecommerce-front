@@ -1,20 +1,24 @@
+import "./Navbar.css";
 import Container from 'react-bootstrap/Container';
 import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
 
 
 function NavBarComponent() {
+
+ const isAdmin = localStorage.getItem("admin");
+
   return (
     <Navbar  expand="lg">
       <Container>
         <Navbar.Brand>
           <div className='d-flex'>
             <div className='icons-nav2 styleUser'>
-              <Link to="/icon-nav" className='mx-lg-2 styleIcons2'>
-                <FontAwesomeIcon icon={faUser} />
+              <Link to="/login" className='mx-lg-2 styleIcons2'>
+                <FaUser/>
               </Link>
             </div>
             <h2 className="ubac-nav">L O G O </h2>
@@ -30,13 +34,15 @@ function NavBarComponent() {
               <Link to="/aboutUs" className='link-nav'>SOBRE NOSOTROS</Link>
               <Link to="/contact" className='link-nav mx-lg-5'>CONTACTO</Link>
               <Link to="/shoppingCart" className='link-nav shopping-cart1 mx-lg-5'>MI CARRITO</Link>
-              <Link to="/shoppingCart" className='link-nav shopping-cart mx-lg-5'>MI CARRITO</Link>
+              { isAdmin? (
+                <Link to="/admin" className='link-nav shopping-cart1 mx-lg-5'>Admin</Link>
+              ):("") }
               <Link to="/login" className='mx-lg-2 icon-nav'>
-                <FontAwesomeIcon icon={faUser} />
+                <FaUser/>
               </Link>
-              <Link to="/icon-nav " className='icon-nav'>
+              <Link to="/cart " className='icon-nav'>
                 <FontAwesomeIcon icon={faShoppingCart} className="mx-5" />
-              </Link>
+              </Link>            
             </li>
           </Nav>
         </Navbar.Collapse>

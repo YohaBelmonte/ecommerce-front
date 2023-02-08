@@ -6,15 +6,18 @@ function UseHome() {
   const token = localStorage.getItem("token") ?? "";
   const headers = { "x-auth-token": token };
   const [product, setproduct] = useState([]);
+  const url = "http://localhost:4000/api";
+
+  
   useEffect(() => {
     GetProduct();
   }, []);
 
-  const url = "http://localhost:4000/api";
-
+   // Method Get all products ↓↓↓
   async function GetProduct() {
     try {
       const { data } = await axios.get(`${url}/product`, { headers });
+      // console.log(data)
       setproduct(data);
     } catch (error) {
       console.error(error);
@@ -33,7 +36,6 @@ function UseHome() {
       propItem={item}
     />
   ));
-
 
   return {
     MapProduct,
