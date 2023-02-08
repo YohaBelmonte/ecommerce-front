@@ -4,8 +4,12 @@
 }
 
 .card-title-wrapper {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
 }
+
 
 #toast {
   font-family: "Roboto", sans-serif;
@@ -16,49 +20,55 @@ h1 {
 }
 
 .card {
-  max-width: 230px;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
-  border-radius: 5px;
-  transition: transform 0.2s;
+  width: 230px;
+  height: 100%;    
+  padding: 15px;
+  border-radius: 10px 10px 10px 10px;
+  position: relative;
+  overflow: hidden;
+  border-color: #21232221;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1);
+  box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card-body {
-  /* background-color: #c5070757; */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding: 1px 15px 10px 15px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
-  transition: all 0.02s ease-in-out;
+  transition: all 0.2s ease-in-out;
   z-index: 999;
 }
 
 .heart {
+  background-color: #212322f0;
   color: #989898;
-  margin-top: 15px;
-  margin-left: 190px;
+  display: flex;
+  justify-content: start;
+  margin-top: -15px;
+  margin-left: -15px;
   font-size: 30px;
   position: absolute;
-  width: 40px;
-  height: 40px;
   border-radius: 30px;
-  padding: 0px;
-  text-align: center;
   cursor: pointer;
 }
 
 .heart-active {
   color: #275e38;
-  margin-top: 15px;
-  margin-left: 190px;
+  display: flex;
+  justify-content: start;
+  margin-top: -15px;
+  margin-left: -15px;
   font-size: 30px;
   position: absolute;
-  width: 40px;
-  height: 40px;
   border-radius: 30px;
   padding: 0px;
   text-align: center;
@@ -67,7 +77,7 @@ h1 {
 
 .heart:hover {
   color: #275e38;
- 
+
 }
 
 .card-body a {
@@ -75,26 +85,22 @@ h1 {
   text-decoration: none;
 }
 
-.card:hover > .card-body {
-  margin-top: -0px;
+.card:hover>.card-body {
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
-  transition: all 0.1s ease;
+  transition: all 0, 2s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px)
-}
 
-.card:hover > .card-body > a {
+.card:hover>.card-body>a {
   visibility: visible;
 }
 
 .first-image {
   width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+ 
+
 }
 
 .cart,
@@ -121,33 +127,35 @@ h1 {
 }
 
 .btn-card {
+  font-family: "Roboto", sans-serif;
   padding: 8px;
-  border-radius: 12px;
+  border-radius: 5px;
   border: 2px;
   border-style: solid;
-  border-color: #212322;
+  border-color: #21232261;
+  background-color: #275e3865;
 }
 
-.btn-card:hover{
+.btn-card:hover {
   background-color: #275e38;
 }
 
-.tocart{
+.tocart {
   color: #212322;
   font-size: 13px;
 }
 
-.precio{
-  color: #275e38;
-  font-size: 20px;
-  margin: 0;
+.buy {
+  color: #275e387d;
+  font-size: 22px;
+  margin: 1;
+  font-family: "Roboto", sans-serif;
 }
 
 #toast,
 #toast-cart {
   padding: 10px;
   padding-left: 5px;
-  position: fixed;
   width: 230px;
   height: 50px;
   top: 0;
@@ -168,6 +176,7 @@ h1 {
   justify-content: center;
   font-size: 18px;
 }
+
 #toast.show,
 #toast-cart.show {
   visibility: visible;
@@ -175,11 +184,13 @@ h1 {
 }
 
 @keyframes fadeInOut {
+
   5%,
   95% {
     opacity: 1;
     top: 50px;
   }
+
   15%,
   85% {
     opacity: 1;
@@ -189,4 +200,103 @@ h1 {
 
 a {
   z-index: -1;
+}
+@media (max-width: 990px){
+  .card {
+    width: 200px;
+    height: 100%;    
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    border-color: #21232221;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.2s;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    margin-left: 10%;
+    width: 200px;
+    height: 100%;    
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    border-color: #21232221;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.2s;
+  }
+  .btn-card {
+    font-family: "Roboto", sans-serif;
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px;
+    border-style: solid;
+    border-color: #21232261;
+    background-color: #275e3865;
+  }
+}
+@media (max-width: 490px){
+  .card {
+    margin-left: 1%;
+    width: 180px;
+    height: 100%;    
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    border-color: #21232221;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.2s;
+  }
+  .btn-card {
+    margin-left: -10px;
+    font-family: "Roboto", sans-serif;
+    padding: 2px;
+    border-radius: 6px;
+    border: 1px;
+    border-style: solid;
+    border-color: #21232261;
+    background-color: #275e3865;
+  }
+  .buy {
+    color: #275e387d;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+  }
+}
+@media (max-width: 395px){
+  .card {
+    width: 150px;
+    height: 100%;    
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    border-color: #21232221;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.2s;
+  }
+  .btn-card {
+    margin-left: -25px;
+    font-family: "Roboto", sans-serif;
+    padding: 1px;
+    border-radius: 6px;
+    border: 1px;
+    border-style: solid;
+    border-color: #21232261;
+    background-color: #275e3865;
+  }
+  .buy {
+    color: #275e387d;
+    font-size: 15px;
+
+    font-family: "Roboto", sans-serif;
+  }
+  .tocart {
+    color: #212322;
+    font-size: 12px;
+  }
+  
 }
