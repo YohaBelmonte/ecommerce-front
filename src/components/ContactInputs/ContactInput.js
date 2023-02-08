@@ -66,11 +66,12 @@ function ContactInput() {
                 </Form.Group>
                 <Form.Group className="my-5">
                     <Form.Control
-                        className="border-bottom border-0 bg-light rounded-0 fs-5 "
+                        className="border-bottom border-0 bg-light rounded-0 fs-5"
                         type="text"
                         name="description"
                         placeholder="Mensaje"
                         onChange={OnChange}
+                        as="textarea"
                     />
                 </Form.Group>
                
