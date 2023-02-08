@@ -9,7 +9,7 @@ import "./NavbarLogin.css";
 function NavBarComponent() {
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="lg">
         <Container className='container-nav d-flex'>
           <div className='d-flex'>
             <div className='icons-nav2'>
@@ -45,49 +45,4 @@ function NavBarComponent() {
 }
 
 export default NavBarComponent;
-// function NavBarComponent() {
-//     return (
-//         <Navbar bg="light" expand="lg">
-//             <Container>
-//                 <Navbar.Brand>
-//                     <div className='d-flex'>
-//                         <div className='icons-nav2'>
-//                             <Link id="user" to="/" className='styleUser'>
-//                                 <FontAwesomeIcon icon={faUser} />
-//                             </Link>
-//                         </div>
-//                         <p>L O G O</p></div></Navbar.Brand>
-//                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//                 <Navbar.Collapse id="basic-navbar-nav">
-//                     <Nav className="link-navbar">
-//                         <Link id="home" to="/" className='af mx-lg-5'>
-//                             INICIO
-//                         </Link>
-//                         <Link id="male" to="/" className='af'>
-//                             MASCULINO
-//                         </Link>
-//                         <Link id="female" to="/" className='af mx-lg-5'>
-//                             FEMENINO
-//                         </Link>
-//                         <Link id="aboutUs" to="/" className='af '>
-//                             SOBRE NOSOTROS
-//                         </Link>
-//                         <Link id="contact" to="/" className='af mx-lg-5'>
-//                             CONTACTO
-//                         </Link>
-//                         <Link id="shoppingCart" to="/" className='af shopping-cart'>
-//                             MI CARRITO
-//                         </Link>
 
-//                         <div className='icons-nav'>    <a href="#" className='styleIcons ' > <FontAwesomeIcon icon={faUser} /> </a> <a href="#" className='styleIcons ' > <FontAwesomeIcon icon={faShoppingCart} className="mx-5" /> </a>
-//                         </div>
-//                     </Nav>
-//                 </Navbar.Collapse>
-//             </Container>
-//         </Navbar >
-//     )
-// }
-
-
-
-// export default NavBarComponent;

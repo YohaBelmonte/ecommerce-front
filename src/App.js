@@ -13,7 +13,7 @@ import RegisterPage from './Pages/Register/RegisterPage';
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
 import NewPassword from './Pages/NewPassword/NewPassword';
-
+import Contact from './Pages/Contact/Contact'
 
 function App() {
   return (
@@ -85,6 +85,16 @@ function App() {
           </div>
         }>
         </Route>
+
+        <Route path='/Contact' element={
+          <div>
+            <div>
+              <Contact />
+            </div>
+          </div>
+        }>
+        </Route>
+
         <Route path='/Register' element={
           <div>
             <div className=''>

@@ -1,0 +1,14 @@
+.LoginInput {
+
+    height: 100vh;
+    align-content: center;
+  
+  }
+  Form {
+    height: fit-content;
+  }
+  Form p {
+    font-size: 200%;
+    font-weight: 400;
+  }
+  

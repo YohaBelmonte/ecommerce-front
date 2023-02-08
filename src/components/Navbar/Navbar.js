@@ -8,7 +8,7 @@ import "./Navbar.css";
 
 function NavBarComponent() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar  expand="lg">
       <Container>
         <Navbar.Brand>
           <div className='d-flex'>
@@ -31,7 +31,7 @@ function NavBarComponent() {
               <Link to="/contact" className='link-nav mx-lg-5'>CONTACTO</Link>
               <Link to="/shoppingCart" className='link-nav shopping-cart1 mx-lg-5'>MI CARRITO</Link>
               <Link to="/shoppingCart" className='link-nav shopping-cart mx-lg-5'>MI CARRITO</Link>
-              <Link to="/icon-nav" className='mx-lg-2 icon-nav'>
+              <Link to="/login" className='mx-lg-2 icon-nav'>
                 <FontAwesomeIcon icon={faUser} />
               </Link>
               <Link to="/icon-nav " className='icon-nav'>
