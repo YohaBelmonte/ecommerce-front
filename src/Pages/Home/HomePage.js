@@ -1,33 +1,27 @@
+// import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
-
-
+import useHome from "../../Utils/useHome";
+import NavBarComponent from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 function HomePage() {
 
-    return (
+//hook
+const { MapProduct } = useHome();
 
-        
-        //home de prueba ↓↓↓↓ para ver si andaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓ 
-
-
-
-        <div className="d-flex justify-content-center bg-dark ">
-
-            <div className="d-grid">
-                <div className="bg-success">Home Page</div>
-                <Button className=" w-100 mt-1 " variant="success">
-                    <Link id="register_login" to="/Login">Login</Link>
-                </Button>
-                <Button className=" w-100 mt-1 " variant="success">
-                    <Link id="register_login" to="/register">Registrarse</Link>
-                </Button>
-            </div>
-        </div >
-    );
+  return (
+    //home de prueba ↓↓↓↓ para ver si andaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓
+    <div>
+      <NavBarComponent/>
+      <div className="d-flex flex-column-reverse MapProductContainer">
+        {MapProduct}
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default HomePage;
 
-
+  

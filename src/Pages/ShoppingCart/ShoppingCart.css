@@ -1,0 +1,13 @@
+.shop-container{
+    min-height: 200px;
+    background-color: #ededed;
+}
+.cart-title{
+    margin: 12px 0px 0px 0px;
+    border-bottom: 1px solid #b4b3b3;
+}
+.cart-container{
+    margin-inline: 12px;
+    margin-top: 15px;
+    background-color: rgb(129, 127, 127);
+}
