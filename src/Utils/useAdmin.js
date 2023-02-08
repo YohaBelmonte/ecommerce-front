@@ -13,13 +13,13 @@ function useAdmin() {
 
     const [data, setData] = useState([]);
     const [form, setForm] = useState({});
-
+    
     useEffect(() => {
         GetUsers();
     }, []);
 
 
-    // Method Get  ↓↓↓
+    // Method Get Users ↓↓↓
     async function GetUsers() {
         try {
             const { data } = await axios.get(`${url}/user`)
@@ -28,7 +28,7 @@ function useAdmin() {
             console.error(error);
         }
     }
-
+    
     // Register users
     function OnChange(e) {
         const { name, value, } = e.target;

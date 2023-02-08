@@ -7,6 +7,9 @@ import "./Navbar.css";
 
 
 function NavBarComponent() {
+
+const isAdmin = true
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -30,7 +33,9 @@ function NavBarComponent() {
               <Link to="/aboutUs" className='link-nav'>SOBRE NOSOTROS</Link>
               <Link to="/contact" className='link-nav mx-lg-5'>CONTACTO</Link>
               <Link to="/shoppingCart" className='link-nav shopping-cart1 mx-lg-5'>MI CARRITO</Link>
-              <Link to="/shoppingCart" className='link-nav shopping-cart mx-lg-5'>MI CARRITO</Link>
+              { isAdmin === true ? (
+                <Link to="/admin" className='link-nav shopping-cart1 mx-lg-5'>Admin</Link>
+              ):("") }
               <Link to="/icon-nav" className='mx-lg-2 icon-nav'>
                 <FontAwesomeIcon icon={faUser} />
               </Link>

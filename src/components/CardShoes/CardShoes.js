@@ -47,7 +47,6 @@ function CardShoes({
     console.log(isFavActive);
   }
 
-
   return (
     <div>
       <div id="toast"></div>
