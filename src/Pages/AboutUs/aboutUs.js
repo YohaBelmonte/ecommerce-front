@@ -184,7 +184,7 @@ function AboutPage() {
       <div className="containerCertificados row d-flex justify-content-center" id="certificados">
         <p className="mt-lg-5  text3">Nuestros certificados </p>
         <div className="col-lg-3 col-sm-12 col-md-3 box-certificats">
-          <div>  <img className="img-certificats mt-4 w-100" src="https://images.prismic.io/ubac/ee32cadf-7156-4800-abf5-0052891e0683_logo-global-recycled-standart%402x.png?auto=compress%2Cformat&rect=0%2C0%2C359%2C165&w=600&h=null 600w" /></div>
+          <div>  <img className="img-certificats global mt-4" src="https://images.prismic.io/ubac/ee32cadf-7156-4800-abf5-0052891e0683_logo-global-recycled-standart%402x.png?auto=compress%2Cformat&rect=0%2C0%2C359%2C165&w=600&h=null 600w" /></div>
           <div> <a href="https://certifications.controlunion.com/es/certification-programs/certification-programs/grs-estandar-global-de-reciclaje"><button className="button-certficats mt-lg-5">Ver más +</button></a></div>
         </div>
         <div className="col-lg-3 col-sm-12 col-md-3 box-certificats mx-lg-4">
