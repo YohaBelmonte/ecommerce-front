@@ -45,17 +45,10 @@ function UseHome() {
       <div id="toast"></div>
       <div id="toast-cart"></div>
       <div className="container">
-        <div className="row">
-          <div className="col-10">
             <div className="row">
               {MapProduct}
             </div>
           </div>
-          <div className="col-2">
-            <div className="publicidad">PUBLICIDAD</div>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

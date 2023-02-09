@@ -12,7 +12,7 @@ function NavBarComponent() {
  const isAdmin = localStorage.getItem("admin");
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar  expand="lg">
       <Container>
         <Navbar.Brand>
           <div className='d-flex'>
@@ -42,7 +42,7 @@ function NavBarComponent() {
               </Link>
               <Link to="/cart " className='icon-nav'>
                 <FontAwesomeIcon icon={faShoppingCart} className="mx-5" />
-              </Link>
+              </Link>            
             </li>
           </Nav>
         </Navbar.Collapse>

@@ -36,9 +36,11 @@ font-size: 0px;
 .icon-nav {
     text-decoration: none;
   color: rgb(36, 36, 36) ;
+
   }
   .icon-nav:hover {
   color: #275e38 ;
+
   }
   
 @media (max-width:844px) {

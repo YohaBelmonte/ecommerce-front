@@ -1,4 +1,5 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
+import "./HomePage.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useHome from "../../Utils/useHome";
@@ -35,10 +36,21 @@ function HomePage() {
     //home de prueba ↓↓↓↓ para ver si andaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓
     <div>
       <NavBarComponent/>
-      <div className="d-flex flex-column-reverse MapProductContainer">
+      <div className="container">
+        <div className="row">
+          <div className="col-10">
         {useHome()}
+        </div>
+          <div className="col-2 advertising1">
+            <div className="advertising2">
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div className="d-flex flex-column-reverse MapProductContainer">
       <Footer />
+    </div>
     </div>
   );
 }
