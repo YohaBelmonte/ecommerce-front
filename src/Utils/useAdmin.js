@@ -6,7 +6,8 @@ function useAdmin() {
 
   const [data, setData] = useState([]);
   const [form, setForm] = useState({});
-
+  const token = localStorage.getItem("token") ?? "";
+  const headers = { "x-auth-token": token };
 
   useEffect(() => {
     GetUsers();
@@ -73,12 +74,54 @@ function useAdmin() {
     }
   }
 
+  // Tabla de productos = Admin Page     
+
+// Tabla de productos = Admin Page     
+
+const [formProduct, setFormProduct] = useState({});
+
+function OnChangeProduct(e) {
+  const { name, value } = e.target;
+  const response = {
+    ...formProduct,
+    [name]: value,
+  };
+  setFormProduct(response);
+  console.log(response)
+}
+
+async function MethodPostProduct(e) {
+  try {
+    const response = await axios.post(`${url}/product`,formProduct,{headers});
+    console.log(response)
+    window.location.reload();
+    alert("Producto añadido con exito");
+  } catch (error) {
+    console.error(error);
+
+  }
+}
+
+async function deletProduct(id) {
+  try {
+    const { data } = await axios.delete(`${url}/product/${id}`,formProduct,{headers});
+    alert("Producto eliminado con exito");
+  } catch (error) {
+    console.error(error);
+  }
+}
+
   return {
     data,
     GetUsers,
     Register,
     OnChange,
     deletUser,
+    OnChangeProduct,
+    MethodPostProduct,
+    headers,
+    token,
+    deletProduct
   };
 }
 export default useAdmin;
