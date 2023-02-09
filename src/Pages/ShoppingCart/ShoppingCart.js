@@ -17,6 +17,10 @@ function ShoppingCart() {
         <div className=" products-container">
           {CartProducts}
         </div>
+        <div className="total">
+        <span>Total Price of your Cart</span>
+        {/* <span>Rs - {price}</span> */}
+      </div>
       </div>
       <Footer />
     </div>

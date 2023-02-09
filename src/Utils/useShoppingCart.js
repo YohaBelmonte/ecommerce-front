@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import CardShoes from "../../src/components/CardShoes/CardShoes";
+import CardToCart from "../../src/components/CardToCart/CardToCart";
 
 
 
@@ -28,7 +28,7 @@ function useCart() {
   
 // Para mostrar en el Cart ↓
   const CartProducts = cart.map((item, i) => (
-    <CardShoes
+    <CardToCart
       key={i}
       propName={item.name}
       propImage={item.image}
@@ -37,6 +37,7 @@ function useCart() {
       propPrice={item.price}
       propId={item._id}
       propItem={item}
+      propQuantity={item.quantity}
     />
   ));
 

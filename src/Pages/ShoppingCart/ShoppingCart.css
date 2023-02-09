@@ -1,13 +1,30 @@
 .shop-container{
     min-height: 200px;
-    background-color: #ededed;
+    background-color: #f7f6f3;
 }
 .cart-title{
     margin: 12px 0px 0px 0px;
-    border-bottom: 1px solid #b4b3b3;
+    border-bottom: 1px solid #f7f6f3;
+    color: #f7f6f3;
 }
 .cart-container{
-    margin-inline: 12px;
-    margin-top: 15px;
-    background-color: rgb(129, 127, 127);
+    margin: 15px 20px 15px 20px;
+    /* background-color: rgb(129, 127, 127); */
+    background-color: #cfdbd5;
 }
+
+.total{
+    display: flex;
+    justify-content: center;
+  }
+  .total span:nth-child(1){
+    font-size: 2rem;
+    color:  #f7f6f3;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .total span:nth-child(2){
+    font-size: 2rem;
+    color:  #f7f6f3;
+    font-weight: bold;
+  }
