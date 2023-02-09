@@ -8,6 +8,7 @@ function useCart() {
     const token = localStorage.getItem("token") ?? "";
     const headers = { "x-auth-token": token };
     const [cart, setCart] = useState([]);
+
     var url = "http://localhost:4000/api";
 
   useEffect(() => {
@@ -23,9 +24,9 @@ function useCart() {
             console.error(error);
         }
     }
-    console.log(cart)
+    
   
-//   // Para mostrar en el Cart ↓
+// Para mostrar en el Cart ↓
   const CartProducts = cart.map((item, i) => (
     <CardShoes
       key={i}
@@ -41,6 +42,35 @@ function useCart() {
 
   return {
     CartProducts,
+    cart,
   };
 }
 export default useCart;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Method Get Admin User ( filtrar el usuario si su atributo isAdmin=true) ↓↓↓
+    //  async function GetAdminUser() {
+    //     try {
+    //       const { data } = await axios.get(`${url}/user`);
+    //     //   const adminUser = data.map((data) => data.isAdmin);
+    //       const adminUser = data.filter((data) => data.isAdmin ===true);
+    //       setAdmin(adminUser);
+    //     } catch (error) {
+    //       console.error(error);
+    //     }
+    //   }

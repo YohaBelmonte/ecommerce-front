@@ -7,7 +7,7 @@ import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
-function NavBarComponent() {
+function NavBarComponent({size}) {
 
  const isAdmin = localStorage.getItem("admin");
 
@@ -41,7 +41,8 @@ function NavBarComponent() {
                 <FaUser/>
               </Link>
               <Link to="/cart " className='icon-nav'>
-                <FontAwesomeIcon icon={faShoppingCart} className="mx-5" />
+                <FontAwesomeIcon icon={faShoppingCart} />
+                <span>{size}</span>
               </Link>            
             </li>
           </Nav>
