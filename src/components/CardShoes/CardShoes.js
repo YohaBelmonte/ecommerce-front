@@ -2,7 +2,6 @@ import "./CardShoes.css";
 import { useState } from "react";
 import { AiTwotoneHeart } from "react-icons/ai";
 import axios from "axios";
-
 function CardShoes({
   propName,
   propImage,
@@ -49,31 +48,34 @@ function CardShoes({
 
 
   return (
-    <> 
-      <div className="card">
-        <span
-          id="heart"
-          className={`heart${isFavActive ? "-active" : ""}`}
-        >
-          <i onClick={() => wishList()}>
-            <AiTwotoneHeart />
-          </i>
-        </span>
-        <img src={propImage} />
-        <div className="card-title-wrapper">
-        <center>
-            <h5 className="card-title">{propName}</h5>
-          </center>
-        </div>
-        <div className="card-body">
-          <a className="btn-card" href="#" onClick={() => addToCart()}>
-            <center className="tocart">Add To Cart</center>
-          </a>
-          <h2 className="buy">$100</h2>
+    <>
 
-          {/* <a href="#" onClick={() => removeToCart()}>
+      <div className="box">
+        <div className="card">
+          <span
+            id="heart"
+            className={`heart${isFavActive ? "-active" : ""}`}
+          >
+            <i onClick={() => wishList()}>
+              <AiTwotoneHeart />
+            </i>
+          </span>
+          <img src={propImage} />
+          <div className="card-title-wrapper">
+            <center>
+              <h5 className="card-title">{propName}</h5>
+            </center>
+          </div>
+          <div className="card-body">
+            <a className="btn-card" href="#" onClick={() => addToCart()}>
+              <center className="tocart">Add To Cart</center>
+            </a>
+            <h2 className="buy">$100</h2>
+
+            {/* <a href="#" onClick={() => removeToCart()}>
             <center>Remove to cart</center>
           </a> */}
+          </div>
         </div>
       </div>
     </>

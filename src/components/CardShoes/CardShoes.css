@@ -1,8 +1,6 @@
-.container {
-  margin-top: 50px;
-
+.box{
+  padding: 15%;
 }
-
 .card-title-wrapper {
   display: flex;
   justify-content: center;
@@ -20,8 +18,8 @@ h1 {
 }
 
 .card {
-  width: 230px;
-  height: 100%;    
+  width: 190px;
+  height: 300px;    
   padding: 15px;
   border-radius: 10px 10px 10px 10px;
   position: relative;
@@ -49,29 +47,24 @@ h1 {
 }
 
 .heart {
-  background-color: #212322f0;
   color: #989898;
-  display: flex;
-  justify-content: start;
-  margin-top: -15px;
-  margin-left: -15px;
+  margin-top: -10px;
+  margin-left: 70%;
   font-size: 30px;
   position: absolute;
-  border-radius: 30px;
+  border-radius: 55%;
   cursor: pointer;
+  padding: 5px;
 }
 
 .heart-active {
   color: #275e38;
-  display: flex;
-  justify-content: start;
-  margin-top: -15px;
-  margin-left: -15px;
+  margin-top: -10px;
+  margin-left: 70%;
   font-size: 30px;
   position: absolute;
-  border-radius: 30px;
-  padding: 0px;
-  text-align: center;
+  border-radius: 55%;
+  padding: 5px;
   cursor: pointer;
 }
 
@@ -129,6 +122,7 @@ h1 {
 .btn-card {
   font-family: "Roboto", sans-serif;
   padding: 8px;
+  margin-left: -3px;
   border-radius: 5px;
   border: 2px;
   border-style: solid;
@@ -142,46 +136,17 @@ h1 {
 
 .tocart {
   color: #212322;
-  font-size: 13px;
+  font-size: 10px;
 }
 
 .buy {
   color: #275e387d;
-  font-size: 22px;
+  font-size: 20px;
   margin: 1;
   font-family: "Roboto", sans-serif;
 }
 
-#toast,
-#toast-cart {
-  padding: 10px;
-  padding-left: 5px;
-  width: 230px;
-  height: 50px;
-  top: 0;
-  left: 80%;
-  transform: translate(-50%);
-  background-color: #eff2ff;
-  color: #76777e;
-  padding: 1px;
-  border-radius: 8px;
-  text-align: center;
-  z-index: 1;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  visibility: hidden;
-  opacity: 0;
-  -ms-display: flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-}
 
-#toast.show,
-#toast-cart.show {
-  visibility: visible;
-  animation: fadeInOut 3s;
-}
 
 @keyframes fadeInOut {
 
@@ -201,23 +166,9 @@ h1 {
 a {
   z-index: -1;
 }
-@media (max-width: 990px){
+@media (max-width: 1280px){
   .card {
-    width: 200px;
-    height: 100%;    
-    padding: 15px;
-    border-radius: 10px 10px 10px 10px;
-    position: relative;
-    overflow: hidden;
-    border-color: #21232221;
-    transform: scale(0.95);
-    transition: box-shadow 0.5s, transform 0.2s;
-  }
-}
-@media (max-width: 768px) {
-  .card {
-    margin-left: 10%;
-    width: 200px;
+    width: 170px;
     height: 100%;    
     padding: 15px;
     border-radius: 10px 10px 10px 10px;
@@ -228,32 +179,9 @@ a {
     transition: box-shadow 0.5s, transform 0.2s;
   }
   .btn-card {
+    margin-left: -25px;
     font-family: "Roboto", sans-serif;
-    padding: 4px;
-    border-radius: 6px;
-    border: 1px;
-    border-style: solid;
-    border-color: #21232261;
-    background-color: #275e3865;
-  }
-}
-@media (max-width: 490px){
-  .card {
-    margin-left: 1%;
-    width: 180px;
-    height: 100%;    
-    padding: 15px;
-    border-radius: 10px 10px 10px 10px;
-    position: relative;
-    overflow: hidden;
-    border-color: #21232221;
-    transform: scale(0.95);
-    transition: box-shadow 0.5s, transform 0.2s;
-  }
-  .btn-card {
-    margin-left: -10px;
-    font-family: "Roboto", sans-serif;
-    padding: 2px;
+    padding: 1px;
     border-radius: 6px;
     border: 1px;
     border-style: solid;
@@ -261,14 +189,125 @@ a {
     background-color: #275e3865;
   }
   .buy {
-    color: #275e387d;
-    font-size: 18px;
+    font-size: 15px;
+  }
+  .tocart {
+    font-size: 12px;
+  }
+}
+@media (max-width: 990px){
+  .box{
+    padding: 5%;
+  }
+  .card {
+    width: 150px;
+    height: 100%;    
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    border-color: #21232221;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.2s;
+  }
+  .heart{
+    margin-top: -10px;
+    margin-left: 60%;
+  }
+  .heart-active{
+    margin-top: -10px;
+    margin-left: 60%;
+  }
+  .btn-card {
+    margin-left: -25px;
     font-family: "Roboto", sans-serif;
+    padding: 1px;
+    border-radius: 6px;
+    border: 1px;
+    border-style: solid;
+    border-color: #21232261;
+    background-color: #275e3865;
+  }
+  .buy {
+    font-size: 15px;
+  }
+  .tocart {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    margin-left: 10%;
+    width: 150px;
+    height: 100%;    
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    border-color: #21232221;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.2s;
+  }
+  .btn-card {
+    margin-left: -25px;
+    padding: 1px;
+    border-radius: 6px;
+    border: 1px;
+  }
+  .buy {
+    font-size: 15px;
+  }
+  .tocart {
+    font-size: 11px;
+  }
+}
+@media (max-width: 590px){
+  .card {
+    width: 150px;
+    height: 100%;    
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    border-color: #21232221;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.2s;
+  }
+  .btn-card {
+    margin-left: -25px;
+    padding: 3px;
+    border-radius: 6px;
+    border: 1px;
+  }
+  .buy {
+    font-size: 15px;
+  }
+  .tocart {
+    font-size: 11px;
+  }
+}
+@media (max-width: 490px){
+  .box{
+    padding: 1%;
+  }
+  .card {
+    width: 125px;
+    height: 100%;    
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    border-color: #21232221;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.2s;
   }
 }
 @media (max-width: 395px){
+  .box{
+    padding: 1%;
+  }
   .card {
-    width: 150px;
+    width: 120px;
     height: 100%;    
     padding: 15px;
     border-radius: 10px 10px 10px 10px;
@@ -290,13 +329,27 @@ a {
   }
   .buy {
     color: #275e387d;
-    font-size: 15px;
+    font-size: 10px;
 
     font-family: "Roboto", sans-serif;
   }
   .tocart {
     color: #212322;
-    font-size: 12px;
+    font-size: 10px;
   }
   
+}
+@media (max-width: 300px){
+  
+  .card {
+    width: 150px;
+    height: 100%;    
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    border-color: #21232221;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.2s;
+  }
 }
