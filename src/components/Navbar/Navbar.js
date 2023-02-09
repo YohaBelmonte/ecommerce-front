@@ -36,6 +36,7 @@ function NavBarComponent({size}) {
               { isAdmin? (
                 <Link to="/admin" className='link-nav'> <p className="admin-nav">ADMINISTRADOR </p></Link>
               ):("") }
+              <Link to="/admin" className='link-nav'> <p className="admin-nav">ADMINISTRADOR </p></Link>
               <Link to="/shoppingCart" className='link-nav shopping-cart1 mx-lg-5'>MI CARRITO</Link>
               <Link to="/login" className='mx-lg-2 icon-nav'>
                 <FaUser/>
