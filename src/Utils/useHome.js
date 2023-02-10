@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CardShoes from "../../src/components/CardShoes/CardShoes";
+import ShoePage from "../Pages/ShoePage/ShoePage";
 
 function UseHome() {
   const token = localStorage.getItem("token") ?? "";
@@ -36,9 +37,26 @@ function UseHome() {
       propItem={item}
     />
   ));
+  const MapProductPage = product.map((item, i) => (
+    <ShoePage
+      key={i}
+      propName={item.name}
+      propName2={item.name2}
+      propName3={item.name3}
+      propName4={item.name4}
+      propImage={item.image}
+      propDescription={item.description}
+      propRating={item.rating}
+      propPrice={item.price}
+      propId={item._id}
+      propItem={item}
+    />
+  ));
 
   return {
     MapProduct,
+    MapProductPage
   };
 }
 export default UseHome;
+

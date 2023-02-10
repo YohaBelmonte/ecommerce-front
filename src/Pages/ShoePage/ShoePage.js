@@ -1,11 +1,23 @@
 import './ShoePage.css';
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
+import UseHome from '../../Utils/useHome';
 
 
 
 
-function ShoePage() {
+function ShoePage({
+  propName,
+  propImage,
+  propImage2,
+  propImage3,
+  propImage4,
+  propDescription,
+  propRating,
+  propPrice,
+  propId,
+  propItem,
+}) {
   
 
   const imgs = document.querySelectorAll(".img-select a");
@@ -45,38 +57,38 @@ function ShoePage() {
           <div className="product-imgsShoe">
             <div className="img-display">
               <div className="img-showcaseShoe">
-                <img src="https://img.stadiumgoods.com/15/25/25/05/15252505_43090336_2048.jpg" alt="shoe image" />
-                <img src="https://img.stadiumgoods.com/15/25/25/05/15252505_43090344_2048.jpg" alt="shoe image" />
-                <img src="https://img.stadiumgoods.com/15/25/25/05/15252505_43090360_2048.jpg" alt="shoe image" />
-                <img src="https://img.stadiumgoods.com/15/25/25/05/15252505_43090382_2048.jpg" alt="shoe image" />
+                <img src={propImage} alt="shoe image" />
+                <img src={propImage2}  alt="shoe image" />
+                <img src={propImage3}  alt="shoe image" />
+                <img src={propImage4}  alt="shoe image" />
               </div>
             </div>
             <div className="img-select">
               <div className="img-item">
                 <a href="#" data-id="1">
-                  <img src="https://img.stadiumgoods.com/15/25/25/05/15252505_43090336_2048.jpg" alt="shoe image" />
+                  <img src={propImage} alt="shoe image" />
                 </a>
               </div>
               <div className="img-item">
                 <a href="#" data-id="2">
-                  <img src="https://img.stadiumgoods.com/15/25/25/05/15252505_43090344_2048.jpg" alt="shoe image" />
+                  <img src={propImage2}  alt="shoe image" />
                 </a>
               </div>
               <div className="img-item">
                 <a href="#" data-id="3">
-                  <img src="https://img.stadiumgoods.com/15/25/25/05/15252505_43090360_2048.jpg" alt="shoe image" />
+                  <img src={propImage3}  alt="shoe image" />
                 </a>
               </div>
               <div className="img-item">
                 <a href="#" data-id="4">
-                  <img src="https://img.stadiumgoods.com/15/25/25/05/15252505_43090382_2048.jpg" alt="shoe image" />
+                  <img src={propImage4}  alt="shoe image" />
                 </a>
               </div>
             </div>
           </div>
           {/* <!-- card right --> */}
           <div className="product-contentShoe">
-            <h2 className="product-titleShoe">Nike AF1 Supreme</h2>
+            <h2 className="product-titleShoe">{propName}</h2>
             <a href="#" className="product-linkShoe">visit nike store</a>
             <div className="product-ratingShoe">
               <i className="fa fa-star"></i>
@@ -84,18 +96,18 @@ function ShoePage() {
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star-half"></i>
-              <span> 4.7(21)</span>
+              <span> {propRating}</span>
             </div>
 
             <div className="product-price">
               {/* <p className="last-price">Old Price: <span>$257.00</span></p> */}
-              <p className="new-price">Precio: <span>$277</span></p>
+              <p className="new-price">Precio: <span>{propPrice}</span></p>
             </div>
 
             <div className="product-detail">
               <h2>Descripción: </h2>
-              <p>The Supreme x Nike Air Force 1 Low “Box Logo White” takes a less-is-more approach in design and is part of the “World Famous” streetwear brand’s Spring/Summer 2020 collaboration with Nike. Supreme tones down the use of aggressive branding and instead opts for a simple and subtle design, featuring the iconic red Box Logo on the heel of a standard white-on-white Air Force 1 Low. A silver “AF1” emblem covers the bottom of the laces near the perforated toe, while tonal Nike Air branding on the tongue tab and heel complete the look.</p>
-              <p>Release date: Spring 2020.</p>
+              <p>{propDescription}</p>
+              
              
               <ul>
                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" className="bi bi-check-circle" viewBox="0 0 16 16">
