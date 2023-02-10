@@ -43,28 +43,6 @@ function useAdmin() {
       console.error(error);
     }
   }
-
-  //   //Put Method
-
-  //   const [update, setupdate] = useState({});
-
-  // function OnChangeUpdate(e) {
-  //     const { name, value } = e.target;
-  //     const response = { ...update, [name]: value }
-  //     setupdate(response);
-  //     console.log(update);
-  // }
-
-  // async function PutMethod(id) {
-  //     try {
-  //         const { data } = await axios.put(`${url}/user/${data.id}`)
-  //         console.log(data)
-  //     } catch (error) {
-  //         alert("No se pudo");
-  //         console.error(error);
-  //     }
-  // }
-
   async function deletUser(id) {
     try {
       const { data } = await axios.delete(`${url}/user/${id}`);
