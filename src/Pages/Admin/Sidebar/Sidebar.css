@@ -207,3 +207,10 @@ div {
 .aff:hover::before {
   width: 100%;
 }
+.buttonsAdmin{
+  position: absolute;
+  background-color: black;
+  margin-left: 25%;
+  margin-top: -42px;
+  width: 50%;
+}
