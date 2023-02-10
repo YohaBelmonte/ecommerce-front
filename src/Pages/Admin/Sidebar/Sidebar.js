@@ -25,7 +25,7 @@ function Sidebar() {
           <Offcanvas.Title >Admin Options</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <p className="mb-0">
+          <div className="mb-0">
           <div className="bg-white px-3" id="sidebar-wrapper">
         <div className="container-fluid text-center d-flex justify-content-center">
 
@@ -57,7 +57,7 @@ function Sidebar() {
 
         </div>
       </div>
-          </p>
+          </div>
         </Offcanvas.Body>
       </Offcanvas>
     </>
