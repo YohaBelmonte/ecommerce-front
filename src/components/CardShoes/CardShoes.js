@@ -23,6 +23,8 @@ function CardShoes({
   //hook
   const { cart } = useCart();
 
+
+  //ADD TO CART
   async function addToCart() {
     let isPresent = false;
     try {
@@ -31,9 +33,10 @@ function CardShoes({
         isPresent = true;
       })
       if (isPresent){
-        alert("YA ESTA EN EL CARRITO MAN");
+        alert("Ya fue agregado al carrito");
       }else {
         const response = await axios.put(`${url}/product/add/${propId}`,{},{headers});
+        alert("Agregado al carrito");
       }
       // console.log(cart);
     } catch (error) {
@@ -68,6 +71,17 @@ function CardShoes({
     }
   }
 
+
+  //VIEW SHOE PAGE
+  async function viewShoePage(propId) {
+    try {
+      localStorage.setItem("selectShoe",propId)
+      window.location.href ="/Shoe"
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div>
       <div id="toast"></div>
@@ -89,7 +103,11 @@ function CardShoes({
                 <a href="#" onClick={() => addToCart()}>
                   <center>Add to cart</center>
                 </a>
+<<<<<<< HEAD
                 <a href="#" onClick={() => viewShoePage()}>
+=======
+                <a href="#" onClick={() => viewShoePage(propId)}>
+>>>>>>> 5677fd67d798a60660a3634386806787716da69f
                   <center>View More</center>
                 </a>
                 <center>

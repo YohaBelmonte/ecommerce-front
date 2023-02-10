@@ -6,7 +6,7 @@ import Dashboard from "../Admin/Dashboard/Dashboard";
 function Admin() {
     return (
         <div>
-            <AdminNavbar />
+            <AdminNavbar/>
             <div className="d-flex column-gap-2">
                 <Sidebar />
                 <Dashboard/>

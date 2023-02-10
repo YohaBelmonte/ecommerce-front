@@ -55,7 +55,11 @@ function UseHome() {
 
   return {
     MapProduct,
+<<<<<<< HEAD
     MapProductPage
+=======
+    product
+>>>>>>> 5677fd67d798a60660a3634386806787716da69f
   };
 }
 export default UseHome;
