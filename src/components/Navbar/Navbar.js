@@ -40,10 +40,12 @@ function NavBarComponent({size}) {
               <Link to="/login" className='mx-lg-2 icon-nav'>
                 <FaUser/>
               </Link>
+              <div>
               <Link to="/cart " className='icon-nav'>
                 <FontAwesomeIcon icon={faShoppingCart} />
                 <span>{size}</span>
-              </Link>            
+              </Link> 
+              </div>           
             </li>
           </Nav>
         </Navbar.Collapse>
