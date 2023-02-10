@@ -116,8 +116,8 @@ img {
 .product-detail ul li {
   margin: 0;
   list-style: none;
-  background: url(https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/checked.png)
-    left center no-repeat;
+  /* background: url(https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/checked.png)
+    left center no-repeat; */
   background-size: 18px;
   padding-left: 1.7rem;
   margin: 0.4rem 0;
@@ -151,7 +151,7 @@ img {
   background: #256eff;
 }
 .purchase-info .btn:last-of-type {
-  background: #f64749;
+  background: green;
 }
 .purchase-info .btn:hover {
   opacity: 0.9;
@@ -160,7 +160,7 @@ img {
   display: flex;
   align-items: center;
 }
-.social-links a {
+.link-icon{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,7 +174,7 @@ img {
   font-size: 0.8rem;
   transition: all 0.5s ease;
 }
-.social-links a:hover {
+.link-icon:hover {
   background: #000;
   border-color: transparent;
   color: #fff;
