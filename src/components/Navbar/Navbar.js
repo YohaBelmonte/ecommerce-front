@@ -12,7 +12,7 @@ function NavBarComponent({size}) {
  const isAdmin = localStorage.getItem("admin");
 
   return (
-    <Navbar  expand="lg">
+    <Navbar  expand="lg" className="navbar">
       <Container>
         <Navbar.Brand>
           <div className='d-flex'>
@@ -21,7 +21,7 @@ function NavBarComponent({size}) {
                 <FaUser/>
               </Link>
             </div>
-            <h2 className="ubac-nav">L O G O </h2>
+           <img src="images/logo-navbar.png" className="logo-navbar"/>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
