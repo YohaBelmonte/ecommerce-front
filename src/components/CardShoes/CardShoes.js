@@ -1,6 +1,7 @@
 import "./CardShoes.css";
 import { useState } from "react";
 import { AiTwotoneHeart } from "react-icons/ai";
+import { BiMessageError } from "react-icons/bi";
 import axios from "axios";
 import useCart from "../../Utils/useShoppingCart";
 
@@ -17,6 +18,8 @@ function CardShoes({
   //ADD TO CART
   const token = localStorage.getItem("token") ?? "";
   const headers = { "x-auth-token": token };
+  const [warning, setWarning] = useState(false);
+  const [addSuccess, setAddSuccess] = useState(false);
 
   var url = "http://localhost:4000/api";
 
@@ -31,10 +34,18 @@ function CardShoes({
         isPresent = true;
       })
       if (isPresent){
-        alert("Ya fue AGREGADO al carrito");
+        setWarning(true);
+          setTimeout(()=>{
+            setWarning(false);
+          }, 2000);
+			  return ;
       }else {
         const response = await axios.put(`${url}/product/add/${propId}`,{},{headers});
-        alert("Agregado con EXITO")
+        setAddSuccess(true);
+          setTimeout(()=>{
+            setAddSuccess(false);
+          }, 2000);
+        // alert("Agregado con EXITO")
       }
       // console.log(cart);
     } catch (error) {
@@ -66,7 +77,8 @@ function CardShoes({
 
   return (
     <>
-
+      {warning && <div className='warning'> <BiMessageError />ERROR! Ya fue agregado al carrito</div>}
+      {addSuccess && <div className='success'> <BiMessageError />Agregado con EXITO!</div>}
       <div className="box">
         <div className="card">
           <span

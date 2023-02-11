@@ -35,12 +35,27 @@ function ShoppingCart() {
     setPrice(ans);
   };
 
-  const [quantity, setQuantity] = useState(0);
   //Contador
-  const quantityChange = () => {
+  const [quantity, setQuantity] = useState(1);
 
+  const quantityDecrease = () => {
+    setQuantity(quantity-1)
+  }
+  const quantityIncrease = () => {
+    setQuantity(quantity+1)
   }
 
+  const quantityChange = (item,d) => {
+    let ind = -1;
+    cart.forEach((data, index)=>{
+			if (data.id === item.id)
+				ind = index;
+		});
+    const tempArray = cart;
+		tempArray[ind].quantity += d;
+    setQuantity(tempArray[ind].quantity)
+    console.log(tempArray[ind].quantity);
+  }
 
   return (
     <div className="shop-container">
@@ -57,9 +72,10 @@ function ShoppingCart() {
                         <p>{item.name}</p>
                     </div>
                     <div>
-                        <button onClick={()=>quantityChange(item, +1)}> + </button>
-                        <button>{item.quantity}</button>
-                        <button > - </button>
+                        <button disabled={quantity<=1} onClick={()=>quantityDecrease()}> - </button>
+                        <button>{quantity}</button>
+                        {/* <button>{item.quantity}</button> */}
+                        <button disabled={quantity>=item.countInStock} onClick={()=>quantityIncrease()}> + </button>
                     </div>
                     <div>
                         <span>$ {item.price}</span>
