@@ -42,6 +42,7 @@ function HomePage() {
     //home de prueba ↓↓↓↓ para ver si andaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓
     <div>
       <NavBarComponent size={cart.length} />
+      <Carousel/>
       <div className="containerCards">
         <div className="row">
           <div className="col-10 d-flex flex-wrap ">
