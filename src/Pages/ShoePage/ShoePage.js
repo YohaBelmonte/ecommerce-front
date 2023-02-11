@@ -1,24 +1,17 @@
 import './ShoePage.css';
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
-import UseHome from '../../Utils/useHome';
+import useHome from '../../Utils/useHome';
 
 
 
 
-function ShoePage({
-  propName,
-  propImage,
-  propImage2,
-  propImage3,
-  propImage4,
-  propDescription,
-  propRating,
-  propPrice,
-  propId,
-  propItem,
-}) {
+function ShoePage() {
   
+
+  //  //hook
+   const { product } = useHome();
+   
 
   const imgs = document.querySelectorAll(".img-select a");
   const imgBtns = [...imgs];
@@ -36,15 +29,27 @@ function ShoePage({
 
   function slideImage() {
     const displayWidth = document.querySelector(".img-showcaseShoe img:first-child")
-      .clientWidth;
+      // .clientWidth;
 
     document.querySelector(".img-showcaseShoe").style.transform = `translateX(${-(imgId - 1) * displayWidth
       }px)`;
   }
 
 
-  window.addEventListener("resize", slideImage);  
+  window.addEventListener("resize", slideImage); 
+  
 
+  const selectShoeId= localStorage.getItem("selectShoe");
+  // console.log(selectShoeId);
+ 
+  const MapShoe= product.find((item)=>{
+    if (item._id==selectShoeId ) {
+      return item;
+
+    } 
+  })
+  // console.log(MapShoe);
+  
 
   return (
 
@@ -57,38 +62,38 @@ function ShoePage({
           <div className="product-imgsShoe">
             <div className="img-display">
               <div className="img-showcaseShoe">
-                <img src={propImage} alt="shoe image" />
-                <img src={propImage2}  alt="shoe image" />
-                <img src={propImage3}  alt="shoe image" />
-                <img src={propImage4}  alt="shoe image" />
+                <img src={MapShoe.image} alt="shoe image" />
+                <img src={MapShoe.image2}  alt="shoe image" />
+                <img src={MapShoe.image3}  alt="shoe image" />
+                <img src={MapShoe.image4}  alt="shoe image" />
               </div>
             </div>
             <div className="img-select">
               <div className="img-item">
                 <a href="#" data-id="1">
-                  <img src={propImage} alt="shoe image" />
+                  <img src={MapShoe.image} alt="shoe image" />
                 </a>
               </div>
               <div className="img-item">
                 <a href="#" data-id="2">
-                  <img src={propImage2}  alt="shoe image" />
+                  <img src={MapShoe.image2}  alt="shoe image" />
                 </a>
               </div>
               <div className="img-item">
                 <a href="#" data-id="3">
-                  <img src={propImage3}  alt="shoe image" />
+                  <img src={MapShoe.image3}  alt="shoe image" />
                 </a>
               </div>
               <div className="img-item">
                 <a href="#" data-id="4">
-                  <img src={propImage4}  alt="shoe image" />
+                  <img src={MapShoe.image4}  alt="shoe image" />
                 </a>
               </div>
             </div>
           </div>
           {/* <!-- card right --> */}
           <div className="product-contentShoe">
-            <h2 className="product-titleShoe">{propName}</h2>
+            <h2 className="product-titleShoe">{MapShoe.name}</h2>
             <a href="#" className="product-linkShoe">visit nike store</a>
             <div className="product-ratingShoe">
               <i className="fa fa-star"></i>
@@ -96,17 +101,17 @@ function ShoePage({
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star-half"></i>
-              <span> {propRating}</span>
+              <span> {MapShoe.rating}</span>
             </div>
 
             <div className="product-price">
               {/* <p className="last-price">Old Price: <span>$257.00</span></p> */}
-              <p className="new-price">Precio: <span>{propPrice}</span></p>
+              <p className="new-price">Precio: <span>$ {MapShoe.price}</span></p>
             </div>
 
             <div className="product-detail">
               <h2>Descripción: </h2>
-              <p>{propDescription}</p>
+              <p>{MapShoe.description}</p>
               
              
               <ul>

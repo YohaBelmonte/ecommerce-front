@@ -15,6 +15,7 @@ import NewPassword from './Pages/NewPassword/NewPassword';
 import Contact from './Pages/Contact/Contact'
 import ShoppingCart from './Pages/ShoppingCart/ShoppingCart';
 import Preloader from './components/LoadingScreen/LoadingScreen';
+import Error from './Pages/404/404';
 
 function App() {
   return (
@@ -115,6 +116,14 @@ function App() {
           <div>
             <div className=''>
               <ShoppingCart/>
+            </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/404' element={
+          <div>
+            <div className=''>
+              <Error/>
             </div>
           </div>
         }>

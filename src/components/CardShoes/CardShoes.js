@@ -62,21 +62,12 @@ function CardShoes({
     }
     console.log(isFavActive);
   }
-  //VIEW SHOE PAGE
-  async function viewShoePage() {
-    try {
-      localStorage.setItem("selectShoe",propId)
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
 
   //VIEW SHOE PAGE
   async function viewShoePage(propId) {
     try {
       localStorage.setItem("selectShoe",propId)
-      window.location.href ="/Shoe"
+      window.location.href ="/shoe"
     } catch (error) {
       console.error(error);
     }
@@ -103,13 +94,12 @@ function CardShoes({
                 <a href="#" onClick={() => addToCart()}>
                   <center>Add to cart</center>
                 </a>
-<<<<<<< HEAD
-                <a href="#" onClick={() => viewShoePage()}>
-=======
-                <a href="#" onClick={() => viewShoePage(propId)}>
->>>>>>> 5677fd67d798a60660a3634386806787716da69f
-                  <center>View More</center>
-                </a>
+                <div onClick={() => viewShoePage(propId)}>
+                <center>View More</center>
+
+                </div>
+                  
+               
                 <center>
                   <h5 className="card-title">{propName}</h5>
                 </center>
