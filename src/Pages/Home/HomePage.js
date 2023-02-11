@@ -1,5 +1,5 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
+import { Button, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useHome from "../../Utils/useHome";
 import useCart from "../../Utils/useShoppingCart";
