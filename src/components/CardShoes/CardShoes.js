@@ -52,10 +52,12 @@ function CardShoes({
       favCart.push(propItem);
       //↓ El "fav" que se escribe es para identificarlo en el inspeccionar elemento-Application
       localStorage.setItem("fav", JSON.stringify(favCart));
+      alert("Agregado a Favoritos");
     } else {
       setIsFavActive(false);
       favCart.splice(propId, 1)
       localStorage.setItem("fav", JSON.stringify(favCart));
+      alert("Eliminado de Favoritos");
     }
     console.log(isFavActive);
   }
