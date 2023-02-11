@@ -48,9 +48,9 @@ function PreLoader() {
             setTimeout(() => {
               // con esto decimos que los datos ya estan guardado (TRUE) pero despues de 1seg
               setcompleted(true);
-            }, 1000);
+            }, 500);
           });
-      }, 2000);
+      }, 1000);
     }, []);
 
   return (

@@ -1,5 +1,5 @@
 import "./CardToCart.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiTwotoneHeart } from "react-icons/ai";
 import axios from "axios";
 import useCart from "../../Utils/useShoppingCart";
@@ -20,17 +20,19 @@ function CardToCart({
 
   var url = "http://localhost:4000/api";
 
+  useEffect(() => {
+    console.log(cart)
+  }, []);
+
+
   //hook
-  const { cart } = useCart();
+  const { cart, setCart } = useCart();
 
   async function removeToCart() {
     try {
-      const response = await axios.put(
-        `${url}/product/remove/${propId}`,
-        {},
-        { headers }
-      );
-      console.log(response);
+      const {data} = await axios.put(`${url}/product/remove/${propId}`, cart,{ headers } );
+      window.location.reload();
+      console.log(data.arrayProduct);
     } catch (error) {
       console.error(error);
     }
@@ -55,8 +57,23 @@ function CardToCart({
     console.log(isFavActive);
   }
 
+//Sumar o agregar productos al carrito (QUANTITY)
+  // const handleChange = (propId, d) =>{
+	// 	let ind = -1;
+	// 	cart.forEach((data, index)=>{
+	// 		if (data.id === propId)
+	// 			ind = index;
+	// 	});
+	// 	const tempArr = cart;
+	// 	tempArr[ind].quantity += d;
+		
+	// 	if (tempArr[ind].quantity === 0)
+	// 		tempArr[ind].quantity = 1;
+	// 	setCart([...tempArr])
+	// }
+
   return (
-    <div className="container" >
+    <div className="containercart" >
       <div className="cart_box" key={propId}>
         <div className="cart_img">
           <img src={propImage} />
@@ -70,9 +87,9 @@ function CardToCart({
           </span>
         </div>
         <div>
-          <button onClick={() => handleChange(item, +1)}> + </button>
+          <button onClick={() => handleChange(propId, +1)}> + </button>
           <button>{propQuantity}</button>
-          <button onClick={() => handleChange(item, -1)}> - </button>
+          <button onClick={() => handleChange(propId, -1)}> - </button>
         </div>
         <div>
           <span>{propPrice}</span>

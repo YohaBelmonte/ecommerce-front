@@ -27,7 +27,7 @@ function useCart() {
     
   
 // Para mostrar en el Cart ↓
-  const CartProducts = cart.map((item, i) => (
+  const CartProducts = cart?.map((item, i) => (
     <CardToCart
       key={i}
       propName={item.name}
@@ -44,6 +44,7 @@ function useCart() {
   return {
     CartProducts,
     cart,
+    setCart
   };
 }
 export default useCart;

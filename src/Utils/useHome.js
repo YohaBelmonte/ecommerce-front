@@ -25,7 +25,7 @@ function UseHome() {
   };
 
   const MapProduct = product.map((item, i) => (
-    <CardShoes
+      <CardShoes
       key={i}
       propName={item.name}
       propImage={item.image}
