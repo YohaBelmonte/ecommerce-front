@@ -18,21 +18,44 @@ function ShoppingCart() {
   //hook
   const { CartProducts, cart, setCart } = useCart();
 
+  //ELIMINAR DEL CARRITO
   async function handleRemove(id) {
     const arr = cart.filter((item)=>item._id !== id);
-    const response = await axios.put(`${url}/product/remove/${id}`,{},{headers});
     setCart(arr);
-    console.log(arr);
+    // console.log(id);
+    const {data} = await axios.put(`${url}/product/remove/${id}`,{},{headers});
+    // console.log(data);
   }
 
-
+//TOTAL DE ORDEN
   const handlePrice = () => {
     let ans = 0;
     // cart.map((item) => (ans += item.quantity * item.price));
     cart.map((item) => (ans += item.price));
     setPrice(ans);
   };
-  
+
+  //Contador
+  const [quantity, setQuantity] = useState(1);
+
+  const quantityDecrease = () => {
+    setQuantity(quantity-1)
+  }
+  const quantityIncrease = () => {
+    setQuantity(quantity+1)
+  }
+
+  const quantityChange = (item,d) => {
+    let ind = -1;
+    cart.forEach((data, index)=>{
+			if (data.id === item.id)
+				ind = index;
+		});
+    const tempArray = cart;
+		tempArray[ind].quantity += d;
+    setQuantity(tempArray[ind].quantity)
+    console.log(tempArray[ind].quantity);
+  }
 
   return (
     <div className="shop-container">
@@ -49,9 +72,10 @@ function ShoppingCart() {
                         <p>{item.name}</p>
                     </div>
                     <div>
-                        <button > + </button>
-                        <button>{item.quantity}</button>
-                        <button > - </button>
+                        <button disabled={quantity<=1} onClick={()=>quantityDecrease()}> - </button>
+                        <button>{quantity}</button>
+                        {/* <button>{item.quantity}</button> */}
+                        <button disabled={quantity>=item.countInStock} onClick={()=>quantityIncrease()}> + </button>
                     </div>
                     <div>
                         <span>$ {item.price}</span>

@@ -10,8 +10,6 @@ function Contact() {
         <div>
         <NavbarLogin />
         </div>
-     
-
         <LoginPage />
       </div>
       <FooterComponent />
