@@ -2,6 +2,7 @@
 import "./HomePage.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Carousel from "../../components/Carousel/Carousel";
 import useHome from "../../Utils/useHome";
 import useCart from "../../Utils/useShoppingCart";
 import NavBarComponent from "../../components/Navbar/Navbar";
