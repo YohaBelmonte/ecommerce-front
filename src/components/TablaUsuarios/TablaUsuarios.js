@@ -1,9 +1,8 @@
 import NavBarComponent from "../../components/Navbar/Navbar";
-import Form from "react-bootstrap/Form";
-import { Button, Modal, InputGroup, } from 'react-bootstrap';
+import { Button, Modal} from 'react-bootstrap';
 import { BiEdit } from 'react-icons/bi';
 import { AiTwotoneDelete } from 'react-icons/ai';
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import useAdmin from "../../Utils/useAdmin";
 import axios from "axios";
 import "./TablaUsuarios.js"
@@ -18,8 +17,8 @@ function TablaUsuarios() {
   const handleShow = () => setShow(true);
   const handleeditClose = () => editShow(false);
   const handleEditShow = () => editShow(true);
-  const { data, OnChange, Register, deletUser, tablaUsuarios, setTablaUsuarios,
-    usuarios, setUsuarios, busqueda, setBusqueda, filtrar, handleChange } = useAdmin();
+  const { data, OnChange, Register, deletUser,
+    usuarios, busqueda, handleChange } = useAdmin();
 
 
   const [update, setupdate] = useState({});
