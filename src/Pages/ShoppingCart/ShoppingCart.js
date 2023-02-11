@@ -9,17 +9,17 @@ function ShoppingCart() {
 
   return (
     <div className="shop-container">
-      <NavBarComponent/>
-      <div className="cart-container">
+      <NavBarComponent />
+      <div className=" cart-container nowrap">
         <div className="cart-title">
           <span>Carrito de compras</span>
         </div>
-        {CartProducts}
+        <div className=" products-container">
+          {CartProducts}
+        </div>
       </div>
       <Footer />
     </div>
-
-
   );
 }
 export default ShoppingCart;

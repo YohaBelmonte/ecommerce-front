@@ -1,4 +1,4 @@
-import "./useHome.css";
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CardShoes from "../../src/components/CardShoes/CardShoes";
@@ -26,7 +26,7 @@ function UseHome() {
   };
 
   const MapProduct = product.map((item, i) => (
-    <div className="col" key={i}>
+    <div className="col " key={i}>
       <CardShoes
         propName={item.name}
         propImage={item.image}
@@ -39,17 +39,10 @@ function UseHome() {
     </div>
   ));
 
+  return {
 
-  return (
-    <>
-      <div id="toast"></div>
-      <div id="toast-cart"></div>
-      <div className="container">
-            <div className="row">
-              {MapProduct}
-            </div>
-          </div>
-    </>
-  );
+    MapProduct,
+    product
+  };
 }
 export default UseHome;

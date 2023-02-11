@@ -2,6 +2,8 @@ import "./CardShoes.css";
 import { useState } from "react";
 import { AiTwotoneHeart } from "react-icons/ai";
 import axios from "axios";
+import useCart from "../../Utils/useShoppingCart";
+
 function CardShoes({
   propName,
   propImage,
@@ -15,13 +17,25 @@ function CardShoes({
   //ADD TO CART
   const token = localStorage.getItem("token") ?? "";
   const headers = { "x-auth-token": token };
+
   var url = "http://localhost:4000/api";
 
+  //hook
+  const { cart } = useCart();
+
   async function addToCart() {
+    let isPresent = false;
     try {
-      const response = await axios.put(`${url}/product/add/${propId}`, {}, { headers });
-      alert("Producto agregado con exito");
-      console.log(response);
+      cart.map((item) => {
+        if (item._id === propId)
+        isPresent = true;
+      })
+      if (isPresent){
+        alert("YA ESTA EN EL CARRITO MAN");
+      }else {
+        const response = await axios.put(`${url}/product/add/${propId}`,{},{headers});
+      }
+      // console.log(cart);
     } catch (error) {
       console.error(error);
     }
@@ -69,6 +83,9 @@ function CardShoes({
           <div className="card-body">
             <a className="btn-card" href="#" onClick={() => addToCart()}>
               <center className="tocart">Add To Cart</center>
+            </a>
+            <a className="btn-card" href="#" >
+              <center className="vermas">ver más</center>
             </a>
             <h2 className="buy">$100</h2>
 

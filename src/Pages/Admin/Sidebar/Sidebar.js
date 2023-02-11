@@ -2,13 +2,31 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Sidebar.css"
 import CardComponents from '../AdminIcon/AdminIcon';
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useState } from 'react';
 
 
 
 function Sidebar() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
-    <div className="d-flex mt-5" id="wrapper">
-      <div className="bg-white px-3" id="sidebar-wrapper">
+    <div className="mt-5">
+          <>
+      <Button variant="primary" className="d-lg-none buttonsAdmin" onClick={handleShow}>
+        Admin
+      </Button>
+
+
+      <Offcanvas show={show} onHide={handleClose} responsive="lg">
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title >Admin Options</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <p className="mb-0">
+          <div className="bg-white px-3" id="sidebar-wrapper">
         <div className="container-fluid text-center d-flex justify-content-center">
 
           <div>
@@ -28,6 +46,8 @@ function Sidebar() {
 
         {/* esto no va */}
         <div className="list-group list-group-flush text-center">
+        <Link to="/" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Inicio</p></Link>
+
           <Link to="/admin" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Dashboard</p></Link>
           <Link to="/admin/usuarios" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Usuarios</p></Link>
           <Link to="/admin/productos" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Productos</p></Link>
@@ -37,7 +57,10 @@ function Sidebar() {
 
         </div>
       </div>
-
+          </p>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </>
     </div>
 
   );
