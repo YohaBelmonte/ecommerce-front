@@ -17,7 +17,7 @@ function UseHome() {
   async function GetProduct() {
     try {
       const { data } = await axios.get(`${url}/product`, { headers });
-      // console.log(data)
+      console.log(data)
       setproduct(data);
     } catch (error) {
       console.error(error);
