@@ -23,6 +23,8 @@ function CardShoes({
   //hook
   const { cart } = useCart();
 
+
+  //ADD TO CART
   async function addToCart() {
     let isPresent = false;
     try {
@@ -31,9 +33,10 @@ function CardShoes({
         isPresent = true;
       })
       if (isPresent){
-        alert("YA ESTA EN EL CARRITO MAN");
+        alert("Ya fue agregado al carrito");
       }else {
         const response = await axios.put(`${url}/product/add/${propId}`,{},{headers});
+        alert("Agregado al carrito");
       }
       // console.log(cart);
     } catch (error) {
@@ -60,6 +63,15 @@ function CardShoes({
     console.log(isFavActive);
   }
 
+  //VIEW SHOE PAGE
+  async function viewShoePage(propId) {
+    try {
+      localStorage.setItem("selectShoe",propId)
+      window.location.href ="/Shoe"
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   return (
     <>
@@ -85,7 +97,7 @@ function CardShoes({
               <center className="tocart">Add To Cart</center>
             </a>
             <a className="btn-card1" href="#" >
-              <u className="seemore">See more</u>
+              <u className="seemore" onClick={() => viewShoePage()}>See more</u>
             </a>
 
             {/* <a href="#" onClick={() => removeToCart()}>
