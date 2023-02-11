@@ -43,8 +43,8 @@ function CardShoes({
       console.error(error);
     }
   }
- 
-//ADD TO FAV
+
+  //ADD TO FAV
   const [isFavActive, setIsFavActive] = useState(false);
 
   //--- ↓ agregar al array un nuevo producto
@@ -55,7 +55,7 @@ function CardShoes({
       favCart.push(propItem);
       //↓ El "fav" que se escribe es para identificarlo en el inspeccionar elemento-Application
       localStorage.setItem("fav", JSON.stringify(favCart));
-    } else{
+    } else {
       setIsFavActive(false);
       favCart.splice(propId, 1)
       localStorage.setItem("fav", JSON.stringify(favCart));
@@ -74,41 +74,40 @@ function CardShoes({
   }
 
   return (
-    <div>
-      <div id="toast"></div>
-      <div id="toast-cart"></div>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3">
-            <div className="m-0 card">
-              <span
-                id="heart"
-                className={`heart${isFavActive ? "-active" : ""}`}
-              >
-                <i onClick={() => wishList()}>
-                  <AiTwotoneHeart />
-                </i>
-              </span>
-              <img src={propImage}/>
-              <div className="card-body">
-                <a href="#" onClick={() => addToCart()}>
-                  <center>Add to cart</center>
-                </a>
-                <div onClick={() => viewShoePage(propId)}>
-                <center>View More</center>
+    <>
 
-                </div>
-                  
-               
-                <center>
-                  <h5 className="card-title">{propName}</h5>
-                </center>
-              </div>
-            </div>
+      <div className="box">
+        <div className="card">
+          <span
+            id="heart"
+            className={`heart${isFavActive ? "-active" : ""}`}
+          >
+            <i onClick={() => wishList()}>
+              <AiTwotoneHeart />
+            </i>
+          </span>
+          <img src={propImage} />
+          <div className="card-title-wrapper">
+            <center>
+              <h5 className="card-title">{propName}</h5>
+            </center>
           </div>
+          <div className="card-body">
+            <a className="btn-card" href="#" onClick={() => addToCart()}>
+              <center className="tocart">Add To Cart</center>
+            </a>
+            <a className="btn-card1" href="#" >
+              <u className="seemore" onClick={() => viewShoePage()}>See more</u>
+            </a>
+
+            {/* <a href="#" onClick={() => removeToCart()}>
+            <center>Remove to cart</center>
+          </a> */}
+          </div>
+          <h2 className="buy">$100</h2>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

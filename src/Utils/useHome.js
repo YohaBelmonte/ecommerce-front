@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CardShoes from "../../src/components/CardShoes/CardShoes";
@@ -18,7 +19,7 @@ function UseHome() {
   async function GetProduct() {
     try {
       const { data } = await axios.get(`${url}/product`, { headers });
-      // console.log(data)
+      console.log(data)
       setproduct(data);
     } catch (error) {
       console.error(error);
@@ -26,7 +27,7 @@ function UseHome() {
   };
 
   const MapProduct = product.map((item, i) => (
-    <CardShoes
+      <CardShoes
       key={i}
       propName={item.name}
       propImage={item.image}
@@ -54,6 +55,7 @@ function UseHome() {
   // ));
 
   return {
+
     MapProduct,
     // MapProductPage,
     product

@@ -9,20 +9,18 @@ function useAdmin() {
   const token = localStorage.getItem("token") ?? "";
   const headers = { "x-auth-token": token };
 
-  useEffect(() => {
-    GetUsers();
-    
-  }, []);
+
 
   // Method Get Users ↓↓↓
-  async function GetUsers() {
-    try {
-      const { data } = await axios.get(`${url}/user`);
-      setData(data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
+  // async function GetUsers() {
+  //   try {
+  //     const { data } = await axios.get(`${url}/user`);
+  //     console.log(data)
+  //     setData(data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
   
   // Register users
   function OnChange(e) {
@@ -51,8 +49,74 @@ function useAdmin() {
       console.error(error);
     }
   }
+  
+// Search Usuarios Y PETICION GET DE USUARIOS ↓↓↓↓
+  const [usuarios, setUsuarios] = useState([]);
+  const [tablaUsuarios, setTablaUsuarios] = useState([]);
+  const [busqueda, setBusqueda] = useState("");
 
-  // Tabla de productos = Admin Page     
+  const peticionGet = async () => {
+    await axios.get(`${url}/user`,)
+      .then(response => {
+        setUsuarios(response.data);
+        setTablaUsuarios(response.data);
+      }).catch(error => {
+        console.log(error);
+      })
+  }
+
+  const handleChange = e => {
+    setBusqueda(e.target.value);
+    filtrar(e.target.value);
+  }
+
+  const filtrar = (terminoBusqueda) => {
+    var resultadosBusqueda = tablaUsuarios.filter((elemento) => {
+      if (elemento._id.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+        || elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+      ) {
+        return elemento;
+      }
+    });
+    setUsuarios(resultadosBusqueda);
+  }
+
+  useEffect(() => {
+    peticionGet();
+  }, [])
+
+//  Search Productos Y PETICION GET DE PRODUCTOS 
+  const [product, setProduct] = useState([]);
+  const [tablaProductos, setTablaProductos] = useState([]);
+  const [busquedaProduct, setBusquedaProduct] = useState("");
+
+
+const peticionGetProduct = async () => {
+  await axios.get(`${url}/product`, { headers })
+    .then(response => {
+      setProduct(response.data);
+      setTablaProductos(response.data);
+    }).catch(error => {
+      console.log(error);
+    })
+}
+const handleChangeProduct = e => {
+  setBusquedaProduct(e.target.value);
+  filtrarProduct(e.target.value);
+}
+const filtrarProduct = (terminoBusqueda) => {
+  var resultadosBusqueda = tablaProductos.filter((elemento) => {
+    if (elemento._id.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+      || elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+    ) {
+      return elemento;
+    }
+  });
+  setProduct(resultadosBusqueda);
+}
+useEffect(() => {
+  peticionGetProduct();
+}, [])
 
 // Tabla de productos = Admin Page     
 
@@ -91,7 +155,6 @@ async function deletProduct(id) {
 
   return {
     data,
-    GetUsers,
     Register,
     OnChange,
     deletUser,
@@ -99,7 +162,11 @@ async function deletProduct(id) {
     MethodPostProduct,
     headers,
     token,
-    deletProduct
+    deletProduct,
+    tablaUsuarios, setTablaUsuarios,
+    usuarios, setUsuarios,busqueda, setBusqueda,handleChange,peticionGet
+    ,peticionGetProduct,handleChangeProduct,busquedaProduct,setProduct,product
+
   };
 }
 export default useAdmin;

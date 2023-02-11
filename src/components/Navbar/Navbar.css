@@ -1,11 +1,16 @@
 .styleUser {
   font-size: 0px;
 }
-
+.navbar {
+  background-color: #fcf8f4 ;
+}
 .container-link {
   list-style: none;
 }
-
+.logo-navbar {
+  width: 90px;
+  height: 90px;
+}
 .link-nav {
   text-decoration: none;
   font-size: 15px;
@@ -58,7 +63,7 @@
 @media (max-width: 844px) {
   .styleUser {
     text-decoration: none;
-    margin-top: 5px;
+    margin-top: 20px;
   }
   .styleIcons2 {
     color: black;
@@ -69,7 +74,7 @@
   .styleIcons2:hover {
     color: #275e38;
   }
-  .ubac-nav {
+  .logo-navbar {
     margin-left: 80px;
   }
   .icon-nav {
