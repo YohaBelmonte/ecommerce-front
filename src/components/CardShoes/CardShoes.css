@@ -124,28 +124,31 @@ h1 {
 }
 
 .btn-card {
-  font-family: "Roboto", sans-serif;
-  padding: 8px;
-  margin-left: -3px;
-  border-radius: 5px;
-  border: 2px;
-  border-style: solid;
-  border-color: #21232261;
-  background-color: #275e3865;
-}
-
-.btn-card:hover {
+  margin-left: -20px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+  border: 1px;
   background-color: #275e38;
 }
 
+.btn-card:hover {
+  background-color: #212322;
+}
+
 .tocart {
-  color: #212322;
-  font-size: 13px;
+  color: #f7f6f3;
+  font-size: 12px;
 }
 .seemore{
   color: #212322fc;
   font-size: 15px;
+  margin-left: -20px;
 }
+.seemore:hover{
+  color: #2123225b;
+  
+}
+
 .buy {
   color: #275e387d;
   font-size: 20px;
@@ -153,10 +156,8 @@ h1 {
   margin: 1;
   font-family: "Roboto", sans-serif;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
-
-
 
 @keyframes fadeInOut {
 
@@ -176,6 +177,7 @@ h1 {
 a {
   z-index: -1;
 }
+
 @media (max-width: 1280px){
   .card {
     width: 170px;
@@ -188,27 +190,12 @@ a {
     transform: scale(0.95);
     transition: box-shadow 0.5s, transform 0.2s;
   }
-  .btn-card {
-    margin-left: -25px;
-    font-family: "Roboto", sans-serif;
-    padding: 2px;
-    border-radius: 6px;
-    border: 1px;
-    border-style: solid;
-    border-color: #21232261;
-    background-color: #275e3865;
-  }
+  
   .buy {
     font-size: 22px;
   }
-  .tocart {
-    font-size: 15px;
-  }
-  .seemore{
-    color: #212322;
-    font-size: 12px;
-    margin-left: -20px;
-  }
+  
+
 }
 @media (max-width: 990px){
   .box{
@@ -233,27 +220,12 @@ a {
     margin-top: -10px;
     margin-left: 60%;
   }
-  .btn-card {
-    margin-left: -20px;
-    font-family: "Roboto", sans-serif;
-    padding: 2px;
-    border-radius: 6px;
-    border: 2px;
-    border-style: solid;
-    border-color: #21232261;
-    background-color: #275e3865;
-  }
+  
   .buy {
     font-size: 20px;
   }
-  .tocart {
-    font-size: 15px;
-  }
-  .seemore{
-    color: #212322;
-    font-size: 12px;
-    margin-left: -18px;
-  }
+ 
+
 }
 @media (max-width: 768px) {
   .card {
@@ -268,23 +240,16 @@ a {
     transform: scale(0.95);
     transition: box-shadow 0.5s, transform 0.2s;
   }
-  .btn-card {
+  /* .btn-card {
     margin-left: -25px;
     padding: 2px;
     border-radius: 6px;
     border: 1px;
-  }
+  } */
   .buy {
     font-size: 20px;
   }
-  .tocart {
-    font-size: 14px;
-  }
-  .seemore{
-    color: #212322;
-    font-size: 13px;
-    margin-left: -18px;
-  }
+  
 }
 @media (max-width: 590px){
   .box{
@@ -301,18 +266,16 @@ a {
     transform: scale(0.95);
     transition: box-shadow 0.5s, transform 0.2s;
   }
-  .btn-card {
+  /* .btn-card {
     margin-left: -25px;
     padding: 3px;
     border-radius: 6px;
     border: 1px;
-  }
+  } */
   .buy {
     font-size: 15px;
   }
-  .tocart {
-    font-size: 11px;
-  }
+  
 }
 @media (max-width: 490px){
   .box{
@@ -341,21 +304,14 @@ a {
   }
   .buy {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     color: #275e387d;
     font-size: 20px;
 
     font-family: "Roboto", sans-serif;
   }
-  .tocart {
-    color: #212322;
-    font-size: 12px;
-  }
-  .seemore{
-    color: #212322;
-    font-size: 12px;
-    margin-left: -20px;
-  }
+  
+  
 }
 @media (max-width: 395px){
   .box{
@@ -373,30 +329,11 @@ a {
     transition: box-shadow 0.5s, transform 0.2s;
   }
   
-  .btn-card {
-    margin-left: -25px;
-    font-family: "Roboto", sans-serif;
-    padding: 2px;
-    border-radius: 6px;
-    border: 1px;
-    border-style: solid;
-    border-color: #21232261;
-    background-color: #275e3865;
-  }
   .buy {
     color: #275e387d;
     font-size: 18px;
 
     font-family: "Roboto", sans-serif;
-  }
-  .tocart {
-    color: #212322;
-    font-size: 12px;
-  }
-  .seemore{
-    color: #212322;
-    font-size: 12px;
-    margin-left: -20px;
   }
   
 }
@@ -432,10 +369,7 @@ a {
 
     font-family: "Roboto", sans-serif;
   }
-  .tocart {
-    color: #212322;
-    font-size: 10px;
-  }
+  
 }
 
 @media (max-width: 300px){
