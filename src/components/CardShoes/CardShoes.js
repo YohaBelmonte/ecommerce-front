@@ -92,7 +92,7 @@ function CardShoes({
             <center>Remove to cart</center>
           </a> */}
           </div>
-          <h2 className="buy">$100</h2>
+          <h2 className="buy">$ {propPrice}</h2>
         </div>
       </div>
     </>
