@@ -26,16 +26,17 @@ function UseHome() {
   };
 
   const MapProduct = product.map((item, i) => (
+    <div className="col " key={i}>
       <CardShoes
-      key={i}
-      propName={item.name}
-      propImage={item.image}
-      propDescription={item.description}
-      propRating={item.rating}
-      propPrice={item.price}
-      propId={item._id}
-      propItem={item}
-    />
+        propName={item.name}
+        propImage={item.image}
+        propDescription={item.description}
+        propRating={item.rating}
+        propPrice={item.price}
+        propId={item._id}
+        propItem={item}
+      />
+    </div>
   ));
 
   return {
