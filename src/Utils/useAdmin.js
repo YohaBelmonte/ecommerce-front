@@ -9,21 +9,19 @@ function useAdmin() {
   const token = localStorage.getItem("token") ?? "";
   const headers = { "x-auth-token": token };
 
-  useEffect(() => {
-    GetUsers();
-    
-  }, []);
+
 
   // Method Get Users ↓↓↓
-  async function GetUsers() {
-    try {
-      const { data } = await axios.get(`${url}/user`);
-      setData(data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-  
+  // async function GetUsers() {
+  //   try {
+  //     const { data } = await axios.get(`${url}/user`);
+  //     console.log(data)
+  //     setData(data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
+
   // Register users
   function OnChange(e) {
     const { name, value } = e.target;
@@ -52,46 +50,111 @@ function useAdmin() {
     }
   }
 
+  // Search Usuarios Y PETICION GET DE USUARIOS ↓↓↓↓
+  const [usuarios, setUsuarios] = useState([]);
+  const [tablaUsuarios, setTablaUsuarios] = useState([]);
+  const [busqueda, setBusqueda] = useState("");
+
+  const peticionGet = async () => {
+    await axios.get(`${url}/user`,)
+      .then(response => {
+        setUsuarios(response.data);
+        setTablaUsuarios(response.data);
+      }).catch(error => {
+        console.log(error);
+      })
+  }
+
+  const handleChange = e => {
+    setBusqueda(e.target.value);
+    filtrar(e.target.value);
+  }
+
+  const filtrar = (terminoBusqueda) => {
+    var resultadosBusqueda = tablaUsuarios.filter((elemento) => {
+      if (elemento._id.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+        || elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+      ) {
+        return elemento;
+      }
+    });
+    setUsuarios(resultadosBusqueda);
+  }
+
+  useEffect(() => {
+    peticionGet();
+  }, [])
+
+  //  Search Productos Y PETICION GET DE PRODUCTOS 
+  const [product, setProduct] = useState([]);
+  const [tablaProductos, setTablaProductos] = useState([]);
+  const [busquedaProduct, setBusquedaProduct] = useState("");
+
+
+  const peticionGetProduct = async () => {
+    await axios.get(`${url}/product`, { headers })
+      .then(response => {
+        setProduct(response.data);
+        setTablaProductos(response.data);
+      }).catch(error => {
+        console.log(error);
+      })
+  }
+  const handleChangeProduct = e => {
+    setBusquedaProduct(e.target.value);
+    filtrarProduct(e.target.value);
+  }
+  const filtrarProduct = (terminoBusqueda) => {
+    var resultadosBusqueda = tablaProductos.filter((elemento) => {
+      if (elemento._id.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+        || elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+      ) {
+        return elemento;
+      }
+    });
+    setProduct(resultadosBusqueda);
+  }
+  useEffect(() => {
+    peticionGetProduct();
+  }, [])
+
   // Tabla de productos = Admin Page     
 
-// Tabla de productos = Admin Page     
+  const [formProduct, setFormProduct] = useState({});
 
-const [formProduct, setFormProduct] = useState({});
-
-function OnChangeProduct(e) {
-  const { name, value } = e.target;
-  const response = {
-    ...formProduct,
-    [name]: value,
-  };
-  setFormProduct(response);
-  console.log(response)
-}
-
-async function MethodPostProduct(e) {
-  try {
-    const response = await axios.post(`${url}/product`,formProduct,{headers});
+  function OnChangeProduct(e) {
+    const { name, value } = e.target;
+    const response = {
+      ...formProduct,
+      [name]: value,
+    };
+    setFormProduct(response);
     console.log(response)
-    window.location.reload();
-    alert("Producto añadido con exito");
-  } catch (error) {
-    console.error(error);
-
   }
-}
 
-async function deletProduct(id) {
-  try {
-    const { data } = await axios.delete(`${url}/product/${id}`,formProduct,{headers});
-    alert("Producto eliminado con exito");
-  } catch (error) {
-    console.error(error);
+  async function MethodPostProduct(e) {
+    try {
+      const response = await axios.post(`${url}/product`, formProduct, { headers });
+      console.log(response)
+      window.location.reload();
+      alert("Producto añadido con exito");
+    } catch (error) {
+      console.error(error);
+
+    }
   }
-}
+
+  async function deletProduct(id) {
+    try {
+      const { data } = await axios.delete(`${url}/product/${id}`, formProduct, { headers });
+      alert("Producto eliminado con exito");
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   return {
     data,
-    GetUsers,
     Register,
     OnChange,
     deletUser,
@@ -99,7 +162,13 @@ async function deletProduct(id) {
     MethodPostProduct,
     headers,
     token,
-    deletProduct
+    deletProduct,
+    tablaUsuarios, 
+    setTablaUsuarios,
+    usuarios,
+     setUsuarios, busqueda, setBusqueda, handleChange, peticionGet
+    , peticionGetProduct, handleChangeProduct, busquedaProduct, setProduct, product
+
   };
 }
 export default useAdmin;
