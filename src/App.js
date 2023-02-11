@@ -15,6 +15,7 @@ import NewPassword from './Pages/NewPassword/NewPassword';
 import Contact from './Pages/Contact/Contact'
 import ShoppingCart from './Pages/ShoppingCart/ShoppingCart';
 import Preloader from './components/LoadingScreen/LoadingScreen';
+import Orders from './Pages/Admin/Orders';
 
 function App() {
   return (
@@ -83,6 +84,14 @@ function App() {
           <div>
             <div className=''>
               <ShoppingCart/>
+            </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin/Orders' element={
+          <div>
+            <div>
+              <Orders />
             </div>
           </div>
         }>
