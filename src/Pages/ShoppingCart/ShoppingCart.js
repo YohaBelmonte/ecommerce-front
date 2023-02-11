@@ -89,9 +89,10 @@ function ShoppingCart() {
         show={show}
         onHide={() => setShow(false)}
         dialogClassName="modal-90w"
-        
+        backdrop="static"
+
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton className="bg-dark text-white">
           <Modal.Title className="d-flex justify-content-center w-100">
            Insertar datos de la tarjeta
             </Modal.Title>
