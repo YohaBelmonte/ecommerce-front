@@ -12,7 +12,7 @@ function NavBarComponent({size}) {
  const isAdmin = localStorage.getItem("admin");
 
   return (
-    <Navbar  expand="lg">
+    <Navbar  expand="lg" className="navbar">
       <Container>
         <Navbar.Brand>
           <div className='d-flex'>
@@ -21,7 +21,7 @@ function NavBarComponent({size}) {
                 <FaUser/>
               </Link>
             </div>
-            <h2 className="ubac-nav">L O G O </h2>
+           <img src="images/logo-navbar.png" className="logo-navbar"/>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
@@ -36,7 +36,6 @@ function NavBarComponent({size}) {
               { isAdmin? (
                 <Link to="/admin" className='link-nav'> <p className="admin-nav">ADMINISTRADOR </p></Link>
               ):("") }
-              <Link to="/admin" className='link-nav'> <p className="admin-nav">ADMINISTRADOR </p></Link>
               <Link to="/shoppingCart" className='link-nav shopping-cart1 mx-lg-5'>MI CARRITO</Link>
               <Link to="/login" className='mx-lg-2 icon-nav'>
                 <FaUser/>
