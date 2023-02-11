@@ -1,6 +1,7 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Carousel from "../../components/Carousel/Carousel";
 import useHome from "../../Utils/useHome";
 import useCart from "../../Utils/useShoppingCart";
 import NavBarComponent from "../../components/Navbar/Navbar";
@@ -40,6 +41,9 @@ function HomePage() {
     //home de prueba ↓↓↓↓ para ver si andaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓
     <div>
       <NavBarComponent size={cart.length}/>
+      <div >
+            <Carousel />
+        </div >
       <div className="d-flex flex-column-reverse MapProductContainer">
         {MapProduct}
       </div>
