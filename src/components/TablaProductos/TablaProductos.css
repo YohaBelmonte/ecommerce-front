@@ -67,5 +67,13 @@ button {
     width:100%;
     transition:800ms ease all;
   }
-  
-  
+.imageProduct{
+  max-width: 100px;
+  min-width: 10px;
+  max-height: 100%;
+ min-height: 10px;
+}
+.Description{
+  max-width: 100px;
+  min-width: 100px;
+}
