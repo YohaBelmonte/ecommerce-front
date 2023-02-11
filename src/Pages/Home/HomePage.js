@@ -1,6 +1,8 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
+import "./HomePage.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Carousel from "../../components/Carousel/Carousel";
 import useHome from "../../Utils/useHome";
 import useCart from "../../Utils/useShoppingCart";
 import NavBarComponent from "../../components/Navbar/Navbar";
@@ -28,7 +30,7 @@ function HomePage() {
       const { data } = await axios.get(`${url}/user/activeUser`, { headers });
       //  console.log(data)
       if (data.isAdmin == true) {
-        localStorage.setItem("admin", data.isAdmin);
+        localStorage.setItem("admin", data.isAdmin)
       }
     } catch (error) {
       console.error(error);
@@ -40,13 +42,18 @@ function HomePage() {
     <div>
       <NavBarComponent size={cart.length} />
       <div className="container">
+        
         <div className="row">
-          <div className="col-10">
+          <div className="col-10 d-flex flex-wrap ">
             {MapProduct}
-            </div>
-          <div className="col-2">
-            <div className="advertising2">PUBLICIDAD</div>
           </div>
+          <div className="col-sm-none col-lg-2">
+            <div className="advertising2"></div>
+          </div>
+        </div>
+        
+        <div className="PAGINATION"> 
+
         </div>
       </div>
       <Footer />
@@ -55,3 +62,5 @@ function HomePage() {
 }
 
 export default HomePage;
+
+

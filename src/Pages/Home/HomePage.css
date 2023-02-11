@@ -1,13 +1,6 @@
-
-
 .advertising2{
     background-image: url(https://cdn3.f-cdn.com//files/download/186324189/Banner_lateral.jpg?fit=crop);
     height: 95%;
     margin-top: 18%;
     
-}
-@media (max-width: 990px){
-    .advertising2{
-        display: none;
-    }
 }

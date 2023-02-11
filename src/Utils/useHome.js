@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CardShoes from "../../src/components/CardShoes/CardShoes";
@@ -38,6 +39,7 @@ function UseHome() {
   ));
 
   return {
+
     MapProduct,
     product
   };
