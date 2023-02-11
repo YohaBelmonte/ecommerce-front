@@ -31,9 +31,10 @@ function CardShoes({
         isPresent = true;
       })
       if (isPresent){
-        alert("YA ESTA EN EL CARRITO MAN");
+        alert("Ya fue AGREGADO al carrito");
       }else {
         const response = await axios.put(`${url}/product/add/${propId}`,{},{headers});
+        alert("Agregado con EXITO")
       }
       // console.log(cart);
     } catch (error) {
@@ -57,7 +58,7 @@ function CardShoes({
       setIsFavActive(false);
       favCart.splice(propId, 1)
       localStorage.setItem("fav", JSON.stringify(favCart));
-      alert("Eliminado de Favoritos");
+      alert("Eliminado del carrito");
     }
     console.log(isFavActive);
   }

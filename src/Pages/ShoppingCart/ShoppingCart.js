@@ -18,21 +18,29 @@ function ShoppingCart() {
   //hook
   const { CartProducts, cart, setCart } = useCart();
 
+  //ELIMINAR DEL CARRITO
   async function handleRemove(id) {
     const arr = cart.filter((item)=>item._id !== id);
-    const response = await axios.put(`${url}/product/remove/${id}`,{},{headers});
     setCart(arr);
-    console.log(arr);
+    // console.log(id);
+    const {data} = await axios.put(`${url}/product/remove/${id}`,{},{headers});
+    // console.log(data);
   }
 
-
+//TOTAL DE ORDEN
   const handlePrice = () => {
     let ans = 0;
     // cart.map((item) => (ans += item.quantity * item.price));
     cart.map((item) => (ans += item.price));
     setPrice(ans);
   };
-  
+
+  const [quantity, setQuantity] = useState(0);
+  //Contador
+  const quantityChange = () => {
+
+  }
+
 
   return (
     <div className="shop-container">
@@ -49,7 +57,7 @@ function ShoppingCart() {
                         <p>{item.name}</p>
                     </div>
                     <div>
-                        <button > + </button>
+                        <button onClick={()=>quantityChange(item, +1)}> + </button>
                         <button>{item.quantity}</button>
                         <button > - </button>
                     </div>
