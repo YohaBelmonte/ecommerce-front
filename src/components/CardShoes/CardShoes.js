@@ -84,15 +84,15 @@ function CardShoes({
             <a className="btn-card" href="#" onClick={() => addToCart()}>
               <center className="tocart">Add To Cart</center>
             </a>
-            <a className="btn-card" href="#" >
-              <center className="vermas">ver más</center>
+            <a className="btn-card1" href="#" >
+              <u className="seemore">See more</u>
             </a>
-            <h2 className="buy">$100</h2>
 
             {/* <a href="#" onClick={() => removeToCart()}>
             <center>Remove to cart</center>
           </a> */}
           </div>
+          <h2 className="buy">$100</h2>
         </div>
       </div>
     </>
