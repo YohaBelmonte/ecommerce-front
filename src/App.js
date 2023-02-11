@@ -22,41 +22,9 @@ function App() {
       <Preloader/>
       <Routes>
           <Route path='/' element={
-          <div>
-            <div className=''>
-              <HomePage/>
-            </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Admin' element={
-          <div>
             <div>
-              <Admin />
-            </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Admin/Productos' element={
-          <div>
-            <div>
-              <Products />
-            </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Admin/Usuarios' element={
-          <div>
-            <div>
-              <Usuarios />
-            </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Admin/AboutUs' element={
-          <div>
-            <div>
-              <AboutUs />
+              <div className=''>
+                <HomePage />
               </div>
           </div>
         }>
@@ -74,13 +42,13 @@ function App() {
             <div className=''>
               <LoginPage />
             </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Admin/Faq' element={
-          <div>
+          </div>  
+          }>
+          </Route>
+          <Route path='/Admin' element={
             <div>
-              <Faq />
+              <div>
+                <Admin />
               </div>
           </div>
         }>
@@ -100,15 +68,15 @@ function App() {
             <div className=''>
               <RegisterPage />
             </div>
-          </div>
-        }>
-        </Route>
-        <Route path='/Shoe' element={
-          <div>
-            <div className=''>
-              <ShoePage/>
             </div>
-          </div>
+          }>
+          </Route>
+          <Route path='/Admin/Productos' element={
+            <div>
+              <div>
+                <Products />
+              </div>
+            </div>
         }>
         </Route>
         <Route path='/cart' element={

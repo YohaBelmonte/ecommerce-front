@@ -39,6 +39,7 @@ function UseHome() {
 
   return {
     MapProduct,
+    product
   };
 }
 export default UseHome;

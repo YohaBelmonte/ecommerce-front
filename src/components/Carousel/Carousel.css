@@ -1,0 +1,28 @@
+.img-carousel1 {
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    border: rgba(56, 55, 55, 0.349) 1px solid;
+    border-style: dashed;
+    border-width: 2px;
+    padding: 30px;
+}
+
+.carousel1 {
+    background-image: url(https://img.freepik.com/foto-gratis/carton-blanco-arrugado_95678-119.jpg?w=740&t=st=1674928944~exp=1674929544~hmac=a5bab85c785274c2e28620d1d997b605144bc4fa6136367188a7922cf90d4c44);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 700px;
+    width: 100%;
+}
+
+@media (max-width:844px) {
+    .img-carousel1 {
+        border: 0px;
+        padding: 110px;
+    }
+
+}
