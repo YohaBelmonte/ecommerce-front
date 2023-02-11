@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import Products from './Pages/Admin/Productos';
 import Usuarios from './Pages/Admin/Usuarios';
-import AboutUs from './Pages/Admin/AboutUs';
-import AboutUs2 from './Pages/AboutUs/aboutUs';
+
+import AboutUs from './Pages/AboutUs/aboutUs';
 import Faq from './Pages/Admin/FAQ';
 import ShoePage from './Pages/ShoePage/ShoePage';
 import RegisterPage from './Pages/Register/RegisterPage';
@@ -33,7 +33,7 @@ function App() {
         <Route path='/aboutUs' element={
           <div>
             <div>
-              <AboutUs2 />
+              <AboutUs />
               </div>
           </div>
         }>
@@ -92,6 +92,14 @@ function App() {
           <div>
             <div>
               <Orders />
+            </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/Admin/Usuarios' element={
+          <div>
+            <div>
+              <Usuarios />
             </div>
           </div>
         }>

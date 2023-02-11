@@ -1,9 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './TablaProductos.css'
-import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
-import { Button, Modal, InputGroup } from 'react-bootstrap';
-import useHome from '../../Utils/useHome';
+import { Button, Modal } from 'react-bootstrap';
+// import useHome from '../../Utils/useHome';
 import useAdmin from '../../Utils/useAdmin';
 import Table from 'react-bootstrap/Table';
 import { BiEdit } from 'react-icons/bi';
@@ -18,8 +17,8 @@ function TablaProductos() {
   const [edit, editShow] = useState(false);
   const handleeditClose = () => editShow(false);
   const handleEditShow = () => editShow(true);
-  const { data, OnChangeProduct, GetAdminProduct, adminProduct, MethodPostProduct,headers,
-    token,deletProduct,peticionGetProduct,handleChangeProduct,busquedaProduct,setProduct,product } = useAdmin();
+  const { data, OnChangeProduct,MethodPostProduct,headers,
+   deletProduct,handleChangeProduct,busquedaProduct,product } = useAdmin();
   // const { product,busqueda, handleChange,productoencontrado } = useHome();
   const [updateProduct, setupdateProduct] = useState({});
 
@@ -60,7 +59,7 @@ function TablaProductos() {
       <tr className='tabla bg-white ' key={i}>
         <td className='col-1 '>{item._id}</td>
         <td className='col-1 '>{item.name}</td>
-        <td className='col-2 '> <img src={item.image} className="w-50"></img></td>
+        <td className='col-2 '> <img src={item.image} alt="" className="w-50"></img></td>
         <td className='col-2 Description text-break'>{item.description}</td>
         <td className='col-2 '>{item.rating}</td>
         <td className='col-2 '>{item.category}</td>
