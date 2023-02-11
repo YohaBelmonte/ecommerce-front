@@ -20,6 +20,7 @@ function Sidebar() {
         </Button>
 
 
+
         <Offcanvas show={show} onHide={handleClose} responsive="lg">
           <Offcanvas.Header closeButton>
             <Offcanvas.Title >Admin Options</Offcanvas.Title>
@@ -62,6 +63,7 @@ function Sidebar() {
           </Offcanvas.Body>
         </Offcanvas>
       </>
+
     </div>
 
   );
