@@ -1,48 +1,44 @@
+import "./Navbar.css";
 import Container from 'react-bootstrap/Container';
 import { Navbar, Nav } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "./NavbarLogin.css";
 
 
-function NavBarComponent() {
+function NavBarComponent({size}) {
+
+ const isAdmin = localStorage.getItem("admin");
+
   return (
-    <div>
-      <Navbar expand="lg">
-        <Container className='container-nav d-flex'>
+    <Navbar  expand="lg" className="navbar">
+      <Container>
+        <Navbar.Brand>
           <div className='d-flex'>
-            <div className='icons-nav2'>
-              <Link id="user" to="/" className='styleUser'>
-                <FontAwesomeIcon icon={faUser} />
+            <div className='icons-nav2 styleUser'>
+              <Link to="/login" className='mx-lg-2 styleIcons2'>
+                <FaUser/>
               </Link>
             </div>
-            <div className='logo-nav'> <p>L O G O </p></div>
+           <img src="images/logo-navbar.png" className="logo-navbar"/>
           </div>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto link-navbar">
-              <div className='af mx-lg-5'> <Nav.Link href="#home">INICIO</Nav.Link></div>
-              <div className='af'> <Nav.Link href="#male">MASCULINO</Nav.Link></div>
-              <div className='af mx-lg-5'> <Nav.Link href="#female">FEMENINO</Nav.Link></div>
-              <div className='af'> <Nav.Link href="#aboutUs">SOBRE NOSOTROS</Nav.Link></div>
-              <div className='af mx-lg-5'> <Nav.Link href="#contact">CONTACTO</Nav.Link></div>
-              <div className='af mx-lg-5 shopping-cart'> <Nav.Link href="#contact">MI CARRITO</Nav.Link></div>
-            </Nav>
-            <div className='icons-nav2'>
-              <Link id="user" to="/" className=''>
-                <button> register </button>
-              </Link>
-              <Link id="user" to="/" className=''>
-                <button> register </button>
-              </Link>
-            </div>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </div>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav " />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="link-navbar mt-4">
+            <li className='container-link'>
+              <Link to="/" className='link-nav mx-lg-5'>INICIO</Link>
+              <Link to="/mal" className='link-nav'>MASCULINO</Link>
+              <Link to="/famele" className='link-nav mx-lg-5'>FEMENINO</Link>
+              <Link to="/aboutUs" className='link-nav'>SOBRE NOSOTROS</Link>
+              <Link to="/contact" className='link-nav mx-lg-5'>CONTACTO</Link>     
+            </li>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+
+    </Navbar >
+
   )
 }
 
 export default NavBarComponent;
-
