@@ -13,8 +13,15 @@ function ShoppingCart() {
   const headers = { "x-auth-token": token };
   var url = "http://localhost:4000/api";
   const [price, setPrice] = useState(0);
-  const [smShow, setSmShow] = useState(false);
-  const [lgShow, setLgShow] = useState(false);
+  const values = [true];
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+
+  function handleShow(breakpoint) {
+    setFullscreen(breakpoint);
+    setShow(true);
+  }
+
 
   useEffect(() => {
     handlePrice();
@@ -72,21 +79,28 @@ function ShoppingCart() {
           <span className="mt-4 mx-5">${price}</span>
         </div>
         {/* Modal */}
+
         <>
           <div>
-            <button className="custom-btn btn-5" onClick={() => setLgShow(true)}>COMPRAR</button>
+            <button className="custom-btn btn-5" onClick={() => setShow(true)}>COMPRAR
+           </button>
           </div>
-          <Modal
-            size="lg"
-            show={lgShow}
-            onHide={() => setLgShow(false)}
-            aria-labelledby="example-modal-sizes-title-lg"
-          >
-            <Modal.Header closeButton>
-            </Modal.Header>
-            <Modal.Body> <CreditCard /></Modal.Body>
-          </Modal>
-        </>
+      <Modal
+        show={show}
+        onHide={() => setShow(false)}
+        dialogClassName="modal-90w"
+        
+      >
+        <Modal.Header closeButton>
+          <Modal.Title className="d-flex justify-content-center w-100">
+           Insertar datos de la tarjeta
+            </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <CreditCard/>
+        </Modal.Body>
+      </Modal>
+    </>
       </div>
       <Footer />
     </div>

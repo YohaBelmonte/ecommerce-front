@@ -45,9 +45,20 @@ const PaymentForms = () => {
                     cvc={state.cvc}
                     focused={state.focus}
                 /> 
-                <form className='text-center  w-75 '>
+                <form className=' w-75 '>
+                <div className="form-group">
+                        <label htmlFor="name">Email</label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            maxLength="15"
+                            className="form-control w-100"
+                            placeholder='Ingresar email'
+                        />
+                    </div>
                     <div className="form-group">
-                        <label htmlFor="number">Nro de la tarjeta</label>
+                        <label htmlFor="number">Numero de la tarjeta</label>
                         <input
                             type="text"
                             name="number"
@@ -56,6 +67,7 @@ const PaymentForms = () => {
                             className="form-control w-100 "
                             onChange={handleInputChange}
                             onFocus={handleFocusChange}
+                            placeholder="Ingresar el numero de la tarjeta"
                         />
                     </div>
                     <div className="form-group">
@@ -68,8 +80,10 @@ const PaymentForms = () => {
                             className="form-control w-100"
                             onChange={handleInputChange}
                             onFocus={handleFocusChange}
+                            placeholder="Ingresar Nombre completo"
                         />
                     </div>
+                    
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <label htmlFor="expiry">Fecha de expiración</label>
@@ -81,6 +95,7 @@ const PaymentForms = () => {
                                 className="form-control"
                                 onChange={handleInputChange}
                                 onFocus={handleFocusChange}
+                                placeholder="Ingresar fecha de expiracion"
                             />
                         </div>
                         <div className="form-group col-md-6">
@@ -93,6 +108,7 @@ const PaymentForms = () => {
                                 className="form-control"
                                 onChange={handleInputChange}
                                 onFocus={handleFocusChange}
+                                placeholder="Ingresar CVC"
                             />
                         </div>
                     </div>
