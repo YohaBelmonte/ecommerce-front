@@ -11,6 +11,38 @@
 font-size: 18px;
 }
 
+.warning{
+  height: 85px;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  left: 10px;
+  top: 20%;
+  background-color: #720e0ed5;
+  border: #c50707 1px solid;
+  font-size: 1rem;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.success{
+  height: 85px;
+  width: 150px;
+  position:fixed;
+  z-index: 1;
+  left: 10px;
+  top: 20%;
+  background-color: #275e38;
+  border: #212322 1px solid;
+  font-size: 1rem;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
 #toast {
   font-family: "Roboto", sans-serif;
 }
