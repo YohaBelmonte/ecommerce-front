@@ -54,7 +54,11 @@ ul {
     position: relative;
     z-index: 2;
 }
-
+.codigo-footer {
+  width: 130px;
+  height: 130px;
+  margin-top: 25px;
+}
 .footer-pattern img {
     position: absolute;
     top: 0;
@@ -186,7 +190,6 @@ ul {
     border-radius: 100%;
     background-color: #33353d
 }
-
 
 @media (max-width:767px) {
     .site-footer {

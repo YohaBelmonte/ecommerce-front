@@ -43,6 +43,7 @@ function useCart() {
   return {
     CartProducts,
     cart,
+    setCart,
   };
 }
 export default useCart;

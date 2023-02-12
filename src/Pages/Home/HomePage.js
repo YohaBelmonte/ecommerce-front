@@ -1,4 +1,5 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
+import "./HomePage.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel";
@@ -15,23 +16,23 @@ function HomePage() {
   const headers = { "x-auth-token": token };
 
   const url = "http://localhost:4000/api";
-  
+
   useEffect(() => {
     GetAdminUser();
   }, []);
-  
+
   //hook
   const { MapProduct } = useHome();
   const { cart } = useCart();
-  
+
   // Method Get Admin User ↓↓↓
   async function GetAdminUser() {
     try {
-      const { data } = await axios.get(`${url}/user/activeUser`, {headers});
-    //  console.log(data)
-     if (data.isAdmin == true){ 
-       localStorage.setItem("admin", data.isAdmin)
-     }
+      const { data } = await axios.get(`${url}/user/activeUser`, { headers });
+      //  console.log(data)
+      if (data.isAdmin == true) {
+        localStorage.setItem("admin", data.isAdmin)
+      }
     } catch (error) {
       console.error(error);
     }
@@ -41,16 +42,18 @@ function HomePage() {
   return (
     //home de prueba ↓↓↓↓ para ver si andaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓
     <div>
-      <NavBarComponent size={cart.length}/>
-      {/* <div >
-            <Carousel />
-        </div > */}
-        <div>
-          <ComponentHome/>
+      <NavBarComponent size={cart.length} />
+      <ComponentHome/>
+      {/* <div className="containerCards">
+        <div className="row">
+          <div className="col-10 d-flex flex-wrap ">
+            {MapProduct}
           </div>
-      <div className="d-flex flex-column-reverse MapProductContainer">
-        {MapProduct}
-      </div>
+          <div className="col-sm-none col-lg-2">
+            <div className="advertising2"></div>
+          </div>
+        </div>
+      </div> */}
       <Footer />
     </div>
   );
@@ -58,4 +61,4 @@ function HomePage() {
 
 export default HomePage;
 
-  
+

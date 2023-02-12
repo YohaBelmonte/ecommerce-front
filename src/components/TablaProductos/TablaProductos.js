@@ -1,9 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './TablaProductos.css'
-import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
-import { Button, Modal, InputGroup } from 'react-bootstrap';
-import useHome from '../../Utils/useHome';
+import { Button, Modal } from 'react-bootstrap';
+// import useHome from '../../Utils/useHome';
 import useAdmin from '../../Utils/useAdmin';
 import Table from 'react-bootstrap/Table';
 import { BiEdit } from 'react-icons/bi';
@@ -18,10 +17,11 @@ function TablaProductos() {
   const [edit, editShow] = useState(false);
   const handleeditClose = () => editShow(false);
   const handleEditShow = () => editShow(true);
-  const { data, OnChangeProduct, GetAdminProduct, adminProduct, MethodPostProduct,headers,
-    token,deletProduct } = useAdmin();
-  const { product } = useHome();
+  const { data, OnChangeProduct,MethodPostProduct,headers,
+   deletProduct,handleChangeProduct,busquedaProduct,product } = useAdmin();
+  // const { product,busqueda, handleChange,productoencontrado } = useHome();
   const [updateProduct, setupdateProduct] = useState({});
+
 
 
   function OnChangeUpdate(e) {
@@ -56,18 +56,18 @@ function TablaProductos() {
   const mapAdminProduct = product.map((item, i) => {
 
     return (
-      <tr className='tabla ' key={i}>
+      <tr className='tabla bg-white ' key={i}>
         <td className='col-1 '>{item._id}</td>
         <td className='col-1 '>{item.name}</td>
-        <td className='col-2 '> <img src={item.image} className="w-50"></img></td>
+        <td className='col-2 '> <img src={item.image} alt="" className="w-50"></img></td>
         <td className='col-2 Description text-break'>{item.description}</td>
         <td className='col-2 '>{item.rating}</td>
         <td className='col-2 '>{item.category}</td>
         <td className='col-1 '>{item.price}</td>
         <td className='col-1 '>{item.countInStock}</td>
         <td className='col-1 d-flex'>
-          <h2 className='btn text-white' onClick={() => deletProduct(item._id)}><AiTwotoneDelete /></h2>
-          <h2 className='btn text-white' onClick={() => setId(item._id)}> <BiEdit /></h2>
+          <h2 className='btn ' onClick={() => deletProduct(item._id)}><AiTwotoneDelete /></h2>
+          <h2 className='btn ' onClick={() => setId(item._id)}> <BiEdit /></h2>
         </td>
       </tr>
     );
@@ -81,10 +81,14 @@ function TablaProductos() {
       <div className="crud shadow-lg p-3 my-5 bg-dark ">
         <div className="row p-2">
           <div className="col-sm-3 mt-5 mb-4 text-gred">
-            <div className="search">
-              <form className="form-inline">
-                <input className="form-control mr-sm-2" type="search" placeholder="Buscar Usuario" aria-label="search" />
-              </form>
+          <div className="containerInput">
+              <input
+                className="form-control inputBuscar text-center"
+                value={busquedaProduct}
+                placeholder="Buscar Usuario"
+                onChange={handleChangeProduct}
+              />
+
             </div>
           </div>
           <div className="col-sm-3 offset-sm-2 mt-5 mb-4 text-gred text-white"><h4>Productos</h4></div>
@@ -96,7 +100,7 @@ function TablaProductos() {
         </div>
 
         <div >
-          <Table responsive="sm" variant="dark" striped="columns" >
+          <Table responsive="sm" variant="light" striped="columns" >
             <thead>
               <tr>
                 <th className='col-1'>ID</th>
