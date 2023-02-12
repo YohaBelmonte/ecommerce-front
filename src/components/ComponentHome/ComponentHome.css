@@ -1,54 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/* seccion fotos */
+.box-imgHome {
+    width: 400px;
+    height: 500px;
+}
+
+.imgHome {
+    background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/esES/Images/ss23-ip-7-launch-hp-mh-d_tcm190-988978.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.text-imgHome {
+    margin-top: 300px;
+}
+
+/* seccion sneakers */
+.box-title {
+    z-index: 20;
+    background: black;
+    text-align: center;
+}
+
+.title-home {
+    color: #f7f7f7;
+    font-size: 12vw;
+    line-height: 21vw;
+    font-weight: 700;
+}
+
+/* tercera seccion */
 .text-home {
     display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
-} 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .text-h {
-    font-size: 50px;
+    font-size: 70px;
     max-width: 500px;
     width: 800px;
     margin-top: 100px;
-    text-align:center;
-    color: #151414;
+    text-align: center;
+    color: #222121;
+    font-family: 'Oswald', sans-serif;
 }
 
 /* seccion cartas */
 .container-cardHome {
     margin: 20px;
-  margin-top: 80px;
+    margin-top: 80px;
 }
+
 .cards-home {
     display: flex;
     flex-wrap: wrap;
 }
+
 .card-home {
     margin-right: 20px;
     cursor: pointer;
 }
+
 .cards .card img {
     width: 200px;
 }
+
 .img-cardHome {
     width: 300px;
     height: 350px;
 }
+
 .cards .card .card-header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.cards .card .card-body p{
-margin-top: -10px;
+.card-body {
+    width: 350px;
+}
+.cards .card .card-body p {
+    margin-top: -10px;
+}
+.title {
+    font-family: 'Oswald', sans-serif; 
 }
 /* incip de video */
-.video{
+.video {
     margin-top: 80px;
     width: 90%;
-  }
-.video iframe{
-    border:none;
+}
+
+.video iframe {
+    border: none;
     border-radius: 10px;
     width: 100%;
     height: 400px;
-  }
+}
+
+/* seccion oceano */
+.imgOceanos {
+    background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/statement_dt_tcm216-741849.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.text-ocean {
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    width: 700px;
+    text-align: center;
+    color: white;
+}
+.buttonOcean {
+    width: 150px;
+    height: 50px ;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    font-family: 'Oswald', sans-serif;
+}
