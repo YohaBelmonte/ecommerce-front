@@ -131,3 +131,32 @@
     border: 1px solid white;
     font-family: 'Oswald', sans-serif;
 }
+@media (max-width:844px) {
+    .text-h {
+        font-size: 30px;
+        width: 250px;
+        margin-top: 30px;
+    }
+    .container-cardHome {
+        margin: 0;
+    }
+    .title  {
+        margin-left: 15px;
+    }
+    .price  {
+        margin-left: 15px;
+    }
+    .box-imgHome {
+        height: 120px;
+    }
+    .box-title {
+        margin: 0;
+    }
+    .video {
+        margin: 0;
+    }
+    .text-ocean {
+        font-size: 30px;
+        width: 250px;
+    }
+} 
