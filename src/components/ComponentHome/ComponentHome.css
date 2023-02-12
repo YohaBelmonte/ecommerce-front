@@ -52,6 +52,7 @@
 }
 
 /* seccion cartas */
+
 .container-cardHome {
     margin: 20px;
     margin-top: 80px;
@@ -72,7 +73,7 @@
 }
 
 .img-cardHome {
-    width: 300px;
+    width: 320px;
     height: 350px;
 }
 
