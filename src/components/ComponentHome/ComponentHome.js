@@ -2,6 +2,7 @@ import './ComponentHome.css';
 import CarouselHome from '../../components/CarouselHome/CarouselHome';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 
 function ComponentHome() {
@@ -19,7 +20,7 @@ function ComponentHome() {
                 <div className='container-cardHome row'>
                     <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
                         <div className='card-home'>
-                            <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4ee3c3061fc5464b94c9af5e00a4a964_9366/Avryn_Shoes_Gris_HP5974_01_standard.jpg" className='img-cardHome' />
+                        <Link to="/" ><img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4ee3c3061fc5464b94c9af5e00a4a964_9366/Avryn_Shoes_Gris_HP5974_01_standard.jpg" className='img-cardHome' /></Link>
                             <div class="card-header">
                                 <h4 class="title">AVRYN SHOES</h4>
                                 <h4 class="price">$13300</h4>
@@ -31,7 +32,7 @@ function ComponentHome() {
                     </div>
                     <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
                         <div className='card-home'>
-                            <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9fa15fcba90349b99883af5e00a4c3cb_9366/Avryn_Shoes_Gris_HP5974_03_standard.jpg" className='img-cardHome' />
+                        <Link to="/" > <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9fa15fcba90349b99883af5e00a4c3cb_9366/Avryn_Shoes_Gris_HP5974_03_standard.jpg" className='img-cardHome' /></Link>
                             <div class="card-header">
                                 <h4 class="title">AVRYN SHOES</h4>
                                 <h4 class="price">$13300</h4>
@@ -43,7 +44,7 @@ function ComponentHome() {
                     </div>
                     <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
                         <div className='card-home'>
-                            <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cba142818f944575b352af5e00a4d822_9366/Avryn_Shoes_Gris_HP5974_05_standard.jpg" className='img-cardHome' />
+                        <Link to="/" > <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cba142818f944575b352af5e00a4d822_9366/Avryn_Shoes_Gris_HP5974_05_standard.jpg" className='img-cardHome' /></Link>
                             <div class="card-header">
                                 <h4 class="title">AVRYN SHOES</h4>
                                 <h4 class="price">$13300</h4>
@@ -56,7 +57,7 @@ function ComponentHome() {
                 </div>
             </div>
             <div className='d-flex '>
-                <div className='box-imgHome'><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-1-d_tcm190-983376.jpg" /></div>
+                <div className='box-imgHome'><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-1-d_tcm190-983376.jpg" /> </div>
                 <div className='box-imgHome'><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-2-updated-d_tcm190-983961.jpg" /></div>
                 <div className='box-imgHome'><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-3-d_tcm190-983383.jpg" /></div>
                 <div className='box-imgHome'><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-4-updated-d_tcm190-983962.jpg" /></div>
@@ -74,7 +75,7 @@ function ComponentHome() {
             <div className='mt-lg-5 imgOceanos'> 
             <div>
             <div><p className='text-ocean mt-2'>PROTEGER LOS ÓCEANOS ES NUESTRA PRINCIPAL PRIORIDAD. NUESTRA MISIÓN VA MÁS ALLÁ DEL DEPORTE. ES NUESTRO FUTURO</p></div>
-            <div><button className='buttonOcean'>CONOCÉ MÁS <FontAwesomeIcon icon={faArrowRight} className="mx-2" /></button> </div>
+            <div>  <Link to="/about" ><button className='buttonOcean'>CONOCÉ MÁS <FontAwesomeIcon icon={faArrowRight} className="mx-2" /></button></Link> </div>
             </div>
             </div>
             {/* seccion sneakers */}

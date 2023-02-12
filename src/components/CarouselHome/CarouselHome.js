@@ -2,6 +2,7 @@ import "./CarouselHome.css";
 import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function CarouselHome () {
     return (
@@ -15,9 +16,9 @@ function CarouselHome () {
         />
         <Carousel.Caption className="textSliders">
           <h3 className="titleSliders2">PARK TRAIL</h3>
-          <button className="buttonSliders">
+          <Link to="/" >  <button className="buttonSliders">
             COMPRAR   <FontAwesomeIcon icon={faArrowRight} className="mx-2" />
-          </button>
+          </button> </Link>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -30,9 +31,9 @@ function CarouselHome () {
         <Carousel.Caption className="textSliders">
           <h3 className="titleSliders">SPORTSWEAR</h3>
           <p>Tu forma de vestir y expresarte. Diseños inspirados en el deporte. Reimaginados para tu día a día</p>
-       <button className="buttonSliders">
+          <Link to="/" > <button className="buttonSliders">
             COMPRAR <FontAwesomeIcon icon={faArrowRight}  className="mx-2"/>
-          </button>
+          </button></Link>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
