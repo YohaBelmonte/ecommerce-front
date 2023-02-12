@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/* incip de video */
+.video {
+  width: 100%;
+}
+
+.video iframe {
+  border: none;
+  width: 100%;
+  height: 572px;
+
+}
 .home-about {
     text-decoration: none;
     color: rgb(158, 153, 153);
@@ -39,9 +51,6 @@ color:rgb(70, 69, 69);
   background-size: 100% 2px;
   color: #275e38;
 }
-.navbar-about {
-    border-block-end: solid 1px #c7c7ca81 ;
-}
 
 .container-img1 {
     height: 600px;
@@ -50,9 +59,12 @@ color:rgb(70, 69, 69);
     line-height: 35px;
     text-align: justify;
     color: #636463;
+    font-size: 17px;
 }
 .title1 {
    color: #275e38;
+   font-family: 'Oswald', sans-serif; 
+   font-size: 35px;
 }
 .text-container2 {
   background-color: rgba(204, 202, 202, 0.26);
@@ -102,91 +114,6 @@ color:rgb(70, 69, 69);
   background-size: 100% 2px;
   color: #275e38;
 }
-/* seccion materiales */
-.ImgRadius {
-    border-radius: 50%;
-    border-end-end-radius: solid 1px gray;
-}
-.SubTitle {
-    font-size: 100px;
-    font-weight: 600;
-    text-align: center;
-    color: #2f302f;
-}
-.ListMaterials {
-    font-size: 45px;
-    font-weight: 400;
-    width: 100%;  
-}
-.container-img {
-  border-radius: 100%;
-  width: 100%;
-  padding: 25px;
-}
-.img4 {
-  border-radius: 100%;
-  width: 100%;
-  background-color: #75727215;
-
-}
-.box-img {
-  border-radius: 100%;
-  width: 100%;
-  padding: 30px;
-  border: rgba(102, 100, 100, 0.87) 1px solid ;
-  border-style: dashed;
-  border-width: 1px;
-}
-.box-imgCarrusel {
-  background-color: #75727215;
-  border-radius: 100%;
-  width: 100%;
-}
-.box-carrusel {
-  background-color: #dfe7ec05;
-  border-radius: 100%;
-  width: 100%;
-  padding: 30px;
-  border: rgba(102, 100, 100, 0.87) 1px solid ;
-  border-style: dashed;
-  border-width: 1px;
-}
-.listMat{
-     list-style: none;  
-     margin-left: 250px;
-     line-height: 90px;
-}
-
-.carruselResponse {
-  width: 0px;
-}
-
-.text2 {
-    font-size: 40px;
-}
-.text3 {
-    font-size: 40px;
-    color: #275e38;
-}
-.SubTitle3 {
-    margin-left: 320px;
-}
-.text-arg {
-  text-align: center;
-  font-size: 30px;
-}
-.styleIcons {
-  color: #2f302f;
-}
-.styleIcons:hover {
-  color: #275e38;
-}
-
-/* seccion ubicacion */
-.iconoPlus:hover {
-  transform:rotate(45deg);
-}
-
 /* seccion certificados */
 .containerCertificados {
   text-align: center;
@@ -198,12 +125,15 @@ color:rgb(70, 69, 69);
 }
 
 .button-certficats {
-  border-radius: 10px;
   background-color: white;
   width: 100px;
   height: 35px;
   border: 2px solid #275e38;
   color: #275e38;
+}
+.img-Fundacion {
+  width: 300px;
+  height: 100px;
 }
 .global {
   margin-left: 90px;
@@ -219,38 +149,28 @@ color:rgb(70, 69, 69);
   color: white;
   background-color: #275e38;
 }
-
-/* seccion impacto ambiental */
-.containerAmbiental {
-  background-color: rgba(204, 202, 202, 0.26);
-  height: 1000px;
+/* seccion fondo img de oceano */
+.fondo-ocean {
+  background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/running-ss22-adidasxparley_transparency-global-clp-statement-citation-d_tcm216-862011.jpg);
+background-position: center;
+background-repeat: no-repeat;
+width: 100%;
+height: 500px;
 }
-.text4 {
-  font-size: 30px;
-  color: #275e38;
+.text-information {
+  font-family: 'Oswald', sans-serif;  
+}
+.box-investiga {
   text-align: center;
 }
-
-.impacto {
-  color: #151616;
-  font-size: 45px;
-}
-.impacto:hover {
-  color: #275e38;
-  font-size: 45px;
-}
-.backImpact {
-  background-image: url(https://images.prismic.io/ubac/907e8ee2-77d6-4125-a8ba-08f860056548_Sans+titre+%283%29.png?auto=compress%2Cformat&rect=0%2C0%2C3100%2C3100&w=1080&h=null);
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center ;
-  width: 100%;
-  height: 690px;
-  background-size: contain;
-  background-attachment: fixed;
-}
-.textImpact {
-text-align: justify;
+.title2 {
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif; 
+  text-align: center;
+  width: 800px;
+  margin-top: 100px;
+  line-height: 150%;
+  
 }
 /* seccion nosotros */
 .our-team {
@@ -323,7 +243,9 @@ text-align: justify;
     width: 0;
     height: 0;
   }
-
+.containerTeam  {
+  text-align: center;
+}
 @media (max-width:740px) {
 
     .about  {
