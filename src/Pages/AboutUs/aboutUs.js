@@ -11,6 +11,11 @@ function AboutPage() {
     // box text ubac vision
     <div>
       <Navbar />
+      <div className='d-flex justify-content-center'>
+                <div class="video">
+                    <iframe src="https://brand.assets.adidas.com/video/upload/q_auto,vc_auto/video/upload/global%20brand%20publishing/Sustainability/ss22-dec-planet-hub-update/horizontal-concepts-fw21-purpose-launch-clp-statement-v1-d.mp4" allowfullscreen></iframe>
+                </div>
+            </div>
       <div className="box-text w-100">
         <div className='d-flex justify-content-center  text-about' >
           <Link to="/" className='mx-2 mt-lg-5  home-about'>HOME</Link>
