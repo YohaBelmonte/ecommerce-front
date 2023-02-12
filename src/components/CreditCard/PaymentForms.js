@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Cards from 'react-credit-cards'
 import 'react-credit-cards/es/styles-compiled.css'
+import "./PaymentForm.css";
 
 const PaymentForms = () => {
 
@@ -52,7 +53,7 @@ const PaymentForms = () => {
                             type="text"
                             name="name"
                             id="name"
-                            maxLength="15"
+                            maxLength="30"
                             className="form-control w-100"
                             placeholder='Ingresar email'
                         />
@@ -112,8 +113,9 @@ const PaymentForms = () => {
                             />
                         </div>
                     </div>
-
-                    <button type="button" className="btn btn-dark btn-block btn-lg w-100">Pagar</button>
+                    {/* <div className="btnPay" >  */}
+                    <button type="button" className="btnPay">Pagar</button>
+                    {/* </div> */}
                 </form>
             </div>
         </div>
