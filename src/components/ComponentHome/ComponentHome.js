@@ -16,7 +16,7 @@ function ComponentHome() {
                 <h1 className='text-h'> ESTA ES TU TIENDA. ESTA ES TU CASA</h1>
             </div>
             {/* seccion cards */}
-            <div className='d-flex justify-content-center'>
+            <div className='d-flex justify-content-center container-card'>
                 <div className='container-cardHome row'>
                     <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
                         <div className='card-home'>
@@ -47,7 +47,7 @@ function ComponentHome() {
                         <Link to="/" > <img src="https://sothebys-md.brightspotcdn.com/53/92/d28052c64b13b38626ff2b63b049/louis-vuitton-x-nike-air-force-1-low-orange.jpg" className='img-cardHome' /></Link>
                             <div class="card-header">
                                 <h4 class="title">LUXURY</h4>
-                                <h4 class="price">$13300</h4>
+                                <h4 class="price">$57300</h4>
                             </div>
                             <div class="card-body">
                                 <p>Para Primavera-Verano 2022, Virgil Abloh colaboró ​​con Nike en Air Force 1 a medida, fusionando los códigos clásicos de la zapatilla con la insignia y los materiales de Louis Vuitton en homenaje a la cultura hip-hop que lo moldeó.</p>
