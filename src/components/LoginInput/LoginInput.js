@@ -1,14 +1,13 @@
 import "./LoginInput.css";
 import { Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState} from "react";
+import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
 import React from "react";
 
 function LoginPage() {
-
   const [form, setForm] = useState({});
 
   function OnChange(e) {
@@ -17,6 +16,7 @@ function LoginPage() {
       ...form,
       [name]: value,
     };
+    console.log(response)
     setForm(response);
   }
 
@@ -31,6 +31,7 @@ function LoginPage() {
     }
   }
   const [modalShow, setModalShow] = React.useState(false);
+
 
   return (
     <div className="d-flex justify-content-center LoginInput mt-5">
@@ -72,11 +73,7 @@ function LoginPage() {
           />
         </Form.Group>
         <div className="text-end">
-          <Button
-            variant="link"
-            className=" fs-5 text-decoration-none m-0"
-            onClick={() => setModalShow(true)}
-          >
+          <Button variant="link" className=" fs-5 text-decoration-none m-0" onClick={() => setModalShow(true)}>
             Olvidé mi contraseña
           </Button>
         </div>
@@ -92,7 +89,11 @@ function LoginPage() {
         </div>
       </Form>
 
-      <ForgotPassword show={modalShow} onHide={() => setModalShow(false)} />
+      <ForgotPassword
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+
     </div>
   );
 }
