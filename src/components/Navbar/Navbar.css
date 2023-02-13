@@ -32,6 +32,14 @@
   background-size: 100% 2px;
   color: #275e38;
 }
+.input-navbar{
+  margin: 8px 20px;
+  padding: 15px;
+  border-radius: 30px;
+  border:none;
+  background-color: rgb(241, 233, 222);
+  outline:none;
+}
 .shopping-cart1 {
   font-size: 0px;
 }
@@ -89,4 +97,13 @@
   .link-nav {
     display: block;
   }
+  .input-navbar {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 1380) {
+.icon-nav {
+  font-size: 0px;
+  width: 0px;
+}
 }

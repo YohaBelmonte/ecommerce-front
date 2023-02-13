@@ -100,7 +100,7 @@ function TablaProductos() {
         </div>
 
         <div >
-          <Table responsive="sm" variant="light" striped="columns" >
+          <Table responsive="lg" variant="light" striped="columns" >
             <thead>
               <tr>
                 <th className='col-1'>ID</th>
