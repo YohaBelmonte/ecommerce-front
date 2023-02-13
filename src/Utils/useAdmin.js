@@ -43,8 +43,12 @@ function useAdmin() {
   }
   async function deletUser(id) {
     try {
+      const isDelete = window.confirm(`Quieres eliminar el Usuario ${id}?`);
+      if (isDelete) {
       const { data } = await axios.delete(`${url}/user/${id}`);
+      alert("Usuario eliminado con exito");
       window.location.reload();
+      }
     } catch (error) {
       console.error(error);
     }
@@ -132,7 +136,8 @@ function useAdmin() {
     console.log(response)
   }
 
-  async function MethodPostProduct(e) {
+  //Añadir producto en ADMIN
+  async function MethodPostProduct() {
     try {
       const response = await axios.post(`${url}/product`, formProduct, { headers });
       console.log(response)
@@ -146,8 +151,12 @@ function useAdmin() {
 
   async function deletProduct(id) {
     try {
+      const isDelete = window.confirm(`Quieres eliminar el producto ${id}?`);
+      if (isDelete) {
       const { data } = await axios.delete(`${url}/product/${id}`, formProduct, { headers });
       alert("Producto eliminado con exito");
+      window.location.reload();
+      }
     } catch (error) {
       console.error(error);
     }

@@ -21,24 +21,15 @@ function TablaProductos() {
    deletProduct,handleChangeProduct,busquedaProduct,product } = useAdmin();
   // const { product,busqueda, handleChange,productoencontrado } = useHome();
   const [updateProduct, setupdateProduct] = useState({});
-
-
+  const [id, setId] = useState("")
+  var url = "http://localhost:4000/api";
 
   function OnChangeUpdate(e) {
     const { name, value } = e.target;
     const response = { ...updateProduct, [name]: value }
     setupdateProduct(response);
-    console.log(response);
+    // console.log(response);
   }
-
-
-
-
-  const [id, setId] = useState("")
-
-  var url = "http://localhost:4000/api";
-
-
 
   async function PutMethodProduct(e) {
     e.preventDefault();
@@ -52,18 +43,21 @@ function TablaProductos() {
     }
   }
 
-
   const mapAdminProduct = product.map((item, i) => {
 
     return (
       <tr className='tabla bg-white ' key={i}>
         <td className='col-1 '>{item._id}</td>
         <td className='col-1 '>{item.name}</td>
-        <td className='col-2 '> <img src={item.image} alt="" className="w-50"></img></td>
-        <td className='col-2 Description text-break'>{item.description}</td>
-        <td className='col-2 '>{item.rating}</td>
+        <td className='col-2 '> <img src={item.image} alt="" className="imageProduct"></img></td>
+        <td className='col-2 '>
+          <div className="adminOverflow">
+            {item.description}
+          </div>
+        </td>
         <td className='col-2 '>{item.category}</td>
         <td className='col-1 '>{item.price}</td>
+        <td className='col-2 '>{item.size}</td>
         <td className='col-1 '>{item.countInStock}</td>
         <td className='col-1 d-flex'>
           <h2 className='btn ' onClick={() => deletProduct(item._id)}><AiTwotoneDelete /></h2>
@@ -107,9 +101,9 @@ function TablaProductos() {
                 <th className='col-1'>Product</th>
                 <th className='col-2'>Image</th>
                 <th className='col-2'>Description</th>
-                <th className='col-2'>Rating</th>
                 <th className='col-2'>Category</th>
                 <th className='col-1'>Price</th>
+                <th className='col-2'>Size</th>
                 <th className='col-1'>Stock</th>
                 <th className='col-1'>Acciones</th>
 
@@ -136,12 +130,21 @@ function TablaProductos() {
             <Modal.Title>Añadir Productos</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <form>
+            <form className="tabla-Products">
               <div className="form-group">
-                <input type="text" className="form-control" name='name' placeholder="Product Name" onChange={OnChangeProduct} />
+                <input type="text" className="form-control" name='name' placeholder="Name" onChange={OnChangeProduct} />
               </div>
               <div className="form-group mt-3">
-                <input type="text" className="form-control" name='image' placeholder="Insert Image" onChange={OnChangeProduct} />
+                <input type="text" className="form-control" name='image' placeholder="Image" onChange={OnChangeProduct} />
+              </div>
+              <div className="form-group mt-3">
+                <input type="text" className="form-control" name='image2' placeholder="Image2" onChange={OnChangeProduct} />
+              </div>
+              <div className="form-group mt-3">
+                <input type="text" className="form-control" name='image3' placeholder="Image3" onChange={OnChangeProduct} />
+              </div>
+              <div className="form-group mt-3">
+                <input type="text" className="form-control" name='image4' placeholder="Image4" onChange={OnChangeProduct} />
               </div>
               <div className="form-group my-3">
                 <input type="text" className="form-control" name='description' placeholder="Description" onChange={OnChangeProduct} />
@@ -151,6 +154,15 @@ function TablaProductos() {
               </div>
               <div className="form-group my-3">
                 <input type="number" className="form-control" name='price' placeholder="Price" onChange={OnChangeProduct} />
+              </div>
+              <div className="form-group my-3">
+                <input type="number" className="form-control" name='size' placeholder="Size" onChange={OnChangeProduct} />
+              </div>
+              <div className="form-group my-3">
+                <input type="number" className="form-control" name='countInStocks' placeholder="Stock" onChange={OnChangeProduct} />
+              </div>
+              <div className="form-group my-3">
+                <input type="text" className="form-control" name='color' placeholder="Color" onChange={OnChangeProduct} />
               </div>
               {/* <InputGroup className=" d-flex mb-3">
                                         <input type="checkbox" className="mx-1" />
