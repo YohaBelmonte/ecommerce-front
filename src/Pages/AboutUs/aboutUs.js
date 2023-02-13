@@ -12,8 +12,8 @@ function AboutPage() {
     <div>
       <Navbar />
       <div className='w-100'>
-        <div class="video1">
-          <iframe src="https://brand.assets.adidas.com/video/upload/q_auto,vc_auto/video/upload/global%20brand%20publishing/Sustainability/ss22-dec-planet-hub-update/horizontal-concepts-fw21-purpose-launch-clp-statement-v1-d.mp4" allowfullscreen></iframe>
+        <div className="video1">
+          <iframe src="https://brand.assets.adidas.com/video/upload/q_auto,vc_auto/video/upload/global%20brand%20publishing/Sustainability/ss22-dec-planet-hub-update/horizontal-concepts-fw21-purpose-launch-clp-statement-v1-d.mp4" allowFullScreen></iframe>
         </div>
       </div>
       <div className="box-text w-100">
@@ -81,10 +81,10 @@ function AboutPage() {
           <div className='cards-home col-lg-2 col-md-12 col-xs-12 '>
             <div className='card-home'>
               <Link to="/" ><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/esAR/Images/outdoor-ss22-epwpack-drop1-launch-clp-teaser-carousel-1-v2-d_tcm216-864714.jpg" className='img-cardHome' /></Link>
-              <div class="card-header">
-                <h4 class="title">INTERCEPTAMOS</h4>
+              <div className="card-header">
+                <h4 className="title">INTERCEPTAMOS</h4>
               </div>
-              <div class="card-body">
+              <div className="card-body">
                 <p>y clasificamos los residuos para eliminar objetos extraños</p>
               </div>
             </div>
@@ -92,10 +92,10 @@ function AboutPage() {
           <div className='cards-home col-lg-2 col-md-12 col-xs-12'>
             <div className='card-home'>
               <Link to="/" > <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/esAR/Images/outdoor-ss22-epwpack-drop1-launch-clp-teaser-carousel-2-v2-d_tcm216-864718.jpg" className='img-cardHome' /></Link>
-              <div class="card-header">
-                <h4 class="title">LIMPIAMOS</h4>
+              <div className="card-header">
+                <h4 className="title">LIMPIAMOS</h4>
               </div>
-              <div class="card-body">
+              <div className="card-body">
                 <p>el plástico y lo convertimos en pequeños gránulos de resina </p>
               </div>
             </div>
@@ -104,10 +104,10 @@ function AboutPage() {
           <div className='cards-home col-lg-2 col-md-12 col-xs-12'>
             <div className='card-home'>
               <Link to="/" > <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/esAR/Images/outdoor-ss22-epwpack-drop1-launch-clp-teaser-carousel-3-v2-d_tcm216-864721.jpg" className='img-cardHome' /></Link>
-              <div class="card-header">
-                <h4 class="title">TRITURAMOS</h4>
+              <div className="card-header">
+                <h4 className="title">TRITURAMOS</h4>
               </div>
-              <div class="card-body">
+              <div className="card-body">
                 <p>el plástico y lo convertimos en pequeños gránulos de resina </p>
               </div>
             </div>
@@ -115,10 +115,10 @@ function AboutPage() {
           <div className='cards-home col-lg-2 col-md-12 col-xs-12'>
             <div className='card-home'>
               <Link to="/" > <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/esAR/Images/outdoor-ss22-epwpack-drop1-launch-clp-teaser-carousel-4-v2-d_tcm216-864723.jpg" className='img-cardHome' /></Link>
-              <div class="card-header">
-                <h4 class="title">FUNDIMOS</h4>
+              <div className="card-header">
+                <h4 className="title">FUNDIMOS</h4>
               </div>
-              <div class="card-body">
+              <div className="card-body">
                 <p>los gránulos y los convertimos en hilo de poliéster de alto rendimiento</p>
               </div>
             </div>
@@ -127,10 +127,10 @@ function AboutPage() {
           <div className='cards-home col-lg-2 col-md-12 col-xs-12'>
             <div className='card-home'>
               <Link to="/" > <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/esAR/Images/outdoor-ss22-epwpack-drop1-launch-clp-teaser-carousel-5-v2-d_tcm216-864726.jpg" className='img-cardHome' /></Link>
-              <div class="card-header">
-                <h4 class="title">CREAMOS</h4>
+              <div className="card-header">
+                <h4 className="title">CREAMOS</h4>
               </div>
-              <div class="card-body">
+              <div className="card-body">
                 <p>diseños fabricados con Parley Ocean Plastic para darte la opción de poder tomar mejores decisiones.</p>
               </div>
             </div>
@@ -159,7 +159,7 @@ function AboutPage() {
             <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
               <div className='card-home'>
                 <Link to="/" > <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/esAR/Images/running-ss22-adidasxparley_transparency-global-clp-teaser-small-3up-card1-d_tcm216-862053.jpg" className='img-cardHome' /></Link>
-                <div class="card-body">
+                <div className="card-body">
                   <p>Ayudanos a acabar con los residuos plásticos.</p>
                    <div className="mt-lg-4">
                   <u className="text-information"> MÁS INFORMACIÓN</u>
@@ -171,7 +171,7 @@ function AboutPage() {
             <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
               <div className='card-home'>
                 <Link to="/" > <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/esAR/Images/running-ss22-adidasxparley_transparency-global-clp-teaser-small-3up-card2-d_tcm216-862055.jpg" className='img-cardHome' /></Link>
-                <div class="card-body">
+                <div className="card-body">
                   <p>Nuestra misión es ayudar a acabar con los residuos plásticos. ¡Sumate vos también!</p>
                   <div>
                   <u className="text-information"> MÁS INFORMACIÓN</u>
@@ -183,7 +183,7 @@ function AboutPage() {
             <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
               <div className='card-home'>
                 <Link to="/" > <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/esAR/Images/running-ss22-adidasxparley_transparency-global-clp-teaser-small-3up-card3-d_tcm216-862060.jpg" className='img-cardHome' /></Link>
-                <div class="card-body">
+                <div className="card-body">
                   <p>Este es el camino para acabar con los residuos plásticos</p>
                 </div>
                 <div className="mx-3 mt-lg-2">

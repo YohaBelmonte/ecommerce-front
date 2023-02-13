@@ -11,6 +11,7 @@ import ShoePage from './Pages/ShoePage/ShoePage';
 import RegisterPage from './Pages/Register/RegisterPage';
 import LoginPage from './Pages/Login/LoginPage';
 import HomePage from './Pages/Home/HomePage';
+import HomeShop from './Pages/HomeShop/HomeShop';
 import NewPassword from './Pages/NewPassword/NewPassword';
 import Contact from './Pages/Contact/Contact'
 import ShoppingCart from './Pages/ShoppingCart/ShoppingCart';
@@ -22,10 +23,18 @@ function App() {
     <BrowserRouter >
       <Preloader/>
       <Routes>
-          <Route path='/' element={
+        <Route path='/' element={
             <div>
               <div className=''>
                 <HomePage />
+              </div>
+          </div>
+        }>
+        </Route>
+        <Route path='/shop' element={
+            <div>
+              <div className=''>
+                <HomeShop />
               </div>
           </div>
         }>

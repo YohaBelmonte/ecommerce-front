@@ -16,7 +16,7 @@ function CarouselHome () {
         />
         <Carousel.Caption className="textSliders">
           <h3 className="titleSliders2">PARK TRAIL</h3>
-          <Link to="/" >  <button className="buttonSliders">
+          <Link to="/shop" >  <button className="buttonSliders">
             COMPRAR   <FontAwesomeIcon icon={faArrowRight} className="mx-2" />
           </button> </Link>
         </Carousel.Caption>
