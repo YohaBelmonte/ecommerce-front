@@ -1,436 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/* incip de video */
+.video1 {
+  width: 100%;
+}
+
+.video1 iframe {
+  border: none;
+  width: 100%;
+  height: 572px;
+
+}
+
 .home-about {
-    text-decoration: none;
-    color: rgb(158, 153, 153);
+  text-decoration: none;
+  color: rgb(158, 153, 153);
 }
 
 .text-about {
-    font-size: 15px;
+  font-size: 15px;
 }
+
 .box-text {
-    background-color: #c7cac84b;
+  background-color: #c7cac84b;
 }
-.about  {
-font-weight: 700;
-font-size: 170px;
-margin-left: 250px;
-color:rgb(70, 69, 69);
+
+.about {
+  font-weight: 700;
+  font-size: 170px;
+  color: rgb(19, 18, 18);
+  font-family: 'Oswald', sans-serif;
 }
-.vision  {
-    font-weight: 700;
-    font-size: 170px;
-   text-align: center;
-   margin-bottom: 5%;
-   color:rgb(70, 69, 69);
-   text-decoration: none;
-   background-image: linear-gradient(
-       to right,
-       #275e38,
-       #275e38 50%,
-       #275e38 50%
-     );
-   background-position: 0% 100%;
-   background-repeat: no-repeat;
-   display: inline-block;
-   background-size: 0% 2px;
-   transition: background-size .3s;
-   padding: 5px;
+
+.vision {
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  font-size: 170px;
+  text-align: center;
+  margin-bottom: 5%;
+  color: rgb(19, 18, 18);
+  text-decoration: none;
+  background-image: linear-gradient(to right,
+      #275e38,
+      #275e38 50%,
+      #275e38 50%);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+  padding: 5px;
 }
+
+.box-textAbout {
+  text-align: center;
+}
+
 .vision:hover {
   background-size: 100% 2px;
   color: #275e38;
 }
-.navbar-about {
-    border-block-end: solid 1px #c7c7ca81 ;
-}
 
 .container-img1 {
-    height: 600px;
+  height: 600px;
 }
+
 .text1 {
-    line-height: 35px;
-    text-align: justify;
-    color: #636463;
+  line-height: 35px;
+  text-align: justify;
+  color: #636463;
+  font-size: 17px;
 }
+
 .title1 {
-   color: #275e38;
+  color: #275e38;
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
 }
+
 .text-container2 {
   background-color: rgba(204, 202, 202, 0.26);
   height: 250px;
 }
+
 .Info {
-  color:#275e38;
+  color: #275e38;
   text-decoration: none;
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       #275e38,
       #275e38 50%,
-      #275e38 50%
-    );
+      #275e38 50%);
   background-position: 0% 100%;
   background-repeat: no-repeat;
   display: inline-block;
   background-size: 0% 2px;
   transition: background-size .3s;
 }
+
 .Info:hover {
   background-size: 100% 2px;
   color: #275e38;
 }
+
 .iconoPlus {
   color: #275e38;
 }
+
 .styleIcons {
   text-decoration: none;
 }
-.nav-about {
-  color:rgb(70, 69, 69);
-  text-decoration: none;
-  background-image: linear-gradient(
-      to right,
-      #275e38,
-      #275e38 50%,
-      #275e38 50%
-    );
-  background-position: 0% 100%;
+
+
+
+/* seccion fondo img de oceano */
+.fondo-ocean {
+  background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/running-ss22-adidasxparley_transparency-global-clp-statement-citation-d_tcm216-862011.jpg);
+  background-position: center;
   background-repeat: no-repeat;
-  display: inline-block;
-  background-size: 0% 2px;
-  transition: background-size .3s;
-}
-.nav-about:hover {
-  background-size: 100% 2px;
-  color: #275e38;
-}
-/* seccion materiales */
-.ImgRadius {
-    border-radius: 50%;
-    border-end-end-radius: solid 1px gray;
-}
-.SubTitle {
-    font-size: 100px;
-    font-weight: 600;
-    text-align: center;
-    color: #2f302f;
-}
-.ListMaterials {
-    font-size: 45px;
-    font-weight: 400;
-    width: 100%;  
-}
-.container-img {
-  border-radius: 100%;
   width: 100%;
-  padding: 25px;
-}
-.img4 {
-  border-radius: 100%;
-  width: 100%;
-  background-color: #75727215;
-
-}
-.box-img {
-  border-radius: 100%;
-  width: 100%;
-  padding: 30px;
-  border: rgba(102, 100, 100, 0.87) 1px solid ;
-  border-style: dashed;
-  border-width: 1px;
-}
-.box-imgCarrusel {
-  background-color: #75727215;
-  border-radius: 100%;
-  width: 100%;
-}
-.box-carrusel {
-  background-color: #dfe7ec05;
-  border-radius: 100%;
-  width: 100%;
-  padding: 30px;
-  border: rgba(102, 100, 100, 0.87) 1px solid ;
-  border-style: dashed;
-  border-width: 1px;
-}
-.listMat{
-     list-style: none;  
-     margin-left: 250px;
-     line-height: 90px;
+  height: 500px;
 }
 
-.carruselResponse {
-  width: 0px;
-}
-
-.text2 {
-    font-size: 40px;
-}
-.text3 {
-    font-size: 40px;
-    color: #275e38;
-}
-.SubTitle3 {
-    margin-left: 320px;
-}
-.text-arg {
-  text-align: center;
-  font-size: 30px;
-}
-.styleIcons {
-  color: #2f302f;
-}
-.styleIcons:hover {
-  color: #275e38;
-}
-
-/* seccion ubicacion */
-.iconoPlus:hover {
-  transform:rotate(45deg);
-}
-
-/* seccion certificados */
-.containerCertificados {
-  text-align: center;
-
-}
-.box-certificats {
-  border: 1px solid rgb(204, 202, 202);
-  height: 250px;
-}
-
-.button-certficats {
-  border-radius: 10px;
-  background-color: white;
-  width: 100px;
-  height: 35px;
-  border: 2px solid #275e38;
-  color: #275e38;
-}
-.global {
-  margin-left: 90px;
-}
-.boo {
-  background-color: #275e38;
-}
-.img-certificats {
-  width: 200px;
-  height: 120px;
-}
-.button-certficats:hover {
+.text-information {
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  z-index: 1;
+  padding: 2px 6px;
   color: white;
   background-color: #275e38;
 }
 
-/* seccion impacto ambiental */
-.containerAmbiental {
-  background-color: rgba(204, 202, 202, 0.26);
-  height: 1000px;
-}
-.text4 {
-  font-size: 30px;
-  color: #275e38;
+
+.box-investiga {
   text-align: center;
 }
 
-.impacto {
-  color: #151616;
-  font-size: 45px;
+.title2 {
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  width: 800px;
+  margin-top: 100px;
+  line-height: 150%;
+
 }
-.impacto:hover {
-  color: #275e38;
-  font-size: 45px;
-}
-.backImpact {
-  background-image: url(https://images.prismic.io/ubac/907e8ee2-77d6-4125-a8ba-08f860056548_Sans+titre+%283%29.png?auto=compress%2Cformat&rect=0%2C0%2C3100%2C3100&w=1080&h=null);
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center ;
-  width: 100%;
-  height: 690px;
-  background-size: contain;
-  background-attachment: fixed;
-}
-.textImpact {
-text-align: justify;
-}
+
 /* seccion nosotros */
 .our-team {
-    padding: 30px 0 40px;
-    background-color: #f7f5ec;
-    text-align: center;
-    overflow: hidden;
-    width: 300px;
-  }
-  
-  .our-team .picture {
-    display: inline-block;
-    height: 130px;
-    width: 130px;
-    margin-bottom: 50px;
-    z-index: 1;
-    position: relative;
-  }
-  
-  .our-team .picture::before {
-    content: "";
-    width: 100%;
-    height: 0;
-    border-radius: 50%;
-    background-color: #275e38;
-    position: absolute;
-    bottom: 135%;
-    right: 0;
-    left: 0;
-    opacity: 0.9;
-    transform: scale(3);
-    transition: all 0.3s linear 0s;
-  }
-  
-  .our-team:hover .picture::before {
-    height: 100%;
-  }
-  
-  .our-team .picture::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #275e38;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  
-  .our-team .picture img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    transform: scale(1);
-    transition: all 0.9s ease 0s;
-  }
-  
-  .our-team:hover .picture img {
-    box-shadow: 0 0 0 14px #f7f5ec;
-    transform: scale(0.7);
-  }
-  
-  .our-team .title {
-    display: block;
-    font-size: 15px;
-    color: #4e5052;
-  }
-  .carruselResponse {
-    width: 0;
-    height: 0;
-  }
+  padding: 30px 0 40px;
+  background-color: #f7f5ec;
+  text-align: center;
+  overflow: hidden;
+  width: 300px;
+}
 
-@media (max-width:740px) {
+.our-team .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
 
-    .about  {
-       font-size: 70px;
-       margin-left: 20px;
-    }
-    .vision  {
-        font-size: 70px;
-        margin-left: 50px;
-        margin-bottom: 50px;
-     }
-     .SubTitle {
-        font-size: 50px;
-     }
-.listMat{
-  font-size: 0px;
-width: 0;
+.our-team .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #275e38;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
 }
-.navbar-about {
-margin-bottom: 25px;
+
+.our-team:hover .picture::before {
+  height: 100%;
 }
-.ListMaterials {
-  width: 0;
+
+.our-team .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #275e38;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-.containerMat {
+
+.our-team .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.our-team .title {
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+}
+
+.carruselResponse {
   width: 0;
   height: 0;
 }
-.listMat:after {
-  width: 0;
-  background-color: #f7f5ec00;
+
+.containerTeam {
+  text-align: center;
+  margin-top: 100px;
 }
 
-/* carrusel  */
-.carruselResponse {
-  width: 100%;
-}
-.text-carrusel {
-  color: #2f302f;
-}
-.box-textCarrusel {
-  margin-top: 35px;
-}
-.container-ubic {
-  margin-top: 400px;
-}
-.box-img {
-  width: 0;
-  border: solid 0px;
-}
-.box-imgCarrusel {
-  background-color: #dfe7ecb7;
-  border-radius: 100%;
-  width: 100%;
-}
-.box-carrusel {
-  background-color: #dfe7ec05;
-  border-radius: 100%;
-  width: 100%;
-  padding: 15px;
-  border: rgba(160, 160, 160, 0.747) 1px solid ;
-  border-style: dashed;
-  border-width: 1px;
-}
-.signoMas {
-  color: #151616;
-}
-.iconoPlus {
-  color: #151616;
+@media (max-width:740px) {
+
+  .about {
+    font-size: 70px;
+    margin-left: 20px;
+  }
+
+  .vision {
+    font-size: 70px;
+    margin-bottom: 50px;
+  }
+
+  .SubTitle {
+    font-size: 50px;
+  }
+
+  .video1 iframe {
+    height: 140px;
+  
+  }
+.container1 {
+  display: flex;
+  justify-content: center;
 }
 .text-container2 {
   height: 300px;
 }
-.seccionMateriales {
-  margin-top: 70px;
+.container3 {
+  margin-top: 30px;
 }
+.card-header {
+  text-align: center;
+}
+.title2 {
+  font-size: 30px;
+}
+  /* seccion nuestro equipo */
+  .containerTeam {
+    margin-top: 50px;
+  }
 
-/* seccion ubicacion */
-.container-ubic {
-  margin-top: 450px;
-}
-
-/* seccion impacto ambiental */
-.impacto {
-font-size: 0px;
-background-color: #275e38;
-}
-.Impact {
-  width: 0px;
-  height: 0px;
-}
-.backImpact {
-  background-attachment: scroll;
-  background-position: bottom center;
-  height: 0px;
-}
-.textImpact {
-  margin-right: 70px;
-}
-.containerAmbiental {
-  height: 1200px;
-}
-/* seccion nuestro equipo */
-.containerTeam {
-  margin-top: 50px;
-}
-.our-team {
-margin-top: 10px;
-}
+  .our-team {
+    margin-top: 10px;
+  }
 }
