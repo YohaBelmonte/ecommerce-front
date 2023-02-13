@@ -7,6 +7,8 @@ import axios from "axios";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CreditCard from '../../components/CreditCard/CreditCard'
+import { Link } from "react-router-dom";
+
 
 function ShoppingCart() {
   const token = localStorage.getItem("token") ?? "";
@@ -74,7 +76,10 @@ function ShoppingCart() {
       <NavBarComponent />
       <div className=" cart-container nowrap">
         <div className="cart-title">
-          <span>Carrito de compras</span>
+          <span>CARRITO DE COMPRAS</span>
+          <span>
+          <Link to="/shop" className=''>VOLVER AL SHOP</Link>
+          </span>
         </div>
         <div className=" products-container">
           {cart?.map((item, i) => (
