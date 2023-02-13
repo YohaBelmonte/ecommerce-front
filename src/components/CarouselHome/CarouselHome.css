@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.textSliders {
+    margin-right: 1000px;
+    width: 250px;
+    margin-bottom: 150px;
+    font-family: 'Oswald', sans-serif;
+}
+.buttonSliders {
+    width: 140px;
+    height: 50px;
+    border: 1px solid black;
+    font-family: 'Oswald', sans-serif;
+}
+.titleSliders {
+    color: white;
+    font-size: 70px;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+}
+.titleSliders2 {
+    color: white;
+    font-size: 70px;
+    font-weight: 600;
+    width: 400px;
+    font-family: 'Oswald', sans-serif;
+}

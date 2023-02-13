@@ -7,6 +7,7 @@ import useHome from "../../Utils/useHome";
 import useCart from "../../Utils/useShoppingCart";
 import NavBarComponent from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import ComponentHome from "../../components/ComponentHome/ComponentHome";
 import axios from "axios";
 import { useEffect } from "react";
 
@@ -42,8 +43,8 @@ function HomePage() {
     //home de prueba ↓↓↓↓ para ver si andaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓
     <div>
       <NavBarComponent size={cart.length} />
-      <Carousel/>
-      <div className="containerCards">
+      <ComponentHome/>
+      {/* <div className="containerCards">
         <div className="row">
           <div className="col-10 d-flex flex-wrap ">
             {MapProduct}
@@ -52,7 +53,7 @@ function HomePage() {
             <div className="advertising2"></div>
           </div>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
