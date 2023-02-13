@@ -12,7 +12,7 @@ function AboutPage() {
     <div>
       <Navbar />
       <div className='w-100'>
-        <div class="video">
+        <div class="video1">
           <iframe src="https://brand.assets.adidas.com/video/upload/q_auto,vc_auto/video/upload/global%20brand%20publishing/Sustainability/ss22-dec-planet-hub-update/horizontal-concepts-fw21-purpose-launch-clp-statement-v1-d.mp4" allowfullscreen></iframe>
         </div>
       </div>
@@ -32,10 +32,10 @@ function AboutPage() {
       {/* seccion introduccion */}
 
       <div className="container1 w-100" id="introducción">
-        <div className="row mt-lg-5">
+        <div className="row mt-lg-5 w-100">
           <div className="col-lg-2">
           </div>
-          <div className="col-lg-4 col-sm-12 "> <img className="container-img1 col-12" src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/originals-ss22-adidasxparley_transparency-global-mar-clp-mh-split-media-item-d_tcm216-861918.jpg" />
+          <div className="col-lg-4 col-sm-12 "> <img className="container-img1" src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/originals-ss22-adidasxparley_transparency-global-mar-clp-mh-split-media-item-d_tcm216-861918.jpg" />
           </div>
           <div className="col-lg-4 col-sm-12 mx-lg-5 p-5">
             <h5 className="mt-lg-2 title1 ">
@@ -52,7 +52,7 @@ function AboutPage() {
 
 
       <div className="container2 w-100">
-        <div className="row ">
+        <div className="row w-100">
           <div className="col-lg-2 col-sm-12">
           </div>
           <div className="col-lg-4 col-sm-12  p-5">
@@ -68,11 +68,11 @@ function AboutPage() {
         </div>
       </div>
 
-      <div className="mx-lg-5">
+      <div className="mx-lg-5 container3 w-100 p-2">
         <h5 className="mt-lg-2 title1">
           Transformá el problema en rendimiento </h5>
         <p className="text1">
-          Descubrí cómo se fabrica un diseño adidas x Parley</p>
+          Descubrí cómo se fabrica un diseño adidas por Parley</p>
       </div>
 
       {/* card */}
@@ -150,7 +150,7 @@ function AboutPage() {
       <div className="d-flex justify-content-center">
         <div className="box-investiga">
           <h5 className="title1 mt-lg-5">INVESTIGA MÁS</h5>
-          <p className="text1 ">Descubrí cómo convertimos el problema del plástico en diseños de alto rendimiento</p>
+          <p className="text1 p-2">Descubrí cómo convertimos el problema del plástico en diseños de alto rendimiento</p>
         </div>
       </div>
       <div>
@@ -173,7 +173,7 @@ function AboutPage() {
                 <Link to="/" > <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_800,w_800/esAR/Images/running-ss22-adidasxparley_transparency-global-clp-teaser-small-3up-card2-d_tcm216-862055.jpg" className='img-cardHome' /></Link>
                 <div class="card-body">
                   <p>Nuestra misión es ayudar a acabar con los residuos plásticos. ¡Sumate vos también!</p>
-                  <div className="">
+                  <div>
                   <u className="text-information"> MÁS INFORMACIÓN</u>
                 </div>
               
@@ -186,7 +186,7 @@ function AboutPage() {
                 <div class="card-body">
                   <p>Este es el camino para acabar con los residuos plásticos</p>
                 </div>
-                <div className="mx-lg-3 mt-lg-2">
+                <div className="mx-3 mt-lg-2">
                   <u className="text-information"> MÁS INFORMACIÓN</u>
                 </div>
               </div>
