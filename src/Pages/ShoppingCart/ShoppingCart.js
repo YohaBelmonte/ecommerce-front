@@ -4,11 +4,10 @@ import useCart from "../../Utils/useShoppingCart";
 import NavBarComponent from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import axios from "axios";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import CreditCard from '../../components/CreditCard/CreditCard'
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import CreditCard from "../../components/CreditCard/CreditCard";
 import { Link } from "react-router-dom";
-
 
 function ShoppingCart() {
   const token = localStorage.getItem("token") ?? "";
@@ -19,15 +18,24 @@ function ShoppingCart() {
   const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
 
+  useEffect(() => {
+    handlePrice();
+    LogOut();
+  });
+
+  async function LogOut() {
+    const token = localStorage.getItem("token") ?? "";
+    if (token == "") {
+      window.location.href = "/login";
+    }
+  }
+
   function handleShow(breakpoint) {
     setFullscreen(breakpoint);
     setShow(true);
   }
 
-
-  useEffect(() => {
-    handlePrice();
-  });
+ 
 
   //hook
   const { CartProducts, cart, setCart } = useCart();
@@ -37,7 +45,11 @@ function ShoppingCart() {
     const arr = cart.filter((item) => item._id !== id);
     setCart(arr);
     // console.log(id);
-    const { data } = await axios.put(`${url}/product/remove/${id}`, {}, { headers });
+    const { data } = await axios.put(
+      `${url}/product/remove/${id}`,
+      {},
+      { headers }
+    );
     // console.log(data);
   }
 
@@ -52,24 +64,32 @@ function ShoppingCart() {
   //Contador
   const [quantity, setQuantity] = useState(1);
 
-  const quantityDecrease = () => {
-    setQuantity(quantity - 1)
-  }
-  const quantityIncrease = () => {
-    setQuantity(quantity + 1)
-  }
+  // const quantityDecrease = (value) => {
+  //   value.quantity= value.quantity -1
+  //   console.log(value.quantity)
+  //   setQuantity(value.quantity);
+  // };
+  // const quantityIncrease = (value) => {
+  //   value.quantity= value.quantity +1
+  //   console.log(value.quantity)
+  //   setQuantity(value.quantity);
+  // };
 
-  const quantityChange = (item, d) => {
-    let ind = -1;
-    cart.forEach((data, index) => {
-      if (data.id === item.id)
-        ind = index;
+  const quantityChange = (value, d) => {
+    let result = cart.map((item) => {
+      if (value == item._id) {
+        if (d == true) {
+          item.quantity = item.quantity + 1;
+        } else {
+          item.quantity = item.quantity - 1;
+        }
+        return item;
+      } else {
+        return item;
+      }
     });
-    const tempArray = cart;
-    tempArray[ind].quantity += d;
-    setQuantity(tempArray[ind].quantity)
-    console.log(tempArray[ind].quantity);
-  }
+    setCart(result);
+  };
 
   return (
     <div className="shop-container">
@@ -78,31 +98,46 @@ function ShoppingCart() {
         <div className="cart-title">
           <span>CARRITO DE COMPRAS</span>
           <span>
-          <Link to="/shop" className=''>VOLVER AL SHOP</Link>
+            <Link to="/shop" className="">
+              VOLVER AL SHOP
+            </Link>
           </span>
         </div>
         <div className=" products-container">
-          {cart?.map((item, i) => (
-            <div className="cart_box" key={i}>
-              <div className="cart_img">
-                <img src={item.image} />
-                <p>{item.name}</p>
+          {cart?.map((item, i) => {
+            return (
+              <div className="cart_box" key={i}>
+                <div className="cart_img">
+                  <img src={item.image} />
+                  <p>{item.name}</p>
+                </div>
+                <div>
+                  <button
+                    disabled={item.quantity <= 1}
+                    onClick={() => quantityChange(item._id, false)}
+                  >
+                    {" "}
+                    -{" "}
+                  </button>
+                  <button>{item.quantity}</button>
+                  {/* <button>{item.quantity}</button> */}
+                  <button
+                    disabled={item.quantity >= item.countInStock}
+                    onClick={() => quantityChange(item._id, true)}
+                  >
+                    {" "}
+                    +{" "}
+                  </button>
+                </div>
+                <div>
+                  <span>$ {item.price}</span>
+                  <button onClick={() => handleRemove(item._id)}>Remove</button>
+                </div>
               </div>
-              <div>
-                <button disabled={quantity <= 1} onClick={() => quantityDecrease()}> - </button>
-                <button>{quantity}</button>
-                {/* <button>{item.quantity}</button> */}
-                <button disabled={quantity >= item.countInStock} onClick={() => quantityIncrease()}> + </button>
-              </div>
-              <div>
-                <span>$ {item.price}</span>
-                <button onClick={() => handleRemove(item._id)} >Remove</button>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         <div className="total  text-end ">
-
           <span className="mt-4 mx-5">Total</span>
           <span className="mt-4 mx-5">${price}</span>
         </div>
@@ -110,7 +145,8 @@ function ShoppingCart() {
 
         <>
           <div>
-            <button className="custom-btn btn-5" onClick={() => setShow(true)}>COMPRAR
+            <button className="custom-btn btn-5" onClick={() => setShow(true)}>
+              COMPRAR
             </button>
           </div>
           <Modal
@@ -118,7 +154,6 @@ function ShoppingCart() {
             onHide={() => setShow(false)}
             dialogClassName="modal-90w"
             backdrop="static"
-
           >
             <Modal.Header closeButton className="bg-dark text-white">
               <Modal.Title className="d-flex justify-content-center w-100">
@@ -136,3 +171,14 @@ function ShoppingCart() {
   );
 }
 export default ShoppingCart;
+
+const quantityChange = (item, d) => {
+  let ind = -1;
+  cart.forEach((data, index) => {
+    if (data.id === item.id) ind = index;
+  });
+  const tempArray = cart;
+  tempArray[ind].quantity += d;
+  setQuantity(tempArray[ind].quantity);
+  console.log(tempArray[ind].quantity);
+};
