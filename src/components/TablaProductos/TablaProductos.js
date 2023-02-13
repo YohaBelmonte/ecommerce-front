@@ -49,8 +49,12 @@ function TablaProductos() {
       <tr className='tabla bg-white ' key={i}>
         <td className='col-1 '>{item._id}</td>
         <td className='col-1 '>{item.name}</td>
-        <td className='col-2 '> <img src={item.image} alt="" className="w-50"></img></td>
-        <td className='col-2 Description text-break'>{item.description}</td>
+        <td className='col-2 '> <img src={item.image} alt="" className="imageProduct"></img></td>
+        <td className='col-2 '>
+          <div className="adminOverflow">
+            {item.description}
+          </div>
+        </td>
         <td className='col-2 '>{item.category}</td>
         <td className='col-1 '>{item.price}</td>
         <td className='col-2 '>{item.size}</td>
@@ -126,7 +130,7 @@ function TablaProductos() {
             <Modal.Title>Añadir Productos</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <form>
+            <form className="tabla-Products">
               <div className="form-group">
                 <input type="text" className="form-control" name='name' placeholder="Name" onChange={OnChangeProduct} />
               </div>
