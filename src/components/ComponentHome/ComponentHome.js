@@ -11,6 +11,34 @@ function ComponentHome() {
             {/* seccion carousel */}
             <CarouselHome />
             {/* seccion imagenes */}
+            {/* <p className=''>¿Para quién es esta compra?</p>
+            <div className='d-flex justify-content-center container-card'>
+                <div className='container-cardHome row'>
+                    <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
+                        <div className='card-home'>
+                            <Link to="/" ><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdNB1C8OC04OzIIu_uFWU5IcjNtDgER_1VC67DzQt1dUwx_J4UaKkXe6-l8C4BFxyu1bQQAx-LJE2VqOP9hCuMV3Oa5jGf" className='img-cardHome' /></Link>
+                            <div class="card-header">
+                                <h4 class="title">MUJER</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
+                        <div className='card-home'>
+                            <Link to="/" ><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdNB1C8OC04OzIIu_uFWU5IcjNtDgER_1VC67DzQt1dUwx_J4UaKkXe6-l8C4BFxyu1bQQAx-LJE2VqOP9hCuMV3Oa5jGf" className='img-cardHome' /></Link>
+                            <div class="card-header">
+                                <h4 class="title">HOMBRE</h4>
+                            </div>
+                        </div>
+                    </div>  <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
+                        <div className='card-home'>
+                            <Link to="/" ><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdNB1C8OC04OzIIu_uFWU5IcjNtDgER_1VC67DzQt1dUwx_J4UaKkXe6-l8C4BFxyu1bQQAx-LJE2VqOP9hCuMV3Oa5jGf" className='img-cardHome' /></Link>
+                            <div class="card-header">
+                                <h4 class="title">NIÑOS</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
             {/* seccion texto */}
             <div className='text-home'>
                 <h1 className='text-h'> ESTA ES TU TIENDA. ESTA ES TU CASA</h1>
@@ -20,7 +48,7 @@ function ComponentHome() {
                 <div className='container-cardHome row'>
                     <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
                         <div className='card-home'>
-                        <Link to="/" ><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdNB1C8OC04OzIIu_uFWU5IcjNtDgER_1VC67DzQt1dUwx_J4UaKkXe6-l8C4BFxyu1bQQAx-LJE2VqOP9hCuMV3Oa5jGf" className='img-cardHome' /></Link>
+                            <Link to="/" ><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdNB1C8OC04OzIIu_uFWU5IcjNtDgER_1VC67DzQt1dUwx_J4UaKkXe6-l8C4BFxyu1bQQAx-LJE2VqOP9hCuMV3Oa5jGf" className='img-cardHome' /></Link>
                             <div class="card-header">
                                 <h4 class="title">STREETWEAR</h4>
                                 <h4 class="price">$55500</h4>
@@ -32,7 +60,7 @@ function ComponentHome() {
                     </div>
                     <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
                         <div className='card-home'>
-                        <Link to="/" > <img src="https://woker.vtexassets.com/arquivos/ids/292438-800-800?v=637945269639330000&width=800&height=800&aspect=true" className='img-cardHome' /></Link>
+                            <Link to="/" > <img src="https://woker.vtexassets.com/arquivos/ids/292438-800-800?v=637945269639330000&width=800&height=800&aspect=true" className='img-cardHome' /></Link>
                             <div class="card-header">
                                 <h4 class="title">PARLEY ADIDAS</h4>
                                 <h4 class="price">$48300</h4>
@@ -44,7 +72,7 @@ function ComponentHome() {
                     </div>
                     <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
                         <div className='card-home'>
-                        <Link to="/" > <img src="https://sothebys-md.brightspotcdn.com/53/92/d28052c64b13b38626ff2b63b049/louis-vuitton-x-nike-air-force-1-low-orange.jpg" className='img-cardHome' /></Link>
+                            <Link to="/" > <img src="https://sothebys-md.brightspotcdn.com/53/92/d28052c64b13b38626ff2b63b049/louis-vuitton-x-nike-air-force-1-low-orange.jpg" className='img-cardHome' /></Link>
                             <div class="card-header">
                                 <h4 class="title">LUXURY</h4>
                                 <h4 class="price">$57300</h4>
@@ -72,11 +100,11 @@ function ComponentHome() {
             </div>
             {/* fin del video */}
             {/* seccion oceano */}
-            <div className='mt-lg-5 imgOceanos'> 
-            <div>
-            <div><p className='text-ocean mt-2'>PROTEGER LOS ÓCEANOS ES NUESTRA PRINCIPAL PRIORIDAD. NUESTRA MISIÓN VA MÁS ALLÁ DEL DEPORTE. ES NUESTRO FUTURO</p></div>
-            <div>  <Link to="/about" ><button className='buttonOcean'>CONOCÉ MÁS <FontAwesomeIcon icon={faArrowRight} className="mx-2" /></button></Link> </div>
-            </div>
+            <div className='mt-lg-5 imgOceanos'>
+                <div>
+                    <div><p className='text-ocean mt-2'>PROTEGER LOS ÓCEANOS ES NUESTRA PRINCIPAL PRIORIDAD. NUESTRA MISIÓN VA MÁS ALLÁ DEL DEPORTE. ES NUESTRO FUTURO</p></div>
+                    <div>  <Link to="/about" ><button className='buttonOcean'>CONOCÉ MÁS <FontAwesomeIcon icon={faArrowRight} className="mx-2" /></button></Link> </div>
+                </div>
             </div>
             {/* seccion sneakers */}
             <div className='productGrid'>
