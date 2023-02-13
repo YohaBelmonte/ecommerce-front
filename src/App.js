@@ -1,10 +1,10 @@
 import './App.css';
-import Admin from './Pages/Admin/admin';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect} from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
+import Admin from './Pages/Admin/admin';
 import Products from './Pages/Admin/Productos';
 import Usuarios from './Pages/Admin/Usuarios';
-
 import AboutUs from './Pages/AboutUs/aboutUs';
 import Faq from './Pages/Admin/FAQ';
 import ShoePage from './Pages/ShoePage/ShoePage';
@@ -19,6 +19,22 @@ import Preloader from './components/LoadingScreen/LoadingScreen';
 import Orders from './Pages/Admin/Orders';
 
 function App() {
+
+  useEffect(() => {
+    // LogOut();
+  }, []);
+
+  async function LogOut() {
+    try {
+      const token = localStorage.getItem("token") ?? "";
+      if (token == "") {
+        window.location.href = "/login";
+      }
+    } catch (error) {
+      console.error("no hay token");
+      alert("Error de sesion");
+    }
+  }
   return (
     <BrowserRouter >
       <Preloader/>
