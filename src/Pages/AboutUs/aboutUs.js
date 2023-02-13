@@ -21,7 +21,7 @@ function AboutPage() {
           <Link to="/" className='mx-2 mt-lg-5  home-about'>HOME</Link>
           <p className="mt-lg-5">•   SOBRE NOSOTROS</p></div>
         {/* este box se va en sm */}
-        <div className="mt-2 ">
+        <div className="mt-2 box-textAbout">
           <h1 className="about"> NUESTRA </h1>
           <Link to="/" className='d-flex justify-content-center vision'>VISIÓN</Link>
         </div>
@@ -194,25 +194,9 @@ function AboutPage() {
           </div>
         </div>
       </div>
-      {/* seccion certificados */}
-      <div className="mt-lg-5">
-      <div className="containerCertificados row d-flex justify-content-center mt-lg-5" id="certificados">
-        <h3 className="title1 ">
-          NUESTROS CERTIFICADOS </h3>
-        <div className="col-lg-3 col-sm-12 col-md-3 box-certificats mt-lg-2">
-          <div>  <img className="img-certificats global mt-4" src="https://images.prismic.io/ubac/ee32cadf-7156-4800-abf5-0052891e0683_logo-global-recycled-standart%402x.png?auto=compress%2Cformat&rect=0%2C0%2C359%2C165&w=600&h=null 600w" /></div>
-          <div> <a href="https://certifications.controlunion.com/es/certification-programs/certification-programs/grs-estandar-global-de-reciclaje"><button className="button-certficats mt-lg-5">Ver más +</button></a></div>
-        </div>
-        <div className="col-lg-3 col-sm-12 col-md-3 box-certificats mx-lg-4 mt-lg-2">
-          <div> <img className="img-certificats mt-4 w-100" src="https://www.biosfera.org/wp-content/uploads/2015/06/logo_fundacion_v5.png" /> </div>
-          <div> <a href="https://www.biosfera.org/?v=5b61a1b298a0"><button className="button-certficats mt-lg-5">Ver más +</button></a></div>
-        </div>
-      </div>
-      </div>
-
-
+  
       {/* seccion Nuestro equipo */}
-      <div className="containerTeam w-100 mt-lg-5" id="team">
+      <div className="containerTeam w-100 " id="team">
       <h3 className="title1 mt-lg-5">NUESTRO EQUIPO</h3>
         <div className="row d-flex justify-content-center mt-lg-5">
           <div className="col-12 col-sm-6 col-md-4 col-lg-3 mx-lg-1 d-flex justify-content-center cardTeam">
