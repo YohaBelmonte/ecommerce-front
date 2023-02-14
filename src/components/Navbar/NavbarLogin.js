@@ -10,7 +10,7 @@ function NavBarComponent({size}) {
  const isAdmin = localStorage.getItem("admin");
 
   return (
-    <Navbar  expand="lg" className="navbar">
+    <Navbar  expand="lg" className="navbar sticky-top">
       <Container>
         <Navbar.Brand>
           <div className='d-flex'>

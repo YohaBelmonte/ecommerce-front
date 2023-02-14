@@ -40,11 +40,15 @@
   background-color: rgb(241, 233, 222);
   outline:none;
 }
+
 .shopping-cart1 {
   font-size: 0px;
 }
 .shopping-cart {
   font-size: 0px;
+}
+.usuarioIcon {
+  margin-bottom: 8px;
 }
 .admin-nav {
   color: #275e38;
@@ -52,7 +56,7 @@
 .icon-nav {
   text-decoration: none;
   color: rgb(36, 36, 36);
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 .icon-nav:hover {
   color: #275e38;
@@ -99,6 +103,14 @@
   }
   .input-navbar {
     margin-left: 10px;
+  }
+  .usuarioIcon {
+   font-size: 0px;
+  }
+  .dropdw {
+   width: 0px;
+   font-size: 0px;
+   border-top: 0;
   }
 }
 @media (max-width: 1380) {
