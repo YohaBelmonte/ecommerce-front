@@ -54,7 +54,11 @@ ul {
     position: relative;
     z-index: 2;
 }
-
+.codigo-footer {
+  width: 130px;
+  height: 130px;
+  margin-top: 25px;
+}
 .footer-pattern img {
     position: absolute;
     top: 0;
@@ -126,7 +130,7 @@ ul {
 
 .subscribe-form input {
     width: 100%;
-    padding: 14px 28px;
+    padding: 22px 25px;
     background: #2E2E2E;
     border: 1px solid #2E2E2E;
     color: #fff;
@@ -136,9 +140,8 @@ ul {
     position: absolute;
     right: 0;
     background: #275e38;
-    padding: 13px 20px;
+    padding: 6px 15px;
     border: 1px solid #275e38;
-    top: 0;
 }
 
 .subscribe-form button i {
@@ -187,7 +190,6 @@ ul {
     border-radius: 100%;
     background-color: #33353d
 }
-
 
 @media (max-width:767px) {
     .site-footer {

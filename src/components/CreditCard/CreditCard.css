@@ -1,0 +1,24 @@
+.layout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    width: 100%;
+
+  }
+  
+  @media (max-width: 600px) {
+    .layout{
+      min-height: 300px;
+      width: 110%;
+      margin-left: -35px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .layout{
+      min-height: 300px;
+      width: 110%;
+      margin-left: -45px;
+    }
+  }

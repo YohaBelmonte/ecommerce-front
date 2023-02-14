@@ -15,18 +15,15 @@ function LoginPage() {
     const response = {
       ...form,
       [name]: value,
-
     };
+    console.log(response)
     setForm(response);
-    console.log(OnChange)
   }
 
   async function Login() {
     try {
       const { data } = await axios.post("http://localhost:4000/api/auth", form);
-      console.log(data);
       localStorage.setItem("token", data);
-
       window.location.href = "/";
     } catch (error) {
       console.error("error");

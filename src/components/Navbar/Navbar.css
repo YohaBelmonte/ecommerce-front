@@ -1,75 +1,109 @@
 .styleUser {
-    font-size: 0px;
+  font-size: 0px;
 }
-
+.navbar {
+  background-color: #fcf8f4 ;
+}
 .container-link {
-    list-style: none;
+  list-style: none;
 }
-
+.logo-navbar {
+  width: 90px;
+  height: 90px;
+}
 .link-nav {
-    text-decoration: none;
-    font-size: 15px;
-    color:rgb(32, 32, 32);
-    background-image: linear-gradient(
-        to right,
-        #275e38,
-        #275e38 50%,
-        #275e38 50%
-      );
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-    padding: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(32, 32, 32);
+  background-image: linear-gradient(
+    to right,
+    #275e38,
+    #275e38 50%,
+    #275e38 50%
+  );
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+  padding: 5px;
 }
-.link-nav:hover  {
-    background-size: 100% 2px;
-    color: #275e38;
-} 
+.link-nav:hover {
+  background-size: 100% 2px;
+  color: #275e38;
+}
+.input-navbar{
+  margin: 8px 20px;
+  padding: 15px;
+  border-radius: 30px;
+  border:none;
+  background-color: rgb(241, 233, 222);
+  outline:none;
+}
 .shopping-cart1 {
-    font-size: 0px;
+  font-size: 0px;
 }
 .shopping-cart {
-font-size: 0px;
+  font-size: 0px;
+}
+.admin-nav {
+  color: #275e38;
 }
 .icon-nav {
-    text-decoration: none;
-  color: rgb(36, 36, 36) ;
-
-  }
-  .icon-nav:hover {
-  color: #275e38 ;
-
-  }
-  
-@media (max-width:844px) {
-    .styleUser {
   text-decoration: none;
-  margin-top: 5px;
-    }
-    .styleIcons2 {
-        color: black;
-        font-size: 25px;
-        margin-left: 15px;
-        padding: 5px;
-    }
-    .styleIcons2:hover {
-        color:#275e38;
-    }
-    .ubac-nav {
-        margin-left: 80px;
-    }
-    .icon-nav {
-        font-size: 0px;
-    }
-    .container-link {
-        display: block;
-    }
-    .shopping-cart1 {
-        font-size: 15px;
-    }
-    .link-nav {
-        display: block;
-    }
+  color: rgb(36, 36, 36);
+  margin-left: 3rem;
+}
+.icon-nav:hover {
+  color: #275e38;
+}
+
+.icon-nav span:nth-child(2) {
+  padding: 0 3px;
+  background-color: #275e38;
+  color: white;
+  font-weight: white;
+  border-radius: 5px;
+  position: relative;
+  top: -15px;
+}
+
+@media (max-width: 844px) {
+  .styleUser {
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  .styleIcons2 {
+    color: black;
+    font-size: 25px;
+    margin-left: 15px;
+    padding: 5px;
+  }
+  .styleIcons2:hover {
+    color: #275e38;
+  }
+  .logo-navbar {
+    margin-left: 80px;
+  }
+  .icon-nav {
+    font-size: 0px;
+  }
+  .container-link {
+    display: block;
+  }
+  .shopping-cart1 {
+    font-size: 15px;
+  }
+  .link-nav {
+    display: block;
+  }
+  .input-navbar {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 1380) {
+.icon-nav {
+  font-size: 0px;
+  width: 0px;
+}
 }

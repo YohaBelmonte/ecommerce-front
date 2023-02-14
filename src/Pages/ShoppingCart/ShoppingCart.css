@@ -1,13 +1,173 @@
 .shop-container{
     min-height: 200px;
-    background-color: #ededed;
+    background-color: #f7f6f3;
 }
 .cart-title{
-    margin: 12px 0px 0px 0px;
-    border-bottom: 1px solid #b4b3b3;
+    font-size: 28px;
+    margin: 12px 20px 0px 20px;
+    padding: 12px 0px 15px 20px;
+    border-bottom: 1px solid #2123222a;
+    color: #212322;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+.cart-title span a{
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(32, 32, 32);
+  background-image: linear-gradient(
+    to right,
+    #275e38,
+    #275e38 50%,
+    #275e38 50%
+  );
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+  padding: 5px;
+}
+
+.cart-title span a:hover{
+  background-size: 100% 2px;
+  color: #275e38;
+}
+
 .cart-container{
-    margin-inline: 12px;
-    margin-top: 15px;
-    background-color: rgb(129, 127, 127);
+    margin: 15px 20px 15px 20px;
+    background-color: #f7f6f3;
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 35px -5px rgba(33,35,34,1); */
+    box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+}
+
+
+  .total span:nth-child(1){
+    font-size: 2rem;
+    color:  #275e38;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .total span:nth-child(2){
+    font-size: 1.5rem;
+    color:  #275e38;
+    /* font-weight: bold; */
+    margin-left: 50px;
+    margin-top:8px;
+  }
+  /* .buyButton{
+    margin: 20px 0px 15px 40%;
+    background-color: #275e38;
+    color: #f7f6f3;
+    padding: 5px 100px 5px 100px;
+  } */
+  
+
+  /* Pago */
+  .custom-btn {
+    width: 160px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    margin: 10px 0px 15px 40%;
+    padding: 5px 100px 5px 100px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+  }
+  /* 5 */
+  .btn-5 {
+      width: 200px;
+      height: 40px;
+      line-height: 42px;
+      padding: 0;
+      border: none;
+      background: #275e38;
+    background: linear-gradient(0deg, #000000 0%,  #000000 100%);
+    }
+    .btn-5:hover {
+      color: #275e38;
+      background: transparent;
+       box-shadow:none;
+    }
+    .btn-5:before,
+    .btn-5:after{
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      height:2px;
+      width:0;
+      background: #275e38;
+      box-shadow:
+       -1px -1px 5px 0px #fff,
+       7px 7px 20px 0px #0003,
+       4px 4px 5px 0px #0002;
+      transition:400ms ease all;
+    }
+    .btn-5:after{
+      right:inherit;
+      top:inherit;
+      left:0;
+      bottom:0;
+    }
+    .btn-5:hover:before,
+    .btn-5:hover:after{
+      width:100%;
+      transition:800ms ease all;
+    }
+    
+/* CARDS DE LAS ORDENES ↓*/
+.cart_box img{
+    width: 50px;
+    height: 50px;
+}
+.cart_img{
+    display: flex;
+    width: 400px;
+}
+.cart_img p {
+    /* font-weight: bold; */
+    margin-left: 10px;
+}
+.cart_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 40px 0px 40px ;
+    border-bottom: 2px solid #21232221;
+    padding-bottom: 5px;
+}
+.cart_box div:nth-child(2) button{
+    padding: 1px 10px;
+    margin-right: 0px;
+    border:#212322 1px solid;
+
+}
+.cart_box div:nth-child(3) button{
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    border:none;
+    outline: none;
+    color: white;
+    background-color: #275e38;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cart_box div:nth-child(3) button:hover{
+    background-color: #212322;
+}
+.cart_box div:nth-child(3) span{
+    background-color: #f7f6f3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* font-weight: bold; */
+    border-color: #212322;
+    margin-right: 10px;
 }

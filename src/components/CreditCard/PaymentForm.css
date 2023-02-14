@@ -1,0 +1,53 @@
+
+/* Pago */
+.btnPay {
+     width: 120%;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    /* margin: 10px 0px 15px 0px; */
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+  }
+  /* 5 */
+  .btnPay {
+      line-height: 42px;
+      border: none;
+      background: #275e38;
+    background: linear-gradient(0deg, #000000 0%,  #000000 100%);
+    }
+    .btnPay:hover {
+      color: #275e38;
+      background: transparent;
+      box-shadow:none;
+    }
+    .btnPay:before,
+    .btnPay:after{
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      height:2px;
+      width:0;
+      background: #275e38;
+      box-shadow:
+       -1px -1px 5px 0px #fff,
+       7px 7px 20px 0px #0003,
+       4px 4px 5px 0px #0002;
+      transition:400ms ease all;
+    }
+    .btnPay:after{
+      right:inherit;
+      top:inherit;
+      left:0;
+      bottom:0;
+    }
+    .btnPay:hover:before,
+    .btnPay:hover:after{
+      width:100%;
+      transition:800ms ease all;
+    }

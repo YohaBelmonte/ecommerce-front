@@ -1,103 +1,170 @@
-
-
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { BiEdit } from 'react-icons/bi';
-import { AiTwotoneDelete } from 'react-icons/ai';
-import { Form } from "react-bootstrap";
 
 function useAdmin() {
+  var url = "http://localhost:4000/api";
 
+  const [data, setData] = useState([]);
+  const [form, setForm] = useState({});
+  const token = localStorage.getItem("token") ?? "";
+  const headers = { "x-auth-token": token };
 
-    var url = "http://localhost:4000/api";
+  // Register users
+  function OnChange(e) {
+    const { name, value } = e.target;
+    const response = {
+      ...form,
+      [name]: value,
+    };
+    setForm(response);
+  }
 
-    const [data, setData] = useState([]);
-    const [form, setForm] = useState({});
-
-    useEffect(() => {
-        GetUsers();
-    }, []);
-
-
-    // Method Get  ↓↓↓
-    async function GetUsers() {
-        try {
-            const { data } = await axios.get(`${url}/user`)
-            setData(data)
-        } catch (error) {
-            console.error(error);
-        }
+  async function Register() {
+    try {
+      const response = await axios.post(`${url}/user`, form);
+      alert("se registró con exito");
+      window.location.href = "/admin/usuarios";
+    } catch (error) {
+      console.error(error);
     }
-
-    // Register users
-    function OnChange(e) {
-        const { name, value, } = e.target;
-        const response = {
-            ...form, [name]: value,
-        };
-        setForm(response);
+  }
+  async function deletUser(id) {
+    try {
+      const isDelete = window.confirm(`Quieres eliminar el Usuario ${id}?`);
+      if (isDelete) {
+      const { data } = await axios.delete(`${url}/user/${id}`);
+      alert("Usuario eliminado con exito");
+      window.location.reload();
+      }
+    } catch (error) {
+      console.error(error);
     }
+  }
 
-    async function Register() {
+  // Search Usuarios Y PETICION GET DE USUARIOS ↓↓↓↓
+  const [usuarios, setUsuarios] = useState([]);
+  const [tablaUsuarios, setTablaUsuarios] = useState([]);
+  const [busqueda, setBusqueda] = useState("");
 
-        try {
-            const response = await axios.post(`${url}/user`, form)
-            alert("se registró con exito")
-            window.location.href = "/admin/usuarios"
+  const peticionGet = async () => {
+    await axios.get(`${url}/user`,)
+      .then(response => {
+        setUsuarios(response.data);
+        setTablaUsuarios(response.data);
+      }).catch(error => {
+        console.log(error);
+      })
+  }
 
-        } catch (error) {
+  const handleChange = e => {
+    setBusqueda(e.target.value);
+    filtrar(e.target.value);
+  }
 
-            console.error(error)
-        }
+  const filtrar = (terminoBusqueda) => {
+    var resultadosBusqueda = tablaUsuarios.filter((elemento) => {
+      if (elemento._id.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+        || elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+      ) {
+        return elemento;
+      }
+    });
+    setUsuarios(resultadosBusqueda);
+  }
+
+  useEffect(() => {
+    peticionGet();
+  }, [])
+
+  //  Search Productos Y PETICION GET DE PRODUCTOS 
+  const [product, setProduct] = useState([]);
+  const [tablaProductos, setTablaProductos] = useState([]);
+  const [busquedaProduct, setBusquedaProduct] = useState("");
+
+
+  const peticionGetProduct = async () => {
+    await axios.get(`${url}/product`, { headers })
+      .then(response => {
+        setProduct(response.data);
+        setTablaProductos(response.data);
+      }).catch(error => {
+        console.log(error);
+      })
+  }
+  const handleChangeProduct = e => {
+    setBusquedaProduct(e.target.value);
+    filtrarProduct(e.target.value);
+  }
+  const filtrarProduct = (terminoBusqueda) => {
+    var resultadosBusqueda = tablaProductos.filter((elemento) => {
+      if (elemento._id.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+        || elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+      ) {
+        return elemento;
+      }
+    });
+    setProduct(resultadosBusqueda);
+  }
+  useEffect(() => {
+    peticionGetProduct();
+  }, [])
+
+  // Tabla de productos = Admin Page     
+
+  const [formProduct, setFormProduct] = useState({});
+
+  function OnChangeProduct(e) {
+    const { name, value } = e.target;
+    const response = {
+      ...formProduct,
+      [name]: value,
+    };
+    setFormProduct(response);
+    console.log(response)
+  }
+
+  //Añadir producto en ADMIN
+  async function MethodPostProduct() {
+    try {
+      const response = await axios.post(`${url}/product`, formProduct, { headers });
+      console.log(response)
+      window.location.reload();
+      alert("Producto añadido con exito");
+    } catch (error) {
+      console.error(error);
 
     }
+  }
 
-
-    //   //Put Method
-
-    //   const [update, setupdate] = useState({});
-
-
-
-    // function OnChangeUpdate(e) {
-    //     const { name, value } = e.target;
-    //     const response = { ...update, [name]: value }
-    //     setupdate(response);
-    //     console.log(update);
-    // }
-
-    // async function PutMethod(id) {
-    //     try {
-    //         const { data } = await axios.put(`${url}/user/${data.id}`)
-    //         console.log(data)
-    //     } catch (error) {
-    //         alert("No se pudo");
-    //         console.error(error);
-    //     }
-    // }
-
-    async function deletUser(id) {
-        try {
-            const { data } = await axios.delete(`${url}/user/${id}`)
-            window.location.reload();
-        } catch (error) {
-            console.error(error)
-        }
+  async function deletProduct(id) {
+    try {
+      const isDelete = window.confirm(`Quieres eliminar el producto ${id}?`);
+      if (isDelete) {
+      const { data } = await axios.delete(`${url}/product/${id}`, formProduct, { headers });
+      alert("Producto eliminado con exito");
+      window.location.reload();
+      }
+    } catch (error) {
+      console.error(error);
     }
+  }
 
+  return {
+    data,
+    Register,
+    OnChange,
+    deletUser,
+    OnChangeProduct,
+    MethodPostProduct,
+    headers,
+    token,
+    deletProduct,
+    tablaUsuarios, 
+    setTablaUsuarios,
+    usuarios,
+     setUsuarios, busqueda, setBusqueda, handleChange, peticionGet
+    , peticionGetProduct, handleChangeProduct, busquedaProduct, setProduct, product
 
-
-    return {
-        data,
-        GetUsers,
-        Register,
-        OnChange,
-        deletUser
-
-
-
-    }
+  };
 }
 export default useAdmin;
-
-
