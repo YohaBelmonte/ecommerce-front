@@ -18,6 +18,7 @@ import ShoppingCart from "./Pages/ShoppingCart/ShoppingCart";
 import FavPage from "./Pages/FavPage/FavPage";
 import Preloader from "./components/LoadingScreen/LoadingScreen";
 import Orders from "./Pages/Admin/Orders";
+import Error from "./Pages/404/404";
 
 function App() {
   
@@ -153,6 +154,16 @@ function App() {
             <div>
               <div>
                 <Usuarios />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/404"
+          element={
+            <div>
+              <div>
+                <Error />
               </div>
             </div>
           }
