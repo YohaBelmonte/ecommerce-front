@@ -26,7 +26,6 @@ font-size: 18px;
   border-radius: 5px;
   justify-content: center;
 }
-
 .success{
   height: 85px;
   width: 150px;
@@ -42,6 +41,22 @@ font-size: 18px;
   border-radius: 5px;
   justify-content: center;
 }
+
+@media (min-width: 1000px){
+  .warning{
+    height: 70px;
+    width: 150px;
+    left: 10px;
+    top: 25%;
+  }
+  .success{
+    height: 70px;
+    width: 150px;
+    left: 10px;
+    top: 25%;
+  }
+}
+
 
 #toast {
   font-family: "Roboto", sans-serif;
@@ -443,3 +458,4 @@ a {
     }
   
 }
+
