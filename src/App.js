@@ -1,12 +1,10 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import Admin from "./Pages/Admin/admin";
 import Products from "./Pages/Admin/Productos";
 import Usuarios from "./Pages/Admin/Usuarios";
 import AboutUs from "./Pages/AboutUs/aboutUs";
-import Faq from "./Pages/Admin/FAQ";
 import ShoePage from "./Pages/ShoePage/ShoePage";
 import RegisterPage from "./Pages/Register/RegisterPage";
 import LoginPage from "./Pages/Login/LoginPage";

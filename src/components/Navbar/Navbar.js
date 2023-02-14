@@ -57,10 +57,10 @@ function NavBarComponent({ size }) {
               ) : (
                 ""
               )}
-              <Link to="/cart" className="link-nav shopping-cart1 mx-lg-4">
+              <Link to="/cart" className="link-nav shopping-cart1 mx-lg-2">
                 MI CARRITO
               </Link>
-              <Link to="/cart" className="link-nav shopping-cart1 mx-lg-4">
+              <Link to="/cart" className="link-nav shopping-cart1 mx-lg-3">
                 CERRAR SESIÓN
               </Link>
               <input

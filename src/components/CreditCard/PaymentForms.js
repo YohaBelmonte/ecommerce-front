@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Cards from 'react-credit-cards'
 import 'react-credit-cards/es/styles-compiled.css'
 import "./PaymentForm.css";
+import { Link } from "react-router-dom";
 
 const PaymentForms = () => {
 
@@ -113,9 +114,7 @@ const PaymentForms = () => {
                             />
                         </div>
                     </div>
-                    {/* <div className="btnPay" >  */}
                     <button type="button" className="btnPay">Pagar</button>
-                    {/* </div> */}
                 </form>
             </div>
         </div>

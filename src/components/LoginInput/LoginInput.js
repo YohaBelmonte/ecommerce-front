@@ -52,7 +52,7 @@ function LoginPage() {
             className="border-bottom border-0 bg-light rounded-0 fs-5 "
             type="email"
             name="email"
-            placeholder="email"
+            placeholder="Email"
             onChange={OnChange}
           />
         </Form.Group>
@@ -61,7 +61,7 @@ function LoginPage() {
             className="border-bottom border-0 bg-light rounded-0 fs-5 "
             type="password"
             name="password"
-            placeholder="password"
+            placeholder="Contraseña"
             onChange={OnChange}
           />
         </Form.Group>

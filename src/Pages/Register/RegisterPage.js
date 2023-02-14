@@ -55,7 +55,7 @@ function RegisterPage() {
           <Form.Control
             className="border-bottom border-0 bg-light rounded-0 fs-5 "
             name="name"
-            placeholder="Name"
+            placeholder="Nombre"
             onChange={OnChange}
           />
         </Form.Group>
@@ -73,7 +73,7 @@ function RegisterPage() {
             className="border-bottom border-0 bg-light rounded-0 fs-5 "
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             onChange={OnChange}
           />
         </Form.Group>
