@@ -1,11 +1,11 @@
-.registerImage {
+.imageBackground {
+  /* background: url(https://wallpapercave.com/wp/wp6430517.jpg); */
   background: url(https://ultrawidewallpapers.com/wp-content/uploads/2020/01/sneakerhead-aj1-3440x1440.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   align-items: center;
 }
-
 Form {
   height: fit-content;
 }
@@ -14,9 +14,8 @@ Form p {
   font-weight: 400;
 }
 
-
 .form-register{
-  background-color: #275e38;
+  background-color: white;
 }
 
 

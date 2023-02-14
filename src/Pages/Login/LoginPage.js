@@ -10,7 +10,8 @@ function Contact() {
         <div>
         <NavbarLogin />
         </div>
-        <LoginPage />
+        <div className="py-5"><LoginPage /></div>
+        
       </div>
       <FooterComponent />
 

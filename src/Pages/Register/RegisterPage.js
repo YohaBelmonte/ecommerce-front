@@ -34,68 +34,62 @@ function RegisterPage() {
 
   return (
     <div>
-      <div>
-        <NavbarLogin />
-      </div>
-      <div className="d-flex justify-content-center bg-dark registerImage">
-        <Form className="form-register col-lg-3 col-sm-6 px-5 py-4">
-          <p className="text-center">Mi Cuenta</p>
-          <div className="text-center">
-            <Link
-              className="fs-4 text-decoration-none text-secondary m-4"
-              id="register_login"
-              to="/Login"
-            >
-              Login
-            </Link>
-            <Link
-              className="fs-4 text-decoration-none text-secondary m-4"
-              id="register_login"
-              to="/register"
-            >
-              Registrarse
-            </Link>
-          </div>
-
-          <Form.Group className="my-5">
-            <Form.Control
-              className="border-bottom border-0 bg-light rounded-0 fs-5 "
-              name="name"
-              placeholder="Name"
-              onChange={OnChange}
-            />
-          </Form.Group>
-          <Form.Group className="my-5">
-            <Form.Control
-              className="border-bottom border-0 bg-light rounded-0 fs-5 "
-              type="email"
-              name="email"
-              placeholder="Email"
-              onChange={OnChange}
-            />
-          </Form.Group>
-          <Form.Group className="my-5">
-            <Form.Control
-              className="border-bottom border-0 bg-light rounded-0 fs-5 "
-              type="password"
-              name="password"
-              placeholder="Password"
-              onChange={OnChange}
-            />
-          </Form.Group>
-          <div className="d-flex justify-content-center ">
-            <Button
-              className=" btn  btn-register w-100  rounded-0 fs-5"
-              onClick={Register}
-            >
-              Registrarse
-            </Button>
-          </div>
-        </Form>
-      </div>
-      <FooterComponent />
+    <div>
+      <NavbarLogin />
     </div>
-  );
+    <div className="d-flex justify-content-center bg-dark imageBackground">
+      <Form className="form-register col-lg-3 col-sm-6 px-5 py-4">
+        <p className="text-center">Registrarse</p>
+        <div className="text-center">
+          <Link
+            className="fs-4 text-decoration-none text-secondary m-4"
+            id="register_login"
+            to="/Login"
+          >
+            Ir a Login
+          </Link>
+         
+        </div>
+
+        <Form.Group className="my-5">
+          <Form.Control
+            className="border-bottom border-0 bg-light rounded-0 fs-5 "
+            name="name"
+            placeholder="Name"
+            onChange={OnChange}
+          />
+        </Form.Group>
+        <Form.Group className="my-5">
+          <Form.Control
+            className="border-bottom border-0 bg-light rounded-0 fs-5 "
+            type="email"
+            name="email"
+            placeholder="Email"
+            onChange={OnChange}
+          />
+        </Form.Group>
+        <Form.Group className="my-5">
+          <Form.Control
+            className="border-bottom border-0 bg-light rounded-0 fs-5 "
+            type="password"
+            name="password"
+            placeholder="Password"
+            onChange={OnChange}
+          />
+        </Form.Group>
+        <div className="d-flex justify-content-center ">
+          <Button
+            className=" btn  btn-register w-100  rounded-0 fs-5"
+            onClick={Register}
+          >
+            Registrarse
+          </Button>
+        </div>
+      </Form>
+    </div>
+    <FooterComponent />
+  </div>
+);
 }
 
 export default RegisterPage;
