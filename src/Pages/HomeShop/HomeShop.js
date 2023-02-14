@@ -50,7 +50,7 @@ function HomePage() {
       <NavBarComponent size={cart.length} />
       <div className="containerCards">
         <div className="row">
-          <div className="col-10 d-flex flex-wrap ">
+          <div className="col-9 d-flex flex-wrap ">
             {MapProduct}
           </div>
           <div className="col-sm-none col-lg-2">

@@ -49,7 +49,7 @@ function FooterComponent() {
                         <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
                             <div className="footer-widget">
                                 <div className="footer-widget-heading">
-                                    <h3>Subscrite</h3>
+                                    <h3>Suscribirme</h3>
                                 </div>
                                 <div className="footer-text mb-25">
                                     <p>No deje de suscribirse para obtener descuentos y promociones unicas pensadas para nuestros socios.</p>

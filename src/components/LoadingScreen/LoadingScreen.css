@@ -1,9 +1,11 @@
 
 .body-preloader{
-    z-index: 11111111 !important;
+    position: absolute;
+    z-index: 111111 !important;
     background-color: rgb(39, 94, 56);
-    /* background-color: #212322; */
-}
+    width: 100%;
+  }
+
 .spinner {
     width: 300px;
     height: 100vh;
