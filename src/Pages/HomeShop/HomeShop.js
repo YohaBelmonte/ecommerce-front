@@ -12,14 +12,23 @@ function HomePage() {
   const headers = { "x-auth-token": token };
 
   const url = "http://localhost:4000/api";
-
-  useEffect(() => {
-    GetAdminUser();
-  }, []);
-
+  
   //hook
   const { MapProduct } = useHome();
   const { cart } = useCart();
+
+  useEffect(() => {
+    GetAdminUser();
+    LogOut();
+  }, []);
+
+
+  async function LogOut() {
+    const token = localStorage.getItem("token") ?? "";
+    if (token == "") {
+      window.location.href = "/login";
+    }
+  }
 
   // Method Get Admin User ↓↓↓
   async function GetAdminUser() {

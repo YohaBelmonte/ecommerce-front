@@ -16,7 +16,6 @@ function LoginPage() {
       ...form,
       [name]: value,
     };
-    console.log(response)
     setForm(response);
   }
 
@@ -80,7 +79,7 @@ function LoginPage() {
 
         <div className="d-flex justify-content-center ">
           <Button
-            className=" btn  btn-dark w-100  rounded-0 fs-5"
+            className=" btn  btn-login w-100  rounded-0 fs-5"
             variant="primary"
             onClick={Login}
           >

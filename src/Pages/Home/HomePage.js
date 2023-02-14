@@ -37,7 +37,6 @@ function HomePage() {
   async function GetAdminUser() {
     try {
       const { data } = await axios.get(`${url}/user/activeUser`, { headers });
-      //  console.log(data)
       if (data.isAdmin == true) {
         localStorage.setItem("admin", data.isAdmin);
       }

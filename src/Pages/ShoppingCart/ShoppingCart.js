@@ -4,7 +4,6 @@ import useCart from "../../Utils/useShoppingCart";
 import NavBarComponent from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import axios from "axios";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import CreditCard from "../../components/CreditCard/CreditCard";
 import { Link } from "react-router-dom";
@@ -35,8 +34,6 @@ function ShoppingCart() {
     setShow(true);
   }
 
- 
-
   //hook
   const { CartProducts, cart, setCart } = useCart();
 
@@ -55,7 +52,7 @@ function ShoppingCart() {
   const handlePrice = () => {
     let ans = 0;
     // cart.map((item) => (ans += item.quantity * item.price));
-    cart.map((item) => (ans += item.price));
+    cart.map((item) => (ans += item.quantity *item.price));
     setPrice(ans);
   };
 
@@ -107,7 +104,6 @@ function ShoppingCart() {
                     -{" "}
                   </button>
                   <button>{item.quantity}</button>
-                  {/* <button>{item.quantity}</button> */}
                   <button
                     disabled={item.quantity >= item.countInStock}
                     onClick={() => quantityChange(item._id, true)}

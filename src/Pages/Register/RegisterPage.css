@@ -1,10 +1,11 @@
 .registerImage {
-  background: url(https://www.lavanguardia.com/files/og_thumbnail/uploads/2020/06/26/5fa91d261c673.jpeg);
+  background: url(https://ultrawidewallpapers.com/wp-content/uploads/2020/01/sneakerhead-aj1-3440x1440.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   align-items: center;
 }
+
 Form {
   height: fit-content;
 }
@@ -12,3 +13,68 @@ Form p {
   font-size: 200%;
   font-weight: 400;
 }
+
+
+.form-register{
+  background-color: #275e38;
+}
+
+
+
+/* Pago */
+.btn-register {
+  width: 160px;
+  height: 40px;
+  color: rgb(255, 255, 255);
+  /* margin: 10px 0px 15px 40%; */
+  padding: 5px 100px 5px 100px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+/* 5 */
+.btn-register {
+    width: 200px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: #275e38;
+  background: linear-gradient(0deg, #000000 0%,  #000000 100%);
+  }
+  .btn-register:hover {
+    color:  #fff;
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-register:before,
+  .btn-register:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #212322;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-register:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-register:hover:before,
+  .btn-register:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }

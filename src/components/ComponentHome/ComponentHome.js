@@ -10,35 +10,6 @@ function ComponentHome() {
         <div className='component-home'>
             {/* seccion carousel */}
             <CarouselHome />
-            {/* seccion imagenes */}
-            {/* <p className=''>¿Para quién es esta compra?</p>
-            <div className='d-flex justify-content-center container-card'>
-                <div className='container-cardHome row'>
-                    <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
-                        <div className='card-home'>
-                            <Link to="/" ><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdNB1C8OC04OzIIu_uFWU5IcjNtDgER_1VC67DzQt1dUwx_J4UaKkXe6-l8C4BFxyu1bQQAx-LJE2VqOP9hCuMV3Oa5jGf" className='img-cardHome' /></Link>
-                            <div className="card-header">
-                                <h4 className="title">MUJER</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
-                        <div className='card-home'>
-                            <Link to="/" ><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdNB1C8OC04OzIIu_uFWU5IcjNtDgER_1VC67DzQt1dUwx_J4UaKkXe6-l8C4BFxyu1bQQAx-LJE2VqOP9hCuMV3Oa5jGf" className='img-cardHome' /></Link>
-                            <div className="card-header">
-                                <h4 className="title">HOMBRE</h4>
-                            </div>
-                        </div>
-                    </div>  <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
-                        <div className='card-home'>
-                            <Link to="/" ><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdNB1C8OC04OzIIu_uFWU5IcjNtDgER_1VC67DzQt1dUwx_J4UaKkXe6-l8C4BFxyu1bQQAx-LJE2VqOP9hCuMV3Oa5jGf" className='img-cardHome' /></Link>
-                            <div className="card-header">
-                                <h4 className="title">NIÑOS</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
             {/* seccion texto */}
             <div className='text-home'>
                 <h1 className='text-h'> ESTA ES TU TIENDA. ESTA ES TU CASA</h1>

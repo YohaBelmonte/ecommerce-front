@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './TablaProductos.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 // import useHome from '../../Utils/useHome';
 import useAdmin from '../../Utils/useAdmin';
@@ -23,6 +23,17 @@ function TablaProductos() {
   const [updateProduct, setupdateProduct] = useState({});
   const [id, setId] = useState("")
   var url = "http://localhost:4000/api";
+
+  useEffect(() => {
+    LogOut();
+  }, []);
+
+  async function LogOut() {
+    const token = localStorage.getItem("token") ?? "";
+    if (token == "") {
+      window.location.href = "/login";
+    }
+  }
 
   function OnChangeUpdate(e) {
     const { name, value } = e.target;
