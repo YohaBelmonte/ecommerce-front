@@ -30,7 +30,7 @@ function NavBarComponent({ size }) {
           <Nav className="link-navbar mt-4">
             <li className='container-link'>
               <Link to="/" className='link-nav mx-lg-3 mt-lg-3'>INICIO</Link>
-              <Link to="/" className='link-nav'>PRODUCTOS</Link>
+              <Link to="/shop" className='link-nav'>PRODUCTOS</Link>
               <Link to="/aboutUs" className='link-nav mx-lg-3'>SOBRE NOSOTROS</Link>
               <Link to="/contact" className='link-nav'>CONTACTO</Link>
               {isAdmin ? (
@@ -47,7 +47,7 @@ function NavBarComponent({ size }) {
                   <FontAwesomeIcon icon={faShoppingCart} />
                   <span>{size}</span>
                 </Link>
-                <Link to="/cart " className='icon-nav'>
+                <Link to="/fav " className='icon-nav'>
                   <FontAwesomeIcon icon={faHeart} />
                 </Link>
                 <Dropdown.Toggle variant="dark-50" id="dropdown-basic"  className="dropdw">
