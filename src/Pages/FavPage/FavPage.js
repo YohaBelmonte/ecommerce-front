@@ -15,7 +15,6 @@ function ShoppingCart() {
 
   //hook
   const favCart = JSON.parse(localStorage.getItem("fav")) || [];
-  console.log(favCart)
 
   useEffect(() => {
     LogOut();

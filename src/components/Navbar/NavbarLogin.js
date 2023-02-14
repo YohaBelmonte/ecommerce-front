@@ -4,13 +4,12 @@ import { Navbar, Nav } from "react-bootstrap";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 function NavBarComponent({size}) {
 
  const isAdmin = localStorage.getItem("admin");
 
   return (
-    <Navbar  expand="lg" className="navbar">
+    <Navbar  expand="lg" className="navbar sticky-top">
       <Container>
         <Navbar.Brand>
           <div className='d-flex'>
@@ -25,10 +24,7 @@ function NavBarComponent({size}) {
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="link-navbar mt-4">
-            <li className='container-link'>
-              <Link to="/" className='link-nav mx-lg-5'>INICIO</Link>
-              <Link to="/mal" className='link-nav'>MASCULINO</Link>
-              <Link to="/famele" className='link-nav mx-lg-5'>FEMENINO</Link>
+            <li className='container-link '>
               <Link to="/aboutUs" className='link-nav'>SOBRE NOSOTROS</Link>
               <Link to="/contact" className='link-nav mx-lg-5'>CONTACTO</Link>     
             </li>

@@ -39,7 +39,6 @@ function UseHome() {
   ));
 
   return {
-
     MapProduct,
     product
   };

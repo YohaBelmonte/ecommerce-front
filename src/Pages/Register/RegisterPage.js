@@ -26,9 +26,8 @@ function RegisterPage() {
       const response = await axios.post(`${url}/user`, form);
       alert("se registro con exito")
       window.location.href = "/login"
-
     } catch (error) {
-
+      alert("Complete sus datos")
       console.error(error)
     }
 
