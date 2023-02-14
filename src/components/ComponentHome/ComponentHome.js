@@ -84,11 +84,11 @@ function ComponentHome() {
                     </div>
                 </div>
             </div>
-            <div className='d-flex '>
-                <div className='box-imgHome'><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-1-d_tcm190-983376.jpg" /> </div>
-                <div className='box-imgHome'><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-2-updated-d_tcm190-983961.jpg" /></div>
-                <div className='box-imgHome'><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-3-d_tcm190-983383.jpg" /></div>
-                <div className='box-imgHome'><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-4-updated-d_tcm190-983962.jpg" /></div>
+            <div className='d-flex w-100 justify-content-center'>
+                <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-1-d_tcm190-983376.jpg" className='box-imgHome ' />
+                <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-2-updated-d_tcm190-983961.jpg" className='box-imgHome ' />
+                <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-3-d_tcm190-983383.jpg" className='box-imgHome ' />
+                <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esES/Images/sportswear-SS23-global-educate-eplp-imagecollection-4-updated-d_tcm190-983962.jpg" className='box-imgHome ' />
             </div>
             {/* fin de presentacion de cartas */}
             {/* incio de video */}
