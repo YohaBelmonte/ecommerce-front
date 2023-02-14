@@ -1,7 +1,5 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomeShop.css";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import useHome from "../../Utils/useHome";
 import useCart from "../../Utils/useShoppingCart";
 import NavBarComponent from "../../components/Navbar/Navbar";

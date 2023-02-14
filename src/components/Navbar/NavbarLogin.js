@@ -4,7 +4,6 @@ import { Navbar, Nav } from "react-bootstrap";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 function NavBarComponent({size}) {
 
  const isAdmin = localStorage.getItem("admin");
