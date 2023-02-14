@@ -2,10 +2,14 @@ import "./ShoePage.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useHome from "../../Utils/useHome";
+import NavBarComponent from "../../components/Navbar/Navbar";
+import useCart from "../../Utils/useShoppingCart";
+import Footer from "../../components/Footer/Footer";
 
 function ShoePage() {
   //  //hook
   const { product } = useHome();
+  const { cart } = useCart();
 
   const imgs = document.querySelectorAll(".img-select a");
   const imgBtns = [...imgs];
@@ -42,6 +46,7 @@ function ShoePage() {
 
   return (
     <div>
+      <NavBarComponent size={cart.length} />
       <div className="card-wrapperShoe">
         <div className="cardShoe">
           {/* <!-- card left --> */}
@@ -193,6 +198,7 @@ function ShoePage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
