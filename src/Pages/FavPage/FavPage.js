@@ -13,7 +13,6 @@ function ShoppingCart() {
   const headers = { "x-auth-token": token };
   var url = "http://localhost:4000/api";
 
-  //hook
   const favCart = JSON.parse(localStorage.getItem("fav")) || [];
 
   useEffect(() => {
