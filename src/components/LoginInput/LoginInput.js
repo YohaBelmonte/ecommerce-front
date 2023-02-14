@@ -35,21 +35,15 @@ function LoginPage() {
   return (
     <div className="d-flex justify-content-center LoginInput mt-5">
       <Form className="col-lg-3 col-sm-6 bg-light px-5 py-4">
-        <p className="text-center">Mi Cuenta</p>
+        <p className="text-center">Login</p>
         <div className="text-center">
-          <Link
-            className="fs-4 text-decoration-none text-secondary m-4"
-            id="register_login"
-            to="/Login"
-          >
-            Login
-          </Link>
+       
           <Link
             className="fs-4 text-decoration-none text-secondary m-4"
             id="register_login"
             to="/register"
           >
-            Registrarse
+           Ir a Registrarse
           </Link>
         </div>
 
