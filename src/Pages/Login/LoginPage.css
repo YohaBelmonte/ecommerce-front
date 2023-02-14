@@ -1,5 +1,9 @@
 .imageBackground {
-  background: url(https://www.lavanguardia.com/files/og_thumbnail/uploads/2020/06/26/5fa91d261c673.jpeg);
+  /* background: url(https://www.lavanguardia.com/files/og_thumbnail/uploads/2020/06/26/5fa91d261c673.jpeg); */
+  /* background: url(https://wallpapercave.com/wp/wp6430517.jpg); */
+  background: url(
+    https://ultrawidewallpapers.com/wp-content/uploads/2020/01/sneakerhead-aj1-3440x1440.jpg
+            );
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;

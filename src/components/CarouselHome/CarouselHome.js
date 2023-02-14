@@ -31,7 +31,7 @@ function CarouselHome () {
         <Carousel.Caption className="textSliders">
           <h3 className="titleSliders">SPORTSWEAR</h3>
           <p>Tu forma de vestir y expresarte. Diseños inspirados en el deporte. Reimaginados para tu día a día</p>
-          <Link to="/" > <button className="buttonSliders">
+          <Link to="/shop" > <button className="buttonSliders">
             COMPRAR <FontAwesomeIcon icon={faArrowRight}  className="mx-2"/>
           </button></Link>
         </Carousel.Caption>

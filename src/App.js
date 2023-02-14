@@ -15,8 +15,10 @@ import HomeShop from "./Pages/HomeShop/HomeShop";
 import NewPassword from "./Pages/NewPassword/NewPassword";
 import Contact from "./Pages/Contact/Contact";
 import ShoppingCart from "./Pages/ShoppingCart/ShoppingCart";
+import FavPage from "./Pages/FavPage/FavPage";
 import Preloader from "./components/LoadingScreen/LoadingScreen";
 import Orders from "./Pages/Admin/Orders";
+import Error from "./Pages/404/404";
 
 function App() {
   
@@ -40,6 +42,26 @@ function App() {
             <div>
               <div className="">
                 <HomeShop />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/shoePage"
+          element={
+            <div>
+              <div className="">
+                <ShoePage />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/fav"
+          element={
+            <div>
+              <div className="">
+                <FavPage />
               </div>
             </div>
           }
@@ -132,6 +154,16 @@ function App() {
             <div>
               <div>
                 <Usuarios />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/404"
+          element={
+            <div>
+              <div>
+                <Error />
               </div>
             </div>
           }
