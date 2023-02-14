@@ -46,6 +46,16 @@ function App() {
           }
         ></Route>
         <Route
+          path="/shoePage"
+          element={
+            <div>
+              <div className="">
+                <ShoePage />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
           path="/fav"
           element={
             <div>

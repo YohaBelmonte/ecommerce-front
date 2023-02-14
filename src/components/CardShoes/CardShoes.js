@@ -71,6 +71,16 @@ function CardShoes({
     }
   }
 
+  //VIEW SHOE PAGE
+  async function viewShoePage(id) {
+    try {
+      localStorage.setItem("selectShoe",id)
+      window.location.href ="/shoePage"
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
 
   return (
     <>
@@ -97,7 +107,7 @@ function CardShoes({
               <center className="tocart">Add To Cart</center>
             </a>
             <a className="btn-card1" href="#" >
-              <u className="seemore">See more</u>
+              <u className="seemore" onClick={() => viewShoePage(propId)}>See more</u>
             </a>
           </div>
           <h2 className="buy">$ {propPrice}</h2>
