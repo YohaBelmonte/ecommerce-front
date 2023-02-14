@@ -9,19 +9,6 @@ function useAdmin() {
   const token = localStorage.getItem("token") ?? "";
   const headers = { "x-auth-token": token };
 
-
-
-  // Method Get Users ↓↓↓
-  // async function GetUsers() {
-  //   try {
-  //     const { data } = await axios.get(`${url}/user`);
-  //     console.log(data)
-  //     setData(data);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
   // Register users
   function OnChange(e) {
     const { name, value } = e.target;

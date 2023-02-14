@@ -64,14 +64,11 @@ function CardShoes({
       favCart.push(propItem);
       //↓ El "fav" que se escribe es para identificarlo en el inspeccionar elemento-Application
       localStorage.setItem("fav", JSON.stringify(favCart));
-      alert("Agregado a Favoritos");
     } else {
       setIsFavActive(false);
       favCart.splice(propId, 1)
       localStorage.setItem("fav", JSON.stringify(favCart));
-      alert("Eliminado del carrito");
     }
-    console.log(isFavActive);
   }
 
 
@@ -102,10 +99,6 @@ function CardShoes({
             <a className="btn-card1" href="#" >
               <u className="seemore">See more</u>
             </a>
-
-            {/* <a href="#" onClick={() => removeToCart()}>
-            <center>Remove to cart</center>
-          </a> */}
           </div>
           <h2 className="buy">$ {propPrice}</h2>
         </div>

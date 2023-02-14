@@ -66,9 +66,7 @@ function TablaProductos() {
       </tr>
     );
 
-  }
-
-  )
+  })
 
   return (
     <div className="container-fluid ">

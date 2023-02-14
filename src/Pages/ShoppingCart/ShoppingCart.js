@@ -44,13 +44,11 @@ function ShoppingCart() {
   async function handleRemove(id) {
     const arr = cart.filter((item) => item._id !== id);
     setCart(arr);
-    // console.log(id);
     const { data } = await axios.put(
       `${url}/product/remove/${id}`,
       {},
       { headers }
     );
-    // console.log(data);
   }
 
   //TOTAL DE ORDEN
@@ -63,17 +61,6 @@ function ShoppingCart() {
 
   //Contador
   const [quantity, setQuantity] = useState(1);
-
-  // const quantityDecrease = (value) => {
-  //   value.quantity= value.quantity -1
-  //   console.log(value.quantity)
-  //   setQuantity(value.quantity);
-  // };
-  // const quantityIncrease = (value) => {
-  //   value.quantity= value.quantity +1
-  //   console.log(value.quantity)
-  //   setQuantity(value.quantity);
-  // };
 
   const quantityChange = (value, d) => {
     let result = cart.map((item) => {
@@ -172,13 +159,13 @@ function ShoppingCart() {
 }
 export default ShoppingCart;
 
-const quantityChange = (item, d) => {
-  let ind = -1;
-  cart.forEach((data, index) => {
-    if (data.id === item.id) ind = index;
-  });
-  const tempArray = cart;
-  tempArray[ind].quantity += d;
-  setQuantity(tempArray[ind].quantity);
-  console.log(tempArray[ind].quantity);
-};
+// const quantityChange = (item, d) => {
+//   let ind = -1;
+//   cart.forEach((data, index) => {
+//     if (data.id === item.id) ind = index;
+//   });
+//   const tempArray = cart;
+//   tempArray[ind].quantity += d;
+//   setQuantity(tempArray[ind].quantity);
+//   console.log(tempArray[ind].quantity);
+// };
