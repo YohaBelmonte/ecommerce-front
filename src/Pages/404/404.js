@@ -12,7 +12,7 @@ function Error() {
                 404 ERROR
             </h1>
             <h2 className="neonText">Page Not Found</h2>
-            <h3 ><Link to="/shop" className="neonText back-404"> Volver al shop</Link></h3>
+            <h3 className="back-404"><Link to="/shop" className="neonText"> Volver al shop</Link></h3>
         </div>
         </div>
 

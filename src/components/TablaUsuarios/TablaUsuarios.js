@@ -75,12 +75,6 @@ function TablaUsuarios() {
         <td>{item.email}</td>
         <td>{item.createAdd}</td>
         <td>
-          {/* <input
-            type="checkbox"
-            checked={item.isAdmin}
-            className="mx-1"
-            onChange={()=> onChange(e, item._id)}
-          /> */}
           {item.isAdmin ? (
             <button
               className="btn btn-success"
