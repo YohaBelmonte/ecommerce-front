@@ -156,11 +156,11 @@ function TablaUsuarios() {
                 <thead className="text-center">
                   <tr>
                     <th className="col-1">id</th>
-                    <th className="col-2">Name</th>
+                    <th className="col-2">Nombre</th>
                     <th className="col-2">Email</th>
                     <th className="col-2">Fecha de registro</th>
                     <th className="col-2">Es admin</th>
-                    <th className="col-2">Actions</th>
+                    <th className="col-2">Acciones</th>
                   </tr>
                 </thead>
                 <tbody className="text-center">{mapUsers}</tbody>

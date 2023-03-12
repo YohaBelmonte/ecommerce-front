@@ -18,10 +18,10 @@ function FooterComponent() {
                             </div>
                             <div className="col-md-4 col-sm-6 col-xs-12">
                                 <ul className="social-icons d-flex">
-                                    <li><a className="facebook" href="/404"><FontAwesomeIcon icon={faFacebook} /></a></li>
-                                    <li><a className="twitter" href="/404"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                                    <li><a className="instagram" href="/404"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                                    <li><a className="linkedin" href="/404"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                                    <li><a className="facebook" href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} /></a></li>
+                                    <li><a className="twitter" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZXMifQ%3D%3D%22%7D"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                                    <li><a className="instagram" href="https://www.instagram.com/accounts/login/"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                                    <li><a className="linkedin" href="https://www.linkedin.com/feed/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
                                 </ul>
                             </div>
                             <div className="col-md-4 col-sm-6 col-xs-12">
@@ -30,7 +30,7 @@ function FooterComponent() {
 
                         <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
                             <div className="footer-widget">
-                                <div className="footer-widget-heading mx-lg-4">
+                                <div className="footer-widget-heading">
                                     <h3>Servicios </h3>
                                 </div>
                                 <ul>
@@ -57,7 +57,7 @@ function FooterComponent() {
                                 <div className="subscribe-form">
                                     <form action="#">
                                         <input type="text" placeholder="Dirección de email"></input>
-                                        <button className="button-envelope"><FontAwesomeIcon icon={faEnvelope} /></button>
+                                        <a href="/404">  <button className="button-envelope"><FontAwesomeIcon icon={faEnvelope} /></button> </a>
                                     </form>
                                 </div>
                             </div>
@@ -77,11 +77,11 @@ function FooterComponent() {
                         <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right d-flex">
                             <div className="footer-menu d-flex">
                                 <ul>
-                                    <li><a href="#">Inicio</a></li>
-                                    <li><a href="#">Términos</a></li>
-                                    <li><a href="#">Privacidad</a></li>
-                                    <li><a href="#">Política</a></li>
-                                    <li><a href="#">Contacto</a></li>
+                                    <li><a href="/404">Inicio</a></li>
+                                    <li><a href="/404">Términos</a></li>
+                                    <li><a href="/404">Privacidad</a></li>
+                                    <li><a href="/404">Política</a></li>
+                                    <li><a href="/404">Contacto</a></li>
                                 </ul>
                             </div>
                         </div>

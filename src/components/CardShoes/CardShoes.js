@@ -47,7 +47,7 @@ function CardShoes({
           }, 2000);
         // alert("Agregado con EXITO")
       }
-      // console.log(cart);
+
     } catch (error) {
       console.error(error);
     }
@@ -104,10 +104,10 @@ function CardShoes({
           </div>
           <div className="card-body">
             <a className="btn-card" href="#" onClick={() => addToCart()}>
-              <center className="tocart">Add To Cart</center>
+              <center className="tocart">Añadir al carrito</center>
             </a>
             <a className="btn-card1" href="#" >
-              <u className="seemore" onClick={() => viewShoePage(propId)}>See more</u>
+              <u className="seemore" onClick={() => viewShoePage(propId)}>Ver más</u>
             </a>
           </div>
           <h2 className="buy">$ {propPrice}</h2>

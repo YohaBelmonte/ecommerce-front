@@ -1,11 +1,11 @@
 import "./Navbar.css";
 import Container from "react-bootstrap/Container";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useAdmin from '../../Utils/useAdmin';
 import {
   faShoppingCart,
   faHeart,
-  faSortDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -13,6 +13,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 function NavBarComponent({ size }) {
   const isAdmin = localStorage.getItem("admin");
+  const {handleChangeProduct,busquedaProduct } = useAdmin();
 
   async function LogOut() {
     localStorage.removeItem("token");
@@ -65,8 +66,10 @@ function NavBarComponent({ size }) {
               </Link>
               <input
                 type="search"
-                placeholder="Buscar"
                 className="input-navbar"
+                value={busquedaProduct}
+                placeholder="Buscar"
+                onChange={handleChangeProduct}
               />
             </li>
 

@@ -37,7 +37,6 @@ function TablaProductos() {
     const { name, value } = e.target;
     const response = { ...updateProduct, [name]: value }
     setupdateProduct(response);
-    // console.log(response);
   }
 
   async function PutMethodProduct(e) {
@@ -105,12 +104,12 @@ function TablaProductos() {
             <thead>
               <tr>
                 <th className='col-1'>ID</th>
-                <th className='col-1'>Product</th>
-                <th className='col-2'>Image</th>
-                <th className='col-2'>Description</th>
-                <th className='col-2'>Category</th>
-                <th className='col-1'>Price</th>
-                <th className='col-2'>Size</th>
+                <th className='col-1'>Producto</th>
+                <th className='col-2'>Imagen</th>
+                <th className='col-2'>Descripción</th>
+                <th className='col-2'>Categoria</th>
+                <th className='col-1'>Precio</th>
+                <th className='col-2'>Talle</th>
                 <th className='col-1'>Stock</th>
                 <th className='col-1'>Acciones</th>
 
@@ -186,35 +185,37 @@ function TablaProductos() {
               keyboard={false}
             >
               <Modal.Header >
-                <Modal.Title>Edit Produtcs</Modal.Title>
+                <Modal.Title>Editar producto</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <form>
                   <div className="form-group">
-                    <input type="text" className="form-control" name='name' onChange={OnChangeUpdate} placeholder="New Name Product" />
+                    <input type="text" className="form-control" name='name' onChange={OnChangeUpdate} placeholder="Nombre" />
                   </div>
 
                   <div className="form-group mt-3">
-                    <input type="text" className="form-control" name='image' onChange={OnChangeUpdate} placeholder="New Image Product" />
+                    <input type="text" className="form-control" name='image' onChange={OnChangeUpdate} placeholder="Imagen" />
                   </div>
 
                   <div className="form-group my-3">
-                    <input type="text" className="form-control" name='description' onChange={OnChangeUpdate} placeholder="New Description Product" />
+                    <input type="text" className="form-control" name='description' onChange={OnChangeUpdate} placeholder="Descripción" />
                   </div>
                   <div className="form-group my-3">
-                    <input type="number" className="form-control" name='price' onChange={OnChangeUpdate} placeholder="New Price Product" />
+                    <input type="number" className="form-control" name='price' onChange={OnChangeUpdate} placeholder="Precio" />
                   </div>
                   <div className="form-group my-3">
-                    <input type="text" className="form-control" name='category' onChange={OnChangeUpdate} placeholder="New Category Product" />
+                    <input type="text" className="form-control" name='category' onChange={OnChangeUpdate} placeholder="Categoría" />
                   </div>
                   <div className="form-group my-3">
-                    <input type="number" className="form-control" name='countInStock' onChange={OnChangeUpdate} placeholder="New Stock Product" />
+                    <input type="number" className="form-control" name='countInStock' onChange={OnChangeUpdate} placeholder="Stock" />
                   </div>
                   <div className="form-group my-3">
-                    <input type="number" className="form-control" name='rating' onChange={OnChangeUpdate} placeholder="New Rating Product" />
+                    <input type="number" className="form-control" name='rating' onChange={OnChangeUpdate} placeholder="Clasificación" />
                   </div>
+                  <div>
                   <button className="custom-btn btn-5" onClick={() => setId("")}><span>Cancelar</span></button>
                   <button className="custom-btn btn-5" onClick={PutMethodProduct} ><span>Editar</span></button>
+                  </div>
                 </form>
               </Modal.Body>
               <Modal.Footer>
