@@ -164,12 +164,7 @@ function TablaProductos() {
               <div className="form-group my-3">
                 <input type="text" className="form-control" name='color' placeholder="Color" onChange={OnChangeProduct} />
               </div>
-              {/* <InputGroup className=" d-flex mb-3">
-                                        <input type="checkbox" className="mx-1" />
-
-                                        <Form type="disable" aria-label="Text input with checkbox" className='border-0 text-secondary mx-2'>Es administrador</Form>
-                                    </InputGroup> */}
-
+        
               <button className="custom-btn btn-5" onClick={() => MethodPostProduct()}><span>Añadir</span></button>
             </form>
           </Modal.Body>
@@ -177,7 +172,6 @@ function TablaProductos() {
         {/* Model Box Finsihs */}
         <div>
           <>
-            {/* <h2 className="btn fs-2" onClick={handleEditShow}><BiEdit />Editar User</h2> */}
             <Modal
               show={id != "" ? true : false}
               onHide={handleeditClose}

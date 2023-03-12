@@ -140,7 +140,7 @@ function AboutPage() {
 
 
       <div>
-        <div className="fondo-ocean d-flex justify-content-center">
+        <div className="background-ocean d-flex justify-content-center">
           <h5 className="title2">
             EL PLÁSTICO ES UN PROBLEMA. LA INNOVACIÓN ES LA SOLUCIÓN. ESTAS ZAPATILLAS ESTÁN HECHAS A PARTIR DE RESIDUOS PLÁSTICOS RECOGIDOS EN ISLAS, PLAYAS Y ZONAS COSTERAS EVITANDO QUE CONTAMINEN NUESTROS OCÉANOS. </h5>
         </div>
@@ -148,7 +148,7 @@ function AboutPage() {
 
       {/* seccion investiga mas  */}
       <div className="d-flex justify-content-center">
-        <div className="box-investiga">
+        <div className="box-research">
           <h5 className="title1 mt-lg-5">INVESTIGA MÁS</h5>
           <p className="text1 p-2">Descubrí cómo convertimos el problema del plástico en diseños de alto rendimiento</p>
         </div>

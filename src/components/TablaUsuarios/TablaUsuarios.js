@@ -64,12 +64,6 @@ function TablaUsuarios() {
         <td>{item.email}</td>
         <td>{item.createAdd}</td>
         <td>
-          {/* <input
-            type="checkbox"
-            checked={item.isAdmin}
-            className="mx-1"
-            onChange={()=> onChange(e, item._id)}
-          /> */}
           {item.isAdmin ? (
             <button
               className="btn btn-success"
@@ -205,12 +199,7 @@ function TablaUsuarios() {
                       onChange={OnChange}
                     />
                   </div>
-                  {/* <InputGroup className=" d-flex mb-3">
-                                        <input type="checkbox" className="mx-1" />
-
-                                        <Form type="disable" aria-label="Text input with checkbox" className='border-0 text-secondary mx-2'>Es administrador</Form>
-                                    </InputGroup> */}
-
+            
                   <button
                     className="custom-btn btn-5"
                     onClick={() => Register()}
@@ -226,7 +215,7 @@ function TablaUsuarios() {
           {/* Modal Edit */}
           <div>
             <>
-              {/* <h2 className="btn fs-2" onClick={handleEditShow}><BiEdit />Editar User</h2> */}
+        
               <Modal
                 show={id != "" ? true : false}
                 onHide={handleeditClose}

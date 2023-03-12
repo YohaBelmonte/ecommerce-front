@@ -51,7 +51,7 @@ function NavBarComponent({ size }) {
                   <FontAwesomeIcon icon={faHeart} />
                 </Link>
                 <Dropdown.Toggle variant="dark-50" id="dropdown-basic"  className="dropdw">
-                  <FaUser className='mx-lg-2 usuarioIcon' />
+                  <FaUser className='mx-lg-2 userIcon' />
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="dropdw">
                   <Dropdown.Item href="./login">Mi Perfil</Dropdown.Item>

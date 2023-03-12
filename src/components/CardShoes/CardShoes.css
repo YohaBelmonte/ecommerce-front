@@ -272,12 +272,7 @@ a {
     transform: scale(0.95);
     transition: box-shadow 0.5s, transform 0.2s;
   }
-  /* .btn-card {
-    margin-left: -25px;
-    padding: 2px;
-    border-radius: 6px;
-    border: 1px;
-  } */
+
   .buy {
     font-size: 20px;
   }
@@ -298,12 +293,7 @@ a {
     transform: scale(0.95);
     transition: box-shadow 0.5s, transform 0.2s;
   }
-  /* .btn-card {
-    margin-left: -25px;
-    padding: 3px;
-    border-radius: 6px;
-    border: 1px;
-  } */
+
   .buy {
     font-size: 15px;
   }
