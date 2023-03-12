@@ -2,8 +2,7 @@
 
 /* seccion fotos */
 .box-imgHome {
-    width: 400px;
-    height: 500px;
+    height: 550px;
 }
 
 .imgHome {
@@ -102,7 +101,7 @@
     border: none;
     border-radius: 10px;
     width: 100%;
-    height: 400px;
+    height: 500px;
 }
 
 /* seccion oceano */

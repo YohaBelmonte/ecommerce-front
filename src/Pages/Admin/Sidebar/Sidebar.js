@@ -12,6 +12,13 @@ function Sidebar() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  async function LogOut() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("admin");
+    window.location.href = "/login";
+  }
+
   return (
     <div className="mt-5">
       <>
@@ -49,12 +56,12 @@ function Sidebar() {
                 <div className="list-group list-group-flush text-center">
                   <Link to="/" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Inicio</p></Link>
 
-                  <Link to="/admin" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Dashboard</p></Link>
+                  <Link to="/admin" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Tablero</p></Link>
                   <Link to="/admin/usuarios" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Usuarios</p></Link>
                   <Link to="/admin/productos" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Productos</p></Link>
-                  <Link to="/admin/Orders" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Orders</p></Link>
-                  <Link to="/admin/Faq" className="list-group-item list-group-item-action bg-transparent second-text fw-bold active"><p className='af'>FAQ</p></Link>
-                  <Link to="/admin" className="list-group-item list-group-item-action bg-transparent text-danger fw-bold active"><p className='aff text-danger'>Logout</p></Link>
+                  <Link to="/admin/Orders" className="list-group-item list-group-item-action bg-transparent second-text active"><p className='af'>Ordenes</p></Link>
+                  {/* <Link to="/admin/Faq" className="list-group-item list-group-item-action bg-transparent second-text fw-bold active"><p className='af'>FAQ</p></Link> */}
+                  <Link to="/admin" className="list-group-item list-group-item-action bg-transparent text-danger fw-bold active" onClick={()=>LogOut()}><p className='aff text-danger'>Cerrar Sesion</p></Link>
 
                 </div>
               </div>

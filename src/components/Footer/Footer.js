@@ -18,10 +18,10 @@ function FooterComponent() {
                             </div>
                             <div className="col-md-4 col-sm-6 col-xs-12">
                                 <ul className="social-icons d-flex">
-                                    <li><a className="facebook" href="#"><FontAwesomeIcon icon={faFacebook} /></a></li>
-                                    <li><a className="twitter" href="#"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                                    <li><a className="instagram" href="#"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                                    <li><a className="linkedin" href="#"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                                    <li><a className="facebook" href="/404"><FontAwesomeIcon icon={faFacebook} /></a></li>
+                                    <li><a className="twitter" href="/404"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                                    <li><a className="instagram" href="/404"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                                    <li><a className="linkedin" href="/404"><FontAwesomeIcon icon={faLinkedin} /></a></li>
                                 </ul>
                             </div>
                             <div className="col-md-4 col-sm-6 col-xs-12">
@@ -34,22 +34,22 @@ function FooterComponent() {
                                     <h3>Servicios </h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">Inicio</a></li>
-                                    <li><a href="#">Masculino</a></li>
-                                    <li><a href="#">Femenino</a></li>
-                                    <li><a href="#">Zapatillas</a></li>
-                                    <li><a href="#">Indumentaria</a></li>
-                                    <li><a href="#">Accesorios</a></li>
-                                    <li><a href="#">Nuestros servicios</a></li>
-                                    <li><a href="#">Sobre Nosotros</a></li>
-                                    <li><a href="#">Contacto</a></li>
+                                    <li><a href="/">Inicio</a></li>
+                                    <li><a href="/404">Masculino</a></li>
+                                    <li><a href="/404">Femenino</a></li>
+                                    <li><a href="/404">Zapatillas</a></li>
+                                    <li><a href="/404">Indumentaria</a></li>
+                                    <li><a href="/404">Accesorios</a></li>
+                                    <li><a href="/404">Nuestros servicios</a></li>
+                                    <li><a href="/aboutUs">Sobre Nosotros</a></li>
+                                    <li><a href="/contact">Contacto</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
                             <div className="footer-widget">
                                 <div className="footer-widget-heading">
-                                    <h3>Subscrite</h3>
+                                    <h3>Suscribite</h3>
                                 </div>
                                 <div className="footer-text mb-25">
                                     <p>No deje de suscribirse para obtener descuentos y promociones unicas pensadas para nuestros socios.</p>

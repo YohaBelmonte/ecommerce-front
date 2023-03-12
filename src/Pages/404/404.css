@@ -1,0 +1,71 @@
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 4.2rem;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px white, 0 0 11px black, 0 0 19px white, 0 0 40px white,
+      0 0 80px white, 0 0 90px white, 0 0 100px white, 0 0 150px white;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+/* Additional styling */
+h2 {
+  font-size: 1.8rem;
+}
+
+.back-404 {
+  font-size: 1rem;
+  margin-top: 15px;
+
+  
+}
+.back-404:hover {
+  font-size: 1.1rem;
+  color: black !important;
+  transition: 0.3s;
+}
+
+.errorContainer {
+  padding-top: 40vh;
+}
+
+.errorBody {
+  /* width: 100vw; */
+  height: 100vh;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Helvetica Neue", sans-serif;
+  background-image: url(https://cutewallpaper.org/cdn-cgi/mirage/2af0adefb1b7ebf6af3b94bf8b86378693ec8b55d34af727ac0cbb58dfd044f5/1280/22/drippy-shoes-wallpapers/2310117514.jpg);
+  background-image: url(https://wallpapercrafter.com/desktop/20205-feet-sneakers-tiles-4k.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+.back-404 {
+  text-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}

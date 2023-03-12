@@ -5,10 +5,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "./aboutUs.css";
+import { useEffect } from "react";
 
 function AboutPage() {
+  useEffect(() => {
+    LogOut();
+  }, []);
+
+  async function LogOut() {
+    const token = localStorage.getItem("token") ?? "";
+    if (token == "") {
+      window.location.href = "/login";
+    }
+  }
   return (
-    // box text ubac vision
     <div>
       <Navbar />
       <div className='w-100'>

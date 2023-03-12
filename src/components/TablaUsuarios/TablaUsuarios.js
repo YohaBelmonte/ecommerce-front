@@ -2,7 +2,7 @@ import NavBarComponent from "../../components/Navbar/Navbar";
 import { Button, Modal } from "react-bootstrap";
 import { BiEdit } from "react-icons/bi";
 import { AiTwotoneDelete } from "react-icons/ai";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useAdmin from "../../Utils/useAdmin";
 import axios from "axios";
 import "./TablaUsuarios.js";
@@ -25,6 +25,17 @@ function TablaUsuarios() {
   } = useAdmin();
 
   const [update, setupdate] = useState({});
+
+  useEffect(() => {
+    LogOut();
+  }, []);
+
+  async function LogOut() {
+    const token = localStorage.getItem("token") ?? "";
+    if (token == "") {
+      window.location.href = "/login";
+    }
+  }
 
   function OnChangeUpdate(e) {
     const { name, value } = e.target;

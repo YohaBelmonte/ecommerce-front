@@ -64,14 +64,21 @@ function CardShoes({
       favCart.push(propItem);
       //↓ El "fav" que se escribe es para identificarlo en el inspeccionar elemento-Application
       localStorage.setItem("fav", JSON.stringify(favCart));
-      alert("Agregado a Favoritos");
     } else {
       setIsFavActive(false);
       favCart.splice(propId, 1)
       localStorage.setItem("fav", JSON.stringify(favCart));
-      alert("Eliminado del carrito");
     }
-    console.log(isFavActive);
+  }
+
+  //VIEW SHOE PAGE
+  async function viewShoePage(id) {
+    try {
+      localStorage.setItem("selectShoe",id)
+      window.location.href ="/shoePage"
+    } catch (error) {
+      console.error(error);
+    }
   }
 
 
@@ -100,12 +107,8 @@ function CardShoes({
               <center className="tocart">Add To Cart</center>
             </a>
             <a className="btn-card1" href="#" >
-              <u className="seemore">See more</u>
+              <u className="seemore" onClick={() => viewShoePage(propId)}>See more</u>
             </a>
-
-            {/* <a href="#" onClick={() => removeToCart()}>
-            <center>Remove to cart</center>
-          </a> */}
           </div>
           <h2 className="buy">$ {propPrice}</h2>
         </div>

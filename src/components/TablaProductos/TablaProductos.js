@@ -1,8 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './TablaProductos.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-// import useHome from '../../Utils/useHome';
 import useAdmin from '../../Utils/useAdmin';
 import Table from 'react-bootstrap/Table';
 import { BiEdit } from 'react-icons/bi';
@@ -19,10 +18,20 @@ function TablaProductos() {
   const handleEditShow = () => editShow(true);
   const { data, OnChangeProduct,MethodPostProduct,headers,
    deletProduct,handleChangeProduct,busquedaProduct,product } = useAdmin();
-  // const { product,busqueda, handleChange,productoencontrado } = useHome();
   const [updateProduct, setupdateProduct] = useState({});
   const [id, setId] = useState("")
   var url = "http://localhost:4000/api";
+
+  useEffect(() => {
+    LogOut();
+  }, []);
+
+  async function LogOut() {
+    const token = localStorage.getItem("token") ?? "";
+    if (token == "") {
+      window.location.href = "/login";
+    }
+  }
 
   function OnChangeUpdate(e) {
     const { name, value } = e.target;
@@ -66,9 +75,7 @@ function TablaProductos() {
       </tr>
     );
 
-  }
-
-  )
+  })
 
   return (
     <div className="container-fluid ">

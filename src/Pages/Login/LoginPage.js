@@ -6,11 +6,12 @@ import './LoginPage.css';
 function Contact() {
   return (
     <div>
-      <div className="imageBackground py-3">
+      <div className="imageBackground">
         <div>
         <NavbarLogin />
         </div>
-        <LoginPage />
+        <div className="py-5"><LoginPage /></div>
+        
       </div>
       <FooterComponent />
 

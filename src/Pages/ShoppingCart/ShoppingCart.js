@@ -4,7 +4,6 @@ import useCart from "../../Utils/useShoppingCart";
 import NavBarComponent from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import axios from "axios";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import CreditCard from "../../components/CreditCard/CreditCard";
 import { Link } from "react-router-dom";
@@ -35,8 +34,6 @@ function ShoppingCart() {
     setShow(true);
   }
 
- 
-
   //hook
   const { CartProducts, cart, setCart } = useCart();
 
@@ -44,36 +41,23 @@ function ShoppingCart() {
   async function handleRemove(id) {
     const arr = cart.filter((item) => item._id !== id);
     setCart(arr);
-    // console.log(id);
     const { data } = await axios.put(
       `${url}/product/remove/${id}`,
       {},
       { headers }
     );
-    // console.log(data);
   }
 
   //TOTAL DE ORDEN
   const handlePrice = () => {
     let ans = 0;
     // cart.map((item) => (ans += item.quantity * item.price));
-    cart.map((item) => (ans += item.price));
+    cart.map((item) => (ans += item.quantity *item.price));
     setPrice(ans);
   };
 
   //Contador
   const [quantity, setQuantity] = useState(1);
-
-  // const quantityDecrease = (value) => {
-  //   value.quantity= value.quantity -1
-  //   console.log(value.quantity)
-  //   setQuantity(value.quantity);
-  // };
-  // const quantityIncrease = (value) => {
-  //   value.quantity= value.quantity +1
-  //   console.log(value.quantity)
-  //   setQuantity(value.quantity);
-  // };
 
   const quantityChange = (value, d) => {
     let result = cart.map((item) => {
@@ -120,7 +104,6 @@ function ShoppingCart() {
                     -{" "}
                   </button>
                   <button>{item.quantity}</button>
-                  {/* <button>{item.quantity}</button> */}
                   <button
                     disabled={item.quantity >= item.countInStock}
                     onClick={() => quantityChange(item._id, true)}
@@ -172,13 +155,13 @@ function ShoppingCart() {
 }
 export default ShoppingCart;
 
-const quantityChange = (item, d) => {
-  let ind = -1;
-  cart.forEach((data, index) => {
-    if (data.id === item.id) ind = index;
-  });
-  const tempArray = cart;
-  tempArray[ind].quantity += d;
-  setQuantity(tempArray[ind].quantity);
-  console.log(tempArray[ind].quantity);
-};
+// const quantityChange = (item, d) => {
+//   let ind = -1;
+//   cart.forEach((data, index) => {
+//     if (data.id === item.id) ind = index;
+//   });
+//   const tempArray = cart;
+//   tempArray[ind].quantity += d;
+//   setQuantity(tempArray[ind].quantity);
+//   console.log(tempArray[ind].quantity);
+// };

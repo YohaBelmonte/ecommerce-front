@@ -200,3 +200,11 @@ img {
     padding-top: 0;
   }
 }
+
+
+@media screen and (min-width: 1000px) {
+.card-wrapperShoe {
+  margin-top: 80px;
+  margin-bottom: 50px;
+
+}}

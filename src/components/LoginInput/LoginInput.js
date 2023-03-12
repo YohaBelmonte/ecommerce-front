@@ -16,7 +16,6 @@ function LoginPage() {
       ...form,
       [name]: value,
     };
-    console.log(response)
     setForm(response);
   }
 
@@ -36,21 +35,15 @@ function LoginPage() {
   return (
     <div className="d-flex justify-content-center LoginInput mt-5">
       <Form className="col-lg-3 col-sm-6 bg-light px-5 py-4">
-        <p className="text-center">Mi Cuenta</p>
+        <p className="text-center">Login</p>
         <div className="text-center">
-          <Link
-            className="fs-4 text-decoration-none text-secondary m-4"
-            id="register_login"
-            to="/Login"
-          >
-            Login
-          </Link>
+       
           <Link
             className="fs-4 text-decoration-none text-secondary m-4"
             id="register_login"
             to="/register"
           >
-            Registrarse
+           Ir a Registrarse
           </Link>
         </div>
 
@@ -59,7 +52,7 @@ function LoginPage() {
             className="border-bottom border-0 bg-light rounded-0 fs-5 "
             type="email"
             name="email"
-            placeholder="email"
+            placeholder="Email"
             onChange={OnChange}
           />
         </Form.Group>
@@ -68,7 +61,7 @@ function LoginPage() {
             className="border-bottom border-0 bg-light rounded-0 fs-5 "
             type="password"
             name="password"
-            placeholder="password"
+            placeholder="Contraseña"
             onChange={OnChange}
           />
         </Form.Group>
@@ -80,7 +73,7 @@ function LoginPage() {
 
         <div className="d-flex justify-content-center ">
           <Button
-            className=" btn  btn-dark w-100  rounded-0 fs-5"
+            className=" btn  btn-login w-100  rounded-0 fs-5"
             variant="primary"
             onClick={Login}
           >

@@ -64,7 +64,7 @@ function PreLoader() {
             //   <span>Loading...</span>
             //   <div className="half-spinner"></div>
             // </div>
-            <Lottie options={defaultOption1} height={200} width={200} />
+            <Lottie className="spinner2" options={defaultOption1} height={200} width={200} />
           ) : (
             //Forma de llamar ↓ al component de la libreria LOTTIE
             <Lottie options={defaultOption2} height={100} width={100} />

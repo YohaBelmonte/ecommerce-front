@@ -1,7 +1,5 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomeShop.css";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import useHome from "../../Utils/useHome";
 import useCart from "../../Utils/useShoppingCart";
 import NavBarComponent from "../../components/Navbar/Navbar";
@@ -14,14 +12,23 @@ function HomePage() {
   const headers = { "x-auth-token": token };
 
   const url = "http://localhost:4000/api";
-
-  useEffect(() => {
-    GetAdminUser();
-  }, []);
-
+  
   //hook
   const { MapProduct } = useHome();
   const { cart } = useCart();
+
+  useEffect(() => {
+    GetAdminUser();
+    LogOut();
+  }, []);
+
+
+  async function LogOut() {
+    const token = localStorage.getItem("token") ?? "";
+    if (token == "") {
+      window.location.href = "/login";
+    }
+  }
 
   // Method Get Admin User ↓↓↓
   async function GetAdminUser() {
@@ -43,7 +50,7 @@ function HomePage() {
       <NavBarComponent size={cart.length} />
       <div className="containerCards">
         <div className="row">
-          <div className="col-10 d-flex flex-wrap ">
+          <div className="col-9 d-flex flex-wrap ">
             {MapProduct}
           </div>
           <div className="col-sm-none col-lg-2">

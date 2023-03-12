@@ -1,12 +1,10 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import Admin from "./Pages/Admin/admin";
 import Products from "./Pages/Admin/Productos";
 import Usuarios from "./Pages/Admin/Usuarios";
 import AboutUs from "./Pages/AboutUs/aboutUs";
-import Faq from "./Pages/Admin/FAQ";
 import ShoePage from "./Pages/ShoePage/ShoePage";
 import RegisterPage from "./Pages/Register/RegisterPage";
 import LoginPage from "./Pages/Login/LoginPage";
@@ -15,8 +13,10 @@ import HomeShop from "./Pages/HomeShop/HomeShop";
 import NewPassword from "./Pages/NewPassword/NewPassword";
 import Contact from "./Pages/Contact/Contact";
 import ShoppingCart from "./Pages/ShoppingCart/ShoppingCart";
+import FavPage from "./Pages/FavPage/FavPage";
 import Preloader from "./components/LoadingScreen/LoadingScreen";
 import Orders from "./Pages/Admin/Orders";
+import Error from "./Pages/404/404";
 
 function App() {
   
@@ -40,6 +40,26 @@ function App() {
             <div>
               <div className="">
                 <HomeShop />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/shoePage"
+          element={
+            <div>
+              <div className="">
+                <ShoePage />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/fav"
+          element={
+            <div>
+              <div className="">
+                <FavPage />
               </div>
             </div>
           }
@@ -132,6 +152,16 @@ function App() {
             <div>
               <div>
                 <Usuarios />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/404"
+          element={
+            <div>
+              <div>
+                <Error />
               </div>
             </div>
           }

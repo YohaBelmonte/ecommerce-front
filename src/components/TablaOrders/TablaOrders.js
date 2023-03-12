@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useHome from '../../Utils/useHome';
 import useAdmin from '../../Utils/useAdmin';
 import Table from 'react-bootstrap/Table';
@@ -13,6 +13,17 @@ function TablaOrders() {
   const [busqueda, setBusqueda] = useState("");
   var url = "http://localhost:4000/api";
 
+
+  useEffect(() => {
+    LogOut();
+  }, []);
+
+  async function LogOut() {
+    const token = localStorage.getItem("token") ?? "";
+    if (token == "") {
+      window.location.href = "/login";
+    }
+  }
 
   const mapProduct = usuarios.map((item, i) => {
     return (
