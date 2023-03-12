@@ -19,37 +19,37 @@ function ComponentHome() {
                 <div className='container-cardHome row'>
                     <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
                         <div className='card-home'>
-                            <Link to="/" ><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdNB1C8OC04OzIIu_uFWU5IcjNtDgER_1VC67DzQt1dUwx_J4UaKkXe6-l8C4BFxyu1bQQAx-LJE2VqOP9hCuMV3Oa5jGf" className='img-cardHome' /></Link>
-                            <div className="card-header">
+                            <Link to="/shop" ><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdNB1C8OC04OzIIu_uFWU5IcjNtDgER_1VC67DzQt1dUwx_J4UaKkXe6-l8C4BFxyu1bQQAx-LJE2VqOP9hCuMV3Oa5jGf" className='img-cardHome' /></Link>
+                            <div className="card-header mx-lg-3">
                                 <h4 className="title">STREETWEAR</h4>
                                 <h4 className="price">$55500</h4>
                             </div>
                             <div className="card-body">
-                                <p>AIR JORDAN 1 MID | BEIGE WHITE RED. Es una zapatilla del año 2022 que forma parte de la colección Jordan 1. Viene en una combinación de colores White Onyx/Cardinal Red/Light Curry, construido con revestimientos de cuero beige.</p>
+                                <b>AIR JORDAN 1 MID | BEIGE WHITE RED. </b> <p> Es una zapatilla del año 2022 que forma parte de la colección Jordan 1. Viene en una combinación de colores White Onyx/Cardinal Red/Light Curry, construido con revestimientos de cuero beige.</p>
                             </div>
                         </div>
                     </div>
                     <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
                         <div className='card-home'>
-                            <Link to="/" > <img src="https://woker.vtexassets.com/arquivos/ids/292438-800-800?v=637945269639330000&width=800&height=800&aspect=true" className='img-cardHome' /></Link>
-                            <div className="card-header">
+                            <Link to="/shop" > <img src="https://woker.vtexassets.com/arquivos/ids/292438-800-800?v=637945269639330000&width=800&height=800&aspect=true" className='img-cardHome' /></Link>
+                            <div className="card-header mx-lg-3">
                                 <h4 className="title">PARLEY ADIDAS</h4>
                                 <h4 className="price">$48300</h4>
                             </div>
                             <div className="card-body">
-                                <p>El cambio es posible cuando trabajamos juntos. Es por eso que se asociaron Parley for the Oceans en estos zapatos junto a adidas Forum, como un recordatorio de que todos tenemos un papel que desempeñar para ayudar a acabar con los desechos plásticos. </p>
+                                <p>El cambio es posible cuando trabajamos juntos. Es por eso que se asociaron  <b>Parley for the Oceans </b> en estos zapatos junto a adidas Forum, como un recordatorio de que todos tenemos un papel que desempeñar para ayudar a acabar con los desechos plásticos. </p>
                             </div>
                         </div>
                     </div>
                     <div className='cards-home col-lg-4 col-md-12 col-xs-12'>
                         <div className='card-home'>
-                            <Link to="/" > <img src="https://sothebys-md.brightspotcdn.com/53/92/d28052c64b13b38626ff2b63b049/louis-vuitton-x-nike-air-force-1-low-orange.jpg" className='img-cardHome' /></Link>
-                            <div className="card-header">
+                            <Link to="/shop" > <img src="https://sothebys-md.brightspotcdn.com/53/92/d28052c64b13b38626ff2b63b049/louis-vuitton-x-nike-air-force-1-low-orange.jpg" className='img-cardHome' /></Link>
+                            <div className="card-header mx-lg-3">
                                 <h4 className="title">LUXURY</h4>
                                 <h4 className="price">$57300</h4>
                             </div>
                             <div className="card-body">
-                                <p>Para Primavera-Verano 2022, Virgil Abloh colaboró ​​con Nike en Air Force 1 a medida, fusionando los códigos clásicos de la zapatilla con la insignia y los materiales de Louis Vuitton en homenaje a la cultura hip-hop que lo moldeó.</p>
+                                <p>Para Primavera-Verano 2022, Virgil Abloh colaboró ​​con  <b>Nike en Air Force 1 </b> a medida, fusionando los códigos clásicos de la zapatilla con la insignia y los materiales de Louis Vuitton en homenaje a la cultura hip-hop.</p>
                             </div>
                         </div>
                     </div>

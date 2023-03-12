@@ -42,7 +42,7 @@ function ShoePage() {
       return item;
     }
   });
-  // console.log(MapShoe);
+
 
   return (
     <div>
@@ -98,7 +98,6 @@ function ShoePage() {
             </div>
 
             <div className="product-price">
-              {/* <p className="last-price">Old Price: <span>$257.00</span></p> */}
               <p className="new-price">
                 Precio: <span>$ {MapShoe?.price}</span>
               </p>
@@ -162,8 +161,8 @@ function ShoePage() {
                   >
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                     <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                  </svg>
-                  Envío: <span>Worlwide</span>
+                  </svg>{" "}
+                  Envío: <span>a domicilio a cualquier país</span>
                 </li>
               </ul>
             </div>
@@ -171,9 +170,9 @@ function ShoePage() {
             <div className="purchase-info">
               <input type="number" min="0" defaultValue={1} />
               <button type="button" className="btn">
-                Add to Cart <i className="fa fa-shopping-cart"></i>
+               Añadir al carrito <i className="fa fa-shopping-cart"></i>
               </button>
-              {/* <button type="button" className="btn">Compare</button> */}
+
             </div>
 
             <div className="social-links">

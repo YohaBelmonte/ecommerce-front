@@ -120,14 +120,12 @@ function useAdmin() {
       [name]: value,
     };
     setFormProduct(response);
-    console.log(response)
   }
 
   //Añadir producto en ADMIN
   async function MethodPostProduct() {
     try {
       const response = await axios.post(`${url}/product`, formProduct, { headers });
-      console.log(response)
       window.location.reload();
       alert("Producto añadido con exito");
     } catch (error) {

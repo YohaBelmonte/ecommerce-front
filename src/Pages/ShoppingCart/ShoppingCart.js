@@ -114,7 +114,7 @@ function ShoppingCart() {
                 </div>
                 <div>
                   <span>$ {item.price}</span>
-                  <button onClick={() => handleRemove(item._id)}>Remove</button>
+                  <button onClick={() => handleRemove(item._id)}>Eliminar</button>
                 </div>
               </div>
             );
@@ -155,13 +155,4 @@ function ShoppingCart() {
 }
 export default ShoppingCart;
 
-// const quantityChange = (item, d) => {
-//   let ind = -1;
-//   cart.forEach((data, index) => {
-//     if (data.id === item.id) ind = index;
-//   });
-//   const tempArray = cart;
-//   tempArray[ind].quantity += d;
-//   setQuantity(tempArray[ind].quantity);
-//   console.log(tempArray[ind].quantity);
-// };
+

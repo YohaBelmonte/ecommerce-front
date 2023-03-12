@@ -28,14 +28,6 @@ const PaymentForms = () => {
         })
     }
 
-    // const processPayment = () => {
-    //     console.log("number => ", state.number)
-    //     console.log("name => ", state.name)
-    //     console.log("expiry => ", state.expiry)
-    //     console.log("cvc => ", state.cvc)
-    //     console.log(JSON.stringify(state))
-    // }
-
     return (
         <div className="card w-100 h-100">
             <div className="card-body">

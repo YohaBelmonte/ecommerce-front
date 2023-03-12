@@ -114,7 +114,7 @@
 
 
 /* seccion fondo img de oceano */
-.fondo-ocean {
+.background-ocean {
   background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/esAR/Images/running-ss22-adidasxparley_transparency-global-clp-statement-citation-d_tcm216-862011.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -132,7 +132,7 @@
 }
 
 
-.box-investiga {
+.box-research {
   text-align: center;
 }
 
@@ -261,6 +261,7 @@
 .title2 {
   font-size: 30px;
 }
+
   /* seccion nuestro equipo */
   .containerTeam {
     margin-top: 50px;

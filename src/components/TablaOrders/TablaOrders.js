@@ -57,16 +57,16 @@ function TablaOrders() {
 
             </div>
           </div>
-          <div className="col-sm-3 offset-sm-2 mt-5 mb-4 text-gred text-white"><h4>Orders</h4></div>
+          <div className="col-sm-3 offset-sm-2 mt-5 mb-4 text-gred text-white"><h4>Ordenes</h4></div>
         </div>
 
         <div >
           <Table responsive="sm" variant="dark" striped="columns" >
             <thead>
               <tr>
-                <th className='col-1'>ID Users</th>
-                <th className='col-1'>Name Users</th>
-                <th className='col-2'>Name Productos</th>
+                <th className='col-1'>ID Usuarios</th>
+                <th className='col-1'>Nombre de usuario</th>
+                <th className='col-2'>Nombre de producto</th>
                 <th className='col-2'>Estado de Compra</th>
               </tr>
             </thead>
