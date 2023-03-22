@@ -48,3 +48,21 @@ function useCart() {
 }
 export default useCart;
 
+
+
+
+
+
+
+
+// Method Get Admin User ( filtrar el usuario si su atributo isAdmin=true) ↓↓↓
+    //  async function GetAdminUser() {
+    //     try {
+    //       const { data } = await axios.get(`${url}/user`);
+    //     //   const adminUser = data.map((data) => data.isAdmin);
+    //       const adminUser = data.filter((data) => data.isAdmin ===true);
+    //       setAdmin(adminUser);
+    //     } catch (error) {
+    //       console.error(error);
+    //     }
+    //   }

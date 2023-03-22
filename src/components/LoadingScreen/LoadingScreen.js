@@ -81,3 +81,50 @@ function PreLoader() {
 export default PreLoader;
 
 
+
+
+
+
+
+// return (
+//   <div>
+//   {/* TERNARIO 1 ↓: buscamos renderizar los componentes cuando el estado "completed" sea FALSE */}
+//     {!completed ? (
+//       <>
+//       {/* TERNARIO 2 ↓: buscamos renderizar los componentes cuando el estado "loading" sea FALSE */}
+//         {!loading ? (
+//           <div className="spinner">
+//             <span>Loading...</span>
+//             <div className="half-spinner"></div>
+//           </div>
+//           // <Lottie options={defaultOption1} height={200} width={200} />
+//         ) : (
+//           //Forma de llamar ↓ al component de la libreria LOTTIE
+//           <Lottie options={defaultOption2} height={100} width={100} />
+//           // <div className="completed">&#x2713;</div>
+//         )}
+//       {/* FIN TERNARIO 2 ↑ */}
+//       </>
+//     ) : (
+//       <>
+//         <h1>Your Data</h1>
+//         <br />
+//         <h6 style={{ position: "Absolute", right: "5rem", bottom: "0" }}>
+//           <a
+//             style={{ color: "white" }}
+//             href="https://lottiefiles.com/chrisgannon"
+//           >
+//             Earth Animation by Chris Gannon on LottieFiles
+//           </a>
+//           <br />
+//           <a style={{ color: "white" }} href="https://lottiefiles.com/darius">
+//             Success Animation by Chris Gannon on LottieFiles
+//           </a>
+//         </h6>
+//       </>
+//     )}
+//     {/* FIN TERNARIO 1 ↑ */}
+//   </div>
+// );
+// }
+// export default PreLoader;
