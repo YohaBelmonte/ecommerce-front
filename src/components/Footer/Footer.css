@@ -54,11 +54,7 @@ ul {
     position: relative;
     z-index: 2;
 }
-.codigo-footer {
-  width: 130px;
-  height: 130px;
-  margin-top: 25px;
-}
+
 .footer-pattern img {
     position: absolute;
     top: 0;

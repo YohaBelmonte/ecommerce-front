@@ -28,7 +28,6 @@ function ContactInput() {
             const headers = { "x-auth-token": token };
             const response = await axios.post(`${url}/email`, form, {headers});
             alert("Mail enviado con exito")
-            console.log(response)
             // window.location.href = "/"
 
         } catch (error) {

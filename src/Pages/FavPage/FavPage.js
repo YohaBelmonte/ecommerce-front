@@ -29,7 +29,6 @@ function ShoppingCart() {
   
   async function removeToFav(id) {
     favCart.map((item) => {
-          console.log(item)
         if (item._id == id) {
             favCart.splice(id, 1);
             localStorage.setItem("fav", JSON.stringify(favCart))
@@ -58,7 +57,7 @@ function ShoppingCart() {
                   <p>{item.name}</p>
                 </div>
                 <div>
-                  <button className="removeToFav" onClick={() => removeToFav(item._id)}>Remove to Fav</button>
+                  <button className="removeToFav" onClick={() => removeToFav(item._id)}>Eliminar favorito</button>
                 </div>
               </div>
             );
