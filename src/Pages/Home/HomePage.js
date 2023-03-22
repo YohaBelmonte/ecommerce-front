@@ -1,8 +1,5 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import Carousel from "../../components/Carousel/Carousel";
 import useHome from "../../Utils/useHome";
 import useCart from "../../Utils/useShoppingCart";
 import NavBarComponent from "../../components/Navbar/Navbar";
@@ -30,7 +27,6 @@ function HomePage() {
   const url = "http://localhost:4000/api";
 
   //hook
-  const { MapProduct } = useHome();
   const { cart } = useCart();
 
   // Method Get Admin User ↓↓↓
