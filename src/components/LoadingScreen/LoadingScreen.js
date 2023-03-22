@@ -39,7 +39,6 @@ function PreLoader() {
         fetch("https://jsonplaceholder.typicode.com/posts")
           .then((response) => response.json())
           .then((json) => {
-            // console.log(json);
             // luego de traer datos de la api ramdom, lo guardamos en data
             setData(json);
             // con esto decimos que los datos estan en proceso de guardado : se transforma en TRUE↓
@@ -80,12 +79,6 @@ function PreLoader() {
   );
 }
 export default PreLoader;
-
-
-
-
-
-
 
 
 

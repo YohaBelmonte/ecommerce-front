@@ -28,7 +28,7 @@ function Dashboard(){
             <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
                 <h3 className="fs-2">3899</h3>
-                <p className="fs-5">New Products</p>
+                <p className="fs-5">Nuevos productos</p>
               </div>
                </div>
           </div>
@@ -37,7 +37,7 @@ function Dashboard(){
             <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
                 <h3 className="fs-2">%25</h3>
-                <p className="fs-5">Increase</p>
+                <p className="fs-5">Incremento</p>
               </div>
               </div>
           </div>
@@ -50,9 +50,9 @@ function Dashboard(){
               <thead>
                 <tr>
                   <th scope="col" width="50">#</th>
-                  <th scope="col">Product</th>
-                  <th scope="col">Customer</th>
-                  <th scope="col">Price</th>
+                  <th scope="col">Productos</th>
+                  <th scope="col">Clientes</th>
+                  <th scope="col">Precio</th>
                 </tr>
               </thead>
               <tbody>
