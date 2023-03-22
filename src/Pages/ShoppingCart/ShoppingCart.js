@@ -13,8 +13,6 @@ function ShoppingCart() {
   const headers = { "x-auth-token": token };
   var url = "http://localhost:4000/api";
   const [price, setPrice] = useState(0);
-  const values = [true];
-  const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
 
   useEffect(() => {

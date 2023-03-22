@@ -31,19 +31,17 @@ function LoginPage() {
   }
   const [modalShow, setModalShow] = React.useState(false);
 
-
   return (
     <div className="d-flex justify-content-center LoginInput mt-5">
       <Form className="col-lg-3 col-sm-6 bg-light px-5 py-4">
         <p className="text-center">Login</p>
         <div className="text-center">
-       
           <Link
             className="fs-4 text-decoration-none text-secondary m-4"
             id="register_login"
             to="/register"
           >
-           Ir a Registrarse
+            Ir a Registrarse
           </Link>
         </div>
 
@@ -66,7 +64,11 @@ function LoginPage() {
           />
         </Form.Group>
         <div className="text-end">
-          <Button variant="link" className=" fs-5 text-decoration-none m-0" onClick={() => setModalShow(true)}>
+          <Button
+            variant="link"
+            className=" fs-5 text-decoration-none m-0"
+            onClick={() => setModalShow(true)}
+          >
             Olvidé mi contraseña
           </Button>
         </div>
@@ -82,11 +84,7 @@ function LoginPage() {
         </div>
       </Form>
 
-      <ForgotPassword
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-
+      <ForgotPassword show={modalShow} onHide={() => setModalShow(false)} />
     </div>
   );
 }

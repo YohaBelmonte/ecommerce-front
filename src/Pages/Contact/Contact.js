@@ -20,7 +20,6 @@ function Contact() {
             <AdminNavbar />
             <ContactInput />
             <FooterComponent />
-
         </div>
     );
 }
