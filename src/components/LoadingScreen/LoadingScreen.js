@@ -86,33 +86,12 @@ export default PreLoader;
 
 
 
-// function PreLoader() {
-//   // se guardan los datos de la api↓
-//   const [data, setData] = useState([]);
-//   // con esto ↓ avisamos con un "TRUE" en 2 states diferentes y, con un retraso de por medio, que la api ya se guardó
-//   const [loading, setloading] = useState(undefined);
-//   const [completed, setcompleted] = useState(undefined);
 
-//   useEffect(() => {
-//     // ↓ se agrega el setTimeout: tiempo de espera para que se vea el preloader por 2000=2seg
-//     setTimeout(() => {
-//       // marcador de posicion: se trae una api ramdom del link ↓
-//       fetch("https://jsonplaceholder.typicode.com/posts")
-//         .then((response) => response.json())
-//         .then((json) => {
-//           console.log(json);
-//           // luego de traer datos de la api ramdom, lo guardamos en data
-//           setData(json);
-//           // con esto decimos que los datos estan en proceso de guardado : se transforma en TRUE↓
-//           setloading(true);
-//           // ↓ se agrega otro setTimeout para que se vea el 2do preloader por 1000=1seg
-//           setTimeout(() => {
-//             // con esto decimos que los datos ya estan guardado (TRUE) pero despues de 1seg
-//             setcompleted(true);
-//           }, 1000);
-//         });
-//     }, 2000);
-//   }, []);
+
+
+
+
+
 
 // return (
 //   <div>
