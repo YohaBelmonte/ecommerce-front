@@ -2,10 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
 import Pagination from "./pagination";
+// import products from "../../data/Products";
+// import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { listProduct } from "../../Redux/Actions/ProductActions";
 
 const ShopSection = () => {
+    // const [products, setProducts] = ueState([]);
+    // useEffect(() => {
+    //     const fetchproducts = async ()=>{
+    //         const {data}= await axios.get ("/api/product")
+    //         setProducts(data);
+    //     }
+    //     fetchproducts();
+    // }, []);
     const dispatch = useDispatch();
     const productList = useSelector((state) => state.productList);
     const { loading, error, products } = productList;
