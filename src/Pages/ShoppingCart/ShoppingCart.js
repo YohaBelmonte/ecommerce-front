@@ -27,11 +27,6 @@ function ShoppingCart() {
     }
   }
 
-  function handleShow(breakpoint) {
-    setFullscreen(breakpoint);
-    setShow(true);
-  }
-
   //hook
   const { CartProducts, cart, setCart } = useCart();
 
