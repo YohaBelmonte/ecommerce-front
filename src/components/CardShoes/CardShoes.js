@@ -21,7 +21,7 @@ function CardShoes({
   const [warning, setWarning] = useState(false);
   const [addSuccess, setAddSuccess] = useState(false);
 
-  var url = "http://localhost:4000/api";
+  var url = "https://jymd-ca6s.onrender.com/api";
 
   //hook
   const { cart } = useCart();

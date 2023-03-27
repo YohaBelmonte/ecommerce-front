@@ -8,7 +8,7 @@ import React from "react";
 function ContactInput() {
   const [form, setForm] = useState({});
 
-  var url = "http://localhost:4000/api";
+  var url = "https://jymd-ca6s.onrender.com/api";
 
   function OnChange(e) {
     const { name, value } = e.target;

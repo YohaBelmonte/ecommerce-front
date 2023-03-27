@@ -43,7 +43,7 @@ function TablaUsuarios() {
     setupdate(response);
   }
 
-  var url = "http://localhost:4000/api";
+  var url = "https://jymd-ca6s.onrender.com/api";
 
   const [id, setId] = useState("");
 

@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function ShoppingCart() {
   const token = localStorage.getItem("token") ?? "";
   const headers = { "x-auth-token": token };
-  var url = "http://localhost:4000/api";
+  var url = "https://jymd-ca6s.onrender.com/api";
 
   //hook
   const favCart = JSON.parse(localStorage.getItem("fav")) || [];

@@ -9,7 +9,7 @@ function useCart() {
     const headers = { "x-auth-token": token };
     const [cart, setCart] = useState([]);
 
-    var url = "http://localhost:4000/api";
+    var url = "https://jymd-ca6s.onrender.com/api";
 
   useEffect(() => {
     GetCartProducts();

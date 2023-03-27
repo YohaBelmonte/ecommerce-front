@@ -10,7 +10,7 @@ function TablaOrders() {
   const { product } = useHome();
   const [id, setId] = useState("");
   const [busqueda, setBusqueda] = useState("");
-  var url = "http://localhost:4000/api";
+  var url = "https://jymd-ca6s.onrender.com/api";
 
   useEffect(() => {
     LogOut();

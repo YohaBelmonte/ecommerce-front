@@ -20,7 +20,7 @@ function TablaProductos() {
    deletProduct,handleChangeProduct,busquedaProduct,product } = useAdmin();
   const [updateProduct, setupdateProduct] = useState({});
   const [id, setId] = useState("")
-  var url = "http://localhost:4000/api";
+  var url = "https://jymd-ca6s.onrender.com/api";
 
   useEffect(() => {
     LogOut();

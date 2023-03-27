@@ -21,7 +21,7 @@ function LoginPage() {
 
   async function Login() {
     try {
-      const { data } = await axios.post("http://localhost:4000/api/auth", form);
+      const { data } = await axios.post("https://jymd-ca6s.onrender.com/api/auth", form);
       localStorage.setItem("token", data);
       window.location.href = "/";
     } catch (error) {

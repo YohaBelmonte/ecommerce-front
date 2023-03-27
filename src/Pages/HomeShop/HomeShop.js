@@ -11,7 +11,7 @@ function HomePage() {
   const token = localStorage.getItem("token") ?? "";
   const headers = { "x-auth-token": token };
 
-  const url = "http://localhost:4000/api";
+  const url = "https://jymd-ca6s.onrender.com/api";
   
   //hook
   const { MapProduct } = useHome();
