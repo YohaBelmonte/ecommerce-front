@@ -21,15 +21,15 @@ function NavBarComponent({size}) {
            <img src="images/logo-navbar.png" className="logo-navbar"/>
           </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav " />
-        <Navbar.Collapse id="basic-navbar-nav">
+        {/* <Navbar.Toggle aria-controls="basic-navbar-nav " /> */}
+        {/* <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="link-navbar mt-4">
             <li className='container-link '>
               <Link to="/aboutUs" className='link-nav'>SOBRE NOSOTROS</Link>
               <Link to="/contact" className='link-nav mx-lg-5'>CONTACTO</Link>     
             </li>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse> */}
       </Container>
 
     </Navbar >
