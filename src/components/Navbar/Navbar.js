@@ -26,11 +26,11 @@ function NavBarComponent({ size }) {
       <Container>
         <Navbar.Brand>
           <div className="d-flex">
-            <div className="icons-nav2 styleUser">
+            {/* <div className="icons-nav2 styleUser">
               <Link to="/login" className="mx-lg-2 styleIcons2">
                 <FaUser />
               </Link>
-            </div>
+            </div> */}
             <img src="./images/logo-navbar.png" className="logo-navbar" />
           </div>
         </Navbar.Brand>
@@ -61,8 +61,8 @@ function NavBarComponent({ size }) {
               <Link to="/cart" className="link-nav shopping-cart1 mx-lg-2">
                 MI CARRITO
               </Link>
-              <Link to="/cart" className="link-nav shopping-cart1 mx-lg-3">
-                CERRAR SESIÓN
+              <Link to="/fav" className="link-nav shopping-cart1 mx-lg-3">
+                FAVORITOS
               </Link>
               <input
                 type="search"
@@ -73,7 +73,7 @@ function NavBarComponent({ size }) {
               />
             </li>
 
-            <form className="d-flex dropdw">
+            <form className="d-flex col-md-4 dropdw">
               <Dropdown>
                 <Link to="/cart " className="icon-nav ">
                   <FontAwesomeIcon icon={faShoppingCart} />

@@ -2,7 +2,8 @@
 
 /* seccion fotos */
 .box-imgHome {
-    height: 550px;
+    /* height: 550px; */
+    width: 25vw;
 }
 
 .imgHome {
@@ -62,10 +63,10 @@
 .cards-home {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card-home {
-    margin-right: 20px;
     cursor: pointer;
 }
 .cards .card img {
@@ -145,9 +146,6 @@
     }
     .price  {
         margin-left: 15px;
-    }
-    .box-imgHome {
-        height: 120px;
     }
     .box-title {
         margin: 0;
