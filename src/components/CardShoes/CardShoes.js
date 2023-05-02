@@ -86,8 +86,8 @@ function CardShoes({
     <>
       {warning && <div className='warning'> <BiMessageError />ERROR! Ya fue agregado al carrito</div>}
       {addSuccess && <div className='success'> <BiMessageError />Agregado con EXITO!</div>}
-      <div className="box">
-        <div className="card">
+      {/* <div className="box "> */}
+        <div className="card col-12 p-3">
           <span
             id="heart"
             className={`heart${isFavActive ? "-active" : ""}`}
@@ -102,17 +102,20 @@ function CardShoes({
               <h5 className="card-title">{propName}</h5>
             </center>
           </div>
-          <div className="card-body">
+          <div className="card-body ">
             <a className="btn-card" href="#" onClick={() => addToCart()}>
-              <center className="tocart">Añadir al carrito</center>
+              {/* <center className="tocart">Añadir al carrito</center> */}
+              Añadir al carrito
             </a>
-            <a className="btn-card1" href="#" >
-              <u className="seemore" onClick={() => viewShoePage(propId)}>Ver más</u>
+            <a className="btn-card1" href="#" onClick={() => viewShoePage(propId)} >
+              {/* <u className="seemore" onClick={() => viewShoePage(propId)}>Ver más</u> */}
+              Ver más
             </a>
+            
           </div>
           <h2 className="buy">$ {propPrice}</h2>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }

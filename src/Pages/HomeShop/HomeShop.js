@@ -47,14 +47,12 @@ function HomePage() {
     //home de prueba ↓↓↓↓ para ver si funcionaba el router y el register , login   ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓  ↓↓↓↓
     <div>
       <NavBarComponent size={cart.length} />
-      <div className="containerCards">
-        <div className="row">
-          <div className="col-9 d-flex flex-wrap ">
+      <div className="col-12 d-flex mx-0 px-0 ">
+          <div className="col-sm-12 col-lg-10 d-flex flex-wrap justify-content-center">
             {MapProduct}
           </div>
-          <div className="col-sm-none col-lg-2">
+          <div className="col-none col-lg-2">
             <div className="advertising2"></div>
-          </div>
         </div>
       </div>
       <Footer />
